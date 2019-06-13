@@ -10,7 +10,7 @@ module Meraki
     # @return [String]
     attr_accessor :comment
 
-    # 'Allow' or 'Deny' traffic specified by this rule
+    # 'allow' or 'deny' traffic specified by this rule
     # @return [String]
     attr_accessor :policy
 
@@ -43,18 +43,12 @@ module Meraki
                    protocol = nil,
                    dest_cidr = nil,
                    comment = nil,
-                   dest_port = nil,
-                   additional_properties = {})
+                   dest_port = nil)
       @comment = comment
       @policy = policy
       @protocol = protocol
       @dest_port = dest_port
       @dest_cidr = dest_cidr
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -68,16 +62,12 @@ module Meraki
       comment = hash['comment']
       dest_port = hash['destPort']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       Rule4Model.new(policy,
                      protocol,
                      dest_cidr,
                      comment,
-                     dest_port,
-                     hash)
+                     dest_port)
     end
   end
 end

@@ -15,32 +15,18 @@ module Meraki
     # @return [String]
     attr_accessor :group_policy_id
 
-    # The timespan for which clients will be fetched. Must be in seconds and
-    # less than or equal to a month (2592000 seconds).
-    # @return [String]
-    attr_accessor :timespan
-
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
       @_hash['device_policy'] = 'devicePolicy'
       @_hash['group_policy_id'] = 'groupPolicyId'
-      @_hash['timespan'] = 'timespan'
       @_hash
     end
 
     def initialize(device_policy = nil,
-                   group_policy_id = nil,
-                   timespan = nil,
-                   additional_properties = {})
+                   group_policy_id = nil)
       @device_policy = device_policy
       @group_policy_id = group_policy_id
-      @timespan = timespan
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -50,16 +36,10 @@ module Meraki
       # Extract variables from the hash.
       device_policy = hash['devicePolicy']
       group_policy_id = hash['groupPolicyId']
-      timespan = hash['timespan']
-
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
 
       # Create object from extracted values.
       UpdateNetworkClientPolicyModel.new(device_policy,
-                                         group_policy_id,
-                                         timespan,
-                                         hash)
+                                         group_policy_id)
     end
   end
 end

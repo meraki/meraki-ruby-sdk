@@ -11,7 +11,7 @@ module Meraki
     attr_accessor :host
 
     # Port on the RADIUS server that is listening for accounting messages
-    # @return [String]
+    # @return [Integer]
     attr_accessor :port
 
     # Shared key used to authenticate messages between the APs and RADIUS server
@@ -29,16 +29,10 @@ module Meraki
 
     def initialize(host = nil,
                    port = nil,
-                   secret = nil,
-                   additional_properties = {})
+                   secret = nil)
       @host = host
       @port = port
       @secret = secret
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -50,14 +44,10 @@ module Meraki
       port = hash['port']
       secret = hash['secret']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       RadiusAccountingServerModel.new(host,
                                       port,
-                                      secret,
-                                      hash)
+                                      secret)
     end
   end
 end

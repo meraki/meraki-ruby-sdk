@@ -28,15 +28,9 @@ module Meraki
     end
 
     def initialize(splash_url = nil,
-                   use_splash_url = nil,
-                   additional_properties = {})
+                   use_splash_url = nil)
       @splash_url = splash_url
       @use_splash_url = use_splash_url
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -47,13 +41,9 @@ module Meraki
       splash_url = hash['splashUrl']
       use_splash_url = hash['useSplashUrl']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkSsidsPlashSettingsModel.new(splash_url,
-                                               use_splash_url,
-                                               hash)
+                                               use_splash_url)
     end
   end
 end

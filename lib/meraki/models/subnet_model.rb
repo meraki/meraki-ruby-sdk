@@ -23,15 +23,9 @@ module Meraki
     end
 
     def initialize(local_subnet = nil,
-                   use_vpn = nil,
-                   additional_properties = {})
+                   use_vpn = nil)
       @local_subnet = local_subnet
       @use_vpn = use_vpn
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -42,13 +36,9 @@ module Meraki
       local_subnet = hash['localSubnet']
       use_vpn = hash['useVpn']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       SubnetModel.new(local_subnet,
-                      use_vpn,
-                      hash)
+                      use_vpn)
     end
   end
 end

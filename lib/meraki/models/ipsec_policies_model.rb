@@ -70,8 +70,7 @@ module Meraki
                    child_cipher_algo = nil,
                    child_auth_algo = nil,
                    child_pfs_group = nil,
-                   child_lifetime = nil,
-                   additional_properties = {})
+                   child_lifetime = nil)
       @ike_cipher_algo = ike_cipher_algo
       @ike_auth_algo = ike_auth_algo
       @ike_diffie_hellman_group = ike_diffie_hellman_group
@@ -80,11 +79,6 @@ module Meraki
       @child_auth_algo = child_auth_algo
       @child_pfs_group = child_pfs_group
       @child_lifetime = child_lifetime
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -101,9 +95,6 @@ module Meraki
       child_pfs_group = hash['childPfsGroup']
       child_lifetime = hash['childLifetime']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       IpsecPoliciesModel.new(ike_cipher_algo,
                              ike_auth_algo,
@@ -112,8 +103,7 @@ module Meraki
                              child_cipher_algo,
                              child_auth_algo,
                              child_pfs_group,
-                             child_lifetime,
-                             hash)
+                             child_lifetime)
     end
   end
 end

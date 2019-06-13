@@ -25,15 +25,9 @@ module Meraki
     end
 
     def initialize(rules = nil,
-                   allow_lan_access = nil,
-                   additional_properties = {})
+                   allow_lan_access = nil)
       @rules = rules
       @allow_lan_access = allow_lan_access
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -51,13 +45,9 @@ module Meraki
       end
       allow_lan_access = hash['allowLanAccess']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkSsidL3FirewallRulesModel.new(rules,
-                                                allow_lan_access,
-                                                hash)
+                                                allow_lan_access)
     end
   end
 end

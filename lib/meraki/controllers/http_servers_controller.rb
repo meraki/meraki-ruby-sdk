@@ -16,19 +16,22 @@ module Meraki
       self.class.instance
     end
 
-    # List the HTTP servers for a network
+    # Return the status of a webhook test
     # @param [String] network_id Required parameter: Example:
+    # @param [String] id Required parameter: Example:
     # @return Mixed response from the API call
-    def get_network_http_servers(network_id)
+    def get_network_http_servers_webhook_test(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => network_id
+        'network_id' => options['network_id'],
+        'id' => options['id']
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/httpServers'
+      _path_url = '/networks/{networkId}/httpServers/webhookTests/{id}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
-        'networkId' => network_id
+        'networkId' => options['network_id'],
+        'id' => options['id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -55,18 +58,18 @@ module Meraki
       decoded
     end
 
-    # Add an HTTP server
+    # Send a test webhook
     # @param [String] network_id Required parameter: Example:
-    # @param [CreateNetworkHttpServersModel] create_network_http_servers
-    # Optional parameter: Example:
+    # @param [CreateNetworkHttpServersWebhookTestModel]
+    # create_network_http_servers_webhook_test Optional parameter: Example:
     # @return Mixed response from the API call
-    def create_network_http_servers(options = {})
+    def create_network_http_servers_webhook_test(options = {})
       # Validate required parameters.
       validate_parameters(
         'network_id' => options['network_id']
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/httpServers'
+      _path_url = '/networks/{networkId}/httpServers/webhookTests'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'networkId' => options['network_id']
@@ -85,7 +88,83 @@ module Meraki
       _request = @http_client.post(
         _query_url,
         headers: _headers,
-        parameters: options['create_network_http_servers'].to_json
+        parameters: options['create_network_http_servers_webhook_test'].to_json
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+
+      # Return appropriate response type.
+      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
+        _context.response.raw_body.nil? ||
+        _context.response.raw_body.to_s.strip.empty?
+      decoded
+    end
+
+    # Delete an HTTP server
+    # @param [String] network_id Required parameter: Example:
+    # @param [String] id Required parameter: Example:
+    # @return void response from the API call
+    def delete_network_http_server(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'network_id' => options['network_id'],
+        'id' => options['id']
+      )
+      # Prepare query url.
+      _path_url = '/networks/{networkId}/httpServers/{id}'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'networkId' => options['network_id'],
+        'id' => options['id']
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+
+      # Prepare and execute HttpRequest.
+      _request = @http_client.delete(
+        _query_url
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+    end
+
+    # Update an HTTP server
+    # @param [String] network_id Required parameter: Example:
+    # @param [String] id Required parameter: Example:
+    # @param [UpdateNetworkHttpServerModel] update_network_http_server Optional
+    # parameter: Example:
+    # @return Mixed response from the API call
+    def update_network_http_server(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'network_id' => options['network_id'],
+        'id' => options['id']
+      )
+      # Prepare query url.
+      _path_url = '/networks/{networkId}/httpServers/{id}'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'networkId' => options['network_id'],
+        'id' => options['id']
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+
+      # Prepare headers.
+      _headers = {
+        'accept' => 'application/json',
+        'content-type' => 'application/json; charset=utf-8'
+      }
+
+      # Prepare and execute HttpRequest.
+      _request = @http_client.put(
+        _query_url,
+        headers: _headers,
+        parameters: options['update_network_http_server'].to_json
       )
       CustomHeaderAuth.apply(_request)
       _context = execute_request(_request)
@@ -140,94 +219,18 @@ module Meraki
       decoded
     end
 
-    # Update an HTTP server
+    # Add an HTTP server
     # @param [String] network_id Required parameter: Example:
-    # @param [String] id Required parameter: Example:
-    # @param [UpdateNetworkHttpServerModel] update_network_http_server Optional
+    # @param [CreateNetworkHttpServerModel] create_network_http_server Optional
     # parameter: Example:
     # @return Mixed response from the API call
-    def update_network_http_server(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'id' => options['id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/httpServers/{id}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'id' => options['id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
-      }
-
-      # Prepare and execute HttpRequest.
-      _request = @http_client.put(
-        _query_url,
-        headers: _headers,
-        parameters: options['update_network_http_server'].to_json
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Delete an HTTP server
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] id Required parameter: Example:
-    # @return void response from the API call
-    def delete_network_http_server(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'id' => options['id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/httpServers/{id}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'id' => options['id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-
-      # Prepare and execute HttpRequest.
-      _request = @http_client.delete(
-        _query_url
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-    end
-
-    # Send a test webhook
-    # @param [String] network_id Required parameter: Example:
-    # @param [CreateNetworkHttpServersWebhookTestsModel]
-    # create_network_http_servers_webhook_tests Optional parameter: Example:
-    # @return Mixed response from the API call
-    def create_network_http_servers_webhook_tests(options = {})
+    def create_network_http_server(options = {})
       # Validate required parameters.
       validate_parameters(
         'network_id' => options['network_id']
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/httpServers/webhookTests'
+      _path_url = '/networks/{networkId}/httpServers'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'networkId' => options['network_id']
@@ -246,7 +249,7 @@ module Meraki
       _request = @http_client.post(
         _query_url,
         headers: _headers,
-        parameters: options['create_network_http_servers_webhook_tests'].to_json
+        parameters: options['create_network_http_server'].to_json
       )
       CustomHeaderAuth.apply(_request)
       _context = execute_request(_request)
@@ -259,22 +262,19 @@ module Meraki
       decoded
     end
 
-    # Return the status of a webhook test
+    # List the HTTP servers for a network
     # @param [String] network_id Required parameter: Example:
-    # @param [String] id Required parameter: Example:
     # @return Mixed response from the API call
-    def get_network_http_servers_webhook_test(options = {})
+    def get_network_http_servers(network_id)
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id'],
-        'id' => options['id']
+        'network_id' => network_id
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/httpServers/webhookTests/{id}'
+      _path_url = '/networks/{networkId}/httpServers'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
-        'networkId' => options['network_id'],
-        'id' => options['id']
+        'networkId' => network_id
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url

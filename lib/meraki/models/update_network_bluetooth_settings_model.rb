@@ -50,19 +50,13 @@ module Meraki
                    uuid = nil,
                    major_minor_assignment_mode = nil,
                    major = nil,
-                   minor = nil,
-                   additional_properties = {})
+                   minor = nil)
       @scanning_enabled = scanning_enabled
       @advertising_enabled = advertising_enabled
       @uuid = uuid
       @major_minor_assignment_mode = major_minor_assignment_mode
       @major = major
       @minor = minor
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -77,17 +71,13 @@ module Meraki
       major = hash['major']
       minor = hash['minor']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkBluetoothSettingsModel.new(scanning_enabled,
                                               advertising_enabled,
                                               uuid,
                                               major_minor_assignment_mode,
                                               major,
-                                              minor,
-                                              hash)
+                                              minor)
     end
   end
 end

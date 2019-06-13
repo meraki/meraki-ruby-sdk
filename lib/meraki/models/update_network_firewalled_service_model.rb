@@ -29,15 +29,9 @@ module Meraki
     end
 
     def initialize(access = nil,
-                   allowed_ips = nil,
-                   additional_properties = {})
+                   allowed_ips = nil)
       @access = access
       @allowed_ips = allowed_ips
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -48,13 +42,9 @@ module Meraki
       access = hash['access']
       allowed_ips = hash['allowedIps']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkFirewalledServiceModel.new(access,
-                                              allowed_ips,
-                                              hash)
+                                              allowed_ips)
     end
   end
 end

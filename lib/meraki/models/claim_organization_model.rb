@@ -41,17 +41,11 @@ module Meraki
     def initialize(order = nil,
                    serial = nil,
                    license_key = nil,
-                   license_mode = nil,
-                   additional_properties = {})
+                   license_mode = nil)
       @order = order
       @serial = serial
       @license_key = license_key
       @license_mode = license_mode
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -64,15 +58,11 @@ module Meraki
       license_key = hash['licenseKey']
       license_mode = hash['licenseMode']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       ClaimOrganizationModel.new(order,
                                  serial,
                                  license_key,
-                                 license_mode,
-                                 hash)
+                                 license_mode)
     end
   end
 end

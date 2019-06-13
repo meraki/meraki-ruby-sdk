@@ -44,6 +44,8 @@ module Meraki
     # the API requests
     # @param [String] method Optional parameter: Filter the results by the
     # method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE')
+    # @param [Integer] response_code Optional parameter: Filter the results by
+    # the response code of the API requests
     # @return Mixed response from the API call
     def get_organization_api_requests(options = {})
       # Validate required parameters.
@@ -69,7 +71,8 @@ module Meraki
           'endingBefore' => options['ending_before'],
           'adminId' => options['admin_id'],
           'path' => options['path'],
-          'method' => options['method']
+          'method' => options['method'],
+          'responseCode' => options['response_code']
         },
         array_serialization: Configuration.array_serialization
       )

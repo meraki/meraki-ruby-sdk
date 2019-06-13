@@ -16,19 +16,25 @@ module Meraki
       self.class.instance
     end
 
-    # List the appliance services and their accessibility rules
+    # Updates the accessibility settings for the given service ('ICMP', 'web',
+    # or 'SNMP')
     # @param [String] network_id Required parameter: Example:
+    # @param [String] service Required parameter: Example:
+    # @param [UpdateNetworkFirewalledServiceModel]
+    # update_network_firewalled_service Optional parameter: Example:
     # @return Mixed response from the API call
-    def get_network_firewalled_services(network_id)
+    def update_network_firewalled_service(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => network_id
+        'network_id' => options['network_id'],
+        'service' => options['service']
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/firewalledServices'
+      _path_url = '/networks/{networkId}/firewalledServices/{service}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
-        'networkId' => network_id
+        'networkId' => options['network_id'],
+        'service' => options['service']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -36,13 +42,15 @@ module Meraki
 
       # Prepare headers.
       _headers = {
-        'accept' => 'application/json'
+        'accept' => 'application/json',
+        'content-type' => 'application/json; charset=utf-8'
       }
 
       # Prepare and execute HttpRequest.
-      _request = @http_client.get(
+      _request = @http_client.put(
         _query_url,
-        headers: _headers
+        headers: _headers,
+        parameters: options['update_network_firewalled_service'].to_json
       )
       CustomHeaderAuth.apply(_request)
       _context = execute_request(_request)
@@ -98,25 +106,19 @@ module Meraki
       decoded
     end
 
-    # Updates the accessibility settings for the given service ('ICMP', 'web',
-    # or 'SNMP')
+    # List the appliance services and their accessibility rules
     # @param [String] network_id Required parameter: Example:
-    # @param [String] service Required parameter: Example:
-    # @param [UpdateNetworkFirewalledServiceModel]
-    # update_network_firewalled_service Optional parameter: Example:
     # @return Mixed response from the API call
-    def update_network_firewalled_service(options = {})
+    def get_network_firewalled_services(network_id)
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id'],
-        'service' => options['service']
+        'network_id' => network_id
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/firewalledServices/{service}'
+      _path_url = '/networks/{networkId}/firewalledServices'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
-        'networkId' => options['network_id'],
-        'service' => options['service']
+        'networkId' => network_id
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -124,15 +126,13 @@ module Meraki
 
       # Prepare headers.
       _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
+        'accept' => 'application/json'
       }
 
       # Prepare and execute HttpRequest.
-      _request = @http_client.put(
+      _request = @http_client.get(
         _query_url,
-        headers: _headers,
-        parameters: options['update_network_firewalled_service'].to_json
+        headers: _headers
       )
       CustomHeaderAuth.apply(_request)
       _context = execute_request(_request)

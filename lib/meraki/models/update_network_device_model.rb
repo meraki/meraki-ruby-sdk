@@ -32,8 +32,16 @@ module Meraki
 
     # Whether or not to set the latitude and longitude of a device based on the
     # new address. Only applies when lat and lng are not specified.
-    # @return [String]
+    # @return [Boolean]
     attr_accessor :move_map_marker
+
+    # The ID of a switch profile to bind to the device (for available switch
+    # profiles, see the 'Switch Profiles' endpoint). Use null to unbind the
+    # switch device from the current profile. For a device to be bindable to a
+    # switch profile, it must (1) be a switch, and (2) belong to a network that
+    # is bound to a configuration template.
+    # @return [String]
+    attr_accessor :switch_profile_id
 
     # A mapping from model property names to API property names.
     def self.names
@@ -45,6 +53,7 @@ module Meraki
       @_hash['address'] = 'address'
       @_hash['notes'] = 'notes'
       @_hash['move_map_marker'] = 'moveMapMarker'
+      @_hash['switch_profile_id'] = 'switchProfileId'
       @_hash
     end
 
@@ -55,7 +64,7 @@ module Meraki
                    address = nil,
                    notes = nil,
                    move_map_marker = nil,
-                   additional_properties = {})
+                   switch_profile_id = nil)
       @name = name
       @tags = tags
       @lat = lat
@@ -63,11 +72,7 @@ module Meraki
       @address = address
       @notes = notes
       @move_map_marker = move_map_marker
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
+      @switch_profile_id = switch_profile_id
     end
 
     # Creates an instance of the object from a hash.
@@ -82,9 +87,7 @@ module Meraki
       address = hash['address']
       notes = hash['notes']
       move_map_marker = hash['moveMapMarker']
-
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
+      switch_profile_id = hash['switchProfileId']
 
       # Create object from extracted values.
       UpdateNetworkDeviceModel.new(name,
@@ -94,7 +97,7 @@ module Meraki
                                    address,
                                    notes,
                                    move_map_marker,
-                                   hash)
+                                   switch_profile_id)
     end
   end
 end

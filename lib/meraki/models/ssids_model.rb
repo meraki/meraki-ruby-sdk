@@ -18,14 +18,8 @@ module Meraki
       @_hash
     end
 
-    def initialize(is_authorized = nil,
-                   additional_properties = {})
+    def initialize(is_authorized = nil)
       @is_authorized = is_authorized
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -35,12 +29,8 @@ module Meraki
       # Extract variables from the hash.
       is_authorized = hash['isAuthorized']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
-      SsidsModel.new(is_authorized,
-                     hash)
+      SsidsModel.new(is_authorized)
     end
   end
 end

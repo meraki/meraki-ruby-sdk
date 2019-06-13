@@ -41,17 +41,11 @@ module Meraki
     def initialize(plugin_bundle_id = nil,
                    filter_browsers = nil,
                    filter_sockets = nil,
-                   vendor_config = nil,
-                   additional_properties = {})
+                   vendor_config = nil)
       @plugin_bundle_id = plugin_bundle_id
       @filter_browsers = filter_browsers
       @filter_sockets = filter_sockets
       @vendor_config = vendor_config
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -64,15 +58,11 @@ module Meraki
       filter_sockets = hash['FilterSockets']
       vendor_config = hash['VendorConfig']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       AddNetworkSmProfileClarityModel.new(plugin_bundle_id,
                                           filter_browsers,
                                           filter_sockets,
-                                          vendor_config,
-                                          hash)
+                                          vendor_config)
     end
   end
 end

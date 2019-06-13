@@ -17,14 +17,8 @@ module Meraki
       @_hash
     end
 
-    def initialize(rules = nil,
-                   additional_properties = {})
+    def initialize(rules = nil)
       @rules = rules
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -41,12 +35,8 @@ module Meraki
         end
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
-      UpdateNetworkCellularFirewallRulesModel.new(rules,
-                                                  hash)
+      UpdateNetworkCellularFirewallRulesModel.new(rules)
     end
   end
 end

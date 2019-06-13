@@ -31,16 +31,10 @@ module Meraki
 
     def initialize(host = nil,
                    port = nil,
-                   roles = nil,
-                   additional_properties = {})
+                   roles = nil)
       @host = host
       @port = port
       @roles = roles
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -52,14 +46,10 @@ module Meraki
       port = hash['port']
       roles = hash['roles']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       ServerModel.new(host,
                       port,
-                      roles,
-                      hash)
+                      roles)
     end
   end
 end

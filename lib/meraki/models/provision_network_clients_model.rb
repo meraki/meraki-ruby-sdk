@@ -37,17 +37,11 @@ module Meraki
     def initialize(mac = nil,
                    name = nil,
                    device_policy = nil,
-                   group_policy_id = nil,
-                   additional_properties = {})
+                   group_policy_id = nil)
       @mac = mac
       @name = name
       @device_policy = device_policy
       @group_policy_id = group_policy_id
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -60,15 +54,11 @@ module Meraki
       device_policy = hash['devicePolicy']
       group_policy_id = hash['groupPolicyId']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       ProvisionNetworkClientsModel.new(mac,
                                        name,
                                        device_policy,
-                                       group_policy_id,
-                                       hash)
+                                       group_policy_id)
     end
   end
 end

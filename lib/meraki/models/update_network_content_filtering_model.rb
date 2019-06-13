@@ -35,17 +35,11 @@ module Meraki
     def initialize(allowed_url_patterns = nil,
                    blocked_url_patterns = nil,
                    blocked_url_categories = nil,
-                   url_category_list_size = nil,
-                   additional_properties = {})
+                   url_category_list_size = nil)
       @allowed_url_patterns = allowed_url_patterns
       @blocked_url_patterns = blocked_url_patterns
       @blocked_url_categories = blocked_url_categories
       @url_category_list_size = url_category_list_size
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -58,15 +52,11 @@ module Meraki
       blocked_url_categories = hash['blockedUrlCategories']
       url_category_list_size = hash['urlCategoryListSize']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkContentFilteringModel.new(allowed_url_patterns,
                                              blocked_url_patterns,
                                              blocked_url_categories,
-                                             url_category_list_size,
-                                             hash)
+                                             url_category_list_size)
     end
   end
 end

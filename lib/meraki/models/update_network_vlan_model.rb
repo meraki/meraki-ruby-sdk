@@ -107,8 +107,7 @@ module Meraki
                    fixed_ip_assignments = nil,
                    reserved_ip_ranges = nil,
                    dns_nameservers = nil,
-                   dhcp_options = nil,
-                   additional_properties = {})
+                   dhcp_options = nil)
       @name = name
       @subnet = subnet
       @appliance_ip = appliance_ip
@@ -123,11 +122,6 @@ module Meraki
       @reserved_ip_ranges = reserved_ip_ranges
       @dns_nameservers = dns_nameservers
       @dhcp_options = dhcp_options
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -164,9 +158,6 @@ module Meraki
         end
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkVlanModel.new(name,
                                  subnet,
@@ -181,8 +172,7 @@ module Meraki
                                  fixed_ip_assignments,
                                  reserved_ip_ranges,
                                  dns_nameservers,
-                                 dhcp_options,
-                                 hash)
+                                 dhcp_options)
     end
   end
 end

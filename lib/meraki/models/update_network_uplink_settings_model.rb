@@ -9,7 +9,7 @@ module Meraki
     # A mapping of uplinks ('wan1', 'wan2' or 'cellular') to their bandwidth
     # settings (be sure to check which uplinks are supported for your network).
     # Bandwidth setting objects have the following structure
-    # @return [BandwidthLimits2Model]
+    # @return [BandwidthLimits6Model]
     attr_accessor :bandwidth_limits
 
     # A mapping from model property names to API property names.
@@ -19,14 +19,8 @@ module Meraki
       @_hash
     end
 
-    def initialize(bandwidth_limits = nil,
-                   additional_properties = {})
+    def initialize(bandwidth_limits = nil)
       @bandwidth_limits = bandwidth_limits
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -35,15 +29,11 @@ module Meraki
 
       # Extract variables from the hash.
       if hash['bandwidthLimits']
-        bandwidth_limits = BandwidthLimits2Model.from_hash(hash['bandwidthLimits'])
+        bandwidth_limits = BandwidthLimits6Model.from_hash(hash['bandwidthLimits'])
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
-      UpdateNetworkUplinkSettingsModel.new(bandwidth_limits,
-                                           hash)
+      UpdateNetworkUplinkSettingsModel.new(bandwidth_limits)
     end
   end
 end

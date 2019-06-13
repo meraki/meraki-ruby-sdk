@@ -18,14 +18,8 @@ module Meraki
       @_hash
     end
 
-    def initialize(ssids = nil,
-                   additional_properties = {})
+    def initialize(ssids = nil)
       @ssids = ssids
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -35,12 +29,8 @@ module Meraki
       # Extract variables from the hash.
       ssids = SsidsModel.from_hash(hash['ssids']) if hash['ssids']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
-      UpdateNetworkClientSplashAuthorizationStatusModel.new(ssids,
-                                                            hash)
+      UpdateNetworkClientSplashAuthorizationStatusModel.new(ssids)
     end
   end
 end

@@ -12,7 +12,7 @@ module Meraki
 
     # The scope and tag options of the target group. Comma separated values
     # beginning with one of withAny, withAll, withoutAny, withoutAll, all, none,
-    # followed by tags
+    # followed by tags. Default to none if empty.
     # @return [String]
     attr_accessor :scope
 
@@ -25,15 +25,9 @@ module Meraki
     end
 
     def initialize(name = nil,
-                   scope = nil,
-                   additional_properties = {})
+                   scope = nil)
       @name = name
       @scope = scope
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -44,13 +38,9 @@ module Meraki
       name = hash['name']
       scope = hash['scope']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkSmTargetGroupModel.new(name,
-                                          scope,
-                                          hash)
+                                          scope)
     end
   end
 end

@@ -16,19 +16,24 @@ module Meraki
       self.class.instance
     end
 
-    # List the switch ports for a switch
+    # Update a switch port
     # @param [String] serial Required parameter: Example:
+    # @param [String] number Required parameter: Example:
+    # @param [UpdateDeviceSwitchPortModel] update_device_switch_port Optional
+    # parameter: Example:
     # @return Mixed response from the API call
-    def get_device_switch_ports(serial)
+    def update_device_switch_port(options = {})
       # Validate required parameters.
       validate_parameters(
-        'serial' => serial
+        'serial' => options['serial'],
+        'number' => options['number']
       )
       # Prepare query url.
-      _path_url = '/devices/{serial}/switchPorts'
+      _path_url = '/devices/{serial}/switchPorts/{number}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
-        'serial' => serial
+        'serial' => options['serial'],
+        'number' => options['number']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -36,13 +41,15 @@ module Meraki
 
       # Prepare headers.
       _headers = {
-        'accept' => 'application/json'
+        'accept' => 'application/json',
+        'content-type' => 'application/json; charset=utf-8'
       }
 
       # Prepare and execute HttpRequest.
-      _request = @http_client.get(
+      _request = @http_client.put(
         _query_url,
-        headers: _headers
+        headers: _headers,
+        parameters: options['update_device_switch_port'].to_json
       )
       CustomHeaderAuth.apply(_request)
       _context = execute_request(_request)
@@ -97,24 +104,19 @@ module Meraki
       decoded
     end
 
-    # Update a switch port
+    # List the switch ports for a switch
     # @param [String] serial Required parameter: Example:
-    # @param [String] number Required parameter: Example:
-    # @param [UpdateDeviceSwitchPortModel] update_device_switch_port Optional
-    # parameter: Example:
     # @return Mixed response from the API call
-    def update_device_switch_port(options = {})
+    def get_device_switch_ports(serial)
       # Validate required parameters.
       validate_parameters(
-        'serial' => options['serial'],
-        'number' => options['number']
+        'serial' => serial
       )
       # Prepare query url.
-      _path_url = '/devices/{serial}/switchPorts/{number}'
+      _path_url = '/devices/{serial}/switchPorts'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
-        'serial' => options['serial'],
-        'number' => options['number']
+        'serial' => serial
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -122,15 +124,13 @@ module Meraki
 
       # Prepare headers.
       _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
+        'accept' => 'application/json'
       }
 
       # Prepare and execute HttpRequest.
-      _request = @http_client.put(
+      _request = @http_client.get(
         _query_url,
-        headers: _headers,
-        parameters: options['update_device_switch_port'].to_json
+        headers: _headers
       )
       CustomHeaderAuth.apply(_request)
       _context = execute_request(_request)

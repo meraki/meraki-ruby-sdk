@@ -18,9 +18,8 @@ module Meraki
     # @return [String]
     attr_accessor :serial
 
-    # The new fields of the device. Passed in as a JSON object. The list of
-    # available fields are: name, notes
-    # @return [Object]
+    # The new fields of the device. Each field of this object is optional.
+    # @return [DeviceFieldsModel]
     attr_accessor :device_fields
 
     # A mapping from model property names to API property names.
@@ -33,20 +32,14 @@ module Meraki
       @_hash
     end
 
-    def initialize(wifi_mac = nil,
+    def initialize(device_fields = nil,
+                   wifi_mac = nil,
                    id = nil,
-                   serial = nil,
-                   device_fields = nil,
-                   additional_properties = {})
+                   serial = nil)
       @wifi_mac = wifi_mac
       @id = id
       @serial = serial
       @device_fields = device_fields
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -54,20 +47,17 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
+      device_fields = DeviceFieldsModel.from_hash(hash['deviceFields']) if
+        hash['deviceFields']
       wifi_mac = hash['wifiMac']
       id = hash['id']
       serial = hash['serial']
-      device_fields = hash['deviceFields']
-
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
 
       # Create object from extracted values.
-      UpdateNetworkSmDeviceFieldsModel.new(wifi_mac,
+      UpdateNetworkSmDeviceFieldsModel.new(device_fields,
+                                           wifi_mac,
                                            id,
-                                           serial,
-                                           device_fields,
-                                           hash)
+                                           serial)
     end
   end
 end

@@ -8,7 +8,7 @@ module Meraki
   class BandwidthModel < BaseModel
     # How bandwidth limits are enforced. Can be 'network default', 'ignore' or
     # 'custom'.
-    # @return [String]
+    # @return [SettingsEnum]
     attr_accessor :settings
 
     # The bandwidth limits object, specifying upload and download speed for
@@ -26,15 +26,9 @@ module Meraki
     end
 
     def initialize(settings = nil,
-                   bandwidth_limits = nil,
-                   additional_properties = {})
+                   bandwidth_limits = nil)
       @settings = settings
       @bandwidth_limits = bandwidth_limits
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -47,13 +41,9 @@ module Meraki
         bandwidth_limits = BandwidthLimitsModel.from_hash(hash['bandwidthLimits'])
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       BandwidthModel.new(settings,
-                         bandwidth_limits,
-                         hash)
+                         bandwidth_limits)
     end
   end
 end

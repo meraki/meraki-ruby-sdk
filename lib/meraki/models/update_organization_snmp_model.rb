@@ -6,28 +6,29 @@
 module Meraki
   # UpdateOrganizationSnmpModel Model.
   class UpdateOrganizationSnmpModel < BaseModel
-    # Boolean indicating whether SNMP version 2c is enabled for the organization
+    # Boolean indicating whether SNMP version 2c is enabled for the
+    # organization.
     # @return [Boolean]
     attr_accessor :v2c_enabled
 
-    # Boolean indicating whether SNMP version 3 is enabled for the organization
+    # Boolean indicating whether SNMP version 3 is enabled for the organization.
     # @return [Boolean]
     attr_accessor :v3_enabled
 
-    # The SNMP version 3 authentication mode either MD5 or SHA
-    # @return [String]
+    # The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
+    # @return [V3AuthModeEnum]
     attr_accessor :v3_auth_mode
 
-    # The SNMP version 3 authentication password.  Must be at least 8 characters
+    # The SNMP version 3 authentication password. Must be at least 8 characters
     # if specified.
     # @return [String]
     attr_accessor :v3_auth_pass
 
-    # The SNMP version 3 privacy mode DES or AES128
-    # @return [String]
+    # The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
+    # @return [V3PrivModeEnum]
     attr_accessor :v3_priv_mode
 
-    # The SNMP version 3 privacy password.  Must be at least 8 characters if
+    # The SNMP version 3 privacy password. Must be at least 8 characters if
     # specified.
     # @return [String]
     attr_accessor :v3_priv_pass
@@ -56,8 +57,7 @@ module Meraki
                    v3_auth_pass = nil,
                    v3_priv_mode = nil,
                    v3_priv_pass = nil,
-                   peer_ips = nil,
-                   additional_properties = {})
+                   peer_ips = nil)
       @v2c_enabled = v2c_enabled
       @v3_enabled = v3_enabled
       @v3_auth_mode = v3_auth_mode
@@ -65,11 +65,6 @@ module Meraki
       @v3_priv_mode = v3_priv_mode
       @v3_priv_pass = v3_priv_pass
       @peer_ips = peer_ips
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -85,9 +80,6 @@ module Meraki
       v3_priv_pass = hash['v3PrivPass']
       peer_ips = hash['peerIps']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateOrganizationSnmpModel.new(v2c_enabled,
                                       v3_enabled,
@@ -95,8 +87,7 @@ module Meraki
                                       v3_auth_pass,
                                       v3_priv_mode,
                                       v3_priv_pass,
-                                      peer_ips,
-                                      hash)
+                                      peer_ips)
     end
   end
 end
