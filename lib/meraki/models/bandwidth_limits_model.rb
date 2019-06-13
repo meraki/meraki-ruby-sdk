@@ -25,15 +25,9 @@ module Meraki
     end
 
     def initialize(limit_up = nil,
-                   limit_down = nil,
-                   additional_properties = {})
+                   limit_down = nil)
       @limit_up = limit_up
       @limit_down = limit_down
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -44,13 +38,9 @@ module Meraki
       limit_up = hash['limitUp']
       limit_down = hash['limitDown']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       BandwidthLimitsModel.new(limit_up,
-                               limit_down,
-                               hash)
+                               limit_down)
     end
   end
 end

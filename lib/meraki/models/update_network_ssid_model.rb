@@ -15,12 +15,12 @@ module Meraki
     attr_accessor :enabled
 
     # The association control method for the SSID ('open', 'psk',
-    # 'open-with-radius', '8021x-meraki', '8021x-radius')
-    # @return [String]
+    # 'open-with-radius', '8021x-meraki' or '8021x-radius')
+    # @return [AuthModeEnum]
     attr_accessor :auth_mode
 
-    # The psk encryption mode for the SSID ('wpa', 'wep', 'wpa-eap')
-    # @return [String]
+    # The psk encryption mode for the SSID ('wpa', 'wep' or 'wpa-eap')
+    # @return [EncryptionModeEnum]
     attr_accessor :encryption_mode
 
     # The passkey for the SSID. This param is only valid if the authMode is
@@ -28,17 +28,17 @@ module Meraki
     # @return [String]
     attr_accessor :psk
 
-    # The types of WPA encryption. ('WPA1 and WPA2', 'WPA2 only')
-    # @return [String]
+    # The types of WPA encryption. ('WPA1 and WPA2' or 'WPA2 only')
+    # @return [WpaEncryptionModeEnum]
     attr_accessor :wpa_encryption_mode
 
     # The type of splash page for the SSID ('None', 'Click-through splash page',
     # 'Billing', 'Password-protected with Meraki RADIUS', 'Password-protected
     # with custom RADIUS', 'Password-protected with Active Directory',
     # 'Password-protected with LDAP', 'SMS authentication', 'Systems Manager
-    # Sentry', 'Facebook Wi-Fi', 'Google OAuth', 'Sponsored guest'). This
+    # Sentry', 'Facebook Wi-Fi', 'Google OAuth' or 'Sponsored guest'). This
     # attribute is not supported for template children.
-    # @return [String]
+    # @return [SplashPageEnum]
     attr_accessor :splash_page
 
     # The RADIUS 802.1x servers to be used for authentication. This param is
@@ -49,24 +49,24 @@ module Meraki
     # If true, Meraki devices will act as a RADIUS Dynamic Authorization Server
     # and will respond to RADIUS Change-of-Authorization and Disconnect messages
     # sent by the RADIUS server.
-    # @return [String]
+    # @return [Boolean]
     attr_accessor :radius_coa_enabled
 
     # This policy determines how authentication requests should be handled in
     # the event that all of the configured RADIUS servers are unreachable ('Deny
-    # access', 'Allow access')
-    # @return [String]
+    # access' or 'Allow access')
+    # @return [RadiusFailoverPolicyEnum]
     attr_accessor :radius_failover_policy
 
     # This policy determines which RADIUS server will be contacted first in an
     # authentication attempt and the ordering of any necessary retry attempts
-    # ('Strict priority order', 'Round robin')
-    # @return [String]
+    # ('Strict priority order' or 'Round robin')
+    # @return [RadiusLoadBalancingPolicyEnum]
     attr_accessor :radius_load_balancing_policy
 
     # Whether or not RADIUS accounting is enabled. This param is only valid if
     # the authMode is 'open-with-radius' or '8021x-radius'
-    # @return [String]
+    # @return [Boolean]
     attr_accessor :radius_accounting_enabled
 
     # The RADIUS accounting 802.1x servers to be used for authentication. This
@@ -76,13 +76,13 @@ module Meraki
     attr_accessor :radius_accounting_servers
 
     # The client IP assignment mode ('NAT mode', 'Bridge mode', 'Layer 3
-    # roaming', 'Layer 3 roaming with a concentrator', 'VPN')
-    # @return [String]
+    # roaming', 'Layer 3 roaming with a concentrator' or 'VPN')
+    # @return [IpAssignmentModeEnum]
     attr_accessor :ip_assignment_mode
 
     # Direct trafic to use specific VLANs. This param is only valid with 'Bridge
     # mode' and 'Layer 3 roaming'
-    # @return [String]
+    # @return [Boolean]
     attr_accessor :use_vlan_tagging
 
     # The concentrator to use for 'Layer 3 roaming with a concentrator' or
@@ -92,12 +92,12 @@ module Meraki
 
     # The VLAN ID used for VLAN tagging. This param is only valid with 'Layer 3
     # roaming with a concentrator' and 'VPN'
-    # @return [String]
+    # @return [Integer]
     attr_accessor :vlan_id
 
     # The default VLAN ID used for 'all other APs'. This param is only valid
     # with 'Bridge mode' and 'Layer 3 roaming'
-    # @return [String]
+    # @return [Integer]
     attr_accessor :default_vlan_id
 
     # The list of tags and VLAN IDs used for VLAN tagging. This param is only
@@ -107,7 +107,7 @@ module Meraki
 
     # Allow access to a configurable list of IP ranges, which users may access
     # prior to sign-on.
-    # @return [String]
+    # @return [Boolean]
     attr_accessor :walled_garden_enabled
 
     # Specify your walled garden by entering space-separated addresses, ranges
@@ -117,21 +117,22 @@ module Meraki
     # @return [String]
     attr_accessor :walled_garden_ranges
 
-    # The minimum bitrate in Mbps. (1, 2, 5.5, 6, 9, 11, 12, 18, 24, 36, 48, 54)
-    # @return [String]
+    # The minimum bitrate in Mbps. ('1', '2', '5.5', '6', '9', '11', '12', '18',
+    # '24', '36', '48' or '54')
+    # @return [Float]
     attr_accessor :min_bitrate
 
-    # The client-serving radio frequencies. (Dual band operation, 5 GHz band
-    # only, Dual band operation with Band Steering)
-    # @return [String]
+    # The client-serving radio frequencies. ('Dual band operation', '5 GHz band
+    # only' or 'Dual band operation with Band Steering')
+    # @return [BandSelectionEnum]
     attr_accessor :band_selection
 
     # The upload bandwidth limit in Kbps. (0 represents no limit.)
-    # @return [String]
+    # @return [Integer]
     attr_accessor :per_client_bandwidth_limit_up
 
     # The download bandwidth limit in Kbps. (0 represents no limit.)
-    # @return [String]
+    # @return [Integer]
     attr_accessor :per_client_bandwidth_limit_down
 
     # A mapping from model property names to API property names.
@@ -190,8 +191,7 @@ module Meraki
                    min_bitrate = nil,
                    band_selection = nil,
                    per_client_bandwidth_limit_up = nil,
-                   per_client_bandwidth_limit_down = nil,
-                   additional_properties = {})
+                   per_client_bandwidth_limit_down = nil)
       @name = name
       @enabled = enabled
       @auth_mode = auth_mode
@@ -217,11 +217,6 @@ module Meraki
       @band_selection = band_selection
       @per_client_bandwidth_limit_up = per_client_bandwidth_limit_up
       @per_client_bandwidth_limit_down = per_client_bandwidth_limit_down
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -276,9 +271,6 @@ module Meraki
       per_client_bandwidth_limit_up = hash['perClientBandwidthLimitUp']
       per_client_bandwidth_limit_down = hash['perClientBandwidthLimitDown']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkSsidModel.new(name,
                                  enabled,
@@ -304,8 +296,7 @@ module Meraki
                                  min_bitrate,
                                  band_selection,
                                  per_client_bandwidth_limit_up,
-                                 per_client_bandwidth_limit_down,
-                                 hash)
+                                 per_client_bandwidth_limit_down)
     end
   end
 end

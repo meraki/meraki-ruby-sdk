@@ -19,27 +19,53 @@ module Meraki
     # @return [BandwidthModel]
     attr_accessor :bandwidth
 
+    # The firewall and traffic shaping rules and settings for your policy.
+    # @return [FirewallAndTrafficShapingModel]
+    attr_accessor :firewall_and_traffic_shaping
+
+    # Whether clients bound to your policy will bypass splash authorization or
+    # behave according to the network's rules. Can be one of 'network default'
+    # or 'bypass'. Only available if your network has a wireless configuration.
+    # @return [SplashAuthSettingsEnum]
+    attr_accessor :splash_auth_settings
+
+    # The VLAN tagging settings for your group policy. Only available if your
+    # network has a wireless configuration.
+    # @return [VlanTaggingModel]
+    attr_accessor :vlan_tagging
+
+    # The Bonjour settings for your group policy. Only valid if your network has
+    # a wireless configuration.
+    # @return [BonjourForwardingModel]
+    attr_accessor :bonjour_forwarding
+
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
       @_hash['name'] = 'name'
       @_hash['scheduling'] = 'scheduling'
       @_hash['bandwidth'] = 'bandwidth'
+      @_hash['firewall_and_traffic_shaping'] = 'firewallAndTrafficShaping'
+      @_hash['splash_auth_settings'] = 'splashAuthSettings'
+      @_hash['vlan_tagging'] = 'vlanTagging'
+      @_hash['bonjour_forwarding'] = 'bonjourForwarding'
       @_hash
     end
 
     def initialize(name = nil,
                    scheduling = nil,
                    bandwidth = nil,
-                   additional_properties = {})
+                   firewall_and_traffic_shaping = nil,
+                   splash_auth_settings = nil,
+                   vlan_tagging = nil,
+                   bonjour_forwarding = nil)
       @name = name
       @scheduling = scheduling
       @bandwidth = bandwidth
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
+      @firewall_and_traffic_shaping = firewall_and_traffic_shaping
+      @splash_auth_settings = splash_auth_settings
+      @vlan_tagging = vlan_tagging
+      @bonjour_forwarding = bonjour_forwarding
     end
 
     # Creates an instance of the object from a hash.
@@ -52,15 +78,24 @@ module Meraki
         hash['scheduling']
       bandwidth = BandwidthModel.from_hash(hash['bandwidth']) if
         hash['bandwidth']
-
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
+      if hash['firewallAndTrafficShaping']
+        firewall_and_traffic_shaping = FirewallAndTrafficShapingModel.from_hash(hash['firewallAndTrafficShaping'])
+      end
+      splash_auth_settings = hash['splashAuthSettings']
+      vlan_tagging = VlanTaggingModel.from_hash(hash['vlanTagging']) if
+        hash['vlanTagging']
+      if hash['bonjourForwarding']
+        bonjour_forwarding = BonjourForwardingModel.from_hash(hash['bonjourForwarding'])
+      end
 
       # Create object from extracted values.
       UpdateNetworkGroupPolicyModel.new(name,
                                         scheduling,
                                         bandwidth,
-                                        hash)
+                                        firewall_and_traffic_shaping,
+                                        splash_auth_settings,
+                                        vlan_tagging,
+                                        bonjour_forwarding)
     end
   end
 end

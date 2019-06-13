@@ -10,7 +10,7 @@ module Meraki
     # @return [String]
     attr_accessor :comment
 
-    # 'Allow' or 'Deny' traffic specified by this rule
+    # 'allow' or 'deny' traffic specified by this rule
     # @return [String]
     attr_accessor :policy
 
@@ -64,8 +64,7 @@ module Meraki
                    comment = nil,
                    src_port = nil,
                    dest_port = nil,
-                   syslog_enabled = nil,
-                   additional_properties = {})
+                   syslog_enabled = nil)
       @comment = comment
       @policy = policy
       @protocol = protocol
@@ -74,11 +73,6 @@ module Meraki
       @dest_port = dest_port
       @dest_cidr = dest_cidr
       @syslog_enabled = syslog_enabled
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -95,9 +89,6 @@ module Meraki
       dest_port = hash['destPort']
       syslog_enabled = hash['syslogEnabled']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       Rule3Model.new(policy,
                      protocol,
@@ -106,8 +97,7 @@ module Meraki
                      comment,
                      src_port,
                      dest_port,
-                     syslog_enabled,
-                     hash)
+                     syslog_enabled)
     end
   end
 end

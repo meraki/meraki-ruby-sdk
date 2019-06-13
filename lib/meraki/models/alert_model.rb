@@ -40,17 +40,11 @@ module Meraki
     def initialize(type = nil,
                    enabled = nil,
                    alert_destinations = nil,
-                   filters = nil,
-                   additional_properties = {})
+                   filters = nil)
       @type = type
       @enabled = enabled
       @alert_destinations = alert_destinations
       @filters = filters
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -63,15 +57,11 @@ module Meraki
       alert_destinations = hash['alertDestinations']
       filters = hash['filters']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       AlertModel.new(type,
                      enabled,
                      alert_destinations,
-                     filters,
-                     hash)
+                     filters)
     end
   end
 end

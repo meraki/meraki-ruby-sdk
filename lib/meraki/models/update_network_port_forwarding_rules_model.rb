@@ -7,7 +7,7 @@ module Meraki
   # UpdateNetworkPortForwardingRulesModel Model.
   class UpdateNetworkPortForwardingRulesModel < BaseModel
     # An array of port forwarding params
-    # @return [List of Rule7Model]
+    # @return [List of Rule11Model]
     attr_accessor :rules
 
     # A mapping from model property names to API property names.
@@ -17,14 +17,8 @@ module Meraki
       @_hash
     end
 
-    def initialize(rules = nil,
-                   additional_properties = {})
+    def initialize(rules = nil)
       @rules = rules
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -37,16 +31,12 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule7Model.from_hash(structure) if structure)
+          rules << (Rule11Model.from_hash(structure) if structure)
         end
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
-      UpdateNetworkPortForwardingRulesModel.new(rules,
-                                                hash)
+      UpdateNetworkPortForwardingRulesModel.new(rules)
     end
   end
 end

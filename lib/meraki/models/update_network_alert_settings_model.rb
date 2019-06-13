@@ -24,15 +24,9 @@ module Meraki
     end
 
     def initialize(default_destinations = nil,
-                   alerts = nil,
-                   additional_properties = {})
+                   alerts = nil)
       @default_destinations = default_destinations
       @alerts = alerts
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -52,13 +46,9 @@ module Meraki
         end
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkAlertSettingsModel.new(default_destinations,
-                                          alerts,
-                                          hash)
+                                          alerts)
     end
   end
 end

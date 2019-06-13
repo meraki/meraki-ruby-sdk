@@ -35,17 +35,11 @@ module Meraki
     def initialize(role = nil,
                    org_access = nil,
                    tags = nil,
-                   networks = nil,
-                   additional_properties = {})
+                   networks = nil)
       @role = role
       @org_access = org_access
       @tags = tags
       @networks = networks
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -72,15 +66,11 @@ module Meraki
         end
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateOrganizationSamlRoleModel.new(role,
                                           org_access,
                                           tags,
-                                          networks,
-                                          hash)
+                                          networks)
     end
   end
 end

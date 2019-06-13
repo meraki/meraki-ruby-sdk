@@ -10,7 +10,8 @@ module Meraki
     # The base Uri for API calls
     @base_uri = 'https://api.meraki.com/api/v0'
 
-    @x_cisco_meraki_api_key = 'TODO: Replace'
+    # Demo DevNet Sandbox
+    @x_cisco_meraki_api_key = '15da0c6ffff295f16267f88f98694cf29a86ed87'
 
     # The attribute accessors for public properties.
     class << self

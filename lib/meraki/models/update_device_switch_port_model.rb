@@ -91,8 +91,7 @@ module Meraki
                    rstp_enabled = nil,
                    stp_guard = nil,
                    access_policy_number = nil,
-                   link_negotiation = nil,
-                   additional_properties = {})
+                   link_negotiation = nil)
       @name = name
       @tags = tags
       @enabled = enabled
@@ -106,11 +105,6 @@ module Meraki
       @stp_guard = stp_guard
       @access_policy_number = access_policy_number
       @link_negotiation = link_negotiation
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -132,9 +126,6 @@ module Meraki
       access_policy_number = hash['accessPolicyNumber']
       link_negotiation = hash['linkNegotiation']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateDeviceSwitchPortModel.new(name,
                                       tags,
@@ -148,8 +139,7 @@ module Meraki
                                       rstp_enabled,
                                       stp_guard,
                                       access_policy_number,
-                                      link_negotiation,
-                                      hash)
+                                      link_negotiation)
     end
   end
 end

@@ -17,14 +17,8 @@ module Meraki
       @_hash
     end
 
-    def initialize(name = nil,
-                   additional_properties = {})
+    def initialize(name = nil)
       @name = name
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -34,12 +28,8 @@ module Meraki
       # Extract variables from the hash.
       name = hash['name']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
-      UpdateOrganizationModel.new(name,
-                                  hash)
+      UpdateOrganizationModel.new(name)
     end
   end
 end

@@ -30,16 +30,10 @@ module Meraki
 
     def initialize(name = nil,
                    url = nil,
-                   shared_secret = nil,
-                   additional_properties = {})
+                   shared_secret = nil)
       @name = name
       @url = url
       @shared_secret = shared_secret
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -51,14 +45,10 @@ module Meraki
       url = hash['url']
       shared_secret = hash['sharedSecret']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkHttpServerModel.new(name,
                                        url,
-                                       shared_secret,
-                                       hash)
+                                       shared_secret)
     end
   end
 end

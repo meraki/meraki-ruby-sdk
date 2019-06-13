@@ -62,8 +62,7 @@ module Meraki
                    thursday = nil,
                    friday = nil,
                    saturday = nil,
-                   sunday = nil,
-                   additional_properties = {})
+                   sunday = nil)
       @enabled = enabled
       @monday = monday
       @tuesday = tuesday
@@ -72,11 +71,6 @@ module Meraki
       @friday = friday
       @saturday = saturday
       @sunday = sunday
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -94,9 +88,6 @@ module Meraki
       saturday = SaturdayModel.from_hash(hash['saturday']) if hash['saturday']
       sunday = SundayModel.from_hash(hash['sunday']) if hash['sunday']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       SchedulingModel.new(enabled,
                           monday,
@@ -105,8 +96,7 @@ module Meraki
                           thursday,
                           friday,
                           saturday,
-                          sunday,
-                          hash)
+                          sunday)
     end
   end
 end

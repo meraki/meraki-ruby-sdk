@@ -32,16 +32,10 @@ module Meraki
 
     def initialize(active = nil,
                    from = nil,
-                   to = nil,
-                   additional_properties = {})
+                   to = nil)
       @active = active
       @from = from
       @to = to
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -53,14 +47,10 @@ module Meraki
       from = hash['from']
       to = hash['to']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       ThursdayModel.new(active,
                         from,
-                        to,
-                        hash)
+                        to)
     end
   end
 end

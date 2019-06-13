@@ -44,24 +44,18 @@ module Meraki
       @_hash
     end
 
-    def initialize(wifi_macs = nil,
+    def initialize(tags = nil,
+                   update_action = nil,
+                   wifi_macs = nil,
                    ids = nil,
                    serials = nil,
-                   scope = nil,
-                   tags = nil,
-                   update_action = nil,
-                   additional_properties = {})
+                   scope = nil)
       @wifi_macs = wifi_macs
       @ids = ids
       @serials = serials
       @scope = scope
       @tags = tags
       @update_action = update_action
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -69,24 +63,20 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
+      tags = hash['tags']
+      update_action = hash['updateAction']
       wifi_macs = hash['wifiMacs']
       ids = hash['ids']
       serials = hash['serials']
       scope = hash['scope']
-      tags = hash['tags']
-      update_action = hash['updateAction']
-
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
 
       # Create object from extracted values.
-      UpdateNetworkSmDevicesTagsModel.new(wifi_macs,
+      UpdateNetworkSmDevicesTagsModel.new(tags,
+                                          update_action,
+                                          wifi_macs,
                                           ids,
                                           serials,
-                                          scope,
-                                          tags,
-                                          update_action,
-                                          hash)
+                                          scope)
     end
   end
 end

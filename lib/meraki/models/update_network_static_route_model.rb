@@ -47,19 +47,13 @@ module Meraki
                    gateway_ip = nil,
                    enabled = nil,
                    fixed_ip_assignments = nil,
-                   reserved_ip_ranges = nil,
-                   additional_properties = {})
+                   reserved_ip_ranges = nil)
       @name = name
       @subnet = subnet
       @gateway_ip = gateway_ip
       @enabled = enabled
       @fixed_ip_assignments = fixed_ip_assignments
       @reserved_ip_ranges = reserved_ip_ranges
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -74,17 +68,13 @@ module Meraki
       fixed_ip_assignments = hash['fixedIpAssignments']
       reserved_ip_ranges = hash['reservedIpRanges']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkStaticRouteModel.new(name,
                                         subnet,
                                         gateway_ip,
                                         enabled,
                                         fixed_ip_assignments,
-                                        reserved_ip_ranges,
-                                        hash)
+                                        reserved_ip_ranges)
     end
   end
 end

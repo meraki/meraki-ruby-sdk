@@ -23,15 +23,9 @@ module Meraki
     end
 
     def initialize(tag = nil,
-                   access = nil,
-                   additional_properties = {})
+                   access = nil)
       @tag = tag
       @access = access
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -42,13 +36,9 @@ module Meraki
       tag = hash['tag']
       access = hash['access']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       Tag2Model.new(tag,
-                    access,
-                    hash)
+                    access)
     end
   end
 end

@@ -6,8 +6,8 @@
 module Meraki
   # UpdateNetworkSwitchSettingsModel Model.
   class UpdateNetworkSwitchSettingsModel < BaseModel
-    # The behavior of secondary power supplies on supported devices
-    # ("redundant", "combined")
+    # The use Combined Power as the default behavior of secondary power supplies
+    # on supported devices.
     # @return [Boolean]
     attr_accessor :use_combined_power
 
@@ -24,15 +24,9 @@ module Meraki
     end
 
     def initialize(use_combined_power = nil,
-                   power_exceptions = nil,
-                   additional_properties = {})
+                   power_exceptions = nil)
       @use_combined_power = use_combined_power
       @power_exceptions = power_exceptions
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -50,13 +44,9 @@ module Meraki
         end
       end
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkSwitchSettingsModel.new(use_combined_power,
-                                           power_exceptions,
-                                           hash)
+                                           power_exceptions)
     end
   end
 end

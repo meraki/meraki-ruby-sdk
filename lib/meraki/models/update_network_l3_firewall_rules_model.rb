@@ -24,15 +24,9 @@ module Meraki
     end
 
     def initialize(rules = nil,
-                   syslog_default_rule = nil,
-                   additional_properties = {})
+                   syslog_default_rule = nil)
       @rules = rules
       @syslog_default_rule = syslog_default_rule
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -50,13 +44,9 @@ module Meraki
       end
       syslog_default_rule = hash['syslogDefaultRule']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkL3FirewallRulesModel.new(rules,
-                                            syslog_default_rule,
-                                            hash)
+                                            syslog_default_rule)
     end
   end
 end

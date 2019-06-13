@@ -29,16 +29,10 @@ module Meraki
 
     def initialize(code = nil,
                    type = nil,
-                   value = nil,
-                   additional_properties = {})
+                   value = nil)
       @code = code
       @type = type
       @value = value
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -50,14 +44,10 @@ module Meraki
       type = hash['type']
       value = hash['value']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       DhcpOptionModel.new(code,
                           type,
-                          value,
-                          hash)
+                          value)
     end
   end
 end

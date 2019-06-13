@@ -11,7 +11,7 @@ module Meraki
     attr_accessor :tags
 
     # Numerical identifier that is assigned to the VLAN
-    # @return [String]
+    # @return [Integer]
     attr_accessor :vlan_id
 
     # A mapping from model property names to API property names.
@@ -23,15 +23,9 @@ module Meraki
     end
 
     def initialize(tags = nil,
-                   vlan_id = nil,
-                   additional_properties = {})
+                   vlan_id = nil)
       @tags = tags
       @vlan_id = vlan_id
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -42,13 +36,9 @@ module Meraki
       tags = hash['tags']
       vlan_id = hash['vlanId']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       ApTagsAndVlanIdModel.new(tags,
-                               vlan_id,
-                               hash)
+                               vlan_id)
     end
   end
 end

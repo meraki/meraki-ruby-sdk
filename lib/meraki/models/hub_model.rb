@@ -24,15 +24,9 @@ module Meraki
     end
 
     def initialize(hub_id = nil,
-                   use_default_route = nil,
-                   additional_properties = {})
+                   use_default_route = nil)
       @hub_id = hub_id
       @use_default_route = use_default_route
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -43,13 +37,9 @@ module Meraki
       hub_id = hash['hubId']
       use_default_route = hash['useDefaultRoute']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       HubModel.new(hub_id,
-                   use_default_route,
-                   hash)
+                   use_default_route)
     end
   end
 end

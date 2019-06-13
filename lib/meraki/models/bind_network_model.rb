@@ -27,15 +27,9 @@ module Meraki
     end
 
     def initialize(config_template_id = nil,
-                   auto_bind = nil,
-                   additional_properties = {})
+                   auto_bind = nil)
       @config_template_id = config_template_id
       @auto_bind = auto_bind
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -46,13 +40,9 @@ module Meraki
       config_template_id = hash['configTemplateId']
       auto_bind = hash['autoBind']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       BindNetworkModel.new(config_template_id,
-                           auto_bind,
-                           hash)
+                           auto_bind)
     end
   end
 end

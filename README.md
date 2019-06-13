@@ -73,9 +73,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build meraki.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.1.1-beta.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.1.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 ## How to Use
 
@@ -85,41 +85,41 @@ The following section explains how to use the Meraki Ruby Gem in a new Rails pro
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.1.1-beta.0' ```
+In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.1.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0)
 
 ## How to Test
 
@@ -136,7 +136,7 @@ In order to setup authentication and initialization of the API client, you need 
 
 | Parameter | Description |
 |-----------|-------------|
-| x_cisco_meraki_api_key | TODO: add a description |
+| x_cisco_meraki_api_key | Demo DevNet Sandbox |
 
 
 
@@ -144,16 +144,16 @@ API client can be initialized as following.
 
 ```ruby
 # Configuration parameters and credentials
-x_cisco_meraki_api_key = 'x_cisco_meraki_api_key'
+x_cisco_meraki_api_key = '15da0c6ffff295f16267f88f98694cf29a86ed87' # Demo DevNet Sandbox
 
-client = Meraki::Meraki.new(
+client = Meraki::MerakiClient.new(
   x_cisco_meraki_api_key: x_cisco_meraki_api_key
 )
 ```
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.1-beta.0&initLine=client%2520%253D%2520Meraki.new%2528%2527x_cisco_meraki_api_key%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.1.0&initLine=client%2520%253D%2520MerakiClient.new%2528%2527x_cisco_meraki_api_key%2527%2529)
 
 
 
@@ -161,93 +161,95 @@ The added initlization code can be debugged by putting a breakpoint in the ``` I
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [AdminsController](#admins_controller)
-* [AlertSettingsController](#alert_settings_controller)
-* [MVSenseController](#mv_sense_controller)
-* [APIUsageController](#api_usage_controller)
-* [BluetoothClientsController](#bluetooth_clients_controller)
-* [NetworksController](#networks_controller)
-* [CamerasController](#cameras_controller)
-* [ClientsController](#clients_controller)
-* [ConfigTemplatesController](#config_templates_controller)
-* [DevicesController](#devices_controller)
-* [MXCellularFirewallController](#mx_cellular_firewall_controller)
-* [MXL3FirewallController](#mxl3_firewall_controller)
-* [MXL7ApplicationCategoriesController](#mxl7_application_categories_controller)
-* [MXL7FirewallController](#mxl7_firewall_controller)
-* [MXVPNFirewallController](#mxvpn_firewall_controller)
-* [MRL3FirewallController](#mrl3_firewall_controller)
-* [GroupPoliciesController](#group_policies_controller)
-* [HTTPServersController](#http_servers_controller)
-* [MerakiAuthUsersController](#meraki_auth_users_controller)
 * [OrganizationsController](#organizations_controller)
-* [PIIController](#pii_controller)
-* [SAMLRolesController](#saml_roles_controller)
-* [ClientSecurityEventsController](#client_security_events_controller)
-* [MalwareSettingsController](#malware_settings_controller)
-* [NamedTagScopeController](#named_tag_scope_controller)
-* [SMController](#sm_controller)
-* [SplashLoginAttemptsController](#splash_login_attempts_controller)
-* [SplashSettingsController](#splash_settings_controller)
-* [SsidsController](#ssids_controller)
-* [SwitchSettingsController](#switch_settings_controller)
-* [SwitchPortsController](#switch_ports_controller)
-* [SwitchStacksController](#switch_stacks_controller)
-* [SyslogServersController](#syslog_servers_controller)
-* [ContentFilteringCategoriesController](#content_filtering_categories_controller)
-* [ContentFilteringRulesController](#content_filtering_rules_controller)
-* [FirewalledServicesController](#firewalled_services_controller)
 * [MX1ManyNATRulesController](#mx1_many_nat_rules_controller)
-* [MX11NATRulesController](#mx11_nat_rules_controller)
-* [MXPortForwardingRulesController](#mx_port_forwarding_rules_controller)
-* [StaticRoutesController](#static_routes_controller)
-* [UplinkSettingsController](#uplink_settings_controller)
-* [VlansController](#vlans_controller)
+* [FirewalledServicesController](#firewalled_services_controller)
+* [TrafficShapingController](#traffic_shaping_controller)
 * [WirelessHealthController](#wireless_health_controller)
+* [AlertSettingsController](#alert_settings_controller)
+* [AdminsController](#admins_controller)
+* [ActionBatchesController](#action_batches_controller)
+* [SwitchPortsController](#switch_ports_controller)
+* [SsidsController](#ssids_controller)
+* [SplashSettingsController](#splash_settings_controller)
+* [SplashLoginAttemptsController](#splash_login_attempts_controller)
+* [SMController](#sm_controller)
+* [NamedTagScopeController](#named_tag_scope_controller)
+* [SAMLRolesController](#saml_roles_controller)
+* [PIIController](#pii_controller)
+* [OpenAPISpecController](#open_api_spec_controller)
+* [ManagementInterfaceSettingsController](#management_interface_settings_controller)
+* [MRL3FirewallController](#mrl3_firewall_controller)
+* [MXL7FirewallController](#mxl7_firewall_controller)
+* [GroupPoliciesController](#group_policies_controller)
+* [NetworksController](#networks_controller)
+* [MVSenseController](#mv_sense_controller)
+* [VlansController](#vlans_controller)
+* [UplinkSettingsController](#uplink_settings_controller)
+* [StaticRoutesController](#static_routes_controller)
+* [MXPortForwardingRulesController](#mx_port_forwarding_rules_controller)
+* [MX11NATRulesController](#mx11_nat_rules_controller)
+* [ContentFilteringRulesController](#content_filtering_rules_controller)
+* [ContentFilteringCategoriesController](#content_filtering_categories_controller)
+* [SyslogServersController](#syslog_servers_controller)
+* [SwitchStacksController](#switch_stacks_controller)
+* [SwitchProfilesController](#switch_profiles_controller)
+* [SwitchSettingsController](#switch_settings_controller)
+* [SNMPSettingsController](#snmp_settings_controller)
+* [MalwareSettingsController](#malware_settings_controller)
+* [IntrusionSettingsController](#intrusion_settings_controller)
+* [RadioSettingsController](#radio_settings_controller)
+* [ClientsController](#clients_controller)
+* [APIUsageController](#api_usage_controller)
+* [NetFlowSettingsController](#net_flow_settings_controller)
+* [MerakiAuthUsersController](#meraki_auth_users_controller)
+* [HTTPServersController](#http_servers_controller)
+* [MXVPNFirewallController](#mxvpn_firewall_controller)
+* [MXL7ApplicationCategoriesController](#mxl7_application_categories_controller)
+* [MXL3FirewallController](#mxl3_firewall_controller)
+* [MXCellularFirewallController](#mx_cellular_firewall_controller)
+* [DevicesController](#devices_controller)
+* [ConfigTemplatesController](#config_templates_controller)
+* [CamerasController](#cameras_controller)
+* [BluetoothClientsController](#bluetooth_clients_controller)
+* [SecurityEventsController](#security_events_controller)
+* [WebhookLogsController](#webhook_logs_controller)
 
-## <a name="admins_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AdminsController") AdminsController
+## <a name="organizations_controller"></a>![Class: ](https://apidocs.io/img/class.png ".OrganizationsController") OrganizationsController
 
 ### Get singleton instance
 
-The singleton instance of the ``` AdminsController ``` class can be accessed from the API Client.
+The singleton instance of the ``` OrganizationsController ``` class can be accessed from the API Client.
 
 ```ruby
-admins_controller = client.admins
+organizations_controller = client.organizations
 ```
 
-### <a name="get_organization_admins"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.get_organization_admins") get_organization_admins
+### <a name="get_organizations"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organizations") get_organizations
 
-> List the dashboard administrators in this organization
+> List the organizations that the user has privileges on
 
 
 ```ruby
-def get_organization_admins(organization_id); end
+def get_organizations; end
 ```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-
 
 #### Example Usage
 
 ```ruby
-organization_id = 'organizationId'
 
-result = admins_controller.get_organization_admins(organization_id)
+result = organizations_controller.get_organizations()
 
 ```
 
 
-### <a name="create_organization_admins"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.create_organization_admins") create_organization_admins
+### <a name="update_organization_third_party_vpn_peers"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.update_organization_third_party_vpn_peers") update_organization_third_party_vpn_peers
 
-> Create a new dashboard administrator
+> Update the third party VPN peers for an organization
 
 
 ```ruby
-def create_organization_admins(options = {}); end
+def update_organization_third_party_vpn_peers(options = {}); end
 ```
 
 #### Parameters
@@ -255,7 +257,7 @@ def create_organization_admins(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_organization_admins |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_third_party_vpn_peers |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -266,22 +268,22 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-create_organization_admins = CreateOrganizationAdminsModel.new
-collect['create_organization_admins'] = create_organization_admins
+update_organization_third_party_vpn_peers = UpdateOrganizationThirdPartyVPNPeersModel.new
+collect['update_organization_third_party_vpn_peers'] = update_organization_third_party_vpn_peers
 
 
-result = admins_controller.create_organization_admins(collect)
+result = organizations_controller.update_organization_third_party_vpn_peers(collect)
 
 ```
 
 
-### <a name="update_organization_admin"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.update_organization_admin") update_organization_admin
+### <a name="get_organization_third_party_vpn_peers"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_third_party_vpn_peers") get_organization_third_party_vpn_peers
 
-> Update an administrator
+> Return the third party VPN peers for an organization
 
 
 ```ruby
-def update_organization_admin(options = {}); end
+def get_organization_third_party_vpn_peers(organization_id); end
 ```
 
 #### Parameters
@@ -289,45 +291,229 @@ def update_organization_admin(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = organizations_controller.get_organization_third_party_vpn_peers(organization_id)
+
+```
+
+
+### <a name="get_organization_uplinks_loss_and_latency"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_uplinks_loss_and_latency") get_organization_uplinks_loss_and_latency
+
+> Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
+
+
+```ruby
+def get_organization_uplinks_loss_and_latency(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 5 minutes after t0. The latest possible time that t1 can be is 2 minutes into the past. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes. |
+| uplink |  ``` Optional ```  | Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks. |
+| ip |  ``` Optional ```  | Optional filter for a specific destination IP. Default will return all destination IPs. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 24
+collect['timespan'] = timespan
+
+uplink = 'uplink'
+collect['uplink'] = uplink
+
+ip = 'ip'
+collect['ip'] = ip
+
+
+result = organizations_controller.get_organization_uplinks_loss_and_latency(collect)
+
+```
+
+
+### <a name="claim_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.claim_organization") claim_organization
+
+> Claim a device, license key, or order into an organization. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory. These three types of claims are mutually exclusive and cannot be performed in one request.
+
+
+```ruby
+def claim_organization(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| claim_organization |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+claim_organization = ClaimOrganizationModel.new
+collect['claim_organization'] = claim_organization
+
+
+result = organizations_controller.claim_organization(collect)
+
+```
+
+
+### <a name="get_organization_device_statuses"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_device_statuses") get_organization_device_statuses
+
+> List the status of every Meraki device in the organization
+
+
+```ruby
+def get_organization_device_statuses(id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| update_organization_admin |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+id = 'id'
+
+result = organizations_controller.get_organization_device_statuses(id)
+
+```
+
+
+### <a name="get_organization_inventory"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_inventory") get_organization_inventory
+
+> Return the inventory for an organization
+
+
+```ruby
+def get_organization_inventory(id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+id = 'id'
+
+result = organizations_controller.get_organization_inventory(id)
+
+```
+
+
+### <a name="get_organization_license_state"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_license_state") get_organization_license_state
+
+> Return the license state for an organization
+
+
+```ruby
+def get_organization_license_state(id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+id = 'id'
+
+result = organizations_controller.get_organization_license_state(id)
+
+```
+
+
+### <a name="clone_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.clone_organization") clone_organization
+
+> Create a new organization by cloning the addressed organization
+
+
+```ruby
+def clone_organization(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| id |  ``` Required ```  | TODO: Add a parameter description |
+| clone_organization |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```ruby
 collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
 
 id = 'id'
 collect['id'] = id
 
-update_organization_admin = UpdateOrganizationAdminModel.new
-collect['update_organization_admin'] = update_organization_admin
+clone_organization = CloneOrganizationModel.new
+collect['clone_organization'] = clone_organization
 
 
-result = admins_controller.update_organization_admin(collect)
+result = organizations_controller.clone_organization(collect)
 
 ```
 
 
-### <a name="delete_organization_admin"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.delete_organization_admin") delete_organization_admin
+### <a name="update_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.update_organization") update_organization
 
-> Revoke all access for a dashboard administrator within this organization
+> Update an organization
 
 
 ```ruby
-def delete_organization_admin(options = {}); end
+def update_organization(options = {}); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -335,14 +521,1094 @@ def delete_organization_admin(options = {}); end
 ```ruby
 collect = Hash.new
 
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
 id = 'id'
 collect['id'] = id
 
+update_organization = UpdateOrganizationModel.new
+collect['update_organization'] = update_organization
 
-admins_controller.delete_organization_admin(collect)
+
+result = organizations_controller.update_organization(collect)
+
+```
+
+
+### <a name="get_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization") get_organization
+
+> Return an organization
+
+
+```ruby
+def get_organization(id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+id = 'id'
+
+result = organizations_controller.get_organization(id)
+
+```
+
+
+### <a name="create_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.create_organization") create_organization
+
+> Create a new organization
+
+
+```ruby
+def create_organization(create_organization = nil); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| create_organization |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+create_organization = CreateOrganizationModel.new
+
+result = organizations_controller.create_organization(create_organization)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mx1_many_nat_rules_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MX1ManyNATRulesController") MX1ManyNATRulesController
+
+### Get singleton instance
+
+The singleton instance of the ``` MX1ManyNATRulesController ``` class can be accessed from the API Client.
+
+```ruby
+mX1ManyNATRules_controller = client.mx_1_many_nat_rules
+```
+
+### <a name="update_network_one_to_many_nat_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MX1ManyNATRulesController.update_network_one_to_many_nat_rules") update_network_one_to_many_nat_rules
+
+> Set the 1:Many NAT mapping rules for an MX network
+
+
+```ruby
+def update_network_one_to_many_nat_rules(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_one_to_many_nat_rules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_one_to_many_nat_rules = UpdateNetworkOneToManyNatRulesModel.new
+collect['update_network_one_to_many_nat_rules'] = update_network_one_to_many_nat_rules
+
+
+result = mX1ManyNATRules_controller.update_network_one_to_many_nat_rules(collect)
+
+```
+
+
+### <a name="get_network_one_to_many_nat_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MX1ManyNATRulesController.get_network_one_to_many_nat_rules") get_network_one_to_many_nat_rules
+
+> Return the 1:Many NAT mapping rules for an MX network
+
+
+```ruby
+def get_network_one_to_many_nat_rules(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = mX1ManyNATRules_controller.get_network_one_to_many_nat_rules(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="firewalled_services_controller"></a>![Class: ](https://apidocs.io/img/class.png ".FirewalledServicesController") FirewalledServicesController
+
+### Get singleton instance
+
+The singleton instance of the ``` FirewalledServicesController ``` class can be accessed from the API Client.
+
+```ruby
+firewalledServices_controller = client.firewalled_services
+```
+
+### <a name="update_network_firewalled_service"></a>![Method: ](https://apidocs.io/img/method.png ".FirewalledServicesController.update_network_firewalled_service") update_network_firewalled_service
+
+> Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
+
+
+```ruby
+def update_network_firewalled_service(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| service |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_firewalled_service |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+service = 'service'
+collect['service'] = service
+
+update_network_firewalled_service = UpdateNetworkFirewalledServiceModel.new
+collect['update_network_firewalled_service'] = update_network_firewalled_service
+
+
+result = firewalledServices_controller.update_network_firewalled_service(collect)
+
+```
+
+
+### <a name="get_network_firewalled_service"></a>![Method: ](https://apidocs.io/img/method.png ".FirewalledServicesController.get_network_firewalled_service") get_network_firewalled_service
+
+> Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
+
+
+```ruby
+def get_network_firewalled_service(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| service |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+service = 'service'
+collect['service'] = service
+
+
+result = firewalledServices_controller.get_network_firewalled_service(collect)
+
+```
+
+
+### <a name="get_network_firewalled_services"></a>![Method: ](https://apidocs.io/img/method.png ".FirewalledServicesController.get_network_firewalled_services") get_network_firewalled_services
+
+> List the appliance services and their accessibility rules
+
+
+```ruby
+def get_network_firewalled_services(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = firewalledServices_controller.get_network_firewalled_services(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="traffic_shaping_controller"></a>![Class: ](https://apidocs.io/img/class.png ".TrafficShapingController") TrafficShapingController
+
+### Get singleton instance
+
+The singleton instance of the ``` TrafficShapingController ``` class can be accessed from the API Client.
+
+```ruby
+trafficShaping_controller = client.traffic_shaping
+```
+
+### <a name="get_network_ssid_traffic_shaping"></a>![Method: ](https://apidocs.io/img/method.png ".TrafficShapingController.get_network_ssid_traffic_shaping") get_network_ssid_traffic_shaping
+
+> Display the traffic shaping settings for a SSID on an MR network
+
+
+```ruby
+def get_network_ssid_traffic_shaping(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+number = 'number'
+collect['number'] = number
+
+
+result = trafficShaping_controller.get_network_ssid_traffic_shaping(collect)
+
+```
+
+
+### <a name="update_network_ssid_traffic_shaping"></a>![Method: ](https://apidocs.io/img/method.png ".TrafficShapingController.update_network_ssid_traffic_shaping") update_network_ssid_traffic_shaping
+
+> Update the traffic shaping settings for an SSID on an MR network
+
+
+```ruby
+def update_network_ssid_traffic_shaping(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_ssid_traffic_shaping |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+number = 'number'
+collect['number'] = number
+
+update_network_ssid_traffic_shaping = UpdateNetworkSsidTrafficShapingModel.new
+collect['update_network_ssid_traffic_shaping'] = update_network_ssid_traffic_shaping
+
+
+result = trafficShaping_controller.update_network_ssid_traffic_shaping(collect)
+
+```
+
+
+### <a name="get_network_traffic_shaping"></a>![Method: ](https://apidocs.io/img/method.png ".TrafficShapingController.get_network_traffic_shaping") get_network_traffic_shaping
+
+> Display the traffic shaping settings for an MX network
+
+
+```ruby
+def get_network_traffic_shaping(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = trafficShaping_controller.get_network_traffic_shaping(network_id)
+
+```
+
+
+### <a name="update_network_traffic_shaping"></a>![Method: ](https://apidocs.io/img/method.png ".TrafficShapingController.update_network_traffic_shaping") update_network_traffic_shaping
+
+> Update the traffic shaping settings for an MX network
+
+
+```ruby
+def update_network_traffic_shaping(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_traffic_shaping |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_traffic_shaping = UpdateNetworkTrafficShapingModel.new
+collect['update_network_traffic_shaping'] = update_network_traffic_shaping
+
+
+result = trafficShaping_controller.update_network_traffic_shaping(collect)
+
+```
+
+
+### <a name="get_network_traffic_shaping_application_categories"></a>![Method: ](https://apidocs.io/img/method.png ".TrafficShapingController.get_network_traffic_shaping_application_categories") get_network_traffic_shaping_application_categories
+
+> Returns the application categories for traffic shaping rules.
+
+
+```ruby
+def get_network_traffic_shaping_application_categories(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = trafficShaping_controller.get_network_traffic_shaping_application_categories(network_id)
+
+```
+
+
+### <a name="get_network_traffic_shaping_dscp_tagging_options"></a>![Method: ](https://apidocs.io/img/method.png ".TrafficShapingController.get_network_traffic_shaping_dscp_tagging_options") get_network_traffic_shaping_dscp_tagging_options
+
+> Returns the available DSCP tagging options for your traffic shaping rules.
+
+
+```ruby
+def get_network_traffic_shaping_dscp_tagging_options(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = trafficShaping_controller.get_network_traffic_shaping_dscp_tagging_options(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="wireless_health_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WirelessHealthController") WirelessHealthController
+
+### Get singleton instance
+
+The singleton instance of the ``` WirelessHealthController ``` class can be accessed from the API Client.
+
+```ruby
+wirelessHealth_controller = client.wireless_health
+```
+
+### <a name="get_network_client_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_client_connection_stats") get_network_client_connection_stats
+
+> Aggregated connectivity info for a given client on this network. Clients are identified by their MAC.
+
+
+```ruby
+def get_network_client_connection_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+
+result = wirelessHealth_controller.get_network_client_connection_stats(collect)
+
+```
+
+
+### <a name="get_network_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_latency_stats") get_network_latency_stats
+
+> Aggregated latency info for this network
+
+
+```ruby
+def get_network_latency_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+fields = 'fields'
+collect['fields'] = fields
+
+
+result = wirelessHealth_controller.get_network_latency_stats(collect)
+
+```
+
+
+### <a name="get_network_devices_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_devices_latency_stats") get_network_devices_latency_stats
+
+> Aggregated latency info for this network, grouped by node
+
+
+```ruby
+def get_network_devices_latency_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+fields = 'fields'
+collect['fields'] = fields
+
+
+result = wirelessHealth_controller.get_network_devices_latency_stats(collect)
+
+```
+
+
+### <a name="get_network_device_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_device_latency_stats") get_network_device_latency_stats
+
+> Aggregated latency info for a given AP on this network
+
+
+```ruby
+def get_network_device_latency_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+fields = 'fields'
+collect['fields'] = fields
+
+
+result = wirelessHealth_controller.get_network_device_latency_stats(collect)
+
+```
+
+
+### <a name="get_network_clients_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_clients_latency_stats") get_network_clients_latency_stats
+
+> Aggregated latency info for this network, grouped by clients
+
+
+```ruby
+def get_network_clients_latency_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+fields = 'fields'
+collect['fields'] = fields
+
+
+result = wirelessHealth_controller.get_network_clients_latency_stats(collect)
+
+```
+
+
+### <a name="get_network_client_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_client_latency_stats") get_network_client_latency_stats
+
+> Aggregated latency info for a given client on this network. Clients are identified by their MAC.
+
+
+```ruby
+def get_network_client_latency_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+fields = 'fields'
+collect['fields'] = fields
+
+
+result = wirelessHealth_controller.get_network_client_latency_stats(collect)
+
+```
+
+
+### <a name="get_network_failed_connections"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_failed_connections") get_network_failed_connections
+
+> List of all failed client connection events on this network in a given time range
+
+
+```ruby
+def get_network_failed_connections(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| serial |  ``` Optional ```  | Filter by AP |
+| client_id |  ``` Optional ```  | Filter by client MAC |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+serial = 'serial'
+collect['serial'] = serial
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+
+result = wirelessHealth_controller.get_network_failed_connections(collect)
+
+```
+
+
+### <a name="get_network_clients_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_clients_connection_stats") get_network_clients_connection_stats
+
+> Aggregated connectivity info for this network, grouped by clients
+
+
+```ruby
+def get_network_clients_connection_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+
+result = wirelessHealth_controller.get_network_clients_connection_stats(collect)
+
+```
+
+
+### <a name="get_network_device_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_device_connection_stats") get_network_device_connection_stats
+
+> Aggregated connectivity info for a given AP on this network
+
+
+```ruby
+def get_network_device_connection_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+
+result = wirelessHealth_controller.get_network_device_connection_stats(collect)
+
+```
+
+
+### <a name="get_network_devices_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_devices_connection_stats") get_network_devices_connection_stats
+
+> Aggregated connectivity info for this network, grouped by node
+
+
+```ruby
+def get_network_devices_connection_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+
+result = wirelessHealth_controller.get_network_devices_connection_stats(collect)
+
+```
+
+
+### <a name="get_network_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_connection_stats") get_network_connection_stats
+
+> Aggregated connectivity info for this network
+
+
+```ruby
+def get_network_connection_stats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 180 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. |
+| ssid |  ``` Optional ```  | Filter results by SSID |
+| vlan |  ``` Optional ```  | Filter results by VLAN |
+| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 116
+collect['timespan'] = timespan
+
+ssid = 116
+collect['ssid'] = ssid
+
+vlan = 116
+collect['vlan'] = vlan
+
+ap_tag = 'apTag'
+collect['ap_tag'] = ap_tag
+
+
+result = wirelessHealth_controller.get_network_connection_stats(collect)
 
 ```
 
@@ -421,1393 +1687,23 @@ result = alertSettings_controller.update_network_alert_settings(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="mv_sense_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MVSenseController") MVSenseController
+## <a name="admins_controller"></a>![Class: ](https://apidocs.io/img/class.png ".AdminsController") AdminsController
 
 ### Get singleton instance
 
-The singleton instance of the ``` MVSenseController ``` class can be accessed from the API Client.
+The singleton instance of the ``` AdminsController ``` class can be accessed from the API Client.
 
 ```ruby
-mVSense_controller = client.mv_sense
+admins_controller = client.admins
 ```
 
-### <a name="get_device_camera_analytics_zones"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_zones") get_device_camera_analytics_zones
+### <a name="delete_organization_admin"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.delete_organization_admin") delete_organization_admin
 
-> Returns all configured analytic zones for this camera
+> Revoke all access for a dashboard administrator within this organization
 
 
 ```ruby
-def get_device_camera_analytics_zones(serial); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-serial = 'serial'
-
-result = mVSense_controller.get_device_camera_analytics_zones(serial)
-
-```
-
-
-### <a name="get_device_camera_analytics_recent"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_recent") get_device_camera_analytics_recent
-
-> Returns most recent record for analytics zones
-
-
-```ruby
-def get_device_camera_analytics_recent(serial); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-serial = 'serial'
-
-result = mVSense_controller.get_device_camera_analytics_recent(serial)
-
-```
-
-
-### <a name="get_device_camera_analytics_live"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_live") get_device_camera_analytics_live
-
-> Returns live state from camera of analytics zones
-
-
-```ruby
-def get_device_camera_analytics_live(serial); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-serial = 'serial'
-
-result = mVSense_controller.get_device_camera_analytics_live(serial)
-
-```
-
-
-### <a name="get_device_camera_analytics_overview"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_overview") get_device_camera_analytics_overview
-
-> Returns an overview of aggregate analytics data for a timespan
-
-
-```ruby
-def get_device_camera_analytics_overview(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
-| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-serial = 'serial'
-collect['serial'] = serial
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-timespan = 14
-collect['timespan'] = timespan
-
-
-result = mVSense_controller.get_device_camera_analytics_overview(collect)
-
-```
-
-
-### <a name="get_device_camera_analytics_zone_history"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_zone_history") get_device_camera_analytics_zone_history
-
-> Return historical records for analytic zones
-
-
-```ruby
-def get_device_camera_analytics_zone_history(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| zone_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
-| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 14 hours after t0. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour. |
-| resolution |  ``` Optional ```  | The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-serial = 'serial'
-collect['serial'] = serial
-
-zone_id = 'zoneId'
-collect['zone_id'] = zone_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-timespan = 14
-collect['timespan'] = timespan
-
-resolution = 14
-collect['resolution'] = resolution
-
-
-result = mVSense_controller.get_device_camera_analytics_zone_history(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="api_usage_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIUsageController") APIUsageController
-
-### Get singleton instance
-
-The singleton instance of the ``` APIUsageController ``` class can be accessed from the API Client.
-
-```ruby
-aPIUsage_controller = client.api_usage
-```
-
-### <a name="get_organization_api_requests"></a>![Method: ](https://apidocs.io/img/method.png ".APIUsageController.get_organization_api_requests") get_organization_api_requests
-
-> List the API requests made by an organization
-
-
-```ruby
-def get_organization_api_requests(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
-| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days. |
-| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50. |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| admin_id |  ``` Optional ```  | Filter the results by the ID of the admin who made the API requests |
-| path |  ``` Optional ```  | Filter the results by the path of the API requests |
-| method |  ``` Optional ```  | Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE') |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-timespan = 14
-collect['timespan'] = timespan
-
-per_page = 14
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-admin_id = 'adminId'
-collect['admin_id'] = admin_id
-
-path = 'path'
-collect['path'] = path
-
-method = 'method'
-collect['method'] = method
-
-
-result = aPIUsage_controller.get_organization_api_requests(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="bluetooth_clients_controller"></a>![Class: ](https://apidocs.io/img/class.png ".BluetoothClientsController") BluetoothClientsController
-
-### Get singleton instance
-
-The singleton instance of the ``` BluetoothClientsController ``` class can be accessed from the API Client.
-
-```ruby
-bluetoothClients_controller = client.bluetooth_clients
-```
-
-### <a name="get_network_bluetooth_client"></a>![Method: ](https://apidocs.io/img/method.png ".BluetoothClientsController.get_network_bluetooth_client") get_network_bluetooth_client
-
-> Return a Bluetooth client
-
-
-```ruby
-def get_network_bluetooth_client(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| include_connectivity_history |  ``` Optional ```  | Include the connectivity history for this client |
-| connectivity_history_timespan |  ``` Optional ```  | The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-include_connectivity_history = 'includeConnectivityHistory'
-collect['include_connectivity_history'] = include_connectivity_history
-
-connectivity_history_timespan = 'connectivityHistoryTimespan'
-collect['connectivity_history_timespan'] = connectivity_history_timespan
-
-
-result = bluetoothClients_controller.get_network_bluetooth_client(collect)
-
-```
-
-
-### <a name="get_network_bluetooth_clients"></a>![Method: ](https://apidocs.io/img/method.png ".BluetoothClientsController.get_network_bluetooth_clients") get_network_bluetooth_clients
-
-> List the Bluetooth clients seen by APs in this network
-
-
-```ruby
-def get_network_bluetooth_clients(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 5 - 1000. Default is 10. |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| timespan |  ``` Optional ```  | The timespan, in seconds, used to look back from now for bluetooth clients |
-| include_connectivity_history |  ``` Optional ```  | Include the connectivity history for this client |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-per_page = 14
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-timespan = 'timespan'
-collect['timespan'] = timespan
-
-include_connectivity_history = 'includeConnectivityHistory'
-collect['include_connectivity_history'] = include_connectivity_history
-
-
-result = bluetoothClients_controller.get_network_bluetooth_clients(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="networks_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NetworksController") NetworksController
-
-### Get singleton instance
-
-The singleton instance of the ``` NetworksController ``` class can be accessed from the API Client.
-
-```ruby
-networks_controller = client.networks
-```
-
-### <a name="get_network_bluetooth_settings"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_bluetooth_settings") get_network_bluetooth_settings
-
-> Return the Bluetooth settings for a network. <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.
-
-
-```ruby
-def get_network_bluetooth_settings(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = networks_controller.get_network_bluetooth_settings(network_id)
-
-```
-
-
-### <a name="update_network_bluetooth_settings"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.update_network_bluetooth_settings") update_network_bluetooth_settings
-
-> Update the Bluetooth settings for a network. See the docs page for <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a>.
-
-
-```ruby
-def update_network_bluetooth_settings(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_bluetooth_settings |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_bluetooth_settings = UpdateNetworkBluetoothSettingsModel.new
-collect['update_network_bluetooth_settings'] = update_network_bluetooth_settings
-
-
-result = networks_controller.update_network_bluetooth_settings(collect)
-
-```
-
-
-### <a name="get_organization_networks"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_organization_networks") get_organization_networks
-
-> List the networks in an organization
-
-
-```ruby
-def get_organization_networks(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| config_template_id |  ``` Optional ```  | An optional parameter that is the ID of a config template. Will return all networks bound to that template. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-config_template_id = 'configTemplateId'
-collect['config_template_id'] = config_template_id
-
-
-result = networks_controller.get_organization_networks(collect)
-
-```
-
-
-### <a name="create_organization_networks"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.create_organization_networks") create_organization_networks
-
-> Create a network
-
-
-```ruby
-def create_organization_networks(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_organization_networks |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-create_organization_networks = CreateOrganizationNetworksModel.new
-collect['create_organization_networks'] = create_organization_networks
-
-
-result = networks_controller.create_organization_networks(collect)
-
-```
-
-
-### <a name="get_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network") get_network
-
-> Return a network
-
-
-```ruby
-def get_network(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = networks_controller.get_network(network_id)
-
-```
-
-
-### <a name="update_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.update_network") update_network
-
-> Update a network
-
-
-```ruby
-def update_network(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network = UpdateNetworkModel.new
-collect['update_network'] = update_network
-
-
-result = networks_controller.update_network(collect)
-
-```
-
-
-### <a name="delete_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.delete_network") delete_network
-
-> Delete a network
-
-
-```ruby
-def delete_network(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-networks_controller.delete_network(network_id)
-
-```
-
-
-### <a name="bind_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.bind_network") bind_network
-
-> Bind a network to a template.
-
-
-```ruby
-def bind_network(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| bind_network |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-bind_network = BindNetworkModel.new
-collect['bind_network'] = bind_network
-
-
-result = networks_controller.bind_network(collect)
-
-```
-
-
-### <a name="unbind_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.unbind_network") unbind_network
-
-> Unbind a network from a template.
-
-
-```ruby
-def unbind_network(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = networks_controller.unbind_network(network_id)
-
-```
-
-
-### <a name="get_network_traffic"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_traffic") get_network_traffic
-
-> The traffic analysis data for this network.
-> <a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
-> 
-
-
-```ruby
-def get_network_traffic(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| timespan |  ``` Required ```  | The timespan for the data. Must be an integer representing a duration in seconds between two hours and one month. (Mandatory.) |
-| device_type |  ``` Optional ```  | Filter the data by device type: combined (default), wireless, switch, appliance. When using combined, for each rule the data will come from the device type with the most usage. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-timespan = 'timespan'
-collect['timespan'] = timespan
-
-device_type = 'deviceType'
-collect['device_type'] = device_type
-
-
-result = networks_controller.get_network_traffic(collect)
-
-```
-
-
-### <a name="get_network_access_policies"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_access_policies") get_network_access_policies
-
-> List the access policies for this network. Only valid for MS networks.
-
-
-```ruby
-def get_network_access_policies(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = networks_controller.get_network_access_policies(network_id)
-
-```
-
-
-### <a name="get_network_air_marshal"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_air_marshal") get_network_air_marshal
-
-> List Air Marshal scan results from a network
-
-
-```ruby
-def get_network_air_marshal(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-timespan = 105
-collect['timespan'] = timespan
-
-
-result = networks_controller.get_network_air_marshal(collect)
-
-```
-
-
-### <a name="get_network_site_to_site_vpn"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_site_to_site_vpn") get_network_site_to_site_vpn
-
-> Return the site-to-site VPN settings of a network. Only valid for MX networks.
-
-
-```ruby
-def get_network_site_to_site_vpn(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = networks_controller.get_network_site_to_site_vpn(network_id)
-
-```
-
-
-### <a name="update_network_site_to_site_vpn"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.update_network_site_to_site_vpn") update_network_site_to_site_vpn
-
-> Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.
-
-
-```ruby
-def update_network_site_to_site_vpn(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_site_to_site_vpn |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_site_to_site_vpn = UpdateNetworkSiteToSiteVpnModel.new
-collect['update_network_site_to_site_vpn'] = update_network_site_to_site_vpn
-
-
-result = networks_controller.update_network_site_to_site_vpn(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="cameras_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CamerasController") CamerasController
-
-### Get singleton instance
-
-The singleton instance of the ``` CamerasController ``` class can be accessed from the API Client.
-
-```ruby
-cameras_controller = client.cameras
-```
-
-### <a name="get_network_camera_video_link"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.get_network_camera_video_link") get_network_camera_video_link
-
-> Returns video link for the specified camera. If a timestamp supplied, it links to that time.
-
-
-```ruby
-def get_network_camera_video_link(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| timestamp |  ``` Optional ```  | The video link will start at this timestamp. The timestamp is in UNIX Epoch time (milliseconds). |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-timestamp = 'timestamp'
-collect['timestamp'] = timestamp
-
-
-result = cameras_controller.get_network_camera_video_link(collect)
-
-```
-
-
-### <a name="snapshot_network_camera"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.snapshot_network_camera") snapshot_network_camera
-
-> Generate a snapshot of what the camera sees at the specified time and return a link to that image.
-
-
-```ruby
-def snapshot_network_camera(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| snapshot_network_camera |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-snapshot_network_camera = SnapshotNetworkCameraModel.new
-collect['snapshot_network_camera'] = snapshot_network_camera
-
-
-result = cameras_controller.snapshot_network_camera(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="clients_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ClientsController") ClientsController
-
-### Get singleton instance
-
-The singleton instance of the ``` ClientsController ``` class can be accessed from the API Client.
-
-```ruby
-clients_controller = client.clients
-```
-
-### <a name="get_network_client"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client") get_network_client
-
-> Return the client associated with the given identifier. This endpoint will lookup by client ID or either the MAC or IP depending on whether the network uses Track-by-IP.
-
-
-```ruby
-def get_network_client(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id_or_mac_or_ip |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id_or_mac_or_ip = 'idOrMacOrIp'
-collect['id_or_mac_or_ip'] = id_or_mac_or_ip
-
-
-result = clients_controller.get_network_client(collect)
-
-```
-
-
-### <a name="provision_network_clients"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.provision_network_clients") provision_network_clients
-
-> Provisions a client with a name and policy. Clients can be provisioned before they associate to the network.
-
-
-```ruby
-def provision_network_clients(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| provision_network_clients |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-provision_network_clients = ProvisionNetworkClientsModel.new
-collect['provision_network_clients'] = provision_network_clients
-
-
-result = clients_controller.provision_network_clients(collect)
-
-```
-
-
-### <a name="get_network_client_usage_history"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_usage_history") get_network_client_usage_history
-
-> Return the client's daily usage history. Usage data is in kilobytes.
-
-
-```ruby
-def get_network_client_usage_history(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id_or_mac_or_ip |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id_or_mac_or_ip = 'idOrMacOrIp'
-collect['id_or_mac_or_ip'] = id_or_mac_or_ip
-
-
-result = clients_controller.get_network_client_usage_history(collect)
-
-```
-
-
-### <a name="get_network_client_policy"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_policy") get_network_client_policy
-
-> Return the policy assigned to a client on the network.
-
-
-```ruby
-def get_network_client_policy(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| mac |  ``` Required ```  | TODO: Add a parameter description |
-| timespan |  ``` Optional ```  | The timespan for which clients will be fetched. Must be in seconds and less than or equal to a month (2592000 seconds). |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-mac = 'mac'
-collect['mac'] = mac
-
-timespan = 'timespan'
-collect['timespan'] = timespan
-
-
-result = clients_controller.get_network_client_policy(collect)
-
-```
-
-
-### <a name="update_network_client_policy"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.update_network_client_policy") update_network_client_policy
-
-> Update the policy assigned to a client on the network.
-
-
-```ruby
-def update_network_client_policy(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| mac |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_client_policy |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-mac = 'mac'
-collect['mac'] = mac
-
-update_network_client_policy = UpdateNetworkClientPolicyModel.new
-collect['update_network_client_policy'] = update_network_client_policy
-
-
-result = clients_controller.update_network_client_policy(collect)
-
-```
-
-
-### <a name="get_network_client_splash_authorization_status"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_splash_authorization_status") get_network_client_splash_authorization_status
-
-> Return the splash authorization for a client, for each SSID they've associated with through splash.
-
-
-```ruby
-def get_network_client_splash_authorization_status(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| mac |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-id = 'id'
-collect['id'] = id
-
-mac = 'mac'
-collect['mac'] = mac
-
-
-result = clients_controller.get_network_client_splash_authorization_status(collect)
-
-```
-
-
-### <a name="update_network_client_splash_authorization_status"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.update_network_client_splash_authorization_status") update_network_client_splash_authorization_status
-
-> Update a client's splash authorization.
-
-
-```ruby
-def update_network_client_splash_authorization_status(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| mac |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_client_splash_authorization_status |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-id = 'id'
-collect['id'] = id
-
-mac = 'mac'
-collect['mac'] = mac
-
-update_network_client_splash_authorization_status = UpdateNetworkClientSplashAuthorizationStatusModel.new
-collect['update_network_client_splash_authorization_status'] = update_network_client_splash_authorization_status
-
-
-result = clients_controller.update_network_client_splash_authorization_status(collect)
-
-```
-
-
-### <a name="get_device_clients"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_device_clients") get_device_clients
-
-> List the clients of a device, up to a maximum of a month ago. The usage of each client is returned in kilobytes. If the device is a switch, the switchport is returned; otherwise the switchport field is null.
-
-
-```ruby
-def get_device_clients(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-serial = 'serial'
-collect['serial'] = serial
-
-t0 = 't0'
-collect['t0'] = t0
-
-timespan = 105
-collect['timespan'] = timespan
-
-
-result = clients_controller.get_device_clients(collect)
-
-```
-
-
-### <a name="get_network_client_traffic_history"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_traffic_history") get_network_client_traffic_history
-
-> Return the client's network traffic data over time. Usage data is in kilobytes. This endpoint requires detailed traffic analysis to be enabled on the Network-wide > General page.
-
-
-```ruby
-def get_network_client_traffic_history(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id_or_mac_or_ip |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id_or_mac_or_ip = 'idOrMacOrIp'
-collect['id_or_mac_or_ip'] = id_or_mac_or_ip
-
-per_page = 105
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-
-result = clients_controller.get_network_client_traffic_history(collect)
-
-```
-
-
-### <a name="get_network_client_events"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_events") get_network_client_events
-
-> Return the events associated with this client
-
-
-```ruby
-def get_network_client_events(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id_or_mac_or_ip |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id_or_mac_or_ip = 'idOrMacOrIp'
-collect['id_or_mac_or_ip'] = id_or_mac_or_ip
-
-per_page = 105
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-
-result = clients_controller.get_network_client_events(collect)
-
-```
-
-
-### <a name="get_network_client_latency_history"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_latency_history") get_network_client_latency_history
-
-> Return the latency history for a client. The latency data is from a sample of 2% of packets and is grouped into 4 traffic categories: background, best effort, video, voice. Within these categories the sampled packet counters are bucketed by latency in milliseconds.
-
-
-```ruby
-def get_network_client_latency_history(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id_or_mac_or_ip |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 791 days from today. |
-| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 791 days after t0. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 1 day. |
-| resolution |  ``` Optional ```  | The time resolution in seconds for returned data. The valid resolutions are: 86400. The default is 86400. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id_or_mac_or_ip = 'idOrMacOrIp'
-collect['id_or_mac_or_ip'] = id_or_mac_or_ip
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-timespan = 105
-collect['timespan'] = timespan
-
-resolution = 105
-collect['resolution'] = resolution
-
-
-result = clients_controller.get_network_client_latency_history(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="config_templates_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ConfigTemplatesController") ConfigTemplatesController
-
-### Get singleton instance
-
-The singleton instance of the ``` ConfigTemplatesController ``` class can be accessed from the API Client.
-
-```ruby
-configTemplates_controller = client.config_templates
-```
-
-### <a name="get_organization_config_templates"></a>![Method: ](https://apidocs.io/img/method.png ".ConfigTemplatesController.get_organization_config_templates") get_organization_config_templates
-
-> List the configuration templates for this organization
-
-
-```ruby
-def get_organization_config_templates(organization_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-organization_id = 'organizationId'
-
-result = configTemplates_controller.get_organization_config_templates(organization_id)
-
-```
-
-
-### <a name="delete_organization_config_template"></a>![Method: ](https://apidocs.io/img/method.png ".ConfigTemplatesController.delete_organization_config_template") delete_organization_config_template
-
-> Remove a configuration template
-
-
-```ruby
-def delete_organization_config_template(options = {}); end
+def delete_organization_admin(options = {}); end
 ```
 
 #### Parameters
@@ -1830,698 +1726,18 @@ id = 'id'
 collect['id'] = id
 
 
-configTemplates_controller.delete_organization_config_template(collect)
+admins_controller.delete_organization_admin(collect)
 
 ```
 
 
-[Back to List of Controllers](#list_of_controllers)
+### <a name="create_organization_admin"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.create_organization_admin") create_organization_admin
 
-## <a name="devices_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DevicesController") DevicesController
-
-### Get singleton instance
-
-The singleton instance of the ``` DevicesController ``` class can be accessed from the API Client.
-
-```ruby
-devices_controller = client.devices
-```
-
-### <a name="get_network_devices"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_devices") get_network_devices
-
-> List the devices in a network
+> Create a new dashboard administrator
 
 
 ```ruby
-def get_network_devices(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = devices_controller.get_network_devices(network_id)
-
-```
-
-
-### <a name="get_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device") get_network_device
-
-> Return a single device
-
-
-```ruby
-def get_network_device(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-
-result = devices_controller.get_network_device(collect)
-
-```
-
-
-### <a name="update_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.update_network_device") update_network_device
-
-> Update the attributes of a device
-
-
-```ruby
-def update_network_device(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_device |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-update_network_device = UpdateNetworkDeviceModel.new
-collect['update_network_device'] = update_network_device
-
-
-result = devices_controller.update_network_device(collect)
-
-```
-
-
-### <a name="get_network_device_performance"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_performance") get_network_device_performance
-
-> Return the performance score for a single device. Only primary MX devices supported. If no data is available, a 204 error code is returned.
-
-
-```ruby
-def get_network_device_performance(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-
-result = devices_controller.get_network_device_performance(collect)
-
-```
-
-
-### <a name="get_network_device_uplink"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_uplink") get_network_device_uplink
-
-> Return the uplink information for a device.
-
-
-```ruby
-def get_network_device_uplink(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-
-result = devices_controller.get_network_device_uplink(collect)
-
-```
-
-
-### <a name="get_network_device_lldp_cdp"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_lldp_cdp") get_network_device_lldp_cdp
-
-> List LLDP and CDP information for a device
-
-
-```ruby
-def get_network_device_lldp_cdp(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| timespan |  ``` Optional ```  | The timespan for which LLDP and CDP information will be fetched. Must be in seconds and less than or equal to a month (2592000 seconds). LLDP and CDP information is sent to the Meraki dashboard every 10 minutes. In instances where this LLDP and CDP information matches an existing entry in the Meraki dashboard, the data is updated once every two hours. Meraki recommends querying LLDP and CDP information at an interval slightly greater than two hours, to ensure that unchanged CDP / LLDP information can be queried consistently. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-timespan = 'timespan'
-collect['timespan'] = timespan
-
-
-result = devices_controller.get_network_device_lldp_cdp(collect)
-
-```
-
-
-### <a name="claim_network_devices"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.claim_network_devices") claim_network_devices
-
-> Claim a device into a network
-
-
-```ruby
-def claim_network_devices(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| claim_network_devices |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-claim_network_devices = ClaimNetworkDevicesModel.new
-collect['claim_network_devices'] = claim_network_devices
-
-
-result = devices_controller.claim_network_devices(collect)
-
-```
-
-
-### <a name="remove_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.remove_network_device") remove_network_device
-
-> Remove a single device
-
-
-```ruby
-def remove_network_device(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-
-result = devices_controller.remove_network_device(collect)
-
-```
-
-
-### <a name="get_network_device_loss_and_latency_history"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_loss_and_latency_history") get_network_device_loss_and_latency_history
-
-> Get the uplink loss percentage and latency in milliseconds for a wired network device.
-
-
-```ruby
-def get_network_device_loss_and_latency_history(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| ip |  ``` Required ```  | The destination IP used to obtain the requested stats. This is required. |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
-| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. |
-| resolution |  ``` Optional ```  | The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60. |
-| uplink |  ``` Optional ```  | The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-ip = 'ip'
-collect['ip'] = ip
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-timespan = 64
-collect['timespan'] = timespan
-
-resolution = 64
-collect['resolution'] = resolution
-
-uplink = 'uplink'
-collect['uplink'] = uplink
-
-
-result = devices_controller.get_network_device_loss_and_latency_history(collect)
-
-```
-
-
-### <a name="reboot_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.reboot_network_device") reboot_network_device
-
-> Reboot a device
-
-
-```ruby
-def reboot_network_device(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-
-result = devices_controller.reboot_network_device(collect)
-
-```
-
-
-### <a name="blink_leds_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.blink_leds_network_device") blink_leds_network_device
-
-> Blink the LEDs on a device
-
-
-```ruby
-def blink_leds_network_device(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| blink_leds_network_device |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-serial = 'serial'
-collect['serial'] = serial
-
-blink_leds_network_device = BlinkLedsNetworkDeviceModel.new
-collect['blink_leds_network_device'] = blink_leds_network_device
-
-
-result = devices_controller.blink_leds_network_device(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="mx_cellular_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXCellularFirewallController") MXCellularFirewallController
-
-### Get singleton instance
-
-The singleton instance of the ``` MXCellularFirewallController ``` class can be accessed from the API Client.
-
-```ruby
-mXCellularFirewall_controller = client.mx_cellular_firewall
-```
-
-### <a name="get_network_cellular_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXCellularFirewallController.get_network_cellular_firewall_rules") get_network_cellular_firewall_rules
-
-> Return the cellular firewall rules for an MX network
-
-
-```ruby
-def get_network_cellular_firewall_rules(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = mXCellularFirewall_controller.get_network_cellular_firewall_rules(network_id)
-
-```
-
-
-### <a name="update_network_cellular_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXCellularFirewallController.update_network_cellular_firewall_rules") update_network_cellular_firewall_rules
-
-> Update the cellular firewall rules of an MX network
-
-
-```ruby
-def update_network_cellular_firewall_rules(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_cellular_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_cellular_firewall_rules = UpdateNetworkCellularFirewallRulesModel.new
-collect['update_network_cellular_firewall_rules'] = update_network_cellular_firewall_rules
-
-
-result = mXCellularFirewall_controller.update_network_cellular_firewall_rules(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="mxl3_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXL3FirewallController") MXL3FirewallController
-
-### Get singleton instance
-
-The singleton instance of the ``` MXL3FirewallController ``` class can be accessed from the API Client.
-
-```ruby
-mXL3Firewall_controller = client.mxl_3_firewall
-```
-
-### <a name="get_network_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL3FirewallController.get_network_l3_firewall_rules") get_network_l3_firewall_rules
-
-> Return the L3 firewall rules for an MX network
-
-
-```ruby
-def get_network_l3_firewall_rules(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = mXL3Firewall_controller.get_network_l3_firewall_rules(network_id)
-
-```
-
-
-### <a name="update_network_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL3FirewallController.update_network_l3_firewall_rules") update_network_l3_firewall_rules
-
-> Update the L3 firewall rules of an MX network
-
-
-```ruby
-def update_network_l3_firewall_rules(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_l3_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_l3_firewall_rules = UpdateNetworkL3FirewallRulesModel.new
-collect['update_network_l3_firewall_rules'] = update_network_l3_firewall_rules
-
-
-result = mXL3Firewall_controller.update_network_l3_firewall_rules(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="mxl7_application_categories_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXL7ApplicationCategoriesController") MXL7ApplicationCategoriesController
-
-### Get singleton instance
-
-The singleton instance of the ``` MXL7ApplicationCategoriesController ``` class can be accessed from the API Client.
-
-```ruby
-mXL7ApplicationCategories_controller = client.mxl_7_application_categories
-```
-
-### <a name="get_network_l7_firewall_rules_application_categories"></a>![Method: ](https://apidocs.io/img/method.png ".MXL7ApplicationCategoriesController.get_network_l7_firewall_rules_application_categories") get_network_l7_firewall_rules_application_categories
-
-> Return the L7 firewall application categories and their associated applications for an MX network
-
-
-```ruby
-def get_network_l7_firewall_rules_application_categories(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = mXL7ApplicationCategories_controller.get_network_l7_firewall_rules_application_categories(network_id)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="mxl7_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXL7FirewallController") MXL7FirewallController
-
-### Get singleton instance
-
-The singleton instance of the ``` MXL7FirewallController ``` class can be accessed from the API Client.
-
-```ruby
-mXL7Firewall_controller = client.mxl_7_firewall
-```
-
-### <a name="get_network_l7_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL7FirewallController.get_network_l7_firewall_rules") get_network_l7_firewall_rules
-
-> List the MX L7 firewall rules for an MX network
-
-
-```ruby
-def get_network_l7_firewall_rules(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = mXL7Firewall_controller.get_network_l7_firewall_rules(network_id)
-
-```
-
-
-### <a name="update_network_l7_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL7FirewallController.update_network_l7_firewall_rules") update_network_l7_firewall_rules
-
-> Update the MX L7 firewall rules for an MX network
-
-
-```ruby
-def update_network_l7_firewall_rules(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_l7_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_l7_firewall_rules = UpdateNetworkL7FirewallRulesModel.new
-collect['update_network_l7_firewall_rules'] = update_network_l7_firewall_rules
-
-
-result = mXL7Firewall_controller.update_network_l7_firewall_rules(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="mxvpn_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXVPNFirewallController") MXVPNFirewallController
-
-### Get singleton instance
-
-The singleton instance of the ``` MXVPNFirewallController ``` class can be accessed from the API Client.
-
-```ruby
-mXVPNFirewall_controller = client.mxvpn_firewall
-```
-
-### <a name="get_organization_vpn_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXVPNFirewallController.get_organization_vpn_firewall_rules") get_organization_vpn_firewall_rules
-
-> Return the firewall rules for an organization's site-to-site VPN
-
-
-```ruby
-def get_organization_vpn_firewall_rules(organization_id); end
+def create_organization_admin(options = {}); end
 ```
 
 #### Parameters
@@ -2529,33 +1745,7 @@ def get_organization_vpn_firewall_rules(organization_id); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | organization_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-organization_id = 'organizationId'
-
-result = mXVPNFirewall_controller.get_organization_vpn_firewall_rules(organization_id)
-
-```
-
-
-### <a name="update_organization_vpn_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXVPNFirewallController.update_organization_vpn_firewall_rules") update_organization_vpn_firewall_rules
-
-> Update the firewall rules of an organization's site-to-site VPN
-
-
-```ruby
-def update_organization_vpn_firewall_rules(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_organization_vpn_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
+| create_organization_admin |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -2566,34 +1756,424 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-update_organization_vpn_firewall_rules = UpdateOrganizationVpnFirewallRulesModel.new
-collect['update_organization_vpn_firewall_rules'] = update_organization_vpn_firewall_rules
+create_organization_admin = CreateOrganizationAdminModel.new
+collect['create_organization_admin'] = create_organization_admin
 
 
-result = mXVPNFirewall_controller.update_organization_vpn_firewall_rules(collect)
+result = admins_controller.create_organization_admin(collect)
+
+```
+
+
+### <a name="get_organization_admins"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.get_organization_admins") get_organization_admins
+
+> List the dashboard administrators in this organization
+
+
+```ruby
+def get_organization_admins(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = admins_controller.get_organization_admins(organization_id)
+
+```
+
+
+### <a name="update_organization_admin"></a>![Method: ](https://apidocs.io/img/method.png ".AdminsController.update_organization_admin") update_organization_admin
+
+> Update an administrator
+
+
+```ruby
+def update_organization_admin(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_admin |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+id = 'id'
+collect['id'] = id
+
+update_organization_admin = UpdateOrganizationAdminModel.new
+collect['update_organization_admin'] = update_organization_admin
+
+
+result = admins_controller.update_organization_admin(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="mrl3_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MRL3FirewallController") MRL3FirewallController
+## <a name="action_batches_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ActionBatchesController") ActionBatchesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` MRL3FirewallController ``` class can be accessed from the API Client.
+The singleton instance of the ``` ActionBatchesController ``` class can be accessed from the API Client.
 
 ```ruby
-mRL3Firewall_controller = client.mrl_3_firewall
+actionBatches_controller = client.action_batches
 ```
 
-### <a name="get_network_ssid_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MRL3FirewallController.get_network_ssid_l3_firewall_rules") get_network_ssid_l3_firewall_rules
+### <a name="delete_organization_action_batch"></a>![Method: ](https://apidocs.io/img/method.png ".ActionBatchesController.delete_organization_action_batch") delete_organization_action_batch
 
-> Return the L3 firewall rules for an SSID on an MR network
+> Delete an action batch
 
 
 ```ruby
-def get_network_ssid_l3_firewall_rules(options = {}); end
+def delete_organization_action_batch(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+id = 'id'
+collect['id'] = id
+
+
+actionBatches_controller.delete_organization_action_batch(collect)
+
+```
+
+
+### <a name="get_organization_action_batch"></a>![Method: ](https://apidocs.io/img/method.png ".ActionBatchesController.get_organization_action_batch") get_organization_action_batch
+
+> Return an action batch
+
+
+```ruby
+def get_organization_action_batch(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+id = 'id'
+collect['id'] = id
+
+
+result = actionBatches_controller.get_organization_action_batch(collect)
+
+```
+
+
+### <a name="get_organization_action_batches"></a>![Method: ](https://apidocs.io/img/method.png ".ActionBatchesController.get_organization_action_batches") get_organization_action_batches
+
+> Return the list of action batches in the organization
+
+
+```ruby
+def get_organization_action_batches(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = actionBatches_controller.get_organization_action_batches(organization_id)
+
+```
+
+
+### <a name="create_organization_action_batch"></a>![Method: ](https://apidocs.io/img/method.png ".ActionBatchesController.create_organization_action_batch") create_organization_action_batch
+
+> Create an action batch
+
+
+```ruby
+def create_organization_action_batch(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_organization_action_batch |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+create_organization_action_batch = CreateOrganizationActionBatchModel.new
+collect['create_organization_action_batch'] = create_organization_action_batch
+
+
+result = actionBatches_controller.create_organization_action_batch(collect)
+
+```
+
+
+### <a name="update_organization_action_batch"></a>![Method: ](https://apidocs.io/img/method.png ".ActionBatchesController.update_organization_action_batch") update_organization_action_batch
+
+> Update an action batch
+
+
+```ruby
+def update_organization_action_batch(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_action_batch |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+id = 'id'
+collect['id'] = id
+
+update_organization_action_batch = UpdateOrganizationActionBatchModel.new
+collect['update_organization_action_batch'] = update_organization_action_batch
+
+
+result = actionBatches_controller.update_organization_action_batch(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="switch_ports_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchPortsController") SwitchPortsController
+
+### Get singleton instance
+
+The singleton instance of the ``` SwitchPortsController ``` class can be accessed from the API Client.
+
+```ruby
+switchPorts_controller = client.switch_ports
+```
+
+### <a name="update_device_switch_port"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.update_device_switch_port") update_device_switch_port
+
+> Update a switch port
+
+
+```ruby
+def update_device_switch_port(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+| update_device_switch_port |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+serial = 'serial'
+collect['serial'] = serial
+
+number = 'number'
+collect['number'] = number
+
+update_device_switch_port = UpdateDeviceSwitchPortModel.new
+collect['update_device_switch_port'] = update_device_switch_port
+
+
+result = switchPorts_controller.update_device_switch_port(collect)
+
+```
+
+
+### <a name="get_device_switch_port"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.get_device_switch_port") get_device_switch_port
+
+> Return a switch port
+
+
+```ruby
+def get_device_switch_port(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+serial = 'serial'
+collect['serial'] = serial
+
+number = 'number'
+collect['number'] = number
+
+
+result = switchPorts_controller.get_device_switch_port(collect)
+
+```
+
+
+### <a name="get_device_switch_ports"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.get_device_switch_ports") get_device_switch_ports
+
+> List the switch ports for a switch
+
+
+```ruby
+def get_device_switch_ports(serial); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+serial = 'serial'
+
+result = switchPorts_controller.get_device_switch_ports(serial)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="ssids_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SsidsController") SsidsController
+
+### Get singleton instance
+
+The singleton instance of the ``` SsidsController ``` class can be accessed from the API Client.
+
+```ruby
+ssids_controller = client.ssids
+```
+
+### <a name="update_network_ssid"></a>![Method: ](https://apidocs.io/img/method.png ".SsidsController.update_network_ssid") update_network_ssid
+
+> Update the attributes of an SSID
+
+
+```ruby
+def update_network_ssid(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_ssid |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+number = 'number'
+collect['number'] = number
+
+update_network_ssid = UpdateNetworkSsidModel.new
+collect['update_network_ssid'] = update_network_ssid
+
+
+result = ssids_controller.update_network_ssid(collect)
+
+```
+
+
+### <a name="get_network_ssid"></a>![Method: ](https://apidocs.io/img/method.png ".SsidsController.get_network_ssid") get_network_ssid
+
+> Return a single SSID
+
+
+```ruby
+def get_network_ssid(options = {}); end
 ```
 
 #### Parameters
@@ -2616,18 +2196,56 @@ number = 'number'
 collect['number'] = number
 
 
-result = mRL3Firewall_controller.get_network_ssid_l3_firewall_rules(collect)
+result = ssids_controller.get_network_ssid(collect)
 
 ```
 
 
-### <a name="update_network_ssid_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MRL3FirewallController.update_network_ssid_l3_firewall_rules") update_network_ssid_l3_firewall_rules
+### <a name="get_network_ssids"></a>![Method: ](https://apidocs.io/img/method.png ".SsidsController.get_network_ssids") get_network_ssids
 
-> Update the L3 firewall rules of an SSID on an MR network
+> List the SSIDs in a network. Supports networks with access points or wireless-enabled security appliances and teleworker gateways.
 
 
 ```ruby
-def update_network_ssid_l3_firewall_rules(options = {}); end
+def get_network_ssids(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = ssids_controller.get_network_ssids(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="splash_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SplashSettingsController") SplashSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` SplashSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+splashSettings_controller = client.splash_settings
+```
+
+### <a name="update_network_ssids_plash_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SplashSettingsController.update_network_ssids_plash_settings") update_network_ssids_plash_settings
+
+> Modify the splash page settings for the given SSID
+
+
+```ruby
+def update_network_ssids_plash_settings(options = {}); end
 ```
 
 #### Parameters
@@ -2636,7 +2254,7 @@ def update_network_ssid_l3_firewall_rules(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | number |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_ssid_l3_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
+| update_network_ssids_plash_settings |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -2650,68 +2268,78 @@ collect['network_id'] = network_id
 number = 'number'
 collect['number'] = number
 
-update_network_ssid_l3_firewall_rules = UpdateNetworkSsidL3FirewallRulesModel.new
-collect['update_network_ssid_l3_firewall_rules'] = update_network_ssid_l3_firewall_rules
+update_network_ssids_plash_settings = UpdateNetworkSsidsPlashSettingsModel.new
+collect['update_network_ssids_plash_settings'] = update_network_ssids_plash_settings
 
 
-result = mRL3Firewall_controller.update_network_ssid_l3_firewall_rules(collect)
+result = splashSettings_controller.update_network_ssids_plash_settings(collect)
+
+```
+
+
+### <a name="get_network_ssids_plash_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SplashSettingsController.get_network_ssids_plash_settings") get_network_ssids_plash_settings
+
+> Display the splash page settings for the given SSID
+
+
+```ruby
+def get_network_ssids_plash_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+number = 'number'
+collect['number'] = number
+
+
+result = splashSettings_controller.get_network_ssids_plash_settings(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="group_policies_controller"></a>![Class: ](https://apidocs.io/img/class.png ".GroupPoliciesController") GroupPoliciesController
+## <a name="splash_login_attempts_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SplashLoginAttemptsController") SplashLoginAttemptsController
 
 ### Get singleton instance
 
-The singleton instance of the ``` GroupPoliciesController ``` class can be accessed from the API Client.
+The singleton instance of the ``` SplashLoginAttemptsController ``` class can be accessed from the API Client.
 
 ```ruby
-groupPolicies_controller = client.group_policies
+splashLoginAttempts_controller = client.splash_login_attempts
 ```
 
-### <a name="get_network_group_policies"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.get_network_group_policies") get_network_group_policies
+### <a name="get_network_splash_login_attempts"></a>![Method: ](https://apidocs.io/img/method.png ".SplashLoginAttemptsController.get_network_splash_login_attempts") get_network_splash_login_attempts
 
-> List the group policies in a network
-
-
-```ruby
-def get_network_group_policies(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = groupPolicies_controller.get_network_group_policies(network_id)
-
-```
-
-
-### <a name="create_network_group_policies"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.create_network_group_policies") create_network_group_policies
-
-> Create a group policy
+> List the splash login attempts for a network
 
 
 ```ruby
-def create_network_group_policies(options = {}); end
+def get_network_splash_login_attempts(options = {}); end
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_group_policies |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+| ssid_number |  ``` Optional ```  | Only return the login attempts for the specified SSID |
+| login_identifier |  ``` Optional ```  | The username, email, or phone number used during login |
+| timespan |  ``` Optional ```  | The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months |
 
 
 #### Example Usage
@@ -2719,169 +2347,43 @@ def create_network_group_policies(options = {}); end
 ```ruby
 collect = Hash.new
 
-network_id = 'networkId'
-collect['network_id'] = network_id
+id = 'id'
+collect['id'] = id
 
-create_network_group_policies = CreateNetworkGroupPoliciesModel.new
-collect['create_network_group_policies'] = create_network_group_policies
+ssid_number = 'ssidNumber'
+collect['ssid_number'] = ssid_number
 
+login_identifier = 'loginIdentifier'
+collect['login_identifier'] = login_identifier
 
-result = groupPolicies_controller.create_network_group_policies(collect)
-
-```
-
-
-### <a name="get_network_group_policy"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.get_network_group_policy") get_network_group_policy
-
-> Display a group policy
+timespan = 'timespan'
+collect['timespan'] = timespan
 
 
-```ruby
-def get_network_group_policy(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| group_policy_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-group_policy_id = 'groupPolicyId'
-collect['group_policy_id'] = group_policy_id
-
-
-result = groupPolicies_controller.get_network_group_policy(collect)
-
-```
-
-
-### <a name="update_network_group_policy"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.update_network_group_policy") update_network_group_policy
-
-> Update a group policy
-
-
-```ruby
-def update_network_group_policy(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| group_policy_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_group_policy |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-group_policy_id = 'groupPolicyId'
-collect['group_policy_id'] = group_policy_id
-
-update_network_group_policy = UpdateNetworkGroupPolicyModel.new
-collect['update_network_group_policy'] = update_network_group_policy
-
-
-result = groupPolicies_controller.update_network_group_policy(collect)
-
-```
-
-
-### <a name="delete_network_group_policy"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.delete_network_group_policy") delete_network_group_policy
-
-> Delete a group policy
-
-
-```ruby
-def delete_network_group_policy(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| group_policy_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-group_policy_id = 'groupPolicyId'
-collect['group_policy_id'] = group_policy_id
-
-
-groupPolicies_controller.delete_network_group_policy(collect)
+result = splashLoginAttempts_controller.get_network_splash_login_attempts(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="http_servers_controller"></a>![Class: ](https://apidocs.io/img/class.png ".HTTPServersController") HTTPServersController
+## <a name="sm_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SMController") SMController
 
 ### Get singleton instance
 
-The singleton instance of the ``` HTTPServersController ``` class can be accessed from the API Client.
+The singleton instance of the ``` SMController ``` class can be accessed from the API Client.
 
 ```ruby
-hTTPServers_controller = client.http_servers
+sM_controller = client.sm
 ```
 
-### <a name="get_network_http_servers"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.get_network_http_servers") get_network_http_servers
+### <a name="get_network_sm_softwares"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_softwares") get_network_sm_softwares
 
-> List the HTTP servers for a network
-
-
-```ruby
-def get_network_http_servers(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = hTTPServers_controller.get_network_http_servers(network_id)
-
-```
-
-
-### <a name="create_network_http_servers"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.create_network_http_servers") create_network_http_servers
-
-> Add an HTTP server
+> Get a list of softwares associated with a device
 
 
 ```ruby
-def create_network_http_servers(options = {}); end
+def get_network_sm_softwares(options = {}); end
 ```
 
 #### Parameters
@@ -2889,7 +2391,7 @@ def create_network_http_servers(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_http_servers |  ``` Optional ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -2900,22 +2402,102 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-create_network_http_servers = CreateNetworkHttpServersModel.new
-collect['create_network_http_servers'] = create_network_http_servers
+device_id = 'deviceId'
+collect['device_id'] = device_id
 
 
-result = hTTPServers_controller.create_network_http_servers(collect)
+result = sM_controller.get_network_sm_softwares(collect)
 
 ```
 
 
-### <a name="get_network_http_server"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.get_network_http_server") get_network_http_server
+### <a name="get_network_sm_user_softwares"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_user_softwares") get_network_sm_user_softwares
 
-> Return an HTTP server
+> Get a list of softwares associated with a user
 
 
 ```ruby
-def get_network_http_server(options = {}); end
+def get_network_sm_user_softwares(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| user_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+user_id = 'userId'
+collect['user_id'] = user_id
+
+
+result = sM_controller.get_network_sm_user_softwares(collect)
+
+```
+
+
+### <a name="get_network_sm_users"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_users") get_network_sm_users
+
+> List the owners in an SM network with various specified fields and filters
+
+
+```ruby
+def get_network_sm_users(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| ids |  ``` Optional ```  | Filter users by id(s). Multiple ids can be passed in as comma separated values. |
+| usernames |  ``` Optional ```  | Filter users by username(s). Multiple usernames can be passed in as comma separated values. |
+| emails |  ``` Optional ```  | Filter users by email(s). Multiple emails can be passed in as comma separated values. |
+| scope |  ``` Optional ```  | Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags as comma separated values. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+ids = 'ids'
+collect['ids'] = ids
+
+usernames = 'usernames'
+collect['usernames'] = usernames
+
+emails = 'emails'
+collect['emails'] = emails
+
+scope = 'scope'
+collect['scope'] = scope
+
+
+result = sM_controller.get_network_sm_users(collect)
+
+```
+
+
+### <a name="get_network_sm_connectivity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_connectivity") get_network_sm_connectivity
+
+> Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
+
+
+```ruby
+def get_network_sm_connectivity(options = {}); end
 ```
 
 #### Parameters
@@ -2924,6 +2506,9 @@ def get_network_http_server(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -2931,25 +2516,38 @@ def get_network_http_server(options = {}); end
 ```ruby
 collect = Hash.new
 
-network_id = 'networkId'
+network_id = 'network_id'
 collect['network_id'] = network_id
 
 id = 'id'
 collect['id'] = id
 
+per_page = 'perPage'
+collect['per_page'] = per_page
 
-result = hTTPServers_controller.get_network_http_server(collect)
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = sM_controller.get_network_sm_connectivity(collect)
 
 ```
 
 
-### <a name="update_network_http_server"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.update_network_http_server") update_network_http_server
+### <a name="get_network_sm_device_command_logs"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_device_command_logs") get_network_sm_device_command_logs
 
-> Update an HTTP server
+>     Return historical records of commands sent to Systems Manager devices.
+>     <p>Note that this will include the name of the Dashboard user who initiated the command if it was generated
+>     by a Dashboard admin rather than the automatic behavior of the system; you may wish to filter this out
+>     of any reports.</p>
+> 
 
 
 ```ruby
-def update_network_http_server(options = {}); end
+def get_network_sm_device_command_logs(options = {}); end
 ```
 
 #### Parameters
@@ -2958,7 +2556,9 @@ def update_network_http_server(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_http_server |  ``` Optional ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -2966,28 +2566,34 @@ def update_network_http_server(options = {}); end
 ```ruby
 collect = Hash.new
 
-network_id = 'networkId'
+network_id = 'network_id'
 collect['network_id'] = network_id
 
 id = 'id'
 collect['id'] = id
 
-update_network_http_server = UpdateNetworkHttpServerModel.new
-collect['update_network_http_server'] = update_network_http_server
+per_page = 'perPage'
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
 
 
-result = hTTPServers_controller.update_network_http_server(collect)
+result = sM_controller.get_network_sm_device_command_logs(collect)
 
 ```
 
 
-### <a name="delete_network_http_server"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.delete_network_http_server") delete_network_http_server
+### <a name="get_network_sm_desktop_logs"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_desktop_logs") get_network_sm_desktop_logs
 
-> Delete an HTTP server
+> Return historical records of various Systems Manager network connection details for desktop devices.
 
 
 ```ruby
-def delete_network_http_server(options = {}); end
+def get_network_sm_desktop_logs(options = {}); end
 ```
 
 #### Parameters
@@ -2996,6 +2602,9 @@ def delete_network_http_server(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -3003,59 +2612,34 @@ def delete_network_http_server(options = {}); end
 ```ruby
 collect = Hash.new
 
-network_id = 'networkId'
+network_id = 'network_id'
 collect['network_id'] = network_id
 
 id = 'id'
 collect['id'] = id
 
+per_page = 'perPage'
+collect['per_page'] = per_page
 
-hTTPServers_controller.delete_network_http_server(collect)
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
 
-```
-
-
-### <a name="create_network_http_servers_webhook_tests"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.create_network_http_servers_webhook_tests") create_network_http_servers_webhook_tests
-
-> Send a test webhook
-
-
-```ruby
-def create_network_http_servers_webhook_tests(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_http_servers_webhook_tests |  ``` Optional ```  | TODO: Add a parameter description |
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
 
 
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-create_network_http_servers_webhook_tests = CreateNetworkHttpServersWebhookTestsModel.new
-collect['create_network_http_servers_webhook_tests'] = create_network_http_servers_webhook_tests
-
-
-result = hTTPServers_controller.create_network_http_servers_webhook_tests(collect)
+result = sM_controller.get_network_sm_desktop_logs(collect)
 
 ```
 
 
-### <a name="get_network_http_servers_webhook_test"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.get_network_http_servers_webhook_test") get_network_http_servers_webhook_test
+### <a name="get_network_sm_performance_history"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_performance_history") get_network_sm_performance_history
 
-> Return the status of a webhook test
+> Return historical records of various Systems Manager client metrics for desktop devices.
 
 
 ```ruby
-def get_network_http_servers_webhook_test(options = {}); end
+def get_network_sm_performance_history(options = {}); end
 ```
 
 #### Parameters
@@ -3064,6 +2648,52 @@ def get_network_http_servers_webhook_test(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+id = 'id'
+collect['id'] = id
+
+per_page = 'perPage'
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = sM_controller.get_network_sm_performance_history(collect)
+
+```
+
+
+### <a name="get_network_sm_cellular_usage_history"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_cellular_usage_history") get_network_sm_cellular_usage_history
+
+> Return the client's daily cellular data usage history. Usage data is in kilobytes.
+
+
+```ruby
+def get_network_sm_cellular_usage_history(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -3074,60 +2704,1096 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-id = 'id'
-collect['id'] = id
+device_id = 'deviceId'
+collect['device_id'] = device_id
 
 
-result = hTTPServers_controller.get_network_http_servers_webhook_test(collect)
+result = sM_controller.get_network_sm_cellular_usage_history(collect)
+
+```
+
+
+### <a name="get_network_sm_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profiles") get_network_sm_profiles
+
+> List all the profiles in the network
+
+
+```ruby
+def get_network_sm_profiles(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = sM_controller.get_network_sm_profiles(network_id)
+
+```
+
+
+### <a name="unenroll_network_sm_device"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.unenroll_network_sm_device") unenroll_network_sm_device
+
+> Unenroll a device
+
+
+```ruby
+def unenroll_network_sm_device(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+device_id = 'deviceId'
+collect['device_id'] = device_id
+
+
+result = sM_controller.unenroll_network_sm_device(collect)
+
+```
+
+
+### <a name="move_network_sm_devices"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.move_network_sm_devices") move_network_sm_devices
+
+> Move a set of devices to a new network
+
+
+```ruby
+def move_network_sm_devices(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| move_network_sm_devices |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+move_network_sm_devices = MoveNetworkSmDevicesModel.new
+collect['move_network_sm_devices'] = move_network_sm_devices
+
+
+result = sM_controller.move_network_sm_devices(collect)
+
+```
+
+
+### <a name="checkin_network_sm_devices"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.checkin_network_sm_devices") checkin_network_sm_devices
+
+> Force check-in a set of devices
+
+
+```ruby
+def checkin_network_sm_devices(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| checkin_network_sm_devices |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+checkin_network_sm_devices = CheckinNetworkSmDevicesModel.new
+collect['checkin_network_sm_devices'] = checkin_network_sm_devices
+
+
+result = sM_controller.checkin_network_sm_devices(collect)
+
+```
+
+
+### <a name="wipe_network_sm_device"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.wipe_network_sm_device") wipe_network_sm_device
+
+> Wipe a device
+
+
+```ruby
+def wipe_network_sm_device(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| wipe_network_sm_device |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+wipe_network_sm_device = WipeNetworkSmDeviceModel.new
+collect['wipe_network_sm_device'] = wipe_network_sm_device
+
+
+result = sM_controller.wipe_network_sm_device(collect)
+
+```
+
+
+### <a name="lock_network_sm_devices"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.lock_network_sm_devices") lock_network_sm_devices
+
+> Lock a set of devices
+
+
+```ruby
+def lock_network_sm_devices(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| lock_network_sm_devices |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+lock_network_sm_devices = LockNetworkSmDevicesModel.new
+collect['lock_network_sm_devices'] = lock_network_sm_devices
+
+
+result = sM_controller.lock_network_sm_devices(collect)
+
+```
+
+
+### <a name="update_network_sm_device_fields"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_device_fields") update_network_sm_device_fields
+
+> Modify the fields of a device
+
+
+```ruby
+def update_network_sm_device_fields(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_sm_device_fields |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_sm_device_fields = UpdateNetworkSmDeviceFieldsModel.new
+collect['update_network_sm_device_fields'] = update_network_sm_device_fields
+
+
+result = sM_controller.update_network_sm_device_fields(collect)
+
+```
+
+
+### <a name="update_network_sm_devices_tags"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_devices_tags") update_network_sm_devices_tags
+
+> Add, delete, or update the tags of a set of devices
+
+
+```ruby
+def update_network_sm_devices_tags(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_sm_devices_tags |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_sm_devices_tags = UpdateNetworkSmDevicesTagsModel.new
+collect['update_network_sm_devices_tags'] = update_network_sm_devices_tags
+
+
+result = sM_controller.update_network_sm_devices_tags(collect)
+
+```
+
+
+### <a name="get_network_sm_certs"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_certs") get_network_sm_certs
+
+> List the certs on a device
+
+
+```ruby
+def get_network_sm_certs(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+device_id = 'deviceId'
+collect['device_id'] = device_id
+
+
+result = sM_controller.get_network_sm_certs(collect)
+
+```
+
+
+### <a name="get_network_sm_restrictions"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_restrictions") get_network_sm_restrictions
+
+> List the restrictions on a device
+
+
+```ruby
+def get_network_sm_restrictions(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+device_id = 'deviceId'
+collect['device_id'] = device_id
+
+
+result = sM_controller.get_network_sm_restrictions(collect)
+
+```
+
+
+### <a name="get_network_sm_security_centers"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_security_centers") get_network_sm_security_centers
+
+> List the security centers on a device
+
+
+```ruby
+def get_network_sm_security_centers(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+device_id = 'deviceId'
+collect['device_id'] = device_id
+
+
+result = sM_controller.get_network_sm_security_centers(collect)
+
+```
+
+
+### <a name="get_network_sm_wlan_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_wlan_lists") get_network_sm_wlan_lists
+
+> List the saved SSID names on a device
+
+
+```ruby
+def get_network_sm_wlan_lists(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+device_id = 'deviceId'
+collect['device_id'] = device_id
+
+
+result = sM_controller.get_network_sm_wlan_lists(collect)
+
+```
+
+
+### <a name="get_network_sm_network_adapters"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_network_adapters") get_network_sm_network_adapters
+
+> List the network adapters of a device
+
+
+```ruby
+def get_network_sm_network_adapters(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+device_id = 'deviceId'
+collect['device_id'] = device_id
+
+
+result = sM_controller.get_network_sm_network_adapters(collect)
+
+```
+
+
+### <a name="get_network_sm_device_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_device_profiles") get_network_sm_device_profiles
+
+> Get the profiles associated with a device
+
+
+```ruby
+def get_network_sm_device_profiles(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| device_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+device_id = 'deviceId'
+collect['device_id'] = device_id
+
+
+result = sM_controller.get_network_sm_device_profiles(collect)
+
+```
+
+
+### <a name="get_network_sm_user_device_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_user_device_profiles") get_network_sm_user_device_profiles
+
+> Get the profiles associated with a user
+
+
+```ruby
+def get_network_sm_user_device_profiles(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| user_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+user_id = 'userId'
+collect['user_id'] = user_id
+
+
+result = sM_controller.get_network_sm_user_device_profiles(collect)
+
+```
+
+
+### <a name="delete_network_sm_app_polaris"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_app_polaris") delete_network_sm_app_polaris
+
+> Delete a Cisco Polaris app
+
+
+```ruby
+def delete_network_sm_app_polaris(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| app_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+app_id = 'appId'
+collect['app_id'] = app_id
+
+
+sM_controller.delete_network_sm_app_polaris(collect)
+
+```
+
+
+### <a name="update_network_sm_app_polaris"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_app_polaris") update_network_sm_app_polaris
+
+> Update an existing Polaris app
+
+
+```ruby
+def update_network_sm_app_polaris(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| app_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_sm_app_polaris |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+app_id = 'appId'
+collect['app_id'] = app_id
+
+update_network_sm_app_polaris = UpdateNetworkSmAppPolarisModel.new
+collect['update_network_sm_app_polaris'] = update_network_sm_app_polaris
+
+
+result = sM_controller.update_network_sm_app_polaris(collect)
+
+```
+
+
+### <a name="get_network_sm_app_polaris"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_app_polaris") get_network_sm_app_polaris
+
+> Get details for a Cisco Polaris app if it exists
+
+
+```ruby
+def get_network_sm_app_polaris(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| bundle_id |  ``` Optional ```  | The bundle ID of the app to be found, defaults to com.cisco.ciscosecurity.app |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+bundle_id = 'bundleId'
+collect['bundle_id'] = bundle_id
+
+
+result = sM_controller.get_network_sm_app_polaris(collect)
+
+```
+
+
+### <a name="create_network_sm_app_polaris"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_app_polaris") create_network_sm_app_polaris
+
+> Create a new Polaris app
+
+
+```ruby
+def create_network_sm_app_polaris(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_sm_app_polaris |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+create_network_sm_app_polaris = CreateNetworkSmAppPolarisModel.new
+collect['create_network_sm_app_polaris'] = create_network_sm_app_polaris
+
+
+result = sM_controller.create_network_sm_app_polaris(collect)
+
+```
+
+
+### <a name="delete_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_profile_umbrella") delete_network_sm_profile_umbrella
+
+> Delete a Cisco Umbrella payload. Deletes the entire profile if it's empty after removing the payload
+
+
+```ruby
+def delete_network_sm_profile_umbrella(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+
+sM_controller.delete_network_sm_profile_umbrella(collect)
+
+```
+
+
+### <a name="get_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profile_umbrella") get_network_sm_profile_umbrella
+
+> Get details for a Cisco Umbrella payload
+
+
+```ruby
+def get_network_sm_profile_umbrella(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+
+result = sM_controller.get_network_sm_profile_umbrella(collect)
+
+```
+
+
+### <a name="add_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.add_network_sm_profile_umbrella") add_network_sm_profile_umbrella
+
+> Add a Cisco Umbrella payload to an existing profile
+
+
+```ruby
+def add_network_sm_profile_umbrella(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+| add_network_sm_profile_umbrella |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+add_network_sm_profile_umbrella = AddNetworkSmProfileUmbrellaModel.new
+collect['add_network_sm_profile_umbrella'] = add_network_sm_profile_umbrella
+
+
+result = sM_controller.add_network_sm_profile_umbrella(collect)
+
+```
+
+
+### <a name="update_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_profile_umbrella") update_network_sm_profile_umbrella
+
+> Update an existing profile containing a Cisco Umbrella payload
+
+
+```ruby
+def update_network_sm_profile_umbrella(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_sm_profile_umbrella |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+update_network_sm_profile_umbrella = UpdateNetworkSmProfileUmbrellaModel.new
+collect['update_network_sm_profile_umbrella'] = update_network_sm_profile_umbrella
+
+
+result = sM_controller.update_network_sm_profile_umbrella(collect)
+
+```
+
+
+### <a name="create_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_profile_umbrella") create_network_sm_profile_umbrella
+
+> Create a new profile containing a Cisco Umbrella payload
+
+
+```ruby
+def create_network_sm_profile_umbrella(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_sm_profile_umbrella |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+create_network_sm_profile_umbrella = CreateNetworkSmProfileUmbrellaModel.new
+collect['create_network_sm_profile_umbrella'] = create_network_sm_profile_umbrella
+
+
+result = sM_controller.create_network_sm_profile_umbrella(collect)
+
+```
+
+
+### <a name="delete_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_profile_clarity") delete_network_sm_profile_clarity
+
+> Delete a Cisco Clarity payload. Deletes the entire profile if it's empty after removing the payload.
+
+
+```ruby
+def delete_network_sm_profile_clarity(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+
+sM_controller.delete_network_sm_profile_clarity(collect)
+
+```
+
+
+### <a name="get_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profile_clarity") get_network_sm_profile_clarity
+
+> Get details for a Cisco Clarity payload
+
+
+```ruby
+def get_network_sm_profile_clarity(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+
+result = sM_controller.get_network_sm_profile_clarity(collect)
+
+```
+
+
+### <a name="add_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.add_network_sm_profile_clarity") add_network_sm_profile_clarity
+
+> Add a Cisco Clarity payload to an existing profile
+
+
+```ruby
+def add_network_sm_profile_clarity(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+| add_network_sm_profile_clarity |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+add_network_sm_profile_clarity = AddNetworkSmProfileClarityModel.new
+collect['add_network_sm_profile_clarity'] = add_network_sm_profile_clarity
+
+
+result = sM_controller.add_network_sm_profile_clarity(collect)
+
+```
+
+
+### <a name="update_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_profile_clarity") update_network_sm_profile_clarity
+
+> Update an existing profile containing a Cisco Clarity payload
+
+
+```ruby
+def update_network_sm_profile_clarity(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| profile_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_sm_profile_clarity |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+profile_id = 'profileId'
+collect['profile_id'] = profile_id
+
+update_network_sm_profile_clarity = UpdateNetworkSmProfileClarityModel.new
+collect['update_network_sm_profile_clarity'] = update_network_sm_profile_clarity
+
+
+result = sM_controller.update_network_sm_profile_clarity(collect)
+
+```
+
+
+### <a name="create_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_profile_clarity") create_network_sm_profile_clarity
+
+> Create a new profile containing a Cisco Clarity payload
+
+
+```ruby
+def create_network_sm_profile_clarity(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_sm_profile_clarity |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'network_id'
+collect['network_id'] = network_id
+
+create_network_sm_profile_clarity = CreateNetworkSmProfileClarityModel.new
+collect['create_network_sm_profile_clarity'] = create_network_sm_profile_clarity
+
+
+result = sM_controller.create_network_sm_profile_clarity(collect)
+
+```
+
+
+### <a name="get_network_sm_devices"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_devices") get_network_sm_devices
+
+> List the devices enrolled in an SM network with various specified fields and filters
+
+
+```ruby
+def get_network_sm_devices(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| fields |  ``` Optional ```  | Additional fields that will be displayed for each device. Multiple fields can be passed in as comma separated values.
+    The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,
+    systemType, availableDeviceCapacity, kioskAppName, biosVersion, lastConnected, missingAppsCount, userSuppliedAddress, location, lastUser,
+    ownerEmail, ownerUsername, publicIp, phoneNumber, diskInfoJson, deviceCapacity, isManaged, hadMdm, isSupervised, meid, imei, iccid,
+    simCarrierNetwork, cellularDataUsed, isHotspotEnabled, createdAt, batteryEstCharge, quarantined, avName, avRunning, asName, fwName,
+    isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,
+    hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityPatchVersion. |
+| wifi_macs |  ``` Optional ```  | Filter devices by wifi mac(s). Multiple wifi macs can be passed in as comma separated values. |
+| serials |  ``` Optional ```  | Filter devices by serial(s). Multiple serials can be passed in as comma separated values. |
+| ids |  ``` Optional ```  | Filter devices by id(s). Multiple ids can be passed in as comma separated values. |
+| scope |  ``` Optional ```  | Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as comma separated values. |
+| batch_token |  ``` Optional ```  | On networks with more than 1000 devices, the device list will be limited to 1000 devices per query.
+    If there are more devices to be seen, a batch token will be returned as a part of the device list. To see the remainder of
+    the devices, pass in the batchToken as a parameter in the next request. Requests made with the batchToken do not require
+    additional parameters as the batchToken includes the parameters passed in with the original request. Additional parameters
+    passed in with the batchToken will be ignored. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+fields = 'fields'
+collect['fields'] = fields
+
+wifi_macs = 'wifiMacs'
+collect['wifi_macs'] = wifi_macs
+
+serials = 'serials'
+collect['serials'] = serials
+
+ids = 'ids'
+collect['ids'] = ids
+
+scope = 'scope'
+collect['scope'] = scope
+
+batch_token = 'batchToken'
+collect['batch_token'] = batch_token
+
+
+result = sM_controller.get_network_sm_devices(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="meraki_auth_users_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MerakiAuthUsersController") MerakiAuthUsersController
+## <a name="named_tag_scope_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NamedTagScopeController") NamedTagScopeController
 
 ### Get singleton instance
 
-The singleton instance of the ``` MerakiAuthUsersController ``` class can be accessed from the API Client.
+The singleton instance of the ``` NamedTagScopeController ``` class can be accessed from the API Client.
 
 ```ruby
-merakiAuthUsers_controller = client.meraki_auth_users
+namedTagScope_controller = client.named_tag_scope
 ```
 
-### <a name="get_network_meraki_auth_users"></a>![Method: ](https://apidocs.io/img/method.png ".MerakiAuthUsersController.get_network_meraki_auth_users") get_network_meraki_auth_users
+### <a name="get_network_sm_target_group"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.get_network_sm_target_group") get_network_sm_target_group
 
-> List the splash or RADIUS users configured under Meraki Authentication for a network
-
-
-```ruby
-def get_network_meraki_auth_users(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = merakiAuthUsers_controller.get_network_meraki_auth_users(network_id)
-
-```
-
-
-### <a name="get_network_meraki_auth_user"></a>![Method: ](https://apidocs.io/img/method.png ".MerakiAuthUsersController.get_network_meraki_auth_user") get_network_meraki_auth_user
-
-> Return the Meraki Auth splash or RADIUS user
+> Return a target group
 
 
 ```ruby
-def get_network_meraki_auth_user(options = {}); end
+def get_network_sm_target_group(options = {}); end
 ```
 
 #### Parameters
@@ -3135,7 +3801,8 @@ def get_network_meraki_auth_user(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
+| target_group_id |  ``` Required ```  | TODO: Add a parameter description |
+| with_details |  ``` Optional ```  | Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response |
 
 
 #### Example Usage
@@ -3146,460 +3813,25 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-id = 'id'
-collect['id'] = id
+target_group_id = 'targetGroupId'
+collect['target_group_id'] = target_group_id
+
+with_details = false
+collect['with_details'] = with_details
 
 
-result = merakiAuthUsers_controller.get_network_meraki_auth_user(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="organizations_controller"></a>![Class: ](https://apidocs.io/img/class.png ".OrganizationsController") OrganizationsController
-
-### Get singleton instance
-
-The singleton instance of the ``` OrganizationsController ``` class can be accessed from the API Client.
-
-```ruby
-organizations_controller = client.organizations
-```
-
-### <a name="get_organizations"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organizations") get_organizations
-
-> List the organizations that the user has privileges on
-
-
-```ruby
-def get_organizations; end
-```
-
-#### Example Usage
-
-```ruby
-
-result = organizations_controller.get_organizations()
+result = namedTagScope_controller.get_network_sm_target_group(collect)
 
 ```
 
 
-### <a name="create_organizations"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.create_organizations") create_organizations
+### <a name="delete_network_sm_target_group"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.delete_network_sm_target_group") delete_network_sm_target_group
 
-> Create a new organization
-
-
-```ruby
-def create_organizations(create_organizations = nil); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| create_organizations |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-create_organizations = CreateOrganizationsModel.new
-
-result = organizations_controller.create_organizations(create_organizations)
-
-```
-
-
-### <a name="get_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization") get_organization
-
-> Return an organization
+> Delete a target group from a network
 
 
 ```ruby
-def get_organization(id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-id = 'id'
-
-result = organizations_controller.get_organization(id)
-
-```
-
-
-### <a name="update_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.update_organization") update_organization
-
-> Update an organization
-
-
-```ruby
-def update_organization(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| update_organization |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-id = 'id'
-collect['id'] = id
-
-update_organization = UpdateOrganizationModel.new
-collect['update_organization'] = update_organization
-
-
-result = organizations_controller.update_organization(collect)
-
-```
-
-
-### <a name="clone_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.clone_organization") clone_organization
-
-> Create a new organization by cloning the addressed organization
-
-
-```ruby
-def clone_organization(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| clone_organization |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-id = 'id'
-collect['id'] = id
-
-clone_organization = CloneOrganizationModel.new
-collect['clone_organization'] = clone_organization
-
-
-result = organizations_controller.clone_organization(collect)
-
-```
-
-
-### <a name="get_organization_license_state"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_license_state") get_organization_license_state
-
-> Return the license state for an organization
-
-
-```ruby
-def get_organization_license_state(id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-id = 'id'
-
-result = organizations_controller.get_organization_license_state(id)
-
-```
-
-
-### <a name="get_organization_inventory"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_inventory") get_organization_inventory
-
-> Return the inventory for an organization
-
-
-```ruby
-def get_organization_inventory(id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-id = 'id'
-
-result = organizations_controller.get_organization_inventory(id)
-
-```
-
-
-### <a name="get_organization_device_statuses"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_device_statuses") get_organization_device_statuses
-
-> List the status of every Meraki device in the organization
-
-
-```ruby
-def get_organization_device_statuses(id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-id = 'id'
-
-result = organizations_controller.get_organization_device_statuses(id)
-
-```
-
-
-### <a name="get_organization_snmp"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_snmp") get_organization_snmp
-
-> Return the SNMP settings for an organization
-
-
-```ruby
-def get_organization_snmp(id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-id = 'id'
-
-result = organizations_controller.get_organization_snmp(id)
-
-```
-
-
-### <a name="update_organization_snmp"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.update_organization_snmp") update_organization_snmp
-
-> Update the SNMP settings for an organization
-
-
-```ruby
-def update_organization_snmp(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| update_organization_snmp |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-id = 'id'
-collect['id'] = id
-
-update_organization_snmp = UpdateOrganizationSnmpModel.new
-collect['update_organization_snmp'] = update_organization_snmp
-
-
-result = organizations_controller.update_organization_snmp(collect)
-
-```
-
-
-### <a name="claim_organization"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.claim_organization") claim_organization
-
-> Claim a device, license key, or order into an organization. When claiming by order, all devices and licenses in the order will be claimed; licenses will be added to the organization and devices will be placed in the organization's inventory. These three types of claims are mutually exclusive and cannot be performed in one request.
-
-
-```ruby
-def claim_organization(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| claim_organization |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-claim_organization = ClaimOrganizationModel.new
-collect['claim_organization'] = claim_organization
-
-
-result = organizations_controller.claim_organization(collect)
-
-```
-
-
-### <a name="get_organization_uplinks_loss_and_latency"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_uplinks_loss_and_latency") get_organization_uplinks_loss_and_latency
-
-> Return the uplink loss and latency for every MX in the organization from 2 - 7 minutes ago
-
-
-```ruby
-def get_organization_uplinks_loss_and_latency(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| uplink |  ``` Optional ```  | Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, cellular. Default will return all uplinks. |
-| ip |  ``` Optional ```  | Optional filter for a specific destination IP. Default will return all destination IPs. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-uplink = 'uplink'
-collect['uplink'] = uplink
-
-ip = 'ip'
-collect['ip'] = ip
-
-
-result = organizations_controller.get_organization_uplinks_loss_and_latency(collect)
-
-```
-
-
-### <a name="get_organization_third_party_vpn_peers"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.get_organization_third_party_vpn_peers") get_organization_third_party_vpn_peers
-
-> Return the third party VPN peers for an organization
-
-
-```ruby
-def get_organization_third_party_vpn_peers(organization_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-organization_id = 'organizationId'
-
-result = organizations_controller.get_organization_third_party_vpn_peers(organization_id)
-
-```
-
-
-### <a name="update_organization_third_party_vpn_peers"></a>![Method: ](https://apidocs.io/img/method.png ".OrganizationsController.update_organization_third_party_vpn_peers") update_organization_third_party_vpn_peers
-
-> Update the third party VPN peers for an organization
-
-
-```ruby
-def update_organization_third_party_vpn_peers(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_organization_third_party_vpn_peers |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-update_organization_third_party_vpn_peers = UpdateOrganizationThirdPartyVPNPeersModel.new
-collect['update_organization_third_party_vpn_peers'] = update_organization_third_party_vpn_peers
-
-
-result = organizations_controller.update_organization_third_party_vpn_peers(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="pii_controller"></a>![Class: ](https://apidocs.io/img/class.png ".PIIController") PIIController
-
-### Get singleton instance
-
-The singleton instance of the ``` PIIController ``` class can be accessed from the API Client.
-
-```ruby
-pII_controller = client.pii
-```
-
-### <a name="get_network_pii_pii_keys"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_pii_keys") get_network_pii_pii_keys
-
-> List the keys required to access Personally Identifiable Information (PII) for a given identifier. Exactly one identifier will be accepted. If the organization contains org-wide Systems Manager users matching the key provided then there will be an entry with the key "0" containing the applicable keys.
-> 
-> ## ALTERNATE PATH
-> 
-> ```
-> /organizations/{organizationId}/pii/piiKeys
-> ```
-
-
-```ruby
-def get_network_pii_pii_keys(options = {}); end
+def delete_network_sm_target_group(options = {}); end
 ```
 
 #### Parameters
@@ -3607,12 +3839,7 @@ def get_network_pii_pii_keys(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| username |  ``` Optional ```  | The username of a Systems Manager user |
-| email |  ``` Optional ```  | The email of a network user account or a Systems Manager device |
-| mac |  ``` Optional ```  | The MAC of a network client device or a Systems Manager device |
-| serial |  ``` Optional ```  | The serial of a Systems Manager device |
-| imei |  ``` Optional ```  | The IMEI of a Systems Manager device |
-| bluetooth_mac |  ``` Optional ```  | The MAC of a Bluetooth client |
+| target_group_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -3623,43 +3850,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-username = 'username'
-collect['username'] = username
-
-email = 'email'
-collect['email'] = email
-
-mac = 'mac'
-collect['mac'] = mac
-
-serial = 'serial'
-collect['serial'] = serial
-
-imei = 'imei'
-collect['imei'] = imei
-
-bluetooth_mac = 'bluetoothMac'
-collect['bluetooth_mac'] = bluetooth_mac
+target_group_id = 'targetGroupId'
+collect['target_group_id'] = target_group_id
 
 
-result = pII_controller.get_network_pii_pii_keys(collect)
+namedTagScope_controller.delete_network_sm_target_group(collect)
 
 ```
 
 
-### <a name="get_network_pii_sm_devices_for_key"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_sm_devices_for_key") get_network_pii_sm_devices_for_key
+### <a name="update_network_sm_target_group"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.update_network_sm_target_group") update_network_sm_target_group
 
-> Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier. These device IDs can be used with the Systems Manager API endpoints to retrieve device details. Exactly one identifier will be accepted.
-> 
-> ## ALTERNATE PATH
-> 
-> ```
-> /organizations/{organizationId}/pii/smDevicesForKey
-> ```
+> Update a target group
 
 
 ```ruby
-def get_network_pii_sm_devices_for_key(options = {}); end
+def update_network_sm_target_group(options = {}); end
 ```
 
 #### Parameters
@@ -3667,12 +3873,8 @@ def get_network_pii_sm_devices_for_key(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| username |  ``` Optional ```  | The username of a Systems Manager user |
-| email |  ``` Optional ```  | The email of a network user account or a Systems Manager device |
-| mac |  ``` Optional ```  | The MAC of a network client device or a Systems Manager device |
-| serial |  ``` Optional ```  | The serial of a Systems Manager device |
-| imei |  ``` Optional ```  | The IMEI of a Systems Manager device |
-| bluetooth_mac |  ``` Optional ```  | The MAC of a Bluetooth client |
+| target_group_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_sm_target_group |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -3683,43 +3885,25 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-username = 'username'
-collect['username'] = username
+target_group_id = 'targetGroupId'
+collect['target_group_id'] = target_group_id
 
-email = 'email'
-collect['email'] = email
-
-mac = 'mac'
-collect['mac'] = mac
-
-serial = 'serial'
-collect['serial'] = serial
-
-imei = 'imei'
-collect['imei'] = imei
-
-bluetooth_mac = 'bluetoothMac'
-collect['bluetooth_mac'] = bluetooth_mac
+update_network_sm_target_group = UpdateNetworkSmTargetGroupModel.new
+collect['update_network_sm_target_group'] = update_network_sm_target_group
 
 
-result = pII_controller.get_network_pii_sm_devices_for_key(collect)
+result = namedTagScope_controller.update_network_sm_target_group(collect)
 
 ```
 
 
-### <a name="get_network_pii_sm_owners_for_key"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_sm_owners_for_key") get_network_pii_sm_owners_for_key
+### <a name="create_network_sm_target_group"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.create_network_sm_target_group") create_network_sm_target_group
 
-> Given a piece of Personally Identifiable Information (PII), return the Systems Manager owner ID(s) associated with that identifier. These owner IDs can be used with the Systems Manager API endpoints to retrieve owner details. Exactly one identifier will be accepted.
-> 
-> ## ALTERNATE PATH
-> 
-> ```
-> /organizations/{organizationId}/pii/smOwnersForKey
-> ```
+> Add a target group
 
 
 ```ruby
-def get_network_pii_sm_owners_for_key(options = {}); end
+def create_network_sm_target_group(options = {}); end
 ```
 
 #### Parameters
@@ -3727,12 +3911,7 @@ def get_network_pii_sm_owners_for_key(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| username |  ``` Optional ```  | The username of a Systems Manager user |
-| email |  ``` Optional ```  | The email of a network user account or a Systems Manager device |
-| mac |  ``` Optional ```  | The MAC of a network client device or a Systems Manager device |
-| serial |  ``` Optional ```  | The serial of a Systems Manager device |
-| imei |  ``` Optional ```  | The IMEI of a Systems Manager device |
-| bluetooth_mac |  ``` Optional ```  | The MAC of a Bluetooth client |
+| create_network_sm_target_group |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -3743,43 +3922,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-username = 'username'
-collect['username'] = username
-
-email = 'email'
-collect['email'] = email
-
-mac = 'mac'
-collect['mac'] = mac
-
-serial = 'serial'
-collect['serial'] = serial
-
-imei = 'imei'
-collect['imei'] = imei
-
-bluetooth_mac = 'bluetoothMac'
-collect['bluetooth_mac'] = bluetooth_mac
+create_network_sm_target_group = CreateNetworkSmTargetGroupModel.new
+collect['create_network_sm_target_group'] = create_network_sm_target_group
 
 
-result = pII_controller.get_network_pii_sm_owners_for_key(collect)
+result = namedTagScope_controller.create_network_sm_target_group(collect)
 
 ```
 
 
-### <a name="get_network_pii_requests"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_requests") get_network_pii_requests
+### <a name="get_network_sm_target_groups"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.get_network_sm_target_groups") get_network_sm_target_groups
 
-> List the PII requests for this network or organization
-> 
-> ## ALTERNATE PATH
-> 
-> ```
-> /organizations/{organizationId}/pii/requests
-> ```
+> List the target groups in this network
 
 
 ```ruby
-def get_network_pii_requests(network_id); end
+def get_network_sm_target_groups(options = {}); end
 ```
 
 #### Parameters
@@ -3787,39 +3945,7 @@ def get_network_pii_requests(network_id); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = pII_controller.get_network_pii_requests(network_id)
-
-```
-
-
-### <a name="create_network_pii_requests"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.create_network_pii_requests") create_network_pii_requests
-
-> Submit a new delete or restrict processing PII request
-> 
-> ## ALTERNATE PATH
-> 
-> ```
-> /organizations/{organizationId}/pii/requests
-> ```
-
-
-```ruby
-def create_network_pii_requests(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_pii_requests |  ``` Optional ```  | TODO: Add a parameter description |
+| with_details |  ``` Optional ```  | Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response |
 
 
 #### Example Usage
@@ -3830,91 +3956,11 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-create_network_pii_requests = CreateNetworkPiiRequestsModel.new
-collect['create_network_pii_requests'] = create_network_pii_requests
+with_details = false
+collect['with_details'] = with_details
 
 
-result = pII_controller.create_network_pii_requests(collect)
-
-```
-
-
-### <a name="get_network_pii_request"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_request") get_network_pii_request
-
-> Return a PII request
-> 
-> ## ALTERNATE PATH
-> 
-> ```
-> /organizations/{organizationId}/pii/requests/{id}
-> ```
-
-
-```ruby
-def get_network_pii_request(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = pII_controller.get_network_pii_request(collect)
-
-```
-
-
-### <a name="delete_network_pii_request"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.delete_network_pii_request") delete_network_pii_request
-
-> Delete a restrict processing PII request
-> 
-> ## ALTERNATE PATH
-> 
-> ```
-> /organizations/{organizationId}/pii/requests/{id}
-> ```
-
-
-```ruby
-def delete_network_pii_request(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-pII_controller.delete_network_pii_request(collect)
+result = namedTagScope_controller.get_network_sm_target_groups(collect)
 
 ```
 
@@ -3930,100 +3976,6 @@ The singleton instance of the ``` SAMLRolesController ``` class can be accessed 
 ```ruby
 sAMLRoles_controller = client.saml_roles
 ```
-
-### <a name="get_organization_saml_roles"></a>![Method: ](https://apidocs.io/img/method.png ".SAMLRolesController.get_organization_saml_roles") get_organization_saml_roles
-
-> List the SAML roles for this organization
-
-
-```ruby
-def get_organization_saml_roles(organization_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-organization_id = 'organizationId'
-
-result = sAMLRoles_controller.get_organization_saml_roles(organization_id)
-
-```
-
-
-### <a name="create_organization_saml_roles"></a>![Method: ](https://apidocs.io/img/method.png ".SAMLRolesController.create_organization_saml_roles") create_organization_saml_roles
-
-> Create a SAML role
-
-
-```ruby
-def create_organization_saml_roles(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_organization_saml_roles |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-create_organization_saml_roles = CreateOrganizationSamlRolesModel.new
-collect['create_organization_saml_roles'] = create_organization_saml_roles
-
-
-result = sAMLRoles_controller.create_organization_saml_roles(collect)
-
-```
-
-
-### <a name="get_organization_saml_role"></a>![Method: ](https://apidocs.io/img/method.png ".SAMLRolesController.get_organization_saml_role") get_organization_saml_role
-
-> Return a SAML role
-
-
-```ruby
-def get_organization_saml_role(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-organization_id = 'organizationId'
-collect['organization_id'] = organization_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sAMLRoles_controller.get_organization_saml_role(collect)
-
-```
-
 
 ### <a name="update_organization_saml_role"></a>![Method: ](https://apidocs.io/img/method.png ".SAMLRolesController.update_organization_saml_role") update_organization_saml_role
 
@@ -4097,25 +4049,125 @@ sAMLRoles_controller.delete_organization_saml_role(collect)
 ```
 
 
+### <a name="get_organization_saml_role"></a>![Method: ](https://apidocs.io/img/method.png ".SAMLRolesController.get_organization_saml_role") get_organization_saml_role
+
+> Return a SAML role
+
+
+```ruby
+def get_organization_saml_role(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+id = 'id'
+collect['id'] = id
+
+
+result = sAMLRoles_controller.get_organization_saml_role(collect)
+
+```
+
+
+### <a name="create_organization_saml_role"></a>![Method: ](https://apidocs.io/img/method.png ".SAMLRolesController.create_organization_saml_role") create_organization_saml_role
+
+> Create a SAML role
+
+
+```ruby
+def create_organization_saml_role(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_organization_saml_role |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+create_organization_saml_role = CreateOrganizationSamlRoleModel.new
+collect['create_organization_saml_role'] = create_organization_saml_role
+
+
+result = sAMLRoles_controller.create_organization_saml_role(collect)
+
+```
+
+
+### <a name="get_organization_saml_roles"></a>![Method: ](https://apidocs.io/img/method.png ".SAMLRolesController.get_organization_saml_roles") get_organization_saml_roles
+
+> List the SAML roles for this organization
+
+
+```ruby
+def get_organization_saml_roles(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = sAMLRoles_controller.get_organization_saml_roles(organization_id)
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="client_security_events_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ClientSecurityEventsController") ClientSecurityEventsController
+## <a name="pii_controller"></a>![Class: ](https://apidocs.io/img/class.png ".PIIController") PIIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` ClientSecurityEventsController ``` class can be accessed from the API Client.
+The singleton instance of the ``` PIIController ``` class can be accessed from the API Client.
 
 ```ruby
-clientSecurityEvents_controller = client.client_security_events
+pII_controller = client.pii
 ```
 
-### <a name="get_network_client_security_events"></a>![Method: ](https://apidocs.io/img/method.png ".ClientSecurityEventsController.get_network_client_security_events") get_network_client_security_events
+### <a name="get_network_pii_sm_owners_for_key"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_sm_owners_for_key") get_network_pii_sm_owners_for_key
 
-> List the security events
+> Given a piece of Personally Identifiable Information (PII), return the Systems Manager owner ID(s) associated with that identifier. These owner IDs can be used with the Systems Manager API endpoints to retrieve owner details. Exactly one identifier will be accepted.
+> 
+> ## ALTERNATE PATH
+> 
+> ```
+> /organizations/{organizationId}/pii/smOwnersForKey
+> ```
 
 
 ```ruby
-def get_network_client_security_events(options = {}); end
+def get_network_pii_sm_owners_for_key(options = {}); end
 ```
 
 #### Parameters
@@ -4123,13 +4175,12 @@ def get_network_client_security_events(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| client_id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Required ```  | The number of entries per page returned. Acceptable range is 3 - 1000. |
-| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 791 days from today. |
-| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 791 days after t0. |
-| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 31 days. |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| username |  ``` Optional ```  | The username of a Systems Manager user |
+| email |  ``` Optional ```  | The email of a network user account or a Systems Manager device |
+| mac |  ``` Optional ```  | The MAC of a network client device or a Systems Manager device |
+| serial |  ``` Optional ```  | The serial of a Systems Manager device |
+| imei |  ``` Optional ```  | The IMEI of a Systems Manager device |
+| bluetooth_mac |  ``` Optional ```  | The MAC of a Bluetooth client |
 
 
 #### Example Usage
@@ -4140,11 +4191,1389 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-client_id = 'clientId'
-collect['client_id'] = client_id
+username = 'username'
+collect['username'] = username
 
-per_page = 155
-collect['per_page'] = per_page
+email = 'email'
+collect['email'] = email
+
+mac = 'mac'
+collect['mac'] = mac
+
+serial = 'serial'
+collect['serial'] = serial
+
+imei = 'imei'
+collect['imei'] = imei
+
+bluetooth_mac = 'bluetoothMac'
+collect['bluetooth_mac'] = bluetooth_mac
+
+
+result = pII_controller.get_network_pii_sm_owners_for_key(collect)
+
+```
+
+
+### <a name="get_network_pii_sm_devices_for_key"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_sm_devices_for_key") get_network_pii_sm_devices_for_key
+
+> Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier. These device IDs can be used with the Systems Manager API endpoints to retrieve device details. Exactly one identifier will be accepted.
+> 
+> ## ALTERNATE PATH
+> 
+> ```
+> /organizations/{organizationId}/pii/smDevicesForKey
+> ```
+
+
+```ruby
+def get_network_pii_sm_devices_for_key(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| username |  ``` Optional ```  | The username of a Systems Manager user |
+| email |  ``` Optional ```  | The email of a network user account or a Systems Manager device |
+| mac |  ``` Optional ```  | The MAC of a network client device or a Systems Manager device |
+| serial |  ``` Optional ```  | The serial of a Systems Manager device |
+| imei |  ``` Optional ```  | The IMEI of a Systems Manager device |
+| bluetooth_mac |  ``` Optional ```  | The MAC of a Bluetooth client |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+username = 'username'
+collect['username'] = username
+
+email = 'email'
+collect['email'] = email
+
+mac = 'mac'
+collect['mac'] = mac
+
+serial = 'serial'
+collect['serial'] = serial
+
+imei = 'imei'
+collect['imei'] = imei
+
+bluetooth_mac = 'bluetoothMac'
+collect['bluetooth_mac'] = bluetooth_mac
+
+
+result = pII_controller.get_network_pii_sm_devices_for_key(collect)
+
+```
+
+
+### <a name="get_network_pii_pii_keys"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_pii_keys") get_network_pii_pii_keys
+
+> List the keys required to access Personally Identifiable Information (PII) for a given identifier. Exactly one identifier will be accepted. If the organization contains org-wide Systems Manager users matching the key provided then there will be an entry with the key "0" containing the applicable keys.
+> 
+> ## ALTERNATE PATH
+> 
+> ```
+> /organizations/{organizationId}/pii/piiKeys
+> ```
+
+
+```ruby
+def get_network_pii_pii_keys(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| username |  ``` Optional ```  | The username of a Systems Manager user |
+| email |  ``` Optional ```  | The email of a network user account or a Systems Manager device |
+| mac |  ``` Optional ```  | The MAC of a network client device or a Systems Manager device |
+| serial |  ``` Optional ```  | The serial of a Systems Manager device |
+| imei |  ``` Optional ```  | The IMEI of a Systems Manager device |
+| bluetooth_mac |  ``` Optional ```  | The MAC of a Bluetooth client |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+username = 'username'
+collect['username'] = username
+
+email = 'email'
+collect['email'] = email
+
+mac = 'mac'
+collect['mac'] = mac
+
+serial = 'serial'
+collect['serial'] = serial
+
+imei = 'imei'
+collect['imei'] = imei
+
+bluetooth_mac = 'bluetoothMac'
+collect['bluetooth_mac'] = bluetooth_mac
+
+
+result = pII_controller.get_network_pii_pii_keys(collect)
+
+```
+
+
+### <a name="delete_network_pii_request"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.delete_network_pii_request") delete_network_pii_request
+
+> Delete a restrict processing PII request
+> 
+> ## ALTERNATE PATH
+> 
+> ```
+> /organizations/{organizationId}/pii/requests/{requestId}
+> ```
+
+
+```ruby
+def delete_network_pii_request(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| request_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+request_id = 'requestId'
+collect['request_id'] = request_id
+
+
+pII_controller.delete_network_pii_request(collect)
+
+```
+
+
+### <a name="get_network_pii_request"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_request") get_network_pii_request
+
+> Return a PII request
+> 
+> ## ALTERNATE PATH
+> 
+> ```
+> /organizations/{organizationId}/pii/requests/{requestId}
+> ```
+
+
+```ruby
+def get_network_pii_request(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| request_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+request_id = 'requestId'
+collect['request_id'] = request_id
+
+
+result = pII_controller.get_network_pii_request(collect)
+
+```
+
+
+### <a name="create_network_pii_request"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.create_network_pii_request") create_network_pii_request
+
+> Submit a new delete or restrict processing PII request
+> 
+> ## ALTERNATE PATH
+> 
+> ```
+> /organizations/{organizationId}/pii/requests
+> ```
+
+
+```ruby
+def create_network_pii_request(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_pii_request |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+create_network_pii_request = CreateNetworkPiiRequestModel.new
+collect['create_network_pii_request'] = create_network_pii_request
+
+
+result = pII_controller.create_network_pii_request(collect)
+
+```
+
+
+### <a name="get_network_pii_requests"></a>![Method: ](https://apidocs.io/img/method.png ".PIIController.get_network_pii_requests") get_network_pii_requests
+
+> List the PII requests for this network or organization
+> 
+> ## ALTERNATE PATH
+> 
+> ```
+> /organizations/{organizationId}/pii/requests
+> ```
+
+
+```ruby
+def get_network_pii_requests(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = pII_controller.get_network_pii_requests(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="open_api_spec_controller"></a>![Class: ](https://apidocs.io/img/class.png ".OpenAPISpecController") OpenAPISpecController
+
+### Get singleton instance
+
+The singleton instance of the ``` OpenAPISpecController ``` class can be accessed from the API Client.
+
+```ruby
+openAPISpec_controller = client.open_api_spec
+```
+
+### <a name="get_organization_openapi_spec"></a>![Method: ](https://apidocs.io/img/method.png ".OpenAPISpecController.get_organization_openapi_spec") get_organization_openapi_spec
+
+> Return the OpenAPI 2.0 Specification of the organization's API documentation in JSON
+
+
+```ruby
+def get_organization_openapi_spec(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = openAPISpec_controller.get_organization_openapi_spec(organization_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="management_interface_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ManagementInterfaceSettingsController") ManagementInterfaceSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` ManagementInterfaceSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+managementInterfaceSettings_controller = client.management_interface_settings
+```
+
+### <a name="update_network_device_management_interface_settings"></a>![Method: ](https://apidocs.io/img/method.png ".ManagementInterfaceSettingsController.update_network_device_management_interface_settings") update_network_device_management_interface_settings
+
+> Update the management interface settings for a device
+
+
+```ruby
+def update_network_device_management_interface_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_device_management_interface_settings |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+update_network_device_management_interface_settings = UpdateNetworkDeviceManagementInterfaceSettingsModel.new
+collect['update_network_device_management_interface_settings'] = update_network_device_management_interface_settings
+
+
+result = managementInterfaceSettings_controller.update_network_device_management_interface_settings(collect)
+
+```
+
+
+### <a name="get_network_device_management_interface_settings"></a>![Method: ](https://apidocs.io/img/method.png ".ManagementInterfaceSettingsController.get_network_device_management_interface_settings") get_network_device_management_interface_settings
+
+> Return the management interface settings for a device
+
+
+```ruby
+def get_network_device_management_interface_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+
+result = managementInterfaceSettings_controller.get_network_device_management_interface_settings(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mrl3_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MRL3FirewallController") MRL3FirewallController
+
+### Get singleton instance
+
+The singleton instance of the ``` MRL3FirewallController ``` class can be accessed from the API Client.
+
+```ruby
+mRL3Firewall_controller = client.mrl_3_firewall
+```
+
+### <a name="update_network_ssid_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MRL3FirewallController.update_network_ssid_l3_firewall_rules") update_network_ssid_l3_firewall_rules
+
+> Update the L3 firewall rules of an SSID on an MR network
+
+
+```ruby
+def update_network_ssid_l3_firewall_rules(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_ssid_l3_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+number = 'number'
+collect['number'] = number
+
+update_network_ssid_l3_firewall_rules = UpdateNetworkSsidL3FirewallRulesModel.new
+collect['update_network_ssid_l3_firewall_rules'] = update_network_ssid_l3_firewall_rules
+
+
+result = mRL3Firewall_controller.update_network_ssid_l3_firewall_rules(collect)
+
+```
+
+
+### <a name="get_network_ssid_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MRL3FirewallController.get_network_ssid_l3_firewall_rules") get_network_ssid_l3_firewall_rules
+
+> Return the L3 firewall rules for an SSID on an MR network
+
+
+```ruby
+def get_network_ssid_l3_firewall_rules(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| number |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+number = 'number'
+collect['number'] = number
+
+
+result = mRL3Firewall_controller.get_network_ssid_l3_firewall_rules(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mxl7_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXL7FirewallController") MXL7FirewallController
+
+### Get singleton instance
+
+The singleton instance of the ``` MXL7FirewallController ``` class can be accessed from the API Client.
+
+```ruby
+mXL7Firewall_controller = client.mxl_7_firewall
+```
+
+### <a name="update_network_l7_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL7FirewallController.update_network_l7_firewall_rules") update_network_l7_firewall_rules
+
+> Update the MX L7 firewall rules for an MX network
+
+
+```ruby
+def update_network_l7_firewall_rules(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_l7_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_l7_firewall_rules = UpdateNetworkL7FirewallRulesModel.new
+collect['update_network_l7_firewall_rules'] = update_network_l7_firewall_rules
+
+
+result = mXL7Firewall_controller.update_network_l7_firewall_rules(collect)
+
+```
+
+
+### <a name="get_network_l7_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL7FirewallController.get_network_l7_firewall_rules") get_network_l7_firewall_rules
+
+> List the MX L7 firewall rules for an MX network
+
+
+```ruby
+def get_network_l7_firewall_rules(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = mXL7Firewall_controller.get_network_l7_firewall_rules(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="group_policies_controller"></a>![Class: ](https://apidocs.io/img/class.png ".GroupPoliciesController") GroupPoliciesController
+
+### Get singleton instance
+
+The singleton instance of the ``` GroupPoliciesController ``` class can be accessed from the API Client.
+
+```ruby
+groupPolicies_controller = client.group_policies
+```
+
+### <a name="update_network_group_policy"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.update_network_group_policy") update_network_group_policy
+
+> Update a group policy
+
+
+```ruby
+def update_network_group_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| group_policy_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_group_policy |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+group_policy_id = 'groupPolicyId'
+collect['group_policy_id'] = group_policy_id
+
+update_network_group_policy = UpdateNetworkGroupPolicyModel.new
+collect['update_network_group_policy'] = update_network_group_policy
+
+
+result = groupPolicies_controller.update_network_group_policy(collect)
+
+```
+
+
+### <a name="delete_network_group_policy"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.delete_network_group_policy") delete_network_group_policy
+
+> Delete a group policy
+
+
+```ruby
+def delete_network_group_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| group_policy_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+group_policy_id = 'groupPolicyId'
+collect['group_policy_id'] = group_policy_id
+
+
+groupPolicies_controller.delete_network_group_policy(collect)
+
+```
+
+
+### <a name="get_network_group_policy"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.get_network_group_policy") get_network_group_policy
+
+> Display a group policy
+
+
+```ruby
+def get_network_group_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| group_policy_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+group_policy_id = 'groupPolicyId'
+collect['group_policy_id'] = group_policy_id
+
+
+result = groupPolicies_controller.get_network_group_policy(collect)
+
+```
+
+
+### <a name="create_network_group_policy"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.create_network_group_policy") create_network_group_policy
+
+> Create a group policy
+
+
+```ruby
+def create_network_group_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_group_policy |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+create_network_group_policy = CreateNetworkGroupPolicyModel.new
+collect['create_network_group_policy'] = create_network_group_policy
+
+
+result = groupPolicies_controller.create_network_group_policy(collect)
+
+```
+
+
+### <a name="get_network_group_policies"></a>![Method: ](https://apidocs.io/img/method.png ".GroupPoliciesController.get_network_group_policies") get_network_group_policies
+
+> List the group policies in a network
+
+
+```ruby
+def get_network_group_policies(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = groupPolicies_controller.get_network_group_policies(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="networks_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NetworksController") NetworksController
+
+### Get singleton instance
+
+The singleton instance of the ``` NetworksController ``` class can be accessed from the API Client.
+
+```ruby
+networks_controller = client.networks
+```
+
+### <a name="get_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network") get_network
+
+> Return a network
+
+
+```ruby
+def get_network(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = networks_controller.get_network(network_id)
+
+```
+
+
+### <a name="create_organization_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.create_organization_network") create_organization_network
+
+> Create a network
+
+
+```ruby
+def create_organization_network(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_organization_network |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+create_organization_network = CreateOrganizationNetworkModel.new
+collect['create_organization_network'] = create_organization_network
+
+
+result = networks_controller.create_organization_network(collect)
+
+```
+
+
+### <a name="get_organization_networks"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_organization_networks") get_organization_networks
+
+> List the networks in an organization
+
+
+```ruby
+def get_organization_networks(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| config_template_id |  ``` Optional ```  | An optional parameter that is the ID of a config template. Will return all networks bound to that template. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+config_template_id = 'configTemplateId'
+collect['config_template_id'] = config_template_id
+
+
+result = networks_controller.get_organization_networks(collect)
+
+```
+
+
+### <a name="update_network_bluetooth_settings"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.update_network_bluetooth_settings") update_network_bluetooth_settings
+
+> Update the Bluetooth settings for a network. See the docs page for <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a>.
+
+
+```ruby
+def update_network_bluetooth_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_bluetooth_settings |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_bluetooth_settings = UpdateNetworkBluetoothSettingsModel.new
+collect['update_network_bluetooth_settings'] = update_network_bluetooth_settings
+
+
+result = networks_controller.update_network_bluetooth_settings(collect)
+
+```
+
+
+### <a name="get_network_bluetooth_settings"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_bluetooth_settings") get_network_bluetooth_settings
+
+> Return the Bluetooth settings for a network. <a href="https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)">Bluetooth settings</a> must be enabled on the network.
+
+
+```ruby
+def get_network_bluetooth_settings(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = networks_controller.get_network_bluetooth_settings(network_id)
+
+```
+
+
+### <a name="delete_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.delete_network") delete_network
+
+> Delete a network
+
+
+```ruby
+def delete_network(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+networks_controller.delete_network(network_id)
+
+```
+
+
+### <a name="update_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.update_network") update_network
+
+> Update a network
+
+
+```ruby
+def update_network(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network = UpdateNetworkModel.new
+collect['update_network'] = update_network
+
+
+result = networks_controller.update_network(collect)
+
+```
+
+
+### <a name="update_network_site_to_site_vpn"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.update_network_site_to_site_vpn") update_network_site_to_site_vpn
+
+> Update the site-to-site VPN settings of a network. Only valid for MX networks in NAT mode.
+
+
+```ruby
+def update_network_site_to_site_vpn(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_site_to_site_vpn |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_site_to_site_vpn = UpdateNetworkSiteToSiteVpnModel.new
+collect['update_network_site_to_site_vpn'] = update_network_site_to_site_vpn
+
+
+result = networks_controller.update_network_site_to_site_vpn(collect)
+
+```
+
+
+### <a name="get_network_site_to_site_vpn"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_site_to_site_vpn") get_network_site_to_site_vpn
+
+> Return the site-to-site VPN settings of a network. Only valid for MX networks.
+
+
+```ruby
+def get_network_site_to_site_vpn(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = networks_controller.get_network_site_to_site_vpn(network_id)
+
+```
+
+
+### <a name="split_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.split_network") split_network
+
+> Split a combined network into individual networks for each type of device
+
+
+```ruby
+def split_network(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = networks_controller.split_network(network_id)
+
+```
+
+
+### <a name="combine_organization_networks"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.combine_organization_networks") combine_organization_networks
+
+> Combine multiple networks into a single network
+
+
+```ruby
+def combine_organization_networks(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| combine_organization_networks |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+combine_organization_networks = CombineOrganizationNetworksModel.new
+collect['combine_organization_networks'] = combine_organization_networks
+
+
+result = networks_controller.combine_organization_networks(collect)
+
+```
+
+
+### <a name="get_network_access_policies"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_access_policies") get_network_access_policies
+
+> List the access policies for this network. Only valid for MS networks.
+
+
+```ruby
+def get_network_access_policies(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = networks_controller.get_network_access_policies(network_id)
+
+```
+
+
+### <a name="unbind_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.unbind_network") unbind_network
+
+> Unbind a network from a template.
+
+
+```ruby
+def unbind_network(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = networks_controller.unbind_network(network_id)
+
+```
+
+
+### <a name="bind_network"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.bind_network") bind_network
+
+> Bind a network to a template.
+
+
+```ruby
+def bind_network(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| bind_network |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+bind_network = BindNetworkModel.new
+collect['bind_network'] = bind_network
+
+
+result = networks_controller.bind_network(collect)
+
+```
+
+
+### <a name="get_network_air_marshal"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_air_marshal") get_network_air_marshal
+
+> List Air Marshal scan results from a network
+
+
+```ruby
+def get_network_air_marshal(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+timespan = 74
+collect['timespan'] = timespan
+
+
+result = networks_controller.get_network_air_marshal(collect)
+
+```
+
+
+### <a name="get_network_traffic"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_traffic") get_network_traffic
+
+> The traffic analysis data for this network.
+> <a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
+> 
+
+
+```ruby
+def get_network_traffic(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| timespan |  ``` Required ```  | The timespan for the data. Must be an integer representing a duration in seconds between two hours and one month. (Mandatory.) |
+| device_type |  ``` Optional ```  | Filter the data by device type: combined (default), wireless, switch, appliance. When using combined, for each rule the data will come from the device type with the most usage. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+timespan = 'timespan'
+collect['timespan'] = timespan
+
+device_type = 'deviceType'
+collect['device_type'] = device_type
+
+
+result = networks_controller.get_network_traffic(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mv_sense_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MVSenseController") MVSenseController
+
+### Get singleton instance
+
+The singleton instance of the ``` MVSenseController ``` class can be accessed from the API Client.
+
+```ruby
+mVSense_controller = client.mv_sense
+```
+
+### <a name="get_device_camera_analytics_live"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_live") get_device_camera_analytics_live
+
+> Returns live state from camera of analytics zones
+
+
+```ruby
+def get_device_camera_analytics_live(serial); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+serial = 'serial'
+
+result = mVSense_controller.get_device_camera_analytics_live(serial)
+
+```
+
+
+### <a name="get_device_camera_analytics_recent"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_recent") get_device_camera_analytics_recent
+
+> Returns most recent record for analytics zones
+
+
+```ruby
+def get_device_camera_analytics_recent(serial); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+serial = 'serial'
+
+result = mVSense_controller.get_device_camera_analytics_recent(serial)
+
+```
+
+
+### <a name="get_device_camera_analytics_zones"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_zones") get_device_camera_analytics_zones
+
+> Returns all configured analytic zones for this camera
+
+
+```ruby
+def get_device_camera_analytics_zones(serial); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+serial = 'serial'
+
+result = mVSense_controller.get_device_camera_analytics_zones(serial)
+
+```
+
+
+### <a name="get_device_camera_analytics_zone_history"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_zone_history") get_device_camera_analytics_zone_history
+
+> Return historical records for analytic zones
+
+
+```ruby
+def get_device_camera_analytics_zone_history(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| zone_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 14 hours after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 hours. The default is 1 hour. |
+| resolution |  ``` Optional ```  | The time resolution in seconds for returned data. The valid resolutions are: 60. The default is 60. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+serial = 'serial'
+collect['serial'] = serial
+
+zone_id = 'zoneId'
+collect['zone_id'] = zone_id
 
 t0 = 't0'
 collect['t0'] = t0
@@ -4152,2032 +5581,25 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 155
+timespan = 74
 collect['timespan'] = timespan
 
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
+resolution = 74
+collect['resolution'] = resolution
 
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
 
+result = mVSense_controller.get_device_camera_analytics_zone_history(collect)
 
-result = clientSecurityEvents_controller.get_network_client_security_events(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="malware_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MalwareSettingsController") MalwareSettingsController
-
-### Get singleton instance
-
-The singleton instance of the ``` MalwareSettingsController ``` class can be accessed from the API Client.
-
-```ruby
-malwareSettings_controller = client.malware_settings
-```
-
-### <a name="get_network_security_malware_settings"></a>![Method: ](https://apidocs.io/img/method.png ".MalwareSettingsController.get_network_security_malware_settings") get_network_security_malware_settings
-
-> Returns all supported malware settings for an MX network
-
-
-```ruby
-def get_network_security_malware_settings(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = malwareSettings_controller.get_network_security_malware_settings(network_id)
-
-```
-
-
-### <a name="update_network_security_malware_settings"></a>![Method: ](https://apidocs.io/img/method.png ".MalwareSettingsController.update_network_security_malware_settings") update_network_security_malware_settings
-
-> Set the supported malware settings for an MX network
-
-
-```ruby
-def update_network_security_malware_settings(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_security_malware_settings |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_security_malware_settings = UpdateNetworkSecurityMalwareSettingsModel.new
-collect['update_network_security_malware_settings'] = update_network_security_malware_settings
-
-
-result = malwareSettings_controller.update_network_security_malware_settings(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="named_tag_scope_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NamedTagScopeController") NamedTagScopeController
-
-### Get singleton instance
-
-The singleton instance of the ``` NamedTagScopeController ``` class can be accessed from the API Client.
-
-```ruby
-namedTagScope_controller = client.named_tag_scope
-```
-
-### <a name="get_network_sm_target_groups"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.get_network_sm_target_groups") get_network_sm_target_groups
-
-> List the target groups in this network
-
-
-```ruby
-def get_network_sm_target_groups(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| with_details |  ``` Optional ```  | Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-with_details = 'withDetails'
-collect['with_details'] = with_details
-
-
-result = namedTagScope_controller.get_network_sm_target_groups(collect)
-
-```
-
-
-### <a name="create_network_sm_target_groups"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.create_network_sm_target_groups") create_network_sm_target_groups
-
-> Add a target group
-
-
-```ruby
-def create_network_sm_target_groups(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_sm_target_groups |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-create_network_sm_target_groups = CreateNetworkSmTargetGroupsModel.new
-collect['create_network_sm_target_groups'] = create_network_sm_target_groups
-
-
-result = namedTagScope_controller.create_network_sm_target_groups(collect)
-
-```
-
-
-### <a name="get_network_sm_target_group"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.get_network_sm_target_group") get_network_sm_target_group
-
-> Return a target group
-
-
-```ruby
-def get_network_sm_target_group(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| target_group_id |  ``` Required ```  | TODO: Add a parameter description |
-| with_details |  ``` Optional ```  | Boolean indicating if the the ids of devices or users scoped by the target group should be included in the response |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-target_group_id = 'targetGroupId'
-collect['target_group_id'] = target_group_id
-
-with_details = 'withDetails'
-collect['with_details'] = with_details
-
-
-result = namedTagScope_controller.get_network_sm_target_group(collect)
-
-```
-
-
-### <a name="update_network_sm_target_group"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.update_network_sm_target_group") update_network_sm_target_group
-
-> Update a target group
-
-
-```ruby
-def update_network_sm_target_group(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| target_group_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_target_group |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-target_group_id = 'targetGroupId'
-collect['target_group_id'] = target_group_id
-
-update_network_sm_target_group = UpdateNetworkSmTargetGroupModel.new
-collect['update_network_sm_target_group'] = update_network_sm_target_group
-
-
-result = namedTagScope_controller.update_network_sm_target_group(collect)
-
-```
-
-
-### <a name="delete_network_sm_target_group"></a>![Method: ](https://apidocs.io/img/method.png ".NamedTagScopeController.delete_network_sm_target_group") delete_network_sm_target_group
-
-> Delete a target group from a network
-
-
-```ruby
-def delete_network_sm_target_group(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| target_group_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-target_group_id = 'targetGroupId'
-collect['target_group_id'] = target_group_id
-
-
-namedTagScope_controller.delete_network_sm_target_group(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="sm_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SMController") SMController
-
-### Get singleton instance
-
-The singleton instance of the ``` SMController ``` class can be accessed from the API Client.
-
-```ruby
-sM_controller = client.sm
-```
-
-### <a name="create_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_profile_clarity") create_network_sm_profile_clarity
-
-> Create a new profile containing a Cisco Clarity payload
-
-
-```ruby
-def create_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_sm_profile_clarity |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-create_network_sm_profile_clarity = CreateNetworkSmProfileClarityModel.new
-collect['create_network_sm_profile_clarity'] = create_network_sm_profile_clarity
-
-
-result = sM_controller.create_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="update_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_profile_clarity") update_network_sm_profile_clarity
-
-> Update an existing profile containing a Cisco Clarity payload
-
-
-```ruby
-def update_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_profile_clarity |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-update_network_sm_profile_clarity = UpdateNetworkSmProfileClarityModel.new
-collect['update_network_sm_profile_clarity'] = update_network_sm_profile_clarity
-
-
-result = sM_controller.update_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="add_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.add_network_sm_profile_clarity") add_network_sm_profile_clarity
-
-> Add a Cisco Clarity payload to an existing profile
-
-
-```ruby
-def add_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| add_network_sm_profile_clarity |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-add_network_sm_profile_clarity = AddNetworkSmProfileClarityModel.new
-collect['add_network_sm_profile_clarity'] = add_network_sm_profile_clarity
-
-
-result = sM_controller.add_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="get_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profile_clarity") get_network_sm_profile_clarity
-
-> Get details for a Cisco Clarity payload
-
-
-```ruby
-def get_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-result = sM_controller.get_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="delete_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_profile_clarity") delete_network_sm_profile_clarity
-
-> Delete a Cisco Clarity payload. Deletes the entire profile if it's empty after removing the payload.
-
-
-```ruby
-def delete_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-sM_controller.delete_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="create_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_profile_umbrella") create_network_sm_profile_umbrella
-
-> Create a new profile containing a Cisco Umbrella payload
-
-
-```ruby
-def create_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_sm_profile_umbrella |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-create_network_sm_profile_umbrella = CreateNetworkSmProfileUmbrellaModel.new
-collect['create_network_sm_profile_umbrella'] = create_network_sm_profile_umbrella
-
-
-result = sM_controller.create_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="update_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_profile_umbrella") update_network_sm_profile_umbrella
-
-> Update an existing profile containing a Cisco Umbrella payload
-
-
-```ruby
-def update_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_profile_umbrella |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-update_network_sm_profile_umbrella = UpdateNetworkSmProfileUmbrellaModel.new
-collect['update_network_sm_profile_umbrella'] = update_network_sm_profile_umbrella
-
-
-result = sM_controller.update_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="add_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.add_network_sm_profile_umbrella") add_network_sm_profile_umbrella
-
-> Add a Cisco Umbrella payload to an existing profile
-
-
-```ruby
-def add_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| add_network_sm_profile_umbrella |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-add_network_sm_profile_umbrella = AddNetworkSmProfileUmbrellaModel.new
-collect['add_network_sm_profile_umbrella'] = add_network_sm_profile_umbrella
-
-
-result = sM_controller.add_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="get_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profile_umbrella") get_network_sm_profile_umbrella
-
-> Get details for a Cisco Umbrella payload
-
-
-```ruby
-def get_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-result = sM_controller.get_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="delete_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_profile_umbrella") delete_network_sm_profile_umbrella
-
-> Delete a Cisco Umbrella payload. Deletes the entire profile if it's empty after removing the payload
-
-
-```ruby
-def delete_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-sM_controller.delete_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="create_network_sm_app_polaris"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_app_polaris") create_network_sm_app_polaris
-
-> Create a new Polaris app
-
-
-```ruby
-def create_network_sm_app_polaris(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_sm_app_polaris |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-create_network_sm_app_polaris = CreateNetworkSmAppPolarisModel.new
-collect['create_network_sm_app_polaris'] = create_network_sm_app_polaris
-
-
-result = sM_controller.create_network_sm_app_polaris(collect)
-
-```
-
-
-### <a name="get_network_sm_app_polaris"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_app_polaris") get_network_sm_app_polaris
-
-> Get details for a Cisco Polaris app if it exists
-
-
-```ruby
-def get_network_sm_app_polaris(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| bundle_id |  ``` Optional ```  | The bundle ID of the app to be found, defaults to com.cisco.ciscosecurity.app |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-bundle_id = 'bundleId'
-collect['bundle_id'] = bundle_id
-
-
-result = sM_controller.get_network_sm_app_polaris(collect)
-
-```
-
-
-### <a name="update_network_sm_app_polari"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_app_polari") update_network_sm_app_polari
-
-> Update an existing Polaris app
-
-
-```ruby
-def update_network_sm_app_polari(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| app_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_app_polari |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-app_id = 'appId'
-collect['app_id'] = app_id
-
-update_network_sm_app_polari = UpdateNetworkSmAppPolariModel.new
-collect['update_network_sm_app_polari'] = update_network_sm_app_polari
-
-
-result = sM_controller.update_network_sm_app_polari(collect)
-
-```
-
-
-### <a name="delete_network_sm_app_polari"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_app_polari") delete_network_sm_app_polari
-
-> Delete a Cisco Polaris app
-
-
-```ruby
-def delete_network_sm_app_polari(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| app_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-app_id = 'appId'
-collect['app_id'] = app_id
-
-
-sM_controller.delete_network_sm_app_polari(collect)
-
-```
-
-
-### <a name="get_network_sm_devices"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_devices") get_network_sm_devices
-
-> List the devices enrolled in an SM network with various specified fields and filters
-
-
-```ruby
-def get_network_sm_devices(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| fields |  ``` Optional ```  | Additional fields that will be displayed for each device. Multiple fields can be passed in as comma separated values.
-      The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,
-      systemType, availableDeviceCapacity, kioskAppName, biosVersion, lastConnected, missingAppsCount, userSuppliedAddress, location, lastUser,
-      ownerEmail, ownerUsername, publicIp, phoneNumber, diskInfoJson, deviceCapacity, isManaged, hadMdm, isSupervised, meid, imei, iccid,
-      simCarrierNetwork, cellularDataUsed, isHotspotEnabled, createdAt, batteryEstCharge, quarantined, avName, avRunning, asName, fwName,
-      isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,
-      hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityPatchVersion. |
-| wifi_macs |  ``` Optional ```  | Filter devices by wifi mac(s). Multiple wifi macs can be passed in as comma separated values. |
-| serials |  ``` Optional ```  | Filter devices by serial(s). Multiple serials can be passed in as comma separated values. |
-| ids |  ``` Optional ```  | Filter devices by id(s). Multiple ids can be passed in as comma separated values. |
-| scope |  ``` Optional ```  | Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as comma separated values. |
-| batch_token |  ``` Optional ```  | On networks with more than 1000 devices, the device list will be limited to 1000 devices per query.
-      If there are more devices to be seen, a batch token will be returned as a part of the device list. To see the remainder of
-      the devices, pass in the batchToken as a parameter in the next request. Requests made with the batchToken do not require
-      additional parameters as the batchToken includes the parameters passed in with the original request. Additional parameters
-      passed in with the batchToken will be ignored. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-fields = 'fields'
-collect['fields'] = fields
-
-wifi_macs = 'wifiMacs'
-collect['wifi_macs'] = wifi_macs
-
-serials = 'serials'
-collect['serials'] = serials
-
-ids = 'ids'
-collect['ids'] = ids
-
-scope = 'scope'
-collect['scope'] = scope
-
-batch_token = 'batchToken'
-collect['batch_token'] = batch_token
-
-
-result = sM_controller.get_network_sm_devices(collect)
-
-```
-
-
-### <a name="get_network_sm_users"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_users") get_network_sm_users
-
-> List the owners in an SM network with various specified fields and filters
-
-
-```ruby
-def get_network_sm_users(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| usernames |  ``` Optional ```  | Filter users by username(s). Multiple usernames can be passed in as comma separated values. |
-| emails |  ``` Optional ```  | Filter users by email(s). Multiple emails can be passed in as comma separated values. |
-| ids |  ``` Optional ```  | Filter users by id(s). Multiple ids can be passed in as comma separated values. |
-| scope |  ``` Optional ```  | Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as comma separated values. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-usernames = 'usernames'
-collect['usernames'] = usernames
-
-emails = 'emails'
-collect['emails'] = emails
-
-ids = 'ids'
-collect['ids'] = ids
-
-scope = 'scope'
-collect['scope'] = scope
-
-
-result = sM_controller.get_network_sm_users(collect)
-
-```
-
-
-### <a name="get_network_sm_user_device_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_user_device_profiles") get_network_sm_user_device_profiles
-
-> Get the profiles associated with a user
-
-
-```ruby
-def get_network_sm_user_device_profiles(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_user_device_profiles(collect)
-
-```
-
-
-### <a name="get_network_sm_device_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_device_profiles") get_network_sm_device_profiles
-
-> Get the profiles associated with a device
-
-
-```ruby
-def get_network_sm_device_profiles(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_device_profiles(collect)
-
-```
-
-
-### <a name="get_network_sm_user_softwares"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_user_softwares") get_network_sm_user_softwares
-
-> Get a list of softwares associated with a user
-
-
-```ruby
-def get_network_sm_user_softwares(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_user_softwares(collect)
-
-```
-
-
-### <a name="get_network_sm_softwares"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_softwares") get_network_sm_softwares
-
-> Get a list of softwares associated with a device
-
-
-```ruby
-def get_network_sm_softwares(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_softwares(collect)
-
-```
-
-
-### <a name="get_network_sm_network_adapters"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_network_adapters") get_network_sm_network_adapters
-
-> List the network adapters of a device
-
-
-```ruby
-def get_network_sm_network_adapters(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_network_adapters(collect)
-
-```
-
-
-### <a name="get_network_sm_wlan_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_wlan_lists") get_network_sm_wlan_lists
-
-> List the saved SSID names on a device
-
-
-```ruby
-def get_network_sm_wlan_lists(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_wlan_lists(collect)
-
-```
-
-
-### <a name="get_network_sm_security_centers"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_security_centers") get_network_sm_security_centers
-
-> List the security centers on a device
-
-
-```ruby
-def get_network_sm_security_centers(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_security_centers(collect)
-
-```
-
-
-### <a name="get_network_sm_restrictions"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_restrictions") get_network_sm_restrictions
-
-> List the restrictions on a device
-
-
-```ruby
-def get_network_sm_restrictions(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_restrictions(collect)
-
-```
-
-
-### <a name="get_network_sm_certs"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_certs") get_network_sm_certs
-
-> List the certs on a device
-
-
-```ruby
-def get_network_sm_certs(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_certs(collect)
-
-```
-
-
-### <a name="update_network_sm_devices_tags"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_devices_tags") update_network_sm_devices_tags
-
-> Add, delete, or update the tags of a set of devices
-
-
-```ruby
-def update_network_sm_devices_tags(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_devices_tags |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-update_network_sm_devices_tags = UpdateNetworkSmDevicesTagsModel.new
-collect['update_network_sm_devices_tags'] = update_network_sm_devices_tags
-
-
-result = sM_controller.update_network_sm_devices_tags(collect)
-
-```
-
-
-### <a name="update_network_sm_device_fields"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_device_fields") update_network_sm_device_fields
-
-> Modify the fields of a device
-
-
-```ruby
-def update_network_sm_device_fields(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_device_fields |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-update_network_sm_device_fields = UpdateNetworkSmDeviceFieldsModel.new
-collect['update_network_sm_device_fields'] = update_network_sm_device_fields
-
-
-result = sM_controller.update_network_sm_device_fields(collect)
-
-```
-
-
-### <a name="update_network_sm_devices_lock"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_devices_lock") update_network_sm_devices_lock
-
-> Lock a set of devices
-
-
-```ruby
-def update_network_sm_devices_lock(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_devices_lock |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-update_network_sm_devices_lock = UpdateNetworkSmDevicesLockModel.new
-collect['update_network_sm_devices_lock'] = update_network_sm_devices_lock
-
-
-result = sM_controller.update_network_sm_devices_lock(collect)
-
-```
-
-
-### <a name="update_network_sm_device_wipe"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_device_wipe") update_network_sm_device_wipe
-
-> Wipe a device
-
-
-```ruby
-def update_network_sm_device_wipe(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_device_wipe |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-update_network_sm_device_wipe = UpdateNetworkSmDeviceWipeModel.new
-collect['update_network_sm_device_wipe'] = update_network_sm_device_wipe
-
-
-result = sM_controller.update_network_sm_device_wipe(collect)
-
-```
-
-
-### <a name="update_network_sm_devices_checkin"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_devices_checkin") update_network_sm_devices_checkin
-
-> Force check-in a set of devices
-
-
-```ruby
-def update_network_sm_devices_checkin(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_devices_checkin |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-update_network_sm_devices_checkin = UpdateNetworkSmDevicesCheckinModel.new
-collect['update_network_sm_devices_checkin'] = update_network_sm_devices_checkin
-
-
-result = sM_controller.update_network_sm_devices_checkin(collect)
-
-```
-
-
-### <a name="update_network_sm_devices_move"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_devices_move") update_network_sm_devices_move
-
-> Move a set of devices to a new network
-
-
-```ruby
-def update_network_sm_devices_move(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_devices_move |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-update_network_sm_devices_move = UpdateNetworkSmDevicesMoveModel.new
-collect['update_network_sm_devices_move'] = update_network_sm_devices_move
-
-
-result = sM_controller.update_network_sm_devices_move(collect)
-
-```
-
-
-### <a name="unenroll_network_sm_device"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.unenroll_network_sm_device") unenroll_network_sm_device
-
-> Unenroll a device
-
-
-```ruby
-def unenroll_network_sm_device(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| device_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-device_id = 'deviceId'
-collect['device_id'] = device_id
-
-
-result = sM_controller.unenroll_network_sm_device(collect)
-
-```
-
-
-### <a name="get_network_sm_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profiles") get_network_sm_profiles
-
-> List all the profiles in the network
-
-
-```ruby
-def get_network_sm_profiles(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'network_id'
-
-result = sM_controller.get_network_sm_profiles(network_id)
-
-```
-
-
-### <a name="get_network_sm_cellular_usage_history"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_cellular_usage_history") get_network_sm_cellular_usage_history
-
-> Return the client's daily cellular data usage history. Usage data is in kilobytes.
-
-
-```ruby
-def get_network_sm_cellular_usage_history(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-
-result = sM_controller.get_network_sm_cellular_usage_history(collect)
-
-```
-
-
-### <a name="get_network_sm_performance_history"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_performance_history") get_network_sm_performance_history
-
-> Return historical records of various Systems Manager client metrics for desktop devices.
-
-
-```ruby
-def get_network_sm_performance_history(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-per_page = 'perPage'
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-
-result = sM_controller.get_network_sm_performance_history(collect)
-
-```
-
-
-### <a name="get_network_sm_desktop_logs"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_desktop_logs") get_network_sm_desktop_logs
-
-> Return historical records of various Systems Manager network connection details for desktop devices.
-
-
-```ruby
-def get_network_sm_desktop_logs(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-per_page = 'perPage'
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-
-result = sM_controller.get_network_sm_desktop_logs(collect)
-
-```
-
-
-### <a name="get_network_sm_device_command_logs"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_device_command_logs") get_network_sm_device_command_logs
-
->     Return historical records of commands sent to Systems Manager devices.
->     <p>Note that this will include the name of the Dashboard user who initiated the command if it was generated
->     by a Dashboard admin rather than the automatic behavior of the system; you may wish to filter this out
->     of any reports.</p>
-> 
-
-
-```ruby
-def get_network_sm_device_command_logs(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-per_page = 'perPage'
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-
-result = sM_controller.get_network_sm_device_command_logs(collect)
-
-```
-
-
-### <a name="get_network_sm_connectivity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_connectivity") get_network_sm_connectivity
-
-> Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
-
-
-```ruby
-def get_network_sm_connectivity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'network_id'
-collect['network_id'] = network_id
-
-id = 'id'
-collect['id'] = id
-
-per_page = 'perPage'
-collect['per_page'] = per_page
-
-starting_after = 'startingAfter'
-collect['starting_after'] = starting_after
-
-ending_before = 'endingBefore'
-collect['ending_before'] = ending_before
-
-
-result = sM_controller.get_network_sm_connectivity(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="splash_login_attempts_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SplashLoginAttemptsController") SplashLoginAttemptsController
-
-### Get singleton instance
-
-The singleton instance of the ``` SplashLoginAttemptsController ``` class can be accessed from the API Client.
-
-```ruby
-splashLoginAttempts_controller = client.splash_login_attempts
-```
-
-### <a name="get_network_splash_login_attempts"></a>![Method: ](https://apidocs.io/img/method.png ".SplashLoginAttemptsController.get_network_splash_login_attempts") get_network_splash_login_attempts
-
-> List the splash login attempts for a network
-
-
-```ruby
-def get_network_splash_login_attempts(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| id |  ``` Required ```  | TODO: Add a parameter description |
-| ssid_number |  ``` Optional ```  | Only return the login attempts for the specified SSID |
-| login_identifier |  ``` Optional ```  | The username, email, or phone number used during login |
-| timespan |  ``` Optional ```  | The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-id = 'id'
-collect['id'] = id
-
-ssid_number = 'ssidNumber'
-collect['ssid_number'] = ssid_number
-
-login_identifier = 'loginIdentifier'
-collect['login_identifier'] = login_identifier
-
-timespan = 'timespan'
-collect['timespan'] = timespan
-
-
-result = splashLoginAttempts_controller.get_network_splash_login_attempts(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="splash_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SplashSettingsController") SplashSettingsController
-
-### Get singleton instance
-
-The singleton instance of the ``` SplashSettingsController ``` class can be accessed from the API Client.
-
-```ruby
-splashSettings_controller = client.splash_settings
-```
-
-### <a name="get_network_ssids_plash_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SplashSettingsController.get_network_ssids_plash_settings") get_network_ssids_plash_settings
-
-> Display the splash page settings for the given SSID
-
-
-```ruby
-def get_network_ssids_plash_settings(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| number |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-number = 'number'
-collect['number'] = number
-
-
-result = splashSettings_controller.get_network_ssids_plash_settings(collect)
-
-```
-
-
-### <a name="update_network_ssids_plash_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SplashSettingsController.update_network_ssids_plash_settings") update_network_ssids_plash_settings
-
-> Modify the splash page settings for the given SSID
-
-
-```ruby
-def update_network_ssids_plash_settings(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| number |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_ssids_plash_settings |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-number = 'number'
-collect['number'] = number
-
-update_network_ssids_plash_settings = UpdateNetworkSsidsPlashSettingsModel.new
-collect['update_network_ssids_plash_settings'] = update_network_ssids_plash_settings
-
-
-result = splashSettings_controller.update_network_ssids_plash_settings(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="ssids_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SsidsController") SsidsController
-
-### Get singleton instance
-
-The singleton instance of the ``` SsidsController ``` class can be accessed from the API Client.
-
-```ruby
-ssids_controller = client.ssids
-```
-
-### <a name="get_network_ssids"></a>![Method: ](https://apidocs.io/img/method.png ".SsidsController.get_network_ssids") get_network_ssids
-
-> List the SSIDs in a network. Supports networks with access points or wireless-enabled security appliances and teleworker gateways.
-
-
-```ruby
-def get_network_ssids(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = ssids_controller.get_network_ssids(network_id)
-
-```
-
-
-### <a name="get_network_ssid"></a>![Method: ](https://apidocs.io/img/method.png ".SsidsController.get_network_ssid") get_network_ssid
-
-> Return a single SSID
-
-
-```ruby
-def get_network_ssid(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| number |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-number = 'number'
-collect['number'] = number
-
-
-result = ssids_controller.get_network_ssid(collect)
-
-```
-
-
-### <a name="update_network_ssid"></a>![Method: ](https://apidocs.io/img/method.png ".SsidsController.update_network_ssid") update_network_ssid
-
-> Update the attributes of an SSID
-
-
-```ruby
-def update_network_ssid(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| number |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_ssid |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-number = 'number'
-collect['number'] = number
-
-update_network_ssid = UpdateNetworkSsidModel.new
-collect['update_network_ssid'] = update_network_ssid
-
-
-result = ssids_controller.update_network_ssid(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="switch_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchSettingsController") SwitchSettingsController
-
-### Get singleton instance
-
-The singleton instance of the ``` SwitchSettingsController ``` class can be accessed from the API Client.
-
-```ruby
-switchSettings_controller = client.switch_settings
-```
-
-### <a name="get_network_switch_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings") get_network_switch_settings
-
-> Returns the switch network settings
-
-
-```ruby
-def get_network_switch_settings(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = switchSettings_controller.get_network_switch_settings(network_id)
-
-```
-
-
-### <a name="update_network_switch_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.update_network_switch_settings") update_network_switch_settings
-
-> Update switch network settings
-
-
-```ruby
-def update_network_switch_settings(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_switch_settings |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_switch_settings = UpdateNetworkSwitchSettingsModel.new
-collect['update_network_switch_settings'] = update_network_switch_settings
-
-
-result = switchSettings_controller.update_network_switch_settings(collect)
-
 ```
-
-
-[Back to List of Controllers](#list_of_controllers)
 
-## <a name="switch_ports_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchPortsController") SwitchPortsController
-
-### Get singleton instance
-
-The singleton instance of the ``` SwitchPortsController ``` class can be accessed from the API Client.
-
-```ruby
-switchPorts_controller = client.switch_ports
-```
 
-### <a name="get_device_switch_ports"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.get_device_switch_ports") get_device_switch_ports
+### <a name="get_device_camera_analytics_overview"></a>![Method: ](https://apidocs.io/img/method.png ".MVSenseController.get_device_camera_analytics_overview") get_device_camera_analytics_overview
 
-> List the switch ports for a switch
+> Returns an overview of aggregate analytics data for a timespan
 
 
 ```ruby
-def get_device_switch_ports(serial); end
+def get_device_camera_analytics_overview(options = {}); end
 ```
 
 #### Parameters
@@ -6185,33 +5607,9 @@ def get_device_switch_ports(serial); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | serial |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-serial = 'serial'
-
-result = switchPorts_controller.get_device_switch_ports(serial)
-
-```
-
-
-### <a name="get_device_switch_port"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.get_device_switch_port") get_device_switch_port
-
-> Return a switch port
-
-
-```ruby
-def get_device_switch_port(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| number |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour. |
 
 
 #### Example Usage
@@ -6222,72 +5620,40 @@ collect = Hash.new
 serial = 'serial'
 collect['serial'] = serial
 
-number = 'number'
-collect['number'] = number
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 74
+collect['timespan'] = timespan
 
 
-result = switchPorts_controller.get_device_switch_port(collect)
-
-```
-
-
-### <a name="update_device_switch_port"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.update_device_switch_port") update_device_switch_port
-
-> Update a switch port
-
-
-```ruby
-def update_device_switch_port(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| serial |  ``` Required ```  | TODO: Add a parameter description |
-| number |  ``` Required ```  | TODO: Add a parameter description |
-| update_device_switch_port |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-serial = 'serial'
-collect['serial'] = serial
-
-number = 'number'
-collect['number'] = number
-
-update_device_switch_port = UpdateDeviceSwitchPortModel.new
-collect['update_device_switch_port'] = update_device_switch_port
-
-
-result = switchPorts_controller.update_device_switch_port(collect)
+result = mVSense_controller.get_device_camera_analytics_overview(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="switch_stacks_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchStacksController") SwitchStacksController
+## <a name="vlans_controller"></a>![Class: ](https://apidocs.io/img/class.png ".VlansController") VlansController
 
 ### Get singleton instance
 
-The singleton instance of the ``` SwitchStacksController ``` class can be accessed from the API Client.
+The singleton instance of the ``` VlansController ``` class can be accessed from the API Client.
 
 ```ruby
-switchStacks_controller = client.switch_stacks
+vlans_controller = client.vlans
 ```
 
-### <a name="get_network_switch_stacks"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.get_network_switch_stacks") get_network_switch_stacks
+### <a name="get_network_vlans"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.get_network_vlans") get_network_vlans
 
-> List the switch stacks in a network
+> List the VLANs for an MX network
 
 
 ```ruby
-def get_network_switch_stacks(network_id); end
+def get_network_vlans(network_id); end
 ```
 
 #### Parameters
@@ -6302,18 +5668,18 @@ def get_network_switch_stacks(network_id); end
 ```ruby
 network_id = 'networkId'
 
-result = switchStacks_controller.get_network_switch_stacks(network_id)
+result = vlans_controller.get_network_vlans(network_id)
 
 ```
 
 
-### <a name="create_network_switch_stacks"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.create_network_switch_stacks") create_network_switch_stacks
+### <a name="get_network_vlans_enabled_state"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.get_network_vlans_enabled_state") get_network_vlans_enabled_state
 
-> Create a stack
+> Returns the enabled status of VLANs for the network
 
 
 ```ruby
-def create_network_switch_stacks(options = {}); end
+def get_network_vlans_enabled_state(network_id); end
 ```
 
 #### Parameters
@@ -6321,7 +5687,33 @@ def create_network_switch_stacks(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_switch_stacks |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = vlans_controller.get_network_vlans_enabled_state(network_id)
+
+```
+
+
+### <a name="delete_network_vlan"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.delete_network_vlan") delete_network_vlan
+
+> Delete a VLAN from a network
+
+
+```ruby
+def delete_network_vlan(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| vlan_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6332,22 +5724,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-create_network_switch_stacks = CreateNetworkSwitchStacksModel.new
-collect['create_network_switch_stacks'] = create_network_switch_stacks
+vlan_id = 'vlanId'
+collect['vlan_id'] = vlan_id
 
 
-result = switchStacks_controller.create_network_switch_stacks(collect)
+vlans_controller.delete_network_vlan(collect)
 
 ```
 
 
-### <a name="get_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.get_network_switch_stack") get_network_switch_stack
+### <a name="create_network_vlan"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.create_network_vlan") create_network_vlan
 
-> Show a switch stack
+> Add a VLAN
 
 
 ```ruby
-def get_network_switch_stack(options = {}); end
+def create_network_vlan(options = {}); end
 ```
 
 #### Parameters
@@ -6355,7 +5747,7 @@ def get_network_switch_stack(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_vlan |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6366,22 +5758,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-switch_stack_id = 'switchStackId'
-collect['switch_stack_id'] = switch_stack_id
+create_network_vlan = CreateNetworkVlanModel.new
+collect['create_network_vlan'] = create_network_vlan
 
 
-result = switchStacks_controller.get_network_switch_stack(collect)
+result = vlans_controller.create_network_vlan(collect)
 
 ```
 
 
-### <a name="delete_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.delete_network_switch_stack") delete_network_switch_stack
+### <a name="update_network_vlans_enabled_state"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.update_network_vlans_enabled_state") update_network_vlans_enabled_state
 
-> Delete a stack
+> Enable/Disable VLANs for the given network
 
 
 ```ruby
-def delete_network_switch_stack(options = {}); end
+def update_network_vlans_enabled_state(options = {}); end
 ```
 
 #### Parameters
@@ -6389,7 +5781,7 @@ def delete_network_switch_stack(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_vlans_enabled_state |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6400,22 +5792,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-switch_stack_id = 'switchStackId'
-collect['switch_stack_id'] = switch_stack_id
+update_network_vlans_enabled_state = UpdateNetworkVlansEnabledStateModel.new
+collect['update_network_vlans_enabled_state'] = update_network_vlans_enabled_state
 
 
-switchStacks_controller.delete_network_switch_stack(collect)
+result = vlans_controller.update_network_vlans_enabled_state(collect)
 
 ```
 
 
-### <a name="add_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.add_network_switch_stack") add_network_switch_stack
+### <a name="update_network_vlan"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.update_network_vlan") update_network_vlan
 
-> Add a switch to a stack
+> Update a VLAN
 
 
 ```ruby
-def add_network_switch_stack(options = {}); end
+def update_network_vlan(options = {}); end
 ```
 
 #### Parameters
@@ -6423,8 +5815,8 @@ def add_network_switch_stack(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
-| add_network_switch_stack |  ``` Required ```  | TODO: Add a parameter description |
+| vlan_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_vlan |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6435,25 +5827,25 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-switch_stack_id = 'switchStackId'
-collect['switch_stack_id'] = switch_stack_id
+vlan_id = 'vlanId'
+collect['vlan_id'] = vlan_id
 
-add_network_switch_stack = AddNetworkSwitchStackModel.new
-collect['add_network_switch_stack'] = add_network_switch_stack
+update_network_vlan = UpdateNetworkVlanModel.new
+collect['update_network_vlan'] = update_network_vlan
 
 
-result = switchStacks_controller.add_network_switch_stack(collect)
+result = vlans_controller.update_network_vlan(collect)
 
 ```
 
 
-### <a name="remove_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.remove_network_switch_stack") remove_network_switch_stack
+### <a name="get_network_vlan"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.get_network_vlan") get_network_vlan
 
-> Remove a switch from a stack
+> Return a VLAN
 
 
 ```ruby
-def remove_network_switch_stack(options = {}); end
+def get_network_vlan(options = {}); end
 ```
 
 #### Parameters
@@ -6461,8 +5853,7 @@ def remove_network_switch_stack(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
-| remove_network_switch_stack |  ``` Required ```  | TODO: Add a parameter description |
+| vlan_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6470,66 +5861,37 @@ def remove_network_switch_stack(options = {}); end
 ```ruby
 collect = Hash.new
 
-network_id = 'networkID'
+network_id = 'networkId'
 collect['network_id'] = network_id
 
-switch_stack_id = 'switchStackId'
-collect['switch_stack_id'] = switch_stack_id
-
-remove_network_switch_stack = RemoveNetworkSwitchStackModel.new
-collect['remove_network_switch_stack'] = remove_network_switch_stack
+vlan_id = 'vlanId'
+collect['vlan_id'] = vlan_id
 
 
-result = switchStacks_controller.remove_network_switch_stack(collect)
+result = vlans_controller.get_network_vlan(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="syslog_servers_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SyslogServersController") SyslogServersController
+## <a name="uplink_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UplinkSettingsController") UplinkSettingsController
 
 ### Get singleton instance
 
-The singleton instance of the ``` SyslogServersController ``` class can be accessed from the API Client.
+The singleton instance of the ``` UplinkSettingsController ``` class can be accessed from the API Client.
 
 ```ruby
-syslogServers_controller = client.syslog_servers
+uplinkSettings_controller = client.uplink_settings
 ```
 
-### <a name="get_network_syslog_servers"></a>![Method: ](https://apidocs.io/img/method.png ".SyslogServersController.get_network_syslog_servers") get_network_syslog_servers
+### <a name="update_network_uplink_settings"></a>![Method: ](https://apidocs.io/img/method.png ".UplinkSettingsController.update_network_uplink_settings") update_network_uplink_settings
 
-> List the syslog servers for a network
-
-
-```ruby
-def get_network_syslog_servers(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = syslogServers_controller.get_network_syslog_servers(network_id)
-
-```
-
-
-### <a name="update_network_syslog_servers"></a>![Method: ](https://apidocs.io/img/method.png ".SyslogServersController.update_network_syslog_servers") update_network_syslog_servers
-
-> Update the syslog servers for a network
+> Updates the uplink settings for your MX network.
 
 
 ```ruby
-def update_network_syslog_servers(options = {}); end
+def update_network_uplink_settings(options = {}); end
 ```
 
 #### Parameters
@@ -6537,7 +5899,7 @@ def update_network_syslog_servers(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_syslog_servers |  ``` Optional ```  | TODO: Add a parameter description |
+| update_network_uplink_settings |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6548,34 +5910,162 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-update_network_syslog_servers = UpdateNetworkSyslogServersModel.new
-collect['update_network_syslog_servers'] = update_network_syslog_servers
+update_network_uplink_settings = UpdateNetworkUplinkSettingsModel.new
+collect['update_network_uplink_settings'] = update_network_uplink_settings
 
 
-result = syslogServers_controller.update_network_syslog_servers(collect)
+result = uplinkSettings_controller.update_network_uplink_settings(collect)
+
+```
+
+
+### <a name="get_network_uplink_settings"></a>![Method: ](https://apidocs.io/img/method.png ".UplinkSettingsController.get_network_uplink_settings") get_network_uplink_settings
+
+> Returns the uplink settings for your MX network.
+
+
+```ruby
+def get_network_uplink_settings(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = uplinkSettings_controller.get_network_uplink_settings(network_id)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="content_filtering_categories_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ContentFilteringCategoriesController") ContentFilteringCategoriesController
+## <a name="static_routes_controller"></a>![Class: ](https://apidocs.io/img/class.png ".StaticRoutesController") StaticRoutesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` ContentFilteringCategoriesController ``` class can be accessed from the API Client.
+The singleton instance of the ``` StaticRoutesController ``` class can be accessed from the API Client.
 
 ```ruby
-contentFilteringCategories_controller = client.content_filtering_categories
+staticRoutes_controller = client.static_routes
 ```
 
-### <a name="get_network_content_filtering_categories"></a>![Method: ](https://apidocs.io/img/method.png ".ContentFilteringCategoriesController.get_network_content_filtering_categories") get_network_content_filtering_categories
+### <a name="delete_network_static_route"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.delete_network_static_route") delete_network_static_route
 
-> List all available content filtering categories for an MX network
+> Delete a static route from a network
 
 
 ```ruby
-def get_network_content_filtering_categories(network_id); end
+def delete_network_static_route(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| sr_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+sr_id = 'srId'
+collect['sr_id'] = sr_id
+
+
+staticRoutes_controller.delete_network_static_route(collect)
+
+```
+
+
+### <a name="get_network_static_route"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.get_network_static_route") get_network_static_route
+
+> Return a static route
+
+
+```ruby
+def get_network_static_route(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| sr_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+sr_id = 'srId'
+collect['sr_id'] = sr_id
+
+
+result = staticRoutes_controller.get_network_static_route(collect)
+
+```
+
+
+### <a name="create_network_static_route"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.create_network_static_route") create_network_static_route
+
+> Add a static route
+
+
+```ruby
+def create_network_static_route(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_static_route |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+create_network_static_route = CreateNetworkStaticRouteModel.new
+collect['create_network_static_route'] = create_network_static_route
+
+
+result = staticRoutes_controller.create_network_static_route(collect)
+
+```
+
+
+### <a name="get_network_static_routes"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.get_network_static_routes") get_network_static_routes
+
+> List the static routes for this network
+
+
+```ruby
+def get_network_static_routes(network_id); end
 ```
 
 #### Parameters
@@ -6590,56 +6080,68 @@ def get_network_content_filtering_categories(network_id); end
 ```ruby
 network_id = 'networkId'
 
-result = contentFilteringCategories_controller.get_network_content_filtering_categories(network_id)
+result = staticRoutes_controller.get_network_static_routes(network_id)
+
+```
+
+
+### <a name="update_network_static_route"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.update_network_static_route") update_network_static_route
+
+> Update a static route
+
+
+```ruby
+def update_network_static_route(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| sr_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_static_route |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+sr_id = 'srId'
+collect['sr_id'] = sr_id
+
+update_network_static_route = UpdateNetworkStaticRouteModel.new
+collect['update_network_static_route'] = update_network_static_route
+
+
+result = staticRoutes_controller.update_network_static_route(collect)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="content_filtering_rules_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ContentFilteringRulesController") ContentFilteringRulesController
+## <a name="mx_port_forwarding_rules_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXPortForwardingRulesController") MXPortForwardingRulesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` ContentFilteringRulesController ``` class can be accessed from the API Client.
+The singleton instance of the ``` MXPortForwardingRulesController ``` class can be accessed from the API Client.
 
 ```ruby
-contentFilteringRules_controller = client.content_filtering_rules
+mXPortForwardingRules_controller = client.mx_port_forwarding_rules
 ```
 
-### <a name="get_network_content_filtering"></a>![Method: ](https://apidocs.io/img/method.png ".ContentFilteringRulesController.get_network_content_filtering") get_network_content_filtering
+### <a name="update_network_port_forwarding_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXPortForwardingRulesController.update_network_port_forwarding_rules") update_network_port_forwarding_rules
 
-> Return the content filtering settings for an MX network
-
-
-```ruby
-def get_network_content_filtering(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = contentFilteringRules_controller.get_network_content_filtering(network_id)
-
-```
-
-
-### <a name="update_network_content_filtering"></a>![Method: ](https://apidocs.io/img/method.png ".ContentFilteringRulesController.update_network_content_filtering") update_network_content_filtering
-
-> Update the content filtering settings for an MX network
+> Update the port forwarding rules for an MX network
 
 
 ```ruby
-def update_network_content_filtering(options = {}); end
+def update_network_port_forwarding_rules(options = {}); end
 ```
 
 #### Parameters
@@ -6647,7 +6149,7 @@ def update_network_content_filtering(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_content_filtering |  ``` Optional ```  | TODO: Add a parameter description |
+| update_network_port_forwarding_rules |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6658,34 +6160,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-update_network_content_filtering = UpdateNetworkContentFilteringModel.new
-collect['update_network_content_filtering'] = update_network_content_filtering
+update_network_port_forwarding_rules = UpdateNetworkPortForwardingRulesModel.new
+collect['update_network_port_forwarding_rules'] = update_network_port_forwarding_rules
 
 
-result = contentFilteringRules_controller.update_network_content_filtering(collect)
+result = mXPortForwardingRules_controller.update_network_port_forwarding_rules(collect)
 
 ```
 
 
-[Back to List of Controllers](#list_of_controllers)
+### <a name="get_network_port_forwarding_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXPortForwardingRulesController.get_network_port_forwarding_rules") get_network_port_forwarding_rules
 
-## <a name="firewalled_services_controller"></a>![Class: ](https://apidocs.io/img/class.png ".FirewalledServicesController") FirewalledServicesController
-
-### Get singleton instance
-
-The singleton instance of the ``` FirewalledServicesController ``` class can be accessed from the API Client.
-
-```ruby
-firewalledServices_controller = client.firewalled_services
-```
-
-### <a name="get_network_firewalled_services"></a>![Method: ](https://apidocs.io/img/method.png ".FirewalledServicesController.get_network_firewalled_services") get_network_firewalled_services
-
-> List the appliance services and their accessibility rules
+> Return the port forwarding rules for an MX network
 
 
 ```ruby
-def get_network_firewalled_services(network_id); end
+def get_network_port_forwarding_rules(network_id); end
 ```
 
 #### Parameters
@@ -6700,151 +6190,7 @@ def get_network_firewalled_services(network_id); end
 ```ruby
 network_id = 'networkId'
 
-result = firewalledServices_controller.get_network_firewalled_services(network_id)
-
-```
-
-
-### <a name="get_network_firewalled_service"></a>![Method: ](https://apidocs.io/img/method.png ".FirewalledServicesController.get_network_firewalled_service") get_network_firewalled_service
-
-> Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
-
-
-```ruby
-def get_network_firewalled_service(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| service |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-service = 'service'
-collect['service'] = service
-
-
-result = firewalledServices_controller.get_network_firewalled_service(collect)
-
-```
-
-
-### <a name="update_network_firewalled_service"></a>![Method: ](https://apidocs.io/img/method.png ".FirewalledServicesController.update_network_firewalled_service") update_network_firewalled_service
-
-> Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
-
-
-```ruby
-def update_network_firewalled_service(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| service |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_firewalled_service |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-service = 'service'
-collect['service'] = service
-
-update_network_firewalled_service = UpdateNetworkFirewalledServiceModel.new
-collect['update_network_firewalled_service'] = update_network_firewalled_service
-
-
-result = firewalledServices_controller.update_network_firewalled_service(collect)
-
-```
-
-
-[Back to List of Controllers](#list_of_controllers)
-
-## <a name="mx1_many_nat_rules_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MX1ManyNATRulesController") MX1ManyNATRulesController
-
-### Get singleton instance
-
-The singleton instance of the ``` MX1ManyNATRulesController ``` class can be accessed from the API Client.
-
-```ruby
-mX1ManyNATRules_controller = client.mx_1_many_nat_rules
-```
-
-### <a name="get_network_one_to_many_nat_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MX1ManyNATRulesController.get_network_one_to_many_nat_rules") get_network_one_to_many_nat_rules
-
-> Return the 1:Many NAT mapping rules for an MX network
-
-
-```ruby
-def get_network_one_to_many_nat_rules(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = mX1ManyNATRules_controller.get_network_one_to_many_nat_rules(network_id)
-
-```
-
-
-### <a name="update_network_one_to_many_nat_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MX1ManyNATRulesController.update_network_one_to_many_nat_rules") update_network_one_to_many_nat_rules
-
-> Set the 1:Many NAT mapping rules for an MX network
-
-
-```ruby
-def update_network_one_to_many_nat_rules(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_one_to_many_nat_rules |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_one_to_many_nat_rules = UpdateNetworkOneToManyNatRulesModel.new
-collect['update_network_one_to_many_nat_rules'] = update_network_one_to_many_nat_rules
-
-
-result = mX1ManyNATRules_controller.update_network_one_to_many_nat_rules(collect)
+result = mXPortForwardingRules_controller.get_network_port_forwarding_rules(network_id)
 
 ```
 
@@ -6923,49 +6269,23 @@ result = mX11NATRules_controller.update_network_one_to_one_nat_rules(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="mx_port_forwarding_rules_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXPortForwardingRulesController") MXPortForwardingRulesController
+## <a name="content_filtering_rules_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ContentFilteringRulesController") ContentFilteringRulesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` MXPortForwardingRulesController ``` class can be accessed from the API Client.
+The singleton instance of the ``` ContentFilteringRulesController ``` class can be accessed from the API Client.
 
 ```ruby
-mXPortForwardingRules_controller = client.mx_port_forwarding_rules
+contentFilteringRules_controller = client.content_filtering_rules
 ```
 
-### <a name="get_network_port_forwarding_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXPortForwardingRulesController.get_network_port_forwarding_rules") get_network_port_forwarding_rules
+### <a name="update_network_content_filtering"></a>![Method: ](https://apidocs.io/img/method.png ".ContentFilteringRulesController.update_network_content_filtering") update_network_content_filtering
 
-> Return the port forwarding rules for an MX network
-
-
-```ruby
-def get_network_port_forwarding_rules(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = mXPortForwardingRules_controller.get_network_port_forwarding_rules(network_id)
-
-```
-
-
-### <a name="update_network_port_forwarding_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXPortForwardingRulesController.update_network_port_forwarding_rules") update_network_port_forwarding_rules
-
-> Update the port forwarding rules for an MX network
+> Update the content filtering settings for an MX network
 
 
 ```ruby
-def update_network_port_forwarding_rules(options = {}); end
+def update_network_content_filtering(options = {}); end
 ```
 
 #### Parameters
@@ -6973,7 +6293,7 @@ def update_network_port_forwarding_rules(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_port_forwarding_rules |  ``` Optional ```  | TODO: Add a parameter description |
+| update_network_content_filtering |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6984,34 +6304,60 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-update_network_port_forwarding_rules = UpdateNetworkPortForwardingRulesModel.new
-collect['update_network_port_forwarding_rules'] = update_network_port_forwarding_rules
+update_network_content_filtering = UpdateNetworkContentFilteringModel.new
+collect['update_network_content_filtering'] = update_network_content_filtering
 
 
-result = mXPortForwardingRules_controller.update_network_port_forwarding_rules(collect)
+result = contentFilteringRules_controller.update_network_content_filtering(collect)
+
+```
+
+
+### <a name="get_network_content_filtering"></a>![Method: ](https://apidocs.io/img/method.png ".ContentFilteringRulesController.get_network_content_filtering") get_network_content_filtering
+
+> Return the content filtering settings for an MX network
+
+
+```ruby
+def get_network_content_filtering(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = contentFilteringRules_controller.get_network_content_filtering(network_id)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="static_routes_controller"></a>![Class: ](https://apidocs.io/img/class.png ".StaticRoutesController") StaticRoutesController
+## <a name="content_filtering_categories_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ContentFilteringCategoriesController") ContentFilteringCategoriesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` StaticRoutesController ``` class can be accessed from the API Client.
+The singleton instance of the ``` ContentFilteringCategoriesController ``` class can be accessed from the API Client.
 
 ```ruby
-staticRoutes_controller = client.static_routes
+contentFilteringCategories_controller = client.content_filtering_categories
 ```
 
-### <a name="get_network_static_routes"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.get_network_static_routes") get_network_static_routes
+### <a name="get_network_content_filtering_categories"></a>![Method: ](https://apidocs.io/img/method.png ".ContentFilteringCategoriesController.get_network_content_filtering_categories") get_network_content_filtering_categories
 
-> List the static routes for this network
+> List all available content filtering categories for an MX network
 
 
 ```ruby
-def get_network_static_routes(network_id); end
+def get_network_content_filtering_categories(network_id); end
 ```
 
 #### Parameters
@@ -7026,196 +6372,30 @@ def get_network_static_routes(network_id); end
 ```ruby
 network_id = 'networkId'
 
-result = staticRoutes_controller.get_network_static_routes(network_id)
-
-```
-
-
-### <a name="create_network_static_routes"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.create_network_static_routes") create_network_static_routes
-
-> Add a static route
-
-
-```ruby
-def create_network_static_routes(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_static_routes |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-create_network_static_routes = CreateNetworkStaticRoutesModel.new
-collect['create_network_static_routes'] = create_network_static_routes
-
-
-result = staticRoutes_controller.create_network_static_routes(collect)
-
-```
-
-
-### <a name="get_network_static_route"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.get_network_static_route") get_network_static_route
-
-> Return a static route
-
-
-```ruby
-def get_network_static_route(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| sr_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-sr_id = 'srId'
-collect['sr_id'] = sr_id
-
-
-result = staticRoutes_controller.get_network_static_route(collect)
-
-```
-
-
-### <a name="update_network_static_route"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.update_network_static_route") update_network_static_route
-
-> Update a static route
-
-
-```ruby
-def update_network_static_route(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| sr_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_static_route |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-sr_id = 'srId'
-collect['sr_id'] = sr_id
-
-update_network_static_route = UpdateNetworkStaticRouteModel.new
-collect['update_network_static_route'] = update_network_static_route
-
-
-result = staticRoutes_controller.update_network_static_route(collect)
-
-```
-
-
-### <a name="delete_network_static_route"></a>![Method: ](https://apidocs.io/img/method.png ".StaticRoutesController.delete_network_static_route") delete_network_static_route
-
-> Delete a static route from a network
-
-
-```ruby
-def delete_network_static_route(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| sr_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-sr_id = 'srId'
-collect['sr_id'] = sr_id
-
-
-staticRoutes_controller.delete_network_static_route(collect)
+result = contentFilteringCategories_controller.get_network_content_filtering_categories(network_id)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="uplink_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".UplinkSettingsController") UplinkSettingsController
+## <a name="syslog_servers_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SyslogServersController") SyslogServersController
 
 ### Get singleton instance
 
-The singleton instance of the ``` UplinkSettingsController ``` class can be accessed from the API Client.
+The singleton instance of the ``` SyslogServersController ``` class can be accessed from the API Client.
 
 ```ruby
-uplinkSettings_controller = client.uplink_settings
+syslogServers_controller = client.syslog_servers
 ```
 
-### <a name="get_network_uplink_settings"></a>![Method: ](https://apidocs.io/img/method.png ".UplinkSettingsController.get_network_uplink_settings") get_network_uplink_settings
+### <a name="update_network_syslog_servers"></a>![Method: ](https://apidocs.io/img/method.png ".SyslogServersController.update_network_syslog_servers") update_network_syslog_servers
 
-> Returns the uplink settings for your MX network.
-
-
-```ruby
-def get_network_uplink_settings(network_id); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-network_id = 'networkId'
-
-result = uplinkSettings_controller.get_network_uplink_settings(network_id)
-
-```
-
-
-### <a name="update_network_uplink_settings"></a>![Method: ](https://apidocs.io/img/method.png ".UplinkSettingsController.update_network_uplink_settings") update_network_uplink_settings
-
-> Updates the uplink settings for your MX network.
+> Update the syslog servers for a network
 
 
 ```ruby
-def update_network_uplink_settings(options = {}); end
+def update_network_syslog_servers(options = {}); end
 ```
 
 #### Parameters
@@ -7223,7 +6403,7 @@ def update_network_uplink_settings(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_uplink_settings |  ``` Optional ```  | TODO: Add a parameter description |
+| update_network_syslog_servers |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7234,34 +6414,60 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-update_network_uplink_settings = UpdateNetworkUplinkSettingsModel.new
-collect['update_network_uplink_settings'] = update_network_uplink_settings
+update_network_syslog_servers = UpdateNetworkSyslogServersModel.new
+collect['update_network_syslog_servers'] = update_network_syslog_servers
 
 
-result = uplinkSettings_controller.update_network_uplink_settings(collect)
+result = syslogServers_controller.update_network_syslog_servers(collect)
+
+```
+
+
+### <a name="get_network_syslog_servers"></a>![Method: ](https://apidocs.io/img/method.png ".SyslogServersController.get_network_syslog_servers") get_network_syslog_servers
+
+> List the syslog servers for a network
+
+
+```ruby
+def get_network_syslog_servers(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = syslogServers_controller.get_network_syslog_servers(network_id)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="vlans_controller"></a>![Class: ](https://apidocs.io/img/class.png ".VlansController") VlansController
+## <a name="switch_stacks_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchStacksController") SwitchStacksController
 
 ### Get singleton instance
 
-The singleton instance of the ``` VlansController ``` class can be accessed from the API Client.
+The singleton instance of the ``` SwitchStacksController ``` class can be accessed from the API Client.
 
 ```ruby
-vlans_controller = client.vlans
+switchStacks_controller = client.switch_stacks
 ```
 
-### <a name="get_network_vlans"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.get_network_vlans") get_network_vlans
+### <a name="remove_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.remove_network_switch_stack") remove_network_switch_stack
 
-> List the VLANs for this network
+> Remove a switch from a stack
 
 
 ```ruby
-def get_network_vlans(network_id); end
+def remove_network_switch_stack(options = {}); end
 ```
 
 #### Parameters
@@ -7269,25 +6475,37 @@ def get_network_vlans(network_id); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
+| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
+| remove_network_switch_stack |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```ruby
-network_id = 'networkId'
+collect = Hash.new
 
-result = vlans_controller.get_network_vlans(network_id)
+network_id = 'networkID'
+collect['network_id'] = network_id
+
+switch_stack_id = 'switchStackId'
+collect['switch_stack_id'] = switch_stack_id
+
+remove_network_switch_stack = RemoveNetworkSwitchStackModel.new
+collect['remove_network_switch_stack'] = remove_network_switch_stack
+
+
+result = switchStacks_controller.remove_network_switch_stack(collect)
 
 ```
 
 
-### <a name="create_network_vlans"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.create_network_vlans") create_network_vlans
+### <a name="add_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.add_network_switch_stack") add_network_switch_stack
 
-> Add a VLAN
+> Add a switch to a stack
 
 
 ```ruby
-def create_network_vlans(options = {}); end
+def add_network_switch_stack(options = {}); end
 ```
 
 #### Parameters
@@ -7295,7 +6513,8 @@ def create_network_vlans(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_vlans |  ``` Required ```  | TODO: Add a parameter description |
+| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
+| add_network_switch_stack |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7306,22 +6525,25 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-create_network_vlans = CreateNetworkVlansModel.new
-collect['create_network_vlans'] = create_network_vlans
+switch_stack_id = 'switchStackId'
+collect['switch_stack_id'] = switch_stack_id
+
+add_network_switch_stack = AddNetworkSwitchStackModel.new
+collect['add_network_switch_stack'] = add_network_switch_stack
 
 
-result = vlans_controller.create_network_vlans(collect)
+result = switchStacks_controller.add_network_switch_stack(collect)
 
 ```
 
 
-### <a name="get_network_vlan"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.get_network_vlan") get_network_vlan
+### <a name="delete_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.delete_network_switch_stack") delete_network_switch_stack
 
-> Return a VLAN
+> Delete a stack
 
 
 ```ruby
-def get_network_vlan(options = {}); end
+def delete_network_switch_stack(options = {}); end
 ```
 
 #### Parameters
@@ -7329,7 +6551,7 @@ def get_network_vlan(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| vlan_id |  ``` Required ```  | TODO: Add a parameter description |
+| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7340,22 +6562,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-vlan_id = 'vlanId'
-collect['vlan_id'] = vlan_id
+switch_stack_id = 'switchStackId'
+collect['switch_stack_id'] = switch_stack_id
 
 
-result = vlans_controller.get_network_vlan(collect)
+switchStacks_controller.delete_network_switch_stack(collect)
 
 ```
 
 
-### <a name="update_network_vlan"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.update_network_vlan") update_network_vlan
+### <a name="get_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.get_network_switch_stack") get_network_switch_stack
 
-> Update a VLAN
+> Show a switch stack
 
 
 ```ruby
-def update_network_vlan(options = {}); end
+def get_network_switch_stack(options = {}); end
 ```
 
 #### Parameters
@@ -7363,8 +6585,7 @@ def update_network_vlan(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| vlan_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_vlan |  ``` Optional ```  | TODO: Add a parameter description |
+| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7375,25 +6596,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-vlan_id = 'vlanId'
-collect['vlan_id'] = vlan_id
-
-update_network_vlan = UpdateNetworkVlanModel.new
-collect['update_network_vlan'] = update_network_vlan
+switch_stack_id = 'switchStackId'
+collect['switch_stack_id'] = switch_stack_id
 
 
-result = vlans_controller.update_network_vlan(collect)
+result = switchStacks_controller.get_network_switch_stack(collect)
 
 ```
 
 
-### <a name="delete_network_vlan"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.delete_network_vlan") delete_network_vlan
+### <a name="create_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.create_network_switch_stack") create_network_switch_stack
 
-> Delete a VLAN from a network
+> Create a stack
 
 
 ```ruby
-def delete_network_vlan(options = {}); end
+def create_network_switch_stack(options = {}); end
 ```
 
 #### Parameters
@@ -7401,7 +6619,7 @@ def delete_network_vlan(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| vlan_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_switch_stack |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7412,22 +6630,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-vlan_id = 'vlanId'
-collect['vlan_id'] = vlan_id
+create_network_switch_stack = CreateNetworkSwitchStackModel.new
+collect['create_network_switch_stack'] = create_network_switch_stack
 
 
-vlans_controller.delete_network_vlan(collect)
+result = switchStacks_controller.create_network_switch_stack(collect)
 
 ```
 
 
-### <a name="get_network_vlans_enabled_state"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.get_network_vlans_enabled_state") get_network_vlans_enabled_state
+### <a name="get_network_switch_stacks"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.get_network_switch_stacks") get_network_switch_stacks
 
-> Returns the enabled status of VLANs for the network
+> List the switch stacks in a network
 
 
 ```ruby
-def get_network_vlans_enabled_state(network_id); end
+def get_network_switch_stacks(network_id); end
 ```
 
 #### Parameters
@@ -7442,64 +6660,76 @@ def get_network_vlans_enabled_state(network_id); end
 ```ruby
 network_id = 'networkId'
 
-result = vlans_controller.get_network_vlans_enabled_state(network_id)
-
-```
-
-
-### <a name="update_network_vlans_enabled_state"></a>![Method: ](https://apidocs.io/img/method.png ".VlansController.update_network_vlans_enabled_state") update_network_vlans_enabled_state
-
-> Enable/Disable VLANs for the given network
-
-
-```ruby
-def update_network_vlans_enabled_state(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_vlans_enabled_state |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-update_network_vlans_enabled_state = UpdateNetworkVlansEnabledStateModel.new
-collect['update_network_vlans_enabled_state'] = update_network_vlans_enabled_state
-
-
-result = vlans_controller.update_network_vlans_enabled_state(collect)
+result = switchStacks_controller.get_network_switch_stacks(network_id)
 
 ```
 
 
 [Back to List of Controllers](#list_of_controllers)
 
-## <a name="wireless_health_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WirelessHealthController") WirelessHealthController
+## <a name="switch_profiles_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchProfilesController") SwitchProfilesController
 
 ### Get singleton instance
 
-The singleton instance of the ``` WirelessHealthController ``` class can be accessed from the API Client.
+The singleton instance of the ``` SwitchProfilesController ``` class can be accessed from the API Client.
 
 ```ruby
-wirelessHealth_controller = client.wireless_health
+switchProfiles_controller = client.switch_profiles
 ```
 
-### <a name="get_network_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_connection_stats") get_network_connection_stats
+### <a name="get_organization_config_template_switch_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchProfilesController.get_organization_config_template_switch_profiles") get_organization_config_template_switch_profiles
 
-> Aggregated connectivity info for this network
+> List the switch profiles for your switch template configuration
 
 
 ```ruby
-def get_network_connection_stats(options = {}); end
+def get_organization_config_template_switch_profiles(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| config_template_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+config_template_id = 'configTemplateId'
+collect['config_template_id'] = config_template_id
+
+
+result = switchProfiles_controller.get_organization_config_template_switch_profiles(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="switch_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchSettingsController") SwitchSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` SwitchSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+switchSettings_controller = client.switch_settings
+```
+
+### <a name="update_network_switch_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.update_network_switch_settings") update_network_switch_settings
+
+> Update switch network settings
+
+
+```ruby
+def update_network_switch_settings(options = {}); end
 ```
 
 #### Parameters
@@ -7507,11 +6737,7 @@ def get_network_connection_stats(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| update_network_switch_settings |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7522,34 +6748,22 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
+update_network_switch_settings = UpdateNetworkSwitchSettingsModel.new
+collect['update_network_switch_settings'] = update_network_switch_settings
 
 
-result = wirelessHealth_controller.get_network_connection_stats(collect)
+result = switchSettings_controller.update_network_switch_settings(collect)
 
 ```
 
 
-### <a name="get_network_devices_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_devices_connection_stats") get_network_devices_connection_stats
+### <a name="get_network_switch_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings") get_network_switch_settings
 
-> Aggregated connectivity info for this network, grouped by node
+> Returns the switch network settings
 
 
 ```ruby
-def get_network_devices_connection_stats(options = {}); end
+def get_network_switch_settings(network_id); end
 ```
 
 #### Parameters
@@ -7557,11 +6771,105 @@ def get_network_devices_connection_stats(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = switchSettings_controller.get_network_switch_settings(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="snmp_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SNMPSettingsController") SNMPSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` SNMPSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+sNMPSettings_controller = client.snmp_settings
+```
+
+### <a name="update_organization_snmp"></a>![Method: ](https://apidocs.io/img/method.png ".SNMPSettingsController.update_organization_snmp") update_organization_snmp
+
+> Update the SNMP settings for an organization
+
+
+```ruby
+def update_organization_snmp(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_snmp |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+update_organization_snmp = UpdateOrganizationSnmpModel.new
+collect['update_organization_snmp'] = update_organization_snmp
+
+
+result = sNMPSettings_controller.update_organization_snmp(collect)
+
+```
+
+
+### <a name="get_organization_snmp"></a>![Method: ](https://apidocs.io/img/method.png ".SNMPSettingsController.get_organization_snmp") get_organization_snmp
+
+> Return the SNMP settings for an organization
+
+
+```ruby
+def get_organization_snmp(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = sNMPSettings_controller.get_organization_snmp(organization_id)
+
+```
+
+
+### <a name="update_network_snmp_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SNMPSettingsController.update_network_snmp_settings") update_network_snmp_settings
+
+> Update the SNMP settings for a network
+
+
+```ruby
+def update_network_snmp_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_snmp_settings |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7572,34 +6880,299 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
+update_network_snmp_settings = UpdateNetworkSnmpSettingsModel.new
+collect['update_network_snmp_settings'] = update_network_snmp_settings
 
 
-result = wirelessHealth_controller.get_network_devices_connection_stats(collect)
+result = sNMPSettings_controller.update_network_snmp_settings(collect)
 
 ```
 
 
-### <a name="get_network_device_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_device_connection_stats") get_network_device_connection_stats
+### <a name="get_network_snmp_settings"></a>![Method: ](https://apidocs.io/img/method.png ".SNMPSettingsController.get_network_snmp_settings") get_network_snmp_settings
 
-> Aggregated connectivity info for a given AP on this network
+> Return the SNMP settings for a network
 
 
 ```ruby
-def get_network_device_connection_stats(options = {}); end
+def get_network_snmp_settings(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = sNMPSettings_controller.get_network_snmp_settings(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="malware_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MalwareSettingsController") MalwareSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` MalwareSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+malwareSettings_controller = client.malware_settings
+```
+
+### <a name="update_network_security_malware_settings"></a>![Method: ](https://apidocs.io/img/method.png ".MalwareSettingsController.update_network_security_malware_settings") update_network_security_malware_settings
+
+> Set the supported malware settings for an MX network
+
+
+```ruby
+def update_network_security_malware_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_security_malware_settings |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_security_malware_settings = UpdateNetworkSecurityMalwareSettingsModel.new
+collect['update_network_security_malware_settings'] = update_network_security_malware_settings
+
+
+result = malwareSettings_controller.update_network_security_malware_settings(collect)
+
+```
+
+
+### <a name="get_network_security_malware_settings"></a>![Method: ](https://apidocs.io/img/method.png ".MalwareSettingsController.get_network_security_malware_settings") get_network_security_malware_settings
+
+> Returns all supported malware settings for an MX network
+
+
+```ruby
+def get_network_security_malware_settings(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = malwareSettings_controller.get_network_security_malware_settings(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="intrusion_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".IntrusionSettingsController") IntrusionSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` IntrusionSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+intrusionSettings_controller = client.intrusion_settings
+```
+
+### <a name="update_organization_security_intrusion_settings"></a>![Method: ](https://apidocs.io/img/method.png ".IntrusionSettingsController.update_organization_security_intrusion_settings") update_organization_security_intrusion_settings
+
+> Sets supported intrusion settings for an organization
+
+
+```ruby
+def update_organization_security_intrusion_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_security_intrusion_settings |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+update_organization_security_intrusion_settings = UpdateOrganizationSecurityIntrusionSettingsModel.new
+collect['update_organization_security_intrusion_settings'] = update_organization_security_intrusion_settings
+
+
+result = intrusionSettings_controller.update_organization_security_intrusion_settings(collect)
+
+```
+
+
+### <a name="get_organization_security_intrusion_settings"></a>![Method: ](https://apidocs.io/img/method.png ".IntrusionSettingsController.get_organization_security_intrusion_settings") get_organization_security_intrusion_settings
+
+> Returns all supported intrusion settings for an organization
+
+
+```ruby
+def get_organization_security_intrusion_settings(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = intrusionSettings_controller.get_organization_security_intrusion_settings(organization_id)
+
+```
+
+
+### <a name="update_network_security_intrusion_settings"></a>![Method: ](https://apidocs.io/img/method.png ".IntrusionSettingsController.update_network_security_intrusion_settings") update_network_security_intrusion_settings
+
+> Set the supported instrusion settings for an MX network
+
+
+```ruby
+def update_network_security_intrusion_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_security_intrusion_settings |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_security_intrusion_settings = UpdateNetworkSecurityIntrusionSettingsModel.new
+collect['update_network_security_intrusion_settings'] = update_network_security_intrusion_settings
+
+
+result = intrusionSettings_controller.update_network_security_intrusion_settings(collect)
+
+```
+
+
+### <a name="get_network_security_intrusion_settings"></a>![Method: ](https://apidocs.io/img/method.png ".IntrusionSettingsController.get_network_security_intrusion_settings") get_network_security_intrusion_settings
+
+> Returns all supported intrusion settings for an MX network
+
+
+```ruby
+def get_network_security_intrusion_settings(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = intrusionSettings_controller.get_network_security_intrusion_settings(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="radio_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".RadioSettingsController") RadioSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` RadioSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+radioSettings_controller = client.radio_settings
+```
+
+### <a name="get_network_wireless_rf_profiles"></a>![Method: ](https://apidocs.io/img/method.png ".RadioSettingsController.get_network_wireless_rf_profiles") get_network_wireless_rf_profiles
+
+> List the non-basic RF profiles for this network
+
+
+```ruby
+def get_network_wireless_rf_profiles(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| include_template_profiles |  ``` Optional ```  | If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template
+      should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+include_template_profiles = true
+collect['include_template_profiles'] = include_template_profiles
+
+
+result = radioSettings_controller.get_network_wireless_rf_profiles(collect)
+
+```
+
+
+### <a name="update_network_device_wireless_radio_settings"></a>![Method: ](https://apidocs.io/img/method.png ".RadioSettingsController.update_network_device_wireless_radio_settings") update_network_device_wireless_radio_settings
+
+> Update the radio settings of a device
+
+
+```ruby
+def update_network_device_wireless_radio_settings(options = {}); end
 ```
 
 #### Parameters
@@ -7608,11 +7181,7 @@ def get_network_device_connection_stats(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | serial |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
+| update_network_device_wireless_radio_settings |  ``` Optional ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -7626,246 +7195,22 @@ collect['network_id'] = network_id
 serial = 'serial'
 collect['serial'] = serial
 
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
+update_network_device_wireless_radio_settings = UpdateNetworkDeviceWirelessRadioSettingsModel.new
+collect['update_network_device_wireless_radio_settings'] = update_network_device_wireless_radio_settings
 
 
-result = wirelessHealth_controller.get_network_device_connection_stats(collect)
+result = radioSettings_controller.update_network_device_wireless_radio_settings(collect)
 
 ```
 
 
-### <a name="get_network_clients_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_clients_connection_stats") get_network_clients_connection_stats
+### <a name="get_network_device_wireless_radio_settings"></a>![Method: ](https://apidocs.io/img/method.png ".RadioSettingsController.get_network_device_wireless_radio_settings") get_network_device_wireless_radio_settings
 
-> Aggregated connectivity info for this network, grouped by clients
-
-
-```ruby
-def get_network_clients_connection_stats(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
-
-
-result = wirelessHealth_controller.get_network_clients_connection_stats(collect)
-
-```
-
-
-### <a name="get_network_client_connection_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_client_connection_stats") get_network_client_connection_stats
-
-> Aggregated connectivity info for a given client on this network
+> Return the radio settings of a device
 
 
 ```ruby
-def get_network_client_connection_stats(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| client_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-client_id = 'clientId'
-collect['client_id'] = client_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
-
-
-result = wirelessHealth_controller.get_network_client_connection_stats(collect)
-
-```
-
-
-### <a name="get_network_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_latency_stats") get_network_latency_stats
-
-> Aggregated latency info for this network
-
-
-```ruby
-def get_network_latency_stats(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
-
-fields = 'fields'
-collect['fields'] = fields
-
-
-result = wirelessHealth_controller.get_network_latency_stats(collect)
-
-```
-
-
-### <a name="get_network_devices_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_devices_latency_stats") get_network_devices_latency_stats
-
-> Aggregated latency info for this network, grouped by node
-
-
-```ruby
-def get_network_devices_latency_stats(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
-
-fields = 'fields'
-collect['fields'] = fields
-
-
-result = wirelessHealth_controller.get_network_devices_latency_stats(collect)
-
-```
-
-
-### <a name="get_network_device_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_device_latency_stats") get_network_device_latency_stats
-
-> Aggregated latency info for a given AP on this network
-
-
-```ruby
-def get_network_device_latency_stats(options = {}); end
+def get_network_device_wireless_radio_settings(options = {}); end
 ```
 
 #### Parameters
@@ -7874,12 +7219,6 @@ def get_network_device_latency_stats(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | serial |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
 
 
 #### Example Usage
@@ -7893,91 +7232,31 @@ collect['network_id'] = network_id
 serial = 'serial'
 collect['serial'] = serial
 
-t0 = 't0'
-collect['t0'] = t0
 
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
-
-fields = 'fields'
-collect['fields'] = fields
-
-
-result = wirelessHealth_controller.get_network_device_latency_stats(collect)
+result = radioSettings_controller.get_network_device_wireless_radio_settings(collect)
 
 ```
 
 
-### <a name="get_network_clients_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_clients_latency_stats") get_network_clients_latency_stats
+[Back to List of Controllers](#list_of_controllers)
 
-> Aggregated latency info for this network, grouped by clients
+## <a name="clients_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ClientsController") ClientsController
 
+### Get singleton instance
+
+The singleton instance of the ``` ClientsController ``` class can be accessed from the API Client.
 
 ```ruby
-def get_network_clients_latency_stats(options = {}); end
+clients_controller = client.clients
 ```
 
-#### Parameters
+### <a name="get_network_client_latency_history"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_latency_history") get_network_client_latency_history
 
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-t0 = 't0'
-collect['t0'] = t0
-
-t1 = 't1'
-collect['t1'] = t1
-
-ssid = 'ssid'
-collect['ssid'] = ssid
-
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
-
-fields = 'fields'
-collect['fields'] = fields
-
-
-result = wirelessHealth_controller.get_network_clients_latency_stats(collect)
-
-```
-
-
-### <a name="get_network_client_latency_stats"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_client_latency_stats") get_network_client_latency_stats
-
-> Aggregated latency info for a given client on this network
+> Return the latency history for a client. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP. The latency data is from a sample of 2% of packets and is grouped into 4 traffic categories: background, best effort, video, voice. Within these categories the sampled packet counters are bucketed by latency in milliseconds.
 
 
 ```ruby
-def get_network_client_latency_stats(options = {}); end
+def get_network_client_latency_history(options = {}); end
 ```
 
 #### Parameters
@@ -7986,12 +7265,10 @@ def get_network_client_latency_stats(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | client_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-| fields |  ``` Optional ```  | Partial selection: If present, this call will return only the selected fields of ["rawDistribution", "avg"]. All fields will be returned by default. Selected fields must be entered as a comma separated string. |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 791 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 791 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 1 day. |
+| resolution |  ``` Optional ```  | The time resolution in seconds for returned data. The valid resolutions are: 86400. The default is 86400. |
 
 
 #### Example Usage
@@ -8011,31 +7288,25 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-ssid = 'ssid'
-collect['ssid'] = ssid
+timespan = 166
+collect['timespan'] = timespan
 
-vlan = 'vlan'
-collect['vlan'] = vlan
-
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
-
-fields = 'fields'
-collect['fields'] = fields
+resolution = 166
+collect['resolution'] = resolution
 
 
-result = wirelessHealth_controller.get_network_client_latency_stats(collect)
+result = clients_controller.get_network_client_latency_history(collect)
 
 ```
 
 
-### <a name="get_network_failed_connections"></a>![Method: ](https://apidocs.io/img/method.png ".WirelessHealthController.get_network_failed_connections") get_network_failed_connections
+### <a name="get_network_clients"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_clients") get_network_clients
 
-> List of all failed client connection events on this network in a given time range
+> List the clients that have used this network in the timespan
 
 
 ```ruby
-def get_network_failed_connections(options = {}); end
+def get_network_clients(options = {}); end
 ```
 
 #### Parameters
@@ -8043,13 +7314,1950 @@ def get_network_failed_connections(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| t0 |  ``` Optional ```  | Start of the requested time range in seconds since epoch (Required) |
-| t1 |  ``` Optional ```  | End of the requested time range in seconds since epoch (Required) |
-| ssid |  ``` Optional ```  | Filter results by SSID |
-| vlan |  ``` Optional ```  | Filter results by VLAN |
-| ap_tag |  ``` Optional ```  | Filter results by AP Tag |
-| serial |  ``` Optional ```  | Filter by AP |
-| client_id |  ``` Optional ```  | Filter by client |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+timespan = 166
+collect['timespan'] = timespan
+
+per_page = 166
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = clients_controller.get_network_clients(collect)
+
+```
+
+
+### <a name="get_network_client_splash_authorization_status"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_splash_authorization_status") get_network_client_splash_authorization_status
+
+> Return the splash authorization for a client, for each SSID they've associated with through splash. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def get_network_client_splash_authorization_status(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+
+result = clients_controller.get_network_client_splash_authorization_status(collect)
+
+```
+
+
+### <a name="get_network_client_policy"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_policy") get_network_client_policy
+
+> Return the policy assigned to a client on the network. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def get_network_client_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+
+result = clients_controller.get_network_client_policy(collect)
+
+```
+
+
+### <a name="get_network_client_usage_history"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_usage_history") get_network_client_usage_history
+
+> Return the client's daily usage history. Usage data is in kilobytes. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def get_network_client_usage_history(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+
+result = clients_controller.get_network_client_usage_history(collect)
+
+```
+
+
+### <a name="provision_network_clients"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.provision_network_clients") provision_network_clients
+
+> Provisions a client with a name and policy. Clients can be provisioned before they associate to the network.
+
+
+```ruby
+def provision_network_clients(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| provision_network_clients |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+provision_network_clients = ProvisionNetworkClientsModel.new
+collect['provision_network_clients'] = provision_network_clients
+
+
+result = clients_controller.provision_network_clients(collect)
+
+```
+
+
+### <a name="get_network_client_events"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_events") get_network_client_events
+
+> Return the events associated with this client. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def get_network_client_events(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+per_page = 166
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = clients_controller.get_network_client_events(collect)
+
+```
+
+
+### <a name="get_network_client_traffic_history"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client_traffic_history") get_network_client_traffic_history
+
+> Return the client's network traffic data over time. Usage data is in kilobytes. This endpoint requires detailed traffic analysis to be enabled on the Network-wide > General page. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def get_network_client_traffic_history(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+per_page = 166
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = clients_controller.get_network_client_traffic_history(collect)
+
+```
+
+
+### <a name="get_device_clients"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_device_clients") get_device_clients
+
+> List the clients of a device, up to a maximum of a month ago. The usage of each client is returned in kilobytes. If the device is a switch, the switchport is returned; otherwise the switchport field is null.
+
+
+```ruby
+def get_device_clients(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+serial = 'serial'
+collect['serial'] = serial
+
+t0 = 't0'
+collect['t0'] = t0
+
+timespan = 166
+collect['timespan'] = timespan
+
+
+result = clients_controller.get_device_clients(collect)
+
+```
+
+
+### <a name="update_network_client_splash_authorization_status"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.update_network_client_splash_authorization_status") update_network_client_splash_authorization_status
+
+> Update a client's splash authorization. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def update_network_client_splash_authorization_status(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_client_splash_authorization_status |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+update_network_client_splash_authorization_status = UpdateNetworkClientSplashAuthorizationStatusModel.new
+collect['update_network_client_splash_authorization_status'] = update_network_client_splash_authorization_status
+
+
+result = clients_controller.update_network_client_splash_authorization_status(collect)
+
+```
+
+
+### <a name="update_network_client_policy"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.update_network_client_policy") update_network_client_policy
+
+> Update the policy assigned to a client on the network. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def update_network_client_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_client_policy |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+update_network_client_policy = UpdateNetworkClientPolicyModel.new
+collect['update_network_client_policy'] = update_network_client_policy
+
+
+result = clients_controller.update_network_client_policy(collect)
+
+```
+
+
+### <a name="get_network_client"></a>![Method: ](https://apidocs.io/img/method.png ".ClientsController.get_network_client") get_network_client
+
+> Return the client associated with the given identifier. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def get_network_client(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+client_id = 'clientId'
+collect['client_id'] = client_id
+
+
+result = clients_controller.get_network_client(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="api_usage_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIUsageController") APIUsageController
+
+### Get singleton instance
+
+The singleton instance of the ``` APIUsageController ``` class can be accessed from the API Client.
+
+```ruby
+aPIUsage_controller = client.api_usage
+```
+
+### <a name="get_organization_api_requests"></a>![Method: ](https://apidocs.io/img/method.png ".APIUsageController.get_organization_api_requests") get_organization_api_requests
+
+> List the API requests made by an organization
+
+
+```ruby
+def get_organization_api_requests(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 31 days. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| admin_id |  ``` Optional ```  | Filter the results by the ID of the admin who made the API requests |
+| path |  ``` Optional ```  | Filter the results by the path of the API requests |
+| method |  ``` Optional ```  | Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE') |
+| response_code |  ``` Optional ```  | Filter the results by the response code of the API requests |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 166
+collect['timespan'] = timespan
+
+per_page = 166
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+admin_id = 'adminId'
+collect['admin_id'] = admin_id
+
+path = 'path'
+collect['path'] = path
+
+method = 'method'
+collect['method'] = method
+
+response_code = 166
+collect['response_code'] = response_code
+
+
+result = aPIUsage_controller.get_organization_api_requests(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="net_flow_settings_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NetFlowSettingsController") NetFlowSettingsController
+
+### Get singleton instance
+
+The singleton instance of the ``` NetFlowSettingsController ``` class can be accessed from the API Client.
+
+```ruby
+netFlowSettings_controller = client.net_flow_settings
+```
+
+### <a name="update_network_netflow_settings"></a>![Method: ](https://apidocs.io/img/method.png ".NetFlowSettingsController.update_network_netflow_settings") update_network_netflow_settings
+
+> Update the NetFlow traffic reporting settings for a network
+
+
+```ruby
+def update_network_netflow_settings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_netflow_settings |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_netflow_settings = UpdateNetworkNetflowSettingsModel.new
+collect['update_network_netflow_settings'] = update_network_netflow_settings
+
+
+result = netFlowSettings_controller.update_network_netflow_settings(collect)
+
+```
+
+
+### <a name="get_network_netflow_settings"></a>![Method: ](https://apidocs.io/img/method.png ".NetFlowSettingsController.get_network_netflow_settings") get_network_netflow_settings
+
+> Return the NetFlow traffic reporting settings for a network
+
+
+```ruby
+def get_network_netflow_settings(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = netFlowSettings_controller.get_network_netflow_settings(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="meraki_auth_users_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MerakiAuthUsersController") MerakiAuthUsersController
+
+### Get singleton instance
+
+The singleton instance of the ``` MerakiAuthUsersController ``` class can be accessed from the API Client.
+
+```ruby
+merakiAuthUsers_controller = client.meraki_auth_users
+```
+
+### <a name="get_network_meraki_auth_user"></a>![Method: ](https://apidocs.io/img/method.png ".MerakiAuthUsersController.get_network_meraki_auth_user") get_network_meraki_auth_user
+
+> Return the Meraki Auth splash or RADIUS user
+
+
+```ruby
+def get_network_meraki_auth_user(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+id = 'id'
+collect['id'] = id
+
+
+result = merakiAuthUsers_controller.get_network_meraki_auth_user(collect)
+
+```
+
+
+### <a name="get_network_meraki_auth_users"></a>![Method: ](https://apidocs.io/img/method.png ".MerakiAuthUsersController.get_network_meraki_auth_users") get_network_meraki_auth_users
+
+> List the splash or RADIUS users configured under Meraki Authentication for a network
+
+
+```ruby
+def get_network_meraki_auth_users(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = merakiAuthUsers_controller.get_network_meraki_auth_users(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="http_servers_controller"></a>![Class: ](https://apidocs.io/img/class.png ".HTTPServersController") HTTPServersController
+
+### Get singleton instance
+
+The singleton instance of the ``` HTTPServersController ``` class can be accessed from the API Client.
+
+```ruby
+hTTPServers_controller = client.http_servers
+```
+
+### <a name="get_network_http_servers_webhook_test"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.get_network_http_servers_webhook_test") get_network_http_servers_webhook_test
+
+> Return the status of a webhook test
+
+
+```ruby
+def get_network_http_servers_webhook_test(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+id = 'id'
+collect['id'] = id
+
+
+result = hTTPServers_controller.get_network_http_servers_webhook_test(collect)
+
+```
+
+
+### <a name="create_network_http_servers_webhook_test"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.create_network_http_servers_webhook_test") create_network_http_servers_webhook_test
+
+> Send a test webhook
+
+
+```ruby
+def create_network_http_servers_webhook_test(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_http_servers_webhook_test |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+create_network_http_servers_webhook_test = CreateNetworkHttpServersWebhookTestModel.new
+collect['create_network_http_servers_webhook_test'] = create_network_http_servers_webhook_test
+
+
+result = hTTPServers_controller.create_network_http_servers_webhook_test(collect)
+
+```
+
+
+### <a name="delete_network_http_server"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.delete_network_http_server") delete_network_http_server
+
+> Delete an HTTP server
+
+
+```ruby
+def delete_network_http_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+id = 'id'
+collect['id'] = id
+
+
+hTTPServers_controller.delete_network_http_server(collect)
+
+```
+
+
+### <a name="update_network_http_server"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.update_network_http_server") update_network_http_server
+
+> Update an HTTP server
+
+
+```ruby
+def update_network_http_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_http_server |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+id = 'id'
+collect['id'] = id
+
+update_network_http_server = UpdateNetworkHttpServerModel.new
+collect['update_network_http_server'] = update_network_http_server
+
+
+result = hTTPServers_controller.update_network_http_server(collect)
+
+```
+
+
+### <a name="get_network_http_server"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.get_network_http_server") get_network_http_server
+
+> Return an HTTP server
+
+
+```ruby
+def get_network_http_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+id = 'id'
+collect['id'] = id
+
+
+result = hTTPServers_controller.get_network_http_server(collect)
+
+```
+
+
+### <a name="create_network_http_server"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.create_network_http_server") create_network_http_server
+
+> Add an HTTP server
+
+
+```ruby
+def create_network_http_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_http_server |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+create_network_http_server = CreateNetworkHttpServerModel.new
+collect['create_network_http_server'] = create_network_http_server
+
+
+result = hTTPServers_controller.create_network_http_server(collect)
+
+```
+
+
+### <a name="get_network_http_servers"></a>![Method: ](https://apidocs.io/img/method.png ".HTTPServersController.get_network_http_servers") get_network_http_servers
+
+> List the HTTP servers for a network
+
+
+```ruby
+def get_network_http_servers(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = hTTPServers_controller.get_network_http_servers(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mxvpn_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXVPNFirewallController") MXVPNFirewallController
+
+### Get singleton instance
+
+The singleton instance of the ``` MXVPNFirewallController ``` class can be accessed from the API Client.
+
+```ruby
+mXVPNFirewall_controller = client.mxvpn_firewall
+```
+
+### <a name="update_organization_vpn_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXVPNFirewallController.update_organization_vpn_firewall_rules") update_organization_vpn_firewall_rules
+
+> Update the firewall rules of an organization's site-to-site VPN
+
+
+```ruby
+def update_organization_vpn_firewall_rules(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_vpn_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+update_organization_vpn_firewall_rules = UpdateOrganizationVpnFirewallRulesModel.new
+collect['update_organization_vpn_firewall_rules'] = update_organization_vpn_firewall_rules
+
+
+result = mXVPNFirewall_controller.update_organization_vpn_firewall_rules(collect)
+
+```
+
+
+### <a name="get_organization_vpn_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXVPNFirewallController.get_organization_vpn_firewall_rules") get_organization_vpn_firewall_rules
+
+> Return the firewall rules for an organization's site-to-site VPN
+
+
+```ruby
+def get_organization_vpn_firewall_rules(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = mXVPNFirewall_controller.get_organization_vpn_firewall_rules(organization_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mxl7_application_categories_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXL7ApplicationCategoriesController") MXL7ApplicationCategoriesController
+
+### Get singleton instance
+
+The singleton instance of the ``` MXL7ApplicationCategoriesController ``` class can be accessed from the API Client.
+
+```ruby
+mXL7ApplicationCategories_controller = client.mxl_7_application_categories
+```
+
+### <a name="get_network_l7_firewall_rules_application_categories"></a>![Method: ](https://apidocs.io/img/method.png ".MXL7ApplicationCategoriesController.get_network_l7_firewall_rules_application_categories") get_network_l7_firewall_rules_application_categories
+
+> Return the L7 firewall application categories and their associated applications for an MX network
+
+
+```ruby
+def get_network_l7_firewall_rules_application_categories(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = mXL7ApplicationCategories_controller.get_network_l7_firewall_rules_application_categories(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mxl3_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXL3FirewallController") MXL3FirewallController
+
+### Get singleton instance
+
+The singleton instance of the ``` MXL3FirewallController ``` class can be accessed from the API Client.
+
+```ruby
+mXL3Firewall_controller = client.mxl_3_firewall
+```
+
+### <a name="update_network_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL3FirewallController.update_network_l3_firewall_rules") update_network_l3_firewall_rules
+
+> Update the L3 firewall rules of an MX network
+
+
+```ruby
+def update_network_l3_firewall_rules(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_l3_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_l3_firewall_rules = UpdateNetworkL3FirewallRulesModel.new
+collect['update_network_l3_firewall_rules'] = update_network_l3_firewall_rules
+
+
+result = mXL3Firewall_controller.update_network_l3_firewall_rules(collect)
+
+```
+
+
+### <a name="get_network_l3_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXL3FirewallController.get_network_l3_firewall_rules") get_network_l3_firewall_rules
+
+> Return the L3 firewall rules for an MX network
+
+
+```ruby
+def get_network_l3_firewall_rules(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = mXL3Firewall_controller.get_network_l3_firewall_rules(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="mx_cellular_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MXCellularFirewallController") MXCellularFirewallController
+
+### Get singleton instance
+
+The singleton instance of the ``` MXCellularFirewallController ``` class can be accessed from the API Client.
+
+```ruby
+mXCellularFirewall_controller = client.mx_cellular_firewall
+```
+
+### <a name="update_network_cellular_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXCellularFirewallController.update_network_cellular_firewall_rules") update_network_cellular_firewall_rules
+
+> Update the cellular firewall rules of an MX network
+
+
+```ruby
+def update_network_cellular_firewall_rules(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_cellular_firewall_rules |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_cellular_firewall_rules = UpdateNetworkCellularFirewallRulesModel.new
+collect['update_network_cellular_firewall_rules'] = update_network_cellular_firewall_rules
+
+
+result = mXCellularFirewall_controller.update_network_cellular_firewall_rules(collect)
+
+```
+
+
+### <a name="get_network_cellular_firewall_rules"></a>![Method: ](https://apidocs.io/img/method.png ".MXCellularFirewallController.get_network_cellular_firewall_rules") get_network_cellular_firewall_rules
+
+> Return the cellular firewall rules for an MX network
+
+
+```ruby
+def get_network_cellular_firewall_rules(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = mXCellularFirewall_controller.get_network_cellular_firewall_rules(network_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="devices_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DevicesController") DevicesController
+
+### Get singleton instance
+
+The singleton instance of the ``` DevicesController ``` class can be accessed from the API Client.
+
+```ruby
+devices_controller = client.devices
+```
+
+### <a name="blink_network_device_leds"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.blink_network_device_leds") blink_network_device_leds
+
+> Blink the LEDs on a device
+
+
+```ruby
+def blink_network_device_leds(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| blink_network_device_leds |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+blink_network_device_leds = BlinkNetworkDeviceLedsModel.new
+collect['blink_network_device_leds'] = blink_network_device_leds
+
+
+result = devices_controller.blink_network_device_leds(collect)
+
+```
+
+
+### <a name="reboot_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.reboot_network_device") reboot_network_device
+
+> Reboot a device
+
+
+```ruby
+def reboot_network_device(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+
+result = devices_controller.reboot_network_device(collect)
+
+```
+
+
+### <a name="remove_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.remove_network_device") remove_network_device
+
+> Remove a single device
+
+
+```ruby
+def remove_network_device(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+
+result = devices_controller.remove_network_device(collect)
+
+```
+
+
+### <a name="claim_network_devices"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.claim_network_devices") claim_network_devices
+
+> Claim a device into a network
+
+
+```ruby
+def claim_network_devices(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| claim_network_devices |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+claim_network_devices = ClaimNetworkDevicesModel.new
+collect['claim_network_devices'] = claim_network_devices
+
+
+result = devices_controller.claim_network_devices(collect)
+
+```
+
+
+### <a name="get_network_device_uplink"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_uplink") get_network_device_uplink
+
+> Return the uplink information for a device.
+
+
+```ruby
+def get_network_device_uplink(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+
+result = devices_controller.get_network_device_uplink(collect)
+
+```
+
+
+### <a name="get_network_device_performance"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_performance") get_network_device_performance
+
+> Return the performance score for a single device. Only primary MX devices supported. If no data is available, a 204 error code is returned.
+
+
+```ruby
+def get_network_device_performance(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+
+result = devices_controller.get_network_device_performance(collect)
+
+```
+
+
+### <a name="get_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device") get_network_device
+
+> Return a single device
+
+
+```ruby
+def get_network_device(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+
+result = devices_controller.get_network_device(collect)
+
+```
+
+
+### <a name="get_network_devices"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_devices") get_network_devices
+
+> List the devices in a network
+
+
+```ruby
+def get_network_devices(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = devices_controller.get_network_devices(network_id)
+
+```
+
+
+### <a name="update_network_device"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.update_network_device") update_network_device
+
+> Update the attributes of a device
+
+
+```ruby
+def update_network_device(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_device |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+update_network_device = UpdateNetworkDeviceModel.new
+collect['update_network_device'] = update_network_device
+
+
+result = devices_controller.update_network_device(collect)
+
+```
+
+
+### <a name="get_organization_devices"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_organization_devices") get_organization_devices
+
+> List the devices in an organization
+
+
+```ruby
+def get_organization_devices(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+per_page = 166
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = devices_controller.get_organization_devices(collect)
+
+```
+
+
+### <a name="get_network_device_lldp_cdp"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_lldp_cdp") get_network_device_lldp_cdp
+
+> List LLDP and CDP information for a device
+
+
+```ruby
+def get_network_device_lldp_cdp(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| timespan |  ``` Optional ```  | The timespan for which LLDP and CDP information will be fetched. Must be in seconds and less than or equal to a month (2592000 seconds). LLDP and CDP information is sent to the Meraki dashboard every 10 minutes. In instances where this LLDP and CDP information matches an existing entry in the Meraki dashboard, the data is updated once every two hours. Meraki recommends querying LLDP and CDP information at an interval slightly greater than two hours, to ensure that unchanged CDP / LLDP information can be queried consistently. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+timespan = 'timespan'
+collect['timespan'] = timespan
+
+
+result = devices_controller.get_network_device_lldp_cdp(collect)
+
+```
+
+
+### <a name="get_network_device_loss_and_latency_history"></a>![Method: ](https://apidocs.io/img/method.png ".DevicesController.get_network_device_loss_and_latency_history") get_network_device_loss_and_latency_history
+
+> Get the uplink loss percentage and latency in milliseconds for a wired network device.
+
+
+```ruby
+def get_network_device_loss_and_latency_history(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| ip |  ``` Required ```  | The destination IP used to obtain the requested stats. This is required. |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. |
+| resolution |  ``` Optional ```  | The time resolution in seconds for returned data. The valid resolutions are: 60, 600, 3600, 86400. The default is 60. |
+| uplink |  ``` Optional ```  | The WAN uplink used to obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The default is wan1. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+ip = 'ip'
+collect['ip'] = ip
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 166
+collect['timespan'] = timespan
+
+resolution = 166
+collect['resolution'] = resolution
+
+uplink = 'uplink'
+collect['uplink'] = uplink
+
+
+result = devices_controller.get_network_device_loss_and_latency_history(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="config_templates_controller"></a>![Class: ](https://apidocs.io/img/class.png ".ConfigTemplatesController") ConfigTemplatesController
+
+### Get singleton instance
+
+The singleton instance of the ``` ConfigTemplatesController ``` class can be accessed from the API Client.
+
+```ruby
+configTemplates_controller = client.config_templates
+```
+
+### <a name="delete_organization_config_template"></a>![Method: ](https://apidocs.io/img/method.png ".ConfigTemplatesController.delete_organization_config_template") delete_organization_config_template
+
+> Remove a configuration template
+
+
+```ruby
+def delete_organization_config_template(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+id = 'id'
+collect['id'] = id
+
+
+configTemplates_controller.delete_organization_config_template(collect)
+
+```
+
+
+### <a name="get_organization_config_templates"></a>![Method: ](https://apidocs.io/img/method.png ".ConfigTemplatesController.get_organization_config_templates") get_organization_config_templates
+
+> List the configuration templates for this organization
+
+
+```ruby
+def get_organization_config_templates(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = configTemplates_controller.get_organization_config_templates(organization_id)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="cameras_controller"></a>![Class: ](https://apidocs.io/img/class.png ".CamerasController") CamerasController
+
+### Get singleton instance
+
+The singleton instance of the ``` CamerasController ``` class can be accessed from the API Client.
+
+```ruby
+cameras_controller = client.cameras
+```
+
+### <a name="generate_network_camera_snapshot"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.generate_network_camera_snapshot") generate_network_camera_snapshot
+
+> Generate a snapshot of what the camera sees at the specified time and return a link to that image.
+
+
+```ruby
+def generate_network_camera_snapshot(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| generate_network_camera_snapshot |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+generate_network_camera_snapshot = GenerateNetworkCameraSnapshotModel.new
+collect['generate_network_camera_snapshot'] = generate_network_camera_snapshot
+
+
+result = cameras_controller.generate_network_camera_snapshot(collect)
+
+```
+
+
+### <a name="get_network_camera_video_link"></a>![Method: ](https://apidocs.io/img/method.png ".CamerasController.get_network_camera_video_link") get_network_camera_video_link
+
+> Returns video link for the specified camera. If a timestamp supplied, it links to that time.
+
+
+```ruby
+def get_network_camera_video_link(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| timestamp |  ``` Optional ```  | The video link will start at this timestamp. The timestamp is in UNIX Epoch time (milliseconds). |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+serial = 'serial'
+collect['serial'] = serial
+
+timestamp = 'timestamp'
+collect['timestamp'] = timestamp
+
+
+result = cameras_controller.get_network_camera_video_link(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="bluetooth_clients_controller"></a>![Class: ](https://apidocs.io/img/class.png ".BluetoothClientsController") BluetoothClientsController
+
+### Get singleton instance
+
+The singleton instance of the ``` BluetoothClientsController ``` class can be accessed from the API Client.
+
+```ruby
+bluetoothClients_controller = client.bluetooth_clients
+```
+
+### <a name="get_network_bluetooth_clients"></a>![Method: ](https://apidocs.io/img/method.png ".BluetoothClientsController.get_network_bluetooth_clients") get_network_bluetooth_clients
+
+> List the Bluetooth clients seen by APs in this network
+
+
+```ruby
+def get_network_bluetooth_clients(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 5 - 1000. Default is 10. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| timespan |  ``` Optional ```  | The timespan, in seconds, used to look back from now for bluetooth clients |
+| include_connectivity_history |  ``` Optional ```  | Include the connectivity history for this client |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+per_page = 166
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+timespan = 'timespan'
+collect['timespan'] = timespan
+
+include_connectivity_history = 'includeConnectivityHistory'
+collect['include_connectivity_history'] = include_connectivity_history
+
+
+result = bluetoothClients_controller.get_network_bluetooth_clients(collect)
+
+```
+
+
+### <a name="get_network_bluetooth_client"></a>![Method: ](https://apidocs.io/img/method.png ".BluetoothClientsController.get_network_bluetooth_client") get_network_bluetooth_client
+
+> Return a Bluetooth client. Bluetooth clients can be identified by their ID or their MAC.
+
+
+```ruby
+def get_network_bluetooth_client(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| bluetooth_client_id |  ``` Required ```  | TODO: Add a parameter description |
+| include_connectivity_history |  ``` Optional ```  | Include the connectivity history for this client |
+| connectivity_history_timespan |  ``` Optional ```  | The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+bluetooth_client_id = 'bluetoothClientId'
+collect['bluetooth_client_id'] = bluetooth_client_id
+
+include_connectivity_history = 'includeConnectivityHistory'
+collect['include_connectivity_history'] = include_connectivity_history
+
+connectivity_history_timespan = 'connectivityHistoryTimespan'
+collect['connectivity_history_timespan'] = connectivity_history_timespan
+
+
+result = bluetoothClients_controller.get_network_bluetooth_client(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="security_events_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SecurityEventsController") SecurityEventsController
+
+### Get singleton instance
+
+The singleton instance of the ``` SecurityEventsController ``` class can be accessed from the API Client.
+
+```ruby
+securityEvents_controller = client.security_events
+```
+
+### <a name="get_organization_security_events"></a>![Method: ](https://apidocs.io/img/method.png ".SecurityEventsController.get_organization_security_events") get_organization_security_events
+
+> List the security events for an organization
+
+
+```ruby
+def get_organization_security_events(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 365 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 2
+collect['timespan'] = timespan
+
+per_page = 2
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = securityEvents_controller.get_organization_security_events(collect)
+
+```
+
+
+### <a name="get_network_security_events"></a>![Method: ](https://apidocs.io/img/method.png ".SecurityEventsController.get_network_security_events") get_network_security_events
+
+> List the security events for a network
+
+
+```ruby
+def get_network_security_events(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 365 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 31 days. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -8066,23 +9274,148 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-ssid = 'ssid'
-collect['ssid'] = ssid
+timespan = 2
+collect['timespan'] = timespan
 
-vlan = 'vlan'
-collect['vlan'] = vlan
+per_page = 2
+collect['per_page'] = per_page
 
-ap_tag = 'apTag'
-collect['ap_tag'] = ap_tag
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
 
-serial = 'serial'
-collect['serial'] = serial
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = securityEvents_controller.get_network_security_events(collect)
+
+```
+
+
+### <a name="get_network_client_security_events"></a>![Method: ](https://apidocs.io/img/method.png ".SecurityEventsController.get_network_client_security_events") get_network_client_security_events
+
+> List the security events for a client. Clients can be identified by a client key or either the MAC or IP depending on whether the network uses Track-by-IP.
+
+
+```ruby
+def get_network_client_security_events(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| client_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 791 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 791 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 31 days. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
 
 client_id = 'clientId'
 collect['client_id'] = client_id
 
+t0 = 't0'
+collect['t0'] = t0
 
-result = wirelessHealth_controller.get_network_failed_connections(collect)
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 2
+collect['timespan'] = timespan
+
+per_page = 2
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+
+result = securityEvents_controller.get_network_client_security_events(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="webhook_logs_controller"></a>![Class: ](https://apidocs.io/img/class.png ".WebhookLogsController") WebhookLogsController
+
+### Get singleton instance
+
+The singleton instance of the ``` WebhookLogsController ``` class can be accessed from the API Client.
+
+```ruby
+webhookLogs_controller = client.webhook_logs
+```
+
+### <a name="get_organization_webhook_logs"></a>![Method: ](https://apidocs.io/img/method.png ".WebhookLogsController.get_organization_webhook_logs") get_organization_webhook_logs
+
+> Return the log of webhook POSTs sent
+
+
+```ruby
+def get_organization_webhook_logs(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 90 days from today. |
+| t1 |  ``` Optional ```  | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| url |  ``` Optional ```  | The URL the webhook was sent to |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+t0 = 't0'
+collect['t0'] = t0
+
+t1 = 't1'
+collect['t1'] = t1
+
+timespan = 2
+collect['timespan'] = timespan
+
+per_page = 2
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+url = 'url'
+collect['url'] = url
+
+
+result = webhookLogs_controller.get_organization_webhook_logs(collect)
 
 ```
 

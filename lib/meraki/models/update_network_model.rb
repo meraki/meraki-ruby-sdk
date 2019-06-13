@@ -51,18 +51,12 @@ module Meraki
                    time_zone = nil,
                    tags = nil,
                    disable_my_meraki_com = nil,
-                   disable_remote_status_page = nil,
-                   additional_properties = {})
+                   disable_remote_status_page = nil)
       @name = name
       @time_zone = time_zone
       @tags = tags
       @disable_my_meraki_com = disable_my_meraki_com
       @disable_remote_status_page = disable_remote_status_page
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -76,16 +70,12 @@ module Meraki
       disable_my_meraki_com = hash['disableMyMerakiCom']
       disable_remote_status_page = hash['disableRemoteStatusPage']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       UpdateNetworkModel.new(name,
                              time_zone,
                              tags,
                              disable_my_meraki_com,
-                             disable_remote_status_page,
-                             hash)
+                             disable_remote_status_page)
     end
   end
 end

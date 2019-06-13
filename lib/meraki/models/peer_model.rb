@@ -57,8 +57,7 @@ module Meraki
                    secret = nil,
                    ipsec_policies = nil,
                    ipsec_policies_preset = nil,
-                   network_tags = nil,
-                   additional_properties = {})
+                   network_tags = nil)
       @name = name
       @public_ip = public_ip
       @private_subnets = private_subnets
@@ -66,11 +65,6 @@ module Meraki
       @ipsec_policies_preset = ipsec_policies_preset
       @secret = secret
       @network_tags = network_tags
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -87,9 +81,6 @@ module Meraki
       ipsec_policies_preset = hash['ipsecPoliciesPreset']
       network_tags = hash['networkTags']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       PeerModel.new(name,
                     public_ip,
@@ -97,8 +88,7 @@ module Meraki
                     secret,
                     ipsec_policies,
                     ipsec_policies_preset,
-                    network_tags,
-                    hash)
+                    network_tags)
     end
   end
 end

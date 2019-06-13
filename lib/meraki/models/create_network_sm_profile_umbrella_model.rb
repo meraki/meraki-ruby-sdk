@@ -57,19 +57,13 @@ module Meraki
                    app_bundle_identifier = nil,
                    provider_bundle_identifier = nil,
                    provider_configuration = nil,
-                   uses_cert = nil,
-                   additional_properties = {})
+                   uses_cert = nil)
       @name = name
       @scope = scope
       @app_bundle_identifier = app_bundle_identifier
       @provider_bundle_identifier = provider_bundle_identifier
       @provider_configuration = provider_configuration
       @uses_cert = uses_cert
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -84,17 +78,13 @@ module Meraki
       provider_configuration = hash['ProviderConfiguration']
       uses_cert = hash['usesCert']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       CreateNetworkSmProfileUmbrellaModel.new(name,
                                               scope,
                                               app_bundle_identifier,
                                               provider_bundle_identifier,
                                               provider_configuration,
-                                              uses_cert,
-                                              hash)
+                                              uses_cert)
     end
   end
 end

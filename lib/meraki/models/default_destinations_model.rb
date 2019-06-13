@@ -30,16 +30,10 @@ module Meraki
 
     def initialize(emails = nil,
                    all_admins = nil,
-                   snmp = nil,
-                   additional_properties = {})
+                   snmp = nil)
       @emails = emails
       @all_admins = all_admins
       @snmp = snmp
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -51,14 +45,10 @@ module Meraki
       all_admins = hash['allAdmins']
       snmp = hash['snmp']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       DefaultDestinationsModel.new(emails,
                                    all_admins,
-                                   snmp,
-                                   hash)
+                                   snmp)
     end
   end
 end

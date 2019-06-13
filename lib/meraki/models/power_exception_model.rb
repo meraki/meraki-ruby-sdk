@@ -11,7 +11,7 @@ module Meraki
     attr_accessor :serial
 
     # Per switch exception (combined, redundant, useNetworkSetting)
-    # @return [String]
+    # @return [PowerTypeEnum]
     attr_accessor :power_type
 
     # A mapping from model property names to API property names.
@@ -23,15 +23,9 @@ module Meraki
     end
 
     def initialize(serial = nil,
-                   power_type = nil,
-                   additional_properties = {})
+                   power_type = nil)
       @serial = serial
       @power_type = power_type
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -42,13 +36,9 @@ module Meraki
       serial = hash['serial']
       power_type = hash['powerType']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       PowerExceptionModel.new(serial,
-                              power_type,
-                              hash)
+                              power_type)
     end
   end
 end

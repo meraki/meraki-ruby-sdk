@@ -46,18 +46,12 @@ module Meraki
                    manifest_url = nil,
                    bundle_id = nil,
                    prevent_auto_install = nil,
-                   uses_vpp = nil,
-                   additional_properties = {})
+                   uses_vpp = nil)
       @scope = scope
       @manifest_url = manifest_url
       @bundle_id = bundle_id
       @prevent_auto_install = prevent_auto_install
       @uses_vpp = uses_vpp
-
-      # Add additional model properties to the instance.
-      additional_properties.each do |_name, _value|
-        instance_variable_set("@#{_name}", _value)
-      end
     end
 
     # Creates an instance of the object from a hash.
@@ -71,16 +65,12 @@ module Meraki
       prevent_auto_install = hash['preventAutoInstall']
       uses_vpp = hash['usesVPP']
 
-      # Clean out expected properties from Hash.
-      names.each_value { |k| hash.delete(k) }
-
       # Create object from extracted values.
       CreateNetworkSmAppPolarisModel.new(scope,
                                          manifest_url,
                                          bundle_id,
                                          prevent_auto_install,
-                                         uses_vpp,
-                                         hash)
+                                         uses_vpp)
     end
   end
 end
