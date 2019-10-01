@@ -16,7 +16,7 @@ module Meraki
 
     # Sets min bitrate (Mbps) of 2.4Ghz band. Can be one of '1', '2', '5.5',
     # '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-    # @return [String]
+    # @return [Float]
     attr_accessor :min_bitrate
 
     # Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'.

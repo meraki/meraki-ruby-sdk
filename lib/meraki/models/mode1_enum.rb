@@ -4,19 +4,19 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # Either 'renew' or 'addDevices'. 'addDevices' will increase the license
-  # limit, while 'renew' will extend the amount of time until expiration. Please
-  # see <a target='_blank'
-  # href='https://documentation.meraki.com/zGeneral_Administration/Licensing/Add
-  # ing_an_Enterprise_license_to_an_existing_Dashboard_account'>this article</a>
-  # for more information.
+  # The traffic analysis mode for the network. Can be one of 'disabled' (do not
+  # collect traffic types),     'basic' (collect generic traffic categories), or
+  # 'detailed' (collect destination hostnames).
   class Mode1Enum
     MODE1_ENUM = [
-      # TODO: Write general description for ADDDEVICES
-      ADDDEVICES = 'addDevices'.freeze,
+      # TODO: Write general description for DISABLED
+      DISABLED = 'disabled'.freeze,
 
-      # TODO: Write general description for RENEW
-      RENEW = 'renew'.freeze
+      # TODO: Write general description for BASIC
+      BASIC = 'basic'.freeze,
+
+      # TODO: Write general description for DETAILED
+      DETAILED = 'detailed'.freeze
     ].freeze
   end
 end

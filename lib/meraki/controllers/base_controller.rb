@@ -11,6 +11,10 @@ module Meraki
     def initialize(http_client: nil, http_call_back: nil)
       @http_client = http_client || FaradayClient.new
       @http_call_back = http_call_back
+
+      @global_headers = {
+        'user-agent' => 'APIMATIC 2.0'
+      }
     end
 
     def validate_parameters(args)
@@ -25,6 +29,7 @@ module Meraki
       @http_call_back.on_before_request(request) if @http_call_back
 
       APIHelper.clean_hash(request.headers)
+      request.headers = @global_headers.clone.merge(request.headers)
 
       response = if binary
                    @http_client.execute_as_binary(request)

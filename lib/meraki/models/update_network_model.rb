@@ -6,7 +6,7 @@
 module Meraki
   # UpdateNetworkModel Model.
   class UpdateNetworkModel < BaseModel
-    # The name of the new network
+    # The name of the network
     # @return [String]
     attr_accessor :name
 

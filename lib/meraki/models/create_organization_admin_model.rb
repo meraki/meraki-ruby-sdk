@@ -15,9 +15,9 @@ module Meraki
     # @return [String]
     attr_accessor :name
 
-    # The privilege of the dashboard administrator on the organization (full,
-    # read-only, none)
-    # @return [String]
+    # The privilege of the dashboard administrator on the organization. Can be
+    # one of 'full', 'read-only', 'enterprise' or 'none'
+    # @return [OrgAccessEnum]
     attr_accessor :org_access
 
     # The list of tags that the dashboard administrator has privileges on

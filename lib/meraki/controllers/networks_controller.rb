@@ -157,7 +157,7 @@ module Meraki
     # @param [String] network_id Required parameter: Example:
     # @param [String] t0 Optional parameter: The beginning of the timespan for
     # the data. The maximum lookback period is 31 days from today.
-    # @param [Integer] timespan Optional parameter: The timespan for which the
+    # @param [Float] timespan Optional parameter: The timespan for which the
     # information will be fetched. If specifying timespan, do not specify
     # parameter t0. The value must be in seconds and be less than or equal to 31
     # days. The default is 7 days.
@@ -358,12 +358,13 @@ module Meraki
     # networks in NAT mode.
     # @param [String] network_id Required parameter: Example:
     # @param [UpdateNetworkSiteToSiteVpnModel] update_network_site_to_site_vpn
-    # Optional parameter: Example:
+    # Required parameter: Example:
     # @return Mixed response from the API call
     def update_network_site_to_site_vpn(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id']
+        'network_id' => options['network_id'],
+        'update_network_site_to_site_vpn' => options['update_network_site_to_site_vpn']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/siteToSiteVpn'
@@ -431,25 +432,27 @@ module Meraki
       decoded
     end
 
-    # The traffic analysis data for this network.
-    # <a
+    #     The traffic analysis data for this network.
+    #     <a
     # href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostnam
     # e_Visibility">Traffic Analysis with Hostname Visibility</a> must be
     # enabled on the network.
     # @param [String] network_id Required parameter: Example:
-    # @param [String] timespan Required parameter: The timespan for the data.
-    # Must be an integer representing a duration in seconds between two hours
-    # and one month. (Mandatory.)
+    # @param [String] t0 Optional parameter: The beginning of the timespan for
+    # the data. The maximum lookback period is 30 days from today.
+    # @param [Float] timespan Optional parameter: The timespan for which the
+    # information will be fetched. If specifying timespan, do not specify
+    # parameter t0. The value must be in seconds and be less than or equal to 30
+    # days.
     # @param [String] device_type Optional parameter: Filter the data by device
-    # type: combined (default), wireless, switch, appliance. When using
+    # type: combined (default), wireless, switch, appliance.     When using
     # combined, for each rule the data will come from the device type with the
     # most usage.
     # @return Mixed response from the API call
     def get_network_traffic(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id'],
-        'timespan' => options['timespan']
+        'network_id' => options['network_id']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/traffic'
@@ -462,6 +465,7 @@ module Meraki
       _query_builder = APIHelper.append_url_with_query_parameters(
         _query_builder,
         {
+          't0' => options['t0'],
           'timespan' => options['timespan'],
           'deviceType' => options['device_type']
         },

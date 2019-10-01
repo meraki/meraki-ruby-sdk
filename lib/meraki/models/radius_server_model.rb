@@ -28,8 +28,8 @@ module Meraki
     end
 
     def initialize(host = nil,
-                   port = nil,
-                   secret = nil)
+                   secret = nil,
+                   port = nil)
       @host = host
       @port = port
       @secret = secret
@@ -41,13 +41,13 @@ module Meraki
 
       # Extract variables from the hash.
       host = hash['host']
-      port = hash['port']
       secret = hash['secret']
+      port = hash['port']
 
       # Create object from extracted values.
       RadiusServerModel.new(host,
-                            port,
-                            secret)
+                            secret,
+                            port)
     end
   end
 end

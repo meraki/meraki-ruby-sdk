@@ -103,7 +103,7 @@ module Meraki
     # @param [String] network_id Required parameter: Example:
     # @param [Boolean] include_template_profiles Optional parameter: If the
     # network is bound to a template, this parameter controls whether or not the
-    # non-basic RF profiles defined on the template       should be included in
+    # non-basic RF profiles defined on the template     should be included in
     # the response alongside the non-basic profiles defined on the bound
     # network. Defaults to false.
     # @return Mixed response from the API call

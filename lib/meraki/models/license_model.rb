@@ -16,7 +16,7 @@ module Meraki
     # href='https://documentation.meraki.com/zGeneral_Administration/Licensing/A
     # dding_an_Enterprise_license_to_an_existing_Dashboard_account'>this
     # article</a> for more information.
-    # @return [Mode1Enum]
+    # @return [Mode2Enum]
     attr_accessor :mode
 
     # A mapping from model property names to API property names.

@@ -66,6 +66,12 @@ module Meraki
       ContentFilteringRulesController.instance
     end
 
+    # Singleton access to dashboard_branding_policies controller.
+    # @return [DashboardBrandingPoliciesController] Returns the controller instance.
+    def dashboard_branding_policies
+      DashboardBrandingPoliciesController.instance
+    end
+
     # Singleton access to devices controller.
     # @return [DevicesController] Returns the controller instance.
     def devices

@@ -15,18 +15,25 @@ module Meraki
     # @return [List of PowerExceptionModel]
     attr_accessor :power_exceptions
 
+    # Management VLAN
+    # @return [Integer]
+    attr_accessor :vlan
+
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
       @_hash['use_combined_power'] = 'useCombinedPower'
       @_hash['power_exceptions'] = 'powerExceptions'
+      @_hash['vlan'] = 'vlan'
       @_hash
     end
 
     def initialize(use_combined_power = nil,
-                   power_exceptions = nil)
+                   power_exceptions = nil,
+                   vlan = nil)
       @use_combined_power = use_combined_power
       @power_exceptions = power_exceptions
+      @vlan = vlan
     end
 
     # Creates an instance of the object from a hash.
@@ -43,10 +50,12 @@ module Meraki
           power_exceptions << (PowerExceptionModel.from_hash(structure) if structure)
         end
       end
+      vlan = hash['vlan']
 
       # Create object from extracted values.
       UpdateNetworkSwitchSettingsModel.new(use_combined_power,
-                                           power_exceptions)
+                                           power_exceptions,
+                                           vlan)
     end
   end
 end

@@ -11,11 +11,11 @@ module Meraki
     attr_accessor :comment
 
     # 'allow' or 'deny' traffic specified by this rule
-    # @return [String]
+    # @return [PolicyEnum]
     attr_accessor :policy
 
     # The type of protocol (must be 'tcp', 'udp', 'icmp' or 'any')
-    # @return [String]
+    # @return [ProtocolEnum]
     attr_accessor :protocol
 
     # Comma-separated list of source port(s) (integer in the range 1-65535), or

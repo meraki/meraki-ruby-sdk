@@ -6,18 +6,13 @@
 module Meraki
   # UpdateOrganizationAdminModel Model.
   class UpdateOrganizationAdminModel < BaseModel
-    # The email of the dashboard administrator. This attribute can not be
-    # updated.
-    # @return [String]
-    attr_accessor :email
-
     # The name of the dashboard administrator
     # @return [String]
     attr_accessor :name
 
-    # The privilege of the dashboard administrator on the organization (full,
-    # read-only, none)
-    # @return [String]
+    # The privilege of the dashboard administrator on the organization. Can be
+    # one of 'full', 'read-only', 'enterprise' or 'none'
+    # @return [OrgAccessEnum]
     attr_accessor :org_access
 
     # The list of tags that the dashboard administrator has privileges on
@@ -31,7 +26,6 @@ module Meraki
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
-      @_hash['email'] = 'email'
       @_hash['name'] = 'name'
       @_hash['org_access'] = 'orgAccess'
       @_hash['tags'] = 'tags'
@@ -39,12 +33,10 @@ module Meraki
       @_hash
     end
 
-    def initialize(email = nil,
-                   name = nil,
+    def initialize(name = nil,
                    org_access = nil,
                    tags = nil,
                    networks = nil)
-      @email = email
       @name = name
       @org_access = org_access
       @tags = tags
@@ -56,7 +48,6 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      email = hash['email']
       name = hash['name']
       org_access = hash['orgAccess']
       # Parameter is an array, so we need to iterate through it
@@ -77,8 +68,7 @@ module Meraki
       end
 
       # Create object from extracted values.
-      UpdateOrganizationAdminModel.new(email,
-                                       name,
+      UpdateOrganizationAdminModel.new(name,
                                        org_access,
                                        tags,
                                        networks)

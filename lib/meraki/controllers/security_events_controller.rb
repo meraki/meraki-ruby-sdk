@@ -25,7 +25,7 @@ module Meraki
     # the data. The maximum lookback period is 791 days from today.
     # @param [String] t1 Optional parameter: The end of the timespan for the
     # data. t1 can be a maximum of 791 days after t0.
-    # @param [Integer] timespan Optional parameter: The timespan for which the
+    # @param [Float] timespan Optional parameter: The timespan for which the
     # information will be fetched. If specifying timespan, do not specify
     # parameters t0 and t1. The value must be in seconds and be less than or
     # equal to 791 days. The default is 31 days.
@@ -95,7 +95,7 @@ module Meraki
     # the data. The maximum lookback period is 365 days from today.
     # @param [String] t1 Optional parameter: The end of the timespan for the
     # data. t1 can be a maximum of 365 days after t0.
-    # @param [Integer] timespan Optional parameter: The timespan for which the
+    # @param [Float] timespan Optional parameter: The timespan for which the
     # information will be fetched. If specifying timespan, do not specify
     # parameters t0 and t1. The value must be in seconds and be less than or
     # equal to 365 days. The default is 31 days.
@@ -163,7 +163,7 @@ module Meraki
     # the data. The maximum lookback period is 365 days from today.
     # @param [String] t1 Optional parameter: The end of the timespan for the
     # data. t1 can be a maximum of 365 days after t0.
-    # @param [Integer] timespan Optional parameter: The timespan for which the
+    # @param [Float] timespan Optional parameter: The timespan for which the
     # information will be fetched. If specifying timespan, do not specify
     # parameters t0 and t1. The value must be in seconds and be less than or
     # equal to 365 days. The default is 31 days.

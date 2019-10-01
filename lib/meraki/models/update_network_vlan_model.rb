@@ -23,10 +23,10 @@ module Meraki
     # @return [String]
     attr_accessor :vpn_nat_subnet
 
-    # The appliance's handling of DHCP requests on this VLAN. One of: "Run a
-    # DHCP server", "Relay DHCP to another server", or "Do not respond to DHCP
-    # requests"
-    # @return [String]
+    # The appliance's handling of DHCP requests on this VLAN. One of: 'Run a
+    # DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP
+    # requests'
+    # @return [DhcpHandlingEnum]
     attr_accessor :dhcp_handling
 
     # The IPs of the DHCP servers that DHCP requests should be relayed to
@@ -34,9 +34,9 @@ module Meraki
     attr_accessor :dhcp_relay_server_ips
 
     # The term of DHCP leases if the appliance is running a DHCP server on this
-    # VLAN. One of: "30 minutes", "1 hour", "4 hours", "12 hours", "1 day", "1
-    # week".
-    # @return [String]
+    # VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1
+    # week'
+    # @return [DhcpLeaseTimeEnum]
     attr_accessor :dhcp_lease_time
 
     # Use DHCP boot options specified in other properties

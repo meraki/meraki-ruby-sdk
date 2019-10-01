@@ -4,19 +4,17 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The traffic analysis mode for the network. Can be one of 'disabled' (do not
-  # collect traffic types),     'basic' (collect generic traffic categories), or
-  # 'detailed' (collect destination hostnames).
+  # The site-to-site VPN mode. Can be one of 'none', 'spoke' or 'hub'
   class ModeEnum
     MODE_ENUM = [
-      # TODO: Write general description for DISABLED
-      DISABLED = 'disabled'.freeze,
+      # TODO: Write general description for NONE
+      NONE = 'none'.freeze,
 
-      # TODO: Write general description for BASIC
-      BASIC = 'basic'.freeze,
+      # TODO: Write general description for SPOKE
+      SPOKE = 'spoke'.freeze,
 
-      # TODO: Write general description for DETAILED
-      DETAILED = 'detailed'.freeze
+      # TODO: Write general description for HUB
+      HUB = 'hub'.freeze
     ].freeze
   end
 end

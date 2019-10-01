@@ -73,9 +73,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build meraki.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.3.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.4.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 ## How to Use
 
@@ -85,41 +85,41 @@ The following section explains how to use the Meraki Ruby Gem in a new Rails pro
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.3.0' ```
+In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.4.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0)
 
 ## How to Test
 
@@ -153,7 +153,7 @@ client = Meraki::MerakiClient.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.3.0&initLine=client%2520%253D%2520MerakiClient.new%2528%2527x_cisco_meraki_api_key%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.4.0&initLine=client%2520%253D%2520MerakiClient.new%2528%2527x_cisco_meraki_api_key%2527%2529)
 
 
 
@@ -171,6 +171,7 @@ The added initlization code can be debugged by putting a breakpoint in the ``` I
 * [ConfigTemplatesController](#config_templates_controller)
 * [ContentFilteringCategoriesController](#content_filtering_categories_controller)
 * [ContentFilteringRulesController](#content_filtering_rules_controller)
+* [DashboardBrandingPoliciesController](#dashboard_branding_policies_controller)
 * [DevicesController](#devices_controller)
 * [FirewalledServicesController](#firewalled_services_controller)
 * [GroupPoliciesController](#group_policies_controller)
@@ -269,10 +270,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 235
+timespan = 245.181801598604
 collect['timespan'] = timespan
 
-per_page = 235
+per_page = 245
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -290,7 +291,7 @@ collect['path'] = path
 method = 'method'
 collect['method'] = method
 
-response_code = 235
+response_code = 245
 collect['response_code'] = response_code
 
 
@@ -719,10 +720,11 @@ def get_network_bluetooth_clients(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 7 days from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 7 days. The default is 1 day. |
 | per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 5 - 1000. Default is 10. |
 | starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 | ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
-| timespan |  ``` Optional ```  | The timespan, in seconds, used to look back from now for bluetooth clients |
 | include_connectivity_history |  ``` Optional ```  | Include the connectivity history for this client |
 
 
@@ -734,7 +736,13 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-per_page = 235
+t0 = 't0'
+collect['t0'] = t0
+
+timespan = 81.677083490266
+collect['timespan'] = timespan
+
+per_page = 81
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -743,10 +751,7 @@ collect['starting_after'] = starting_after
 ending_before = 'endingBefore'
 collect['ending_before'] = ending_before
 
-timespan = 235
-collect['timespan'] = timespan
-
-include_connectivity_history = true
+include_connectivity_history = false
 collect['include_connectivity_history'] = include_connectivity_history
 
 
@@ -785,10 +790,10 @@ collect['network_id'] = network_id
 bluetooth_client_id = 'bluetoothClientId'
 collect['bluetooth_client_id'] = bluetooth_client_id
 
-include_connectivity_history = true
+include_connectivity_history = false
 collect['include_connectivity_history'] = include_connectivity_history
 
-connectivity_history_timespan = 235
+connectivity_history_timespan = 81
 collect['connectivity_history_timespan'] = connectivity_history_timespan
 
 
@@ -926,7 +931,7 @@ collect['serial'] = serial
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 235
+timespan = 81.677083490266
 collect['timespan'] = timespan
 
 
@@ -967,10 +972,10 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 235
+timespan = 81.677083490266
 collect['timespan'] = timespan
 
-per_page = 235
+per_page = 81
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -1084,7 +1089,7 @@ collect['network_id'] = network_id
 client_id = 'clientId'
 collect['client_id'] = client_id
 
-per_page = 71
+per_page = 81
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -1137,10 +1142,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 71
+timespan = 81.677083490266
 collect['timespan'] = timespan
 
-resolution = 71
+resolution = 81
 collect['resolution'] = resolution
 
 
@@ -1324,7 +1329,7 @@ collect['network_id'] = network_id
 client_id = 'clientId'
 collect['client_id'] = client_id
 
-per_page = 71
+per_page = 81
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -1557,6 +1562,244 @@ result = contentFilteringRules_controller.update_network_content_filtering(colle
 
 [Back to List of Controllers](#list_of_controllers)
 
+## <a name="dashboard_branding_policies_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DashboardBrandingPoliciesController") DashboardBrandingPoliciesController
+
+### Get singleton instance
+
+The singleton instance of the ``` DashboardBrandingPoliciesController ``` class can be accessed from the API Client.
+
+```ruby
+dashboardBrandingPolicies_controller = client.dashboard_branding_policies
+```
+
+### <a name="get_organization_branding_policies"></a>![Method: ](https://apidocs.io/img/method.png ".DashboardBrandingPoliciesController.get_organization_branding_policies") get_organization_branding_policies
+
+> List the branding policies of an organization
+
+
+```ruby
+def get_organization_branding_policies(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = dashboardBrandingPolicies_controller.get_organization_branding_policies(organization_id)
+
+```
+
+
+### <a name="create_organization_branding_policy"></a>![Method: ](https://apidocs.io/img/method.png ".DashboardBrandingPoliciesController.create_organization_branding_policy") create_organization_branding_policy
+
+> Add a new branding policy to an organization
+
+
+```ruby
+def create_organization_branding_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_organization_branding_policy |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+create_organization_branding_policy = CreateOrganizationBrandingPolicyModel.new
+collect['create_organization_branding_policy'] = create_organization_branding_policy
+
+
+result = dashboardBrandingPolicies_controller.create_organization_branding_policy(collect)
+
+```
+
+
+### <a name="get_organization_branding_policies_priorities"></a>![Method: ](https://apidocs.io/img/method.png ".DashboardBrandingPoliciesController.get_organization_branding_policies_priorities") get_organization_branding_policies_priorities
+
+> Return the branding policy IDs of an organization in priority order. IDs are ordered in ascending order of priority (IDs later in the array have higher priority).
+
+
+```ruby
+def get_organization_branding_policies_priorities(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = dashboardBrandingPolicies_controller.get_organization_branding_policies_priorities(organization_id)
+
+```
+
+
+### <a name="update_organization_branding_policies_priorities"></a>![Method: ](https://apidocs.io/img/method.png ".DashboardBrandingPoliciesController.update_organization_branding_policies_priorities") update_organization_branding_policies_priorities
+
+> Update the priority ordering of an organization's branding policies.
+
+
+```ruby
+def update_organization_branding_policies_priorities(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_branding_policies_priorities |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+update_organization_branding_policies_priorities = UpdateOrganizationBrandingPoliciesPrioritiesModel.new
+collect['update_organization_branding_policies_priorities'] = update_organization_branding_policies_priorities
+
+
+result = dashboardBrandingPolicies_controller.update_organization_branding_policies_priorities(collect)
+
+```
+
+
+### <a name="get_organization_branding_policy"></a>![Method: ](https://apidocs.io/img/method.png ".DashboardBrandingPoliciesController.get_organization_branding_policy") get_organization_branding_policy
+
+> Return a branding policy
+
+
+```ruby
+def get_organization_branding_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| branding_policy_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+branding_policy_id = 'brandingPolicyId'
+collect['branding_policy_id'] = branding_policy_id
+
+
+result = dashboardBrandingPolicies_controller.get_organization_branding_policy(collect)
+
+```
+
+
+### <a name="update_organization_branding_policy"></a>![Method: ](https://apidocs.io/img/method.png ".DashboardBrandingPoliciesController.update_organization_branding_policy") update_organization_branding_policy
+
+> Update a branding policy
+
+
+```ruby
+def update_organization_branding_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| branding_policy_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_branding_policy |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+branding_policy_id = 'brandingPolicyId'
+collect['branding_policy_id'] = branding_policy_id
+
+update_organization_branding_policy = UpdateOrganizationBrandingPolicyModel.new
+collect['update_organization_branding_policy'] = update_organization_branding_policy
+
+
+result = dashboardBrandingPolicies_controller.update_organization_branding_policy(collect)
+
+```
+
+
+### <a name="delete_organization_branding_policy"></a>![Method: ](https://apidocs.io/img/method.png ".DashboardBrandingPoliciesController.delete_organization_branding_policy") delete_organization_branding_policy
+
+> Delete a branding policy
+
+
+```ruby
+def delete_organization_branding_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| branding_policy_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+branding_policy_id = 'brandingPolicyId'
+collect['branding_policy_id'] = branding_policy_id
+
+
+dashboardBrandingPolicies_controller.delete_organization_branding_policy(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
 ## <a name="devices_controller"></a>![Class: ](https://apidocs.io/img/class.png ".DevicesController") DevicesController
 
 ### Get singleton instance
@@ -1766,7 +2009,7 @@ collect['network_id'] = network_id
 serial = 'serial'
 collect['serial'] = serial
 
-timespan = 71
+timespan = 81
 collect['timespan'] = timespan
 
 
@@ -1818,13 +2061,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 71
+timespan = 81.677083490266
 collect['timespan'] = timespan
 
-resolution = 71
+resolution = 81
 collect['resolution'] = resolution
 
-uplink = 'uplink'
+uplink = Meraki::UplinkEnum::WAN1
 collect['uplink'] = uplink
 
 
@@ -1996,7 +2239,7 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-per_page = 71
+per_page = 81
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -2833,7 +3076,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 71
+timespan = 81.677083490266
 collect['timespan'] = timespan
 
 object_type = Meraki::ObjectTypeEnum::PERSON
@@ -2944,10 +3187,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 71
+timespan = 39.9539102636994
 collect['timespan'] = timespan
 
-resolution = 71
+resolution = 39
 collect['resolution'] = resolution
 
 object_type = Meraki::ObjectTypeEnum::PERSON
@@ -4352,7 +4595,7 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 30
+timespan = 39.9539102636994
 collect['timespan'] = timespan
 
 
@@ -4495,7 +4738,7 @@ def update_network_site_to_site_vpn(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_site_to_site_vpn |  ``` Optional ```  | TODO: Add a parameter description |
+| update_network_site_to_site_vpn |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -4543,8 +4786,8 @@ result = networks_controller.split_network(network_id)
 
 ### <a name="get_network_traffic"></a>![Method: ](https://apidocs.io/img/method.png ".NetworksController.get_network_traffic") get_network_traffic
 
-> The traffic analysis data for this network.
-> <a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
+>     The traffic analysis data for this network.
+>     <a href="https://documentation.meraki.com/MR/Monitoring_and_Reporting/Hostname_Visibility">Traffic Analysis with Hostname Visibility</a> must be enabled on the network.
 > 
 
 
@@ -4557,8 +4800,10 @@ def get_network_traffic(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| timespan |  ``` Required ```  | The timespan for the data. Must be an integer representing a duration in seconds between two hours and one month. (Mandatory.) |
-| device_type |  ``` Optional ```  | Filter the data by device type: combined (default), wireless, switch, appliance. When using combined, for each rule the data will come from the device type with the most usage. |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 30 days from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days. |
+| device_type |  ``` Optional ```  | Filter the data by device type: combined (default), wireless, switch, appliance.
+    When using combined, for each rule the data will come from the device type with the most usage. |
 
 
 #### Example Usage
@@ -4569,7 +4814,10 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-timespan = 'timespan'
+t0 = 't0'
+collect['t0'] = t0
+
+timespan = 39.9539102636994
 collect['timespan'] = timespan
 
 device_type = 'deviceType'
@@ -5130,10 +5378,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 30
+timespan = 39.9539102636994
 collect['timespan'] = timespan
 
-uplink = 'uplink'
+uplink = Meraki::UplinkEnum::WAN1
 collect['uplink'] = uplink
 
 ip = 'ip'
@@ -5588,7 +5836,7 @@ def get_network_wireless_rf_profiles(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | include_template_profiles |  ``` Optional ```  | If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template
-      should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false. |
+    should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false. |
 
 
 #### Example Usage
@@ -5599,7 +5847,7 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-include_template_profiles = false
+include_template_profiles = true
 collect['include_template_profiles'] = include_template_profiles
 
 
@@ -7732,10 +7980,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 131.449192155362
 collect['timespan'] = timespan
 
-per_page = 121
+per_page = 131
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -7786,10 +8034,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 131.449192155362
 collect['timespan'] = timespan
 
-per_page = 121
+per_page = 131
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -7840,10 +8088,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 131.449192155362
 collect['timespan'] = timespan
 
-per_page = 121
+per_page = 131
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -7903,7 +8151,7 @@ collect['ssid_number'] = ssid_number
 login_identifier = 'loginIdentifier'
 collect['login_identifier'] = login_identifier
 
-timespan = 121
+timespan = 131
 collect['timespan'] = timespan
 
 
@@ -8546,6 +8794,232 @@ result = switchSettings_controller.update_network_switch_settings(collect)
 ```
 
 
+### <a name="get_network_switch_settings_qos_rules"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings_qos_rules") get_network_switch_settings_qos_rules
+
+> List quality of service rules
+
+
+```ruby
+def get_network_switch_settings_qos_rules(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = switchSettings_controller.get_network_switch_settings_qos_rules(network_id)
+
+```
+
+
+### <a name="create_network_switch_settings_qos_rule"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.create_network_switch_settings_qos_rule") create_network_switch_settings_qos_rule
+
+> Add a quality of service rule
+
+
+```ruby
+def create_network_switch_settings_qos_rule(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_network_switch_settings_qos_rule |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+create_network_switch_settings_qos_rule = CreateNetworkSwitchSettingsQosRuleModel.new
+collect['create_network_switch_settings_qos_rule'] = create_network_switch_settings_qos_rule
+
+
+result = switchSettings_controller.create_network_switch_settings_qos_rule(collect)
+
+```
+
+
+### <a name="get_network_switch_settings_qos_rules_order"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings_qos_rules_order") get_network_switch_settings_qos_rules_order
+
+> Return the quality of service rule IDs by order in which they will be processed by the switch
+
+
+```ruby
+def get_network_switch_settings_qos_rules_order(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = switchSettings_controller.get_network_switch_settings_qos_rules_order(network_id)
+
+```
+
+
+### <a name="update_network_switch_settings_qos_rules_order"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.update_network_switch_settings_qos_rules_order") update_network_switch_settings_qos_rules_order
+
+> Update the order in which the rules should be processed by the switch
+
+
+```ruby
+def update_network_switch_settings_qos_rules_order(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_switch_settings_qos_rules_order |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_switch_settings_qos_rules_order = UpdateNetworkSwitchSettingsQosRulesOrderModel.new
+collect['update_network_switch_settings_qos_rules_order'] = update_network_switch_settings_qos_rules_order
+
+
+result = switchSettings_controller.update_network_switch_settings_qos_rules_order(collect)
+
+```
+
+
+### <a name="get_network_switch_settings_qos_rule"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings_qos_rule") get_network_switch_settings_qos_rule
+
+> Return a quality of service rule
+
+
+```ruby
+def get_network_switch_settings_qos_rule(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| qos_rule_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+qos_rule_id = 'qosRuleId'
+collect['qos_rule_id'] = qos_rule_id
+
+
+result = switchSettings_controller.get_network_switch_settings_qos_rule(collect)
+
+```
+
+
+### <a name="delete_network_switch_settings_qos_rule"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.delete_network_switch_settings_qos_rule") delete_network_switch_settings_qos_rule
+
+> Delete a quality of service rule
+
+
+```ruby
+def delete_network_switch_settings_qos_rule(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| qos_rule_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+qos_rule_id = 'qosRuleId'
+collect['qos_rule_id'] = qos_rule_id
+
+
+switchSettings_controller.delete_network_switch_settings_qos_rule(collect)
+
+```
+
+
+### <a name="update_network_switch_settings_qos_rule"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.update_network_switch_settings_qos_rule") update_network_switch_settings_qos_rule
+
+> Update a quality of service rule
+
+
+```ruby
+def update_network_switch_settings_qos_rule(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| qos_rule_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_switch_settings_qos_rule |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+qos_rule_id = 'qosRuleId'
+collect['qos_rule_id'] = qos_rule_id
+
+update_network_switch_settings_qos_rule = UpdateNetworkSwitchSettingsQosRuleModel.new
+collect['update_network_switch_settings_qos_rule'] = update_network_switch_settings_qos_rule
+
+
+result = switchSettings_controller.update_network_switch_settings_qos_rule(collect)
+
+```
+
+
 [Back to List of Controllers](#list_of_controllers)
 
 ## <a name="switch_stacks_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchStacksController") SwitchStacksController
@@ -8557,44 +9031,6 @@ The singleton instance of the ``` SwitchStacksController ``` class can be access
 ```ruby
 switchStacks_controller = client.switch_stacks
 ```
-
-### <a name="remove_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.remove_network_switch_stack") remove_network_switch_stack
-
-> Remove a switch from a stack
-
-
-```ruby
-def remove_network_switch_stack(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
-| remove_network_switch_stack |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkID'
-collect['network_id'] = network_id
-
-switch_stack_id = 'switchStackId'
-collect['switch_stack_id'] = switch_stack_id
-
-remove_network_switch_stack = RemoveNetworkSwitchStackModel.new
-collect['remove_network_switch_stack'] = remove_network_switch_stack
-
-
-result = switchStacks_controller.remove_network_switch_stack(collect)
-
-```
-
 
 ### <a name="get_network_switch_stacks"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.get_network_switch_stacks") get_network_switch_stacks
 
@@ -8758,6 +9194,44 @@ collect['add_network_switch_stack'] = add_network_switch_stack
 
 
 result = switchStacks_controller.add_network_switch_stack(collect)
+
+```
+
+
+### <a name="remove_network_switch_stack"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchStacksController.remove_network_switch_stack") remove_network_switch_stack
+
+> Remove a switch from a stack
+
+
+```ruby
+def remove_network_switch_stack(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| switch_stack_id |  ``` Required ```  | TODO: Add a parameter description |
+| remove_network_switch_stack |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+switch_stack_id = 'switchStackId'
+collect['switch_stack_id'] = switch_stack_id
+
+remove_network_switch_stack = RemoveNetworkSwitchStackModel.new
+collect['remove_network_switch_stack'] = remove_network_switch_stack
+
+
+result = switchStacks_controller.remove_network_switch_stack(collect)
 
 ```
 
@@ -9461,10 +9935,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-per_page = 121
+per_page = 222
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9530,13 +10004,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9585,13 +10059,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9646,13 +10120,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9705,13 +10179,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9762,13 +10236,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9816,13 +10290,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9871,13 +10345,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9932,13 +10406,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -9991,13 +10465,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10050,13 +10524,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 121
+timespan = 222.944474047024
 collect['timespan'] = timespan
 
-ssid = 121
+ssid = 222
 collect['ssid'] = ssid
 
-vlan = 121
+vlan = 222
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10111,13 +10585,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 213
+timespan = 181.221300820457
 collect['timespan'] = timespan
 
-ssid = 213
+ssid = 181
 collect['ssid'] = ssid
 
-vlan = 213
+vlan = 181
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'

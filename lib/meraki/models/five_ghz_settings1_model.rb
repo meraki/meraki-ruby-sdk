@@ -16,7 +16,7 @@ module Meraki
 
     # Sets min bitrate (Mbps) of 5Ghz band. Can be one of '6', '9', '12', '18',
     # '24', '36', '48' or '54'.
-    # @return [String]
+    # @return [Integer]
     attr_accessor :min_bitrate
 
     # Sets valid auto channels for 5Ghz band. Can be one of '36', '40', '44',

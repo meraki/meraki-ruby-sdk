@@ -4,9 +4,12 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The policy applied to matching traffic. Must be 'deny'.
+  # 'allow' or 'deny' traffic specified by this rule
   class PolicyEnum
     POLICY_ENUM = [
+      # TODO: Write general description for ALLOW
+      ALLOW = 'allow'.freeze,
+
       # TODO: Write general description for DENY
       DENY = 'deny'.freeze
     ].freeze

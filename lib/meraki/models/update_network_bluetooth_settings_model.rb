@@ -20,7 +20,7 @@ module Meraki
 
     # The way major and minor number should be assigned to nodes in the network.
     # ('Unique', 'Non-unique')
-    # @return [String]
+    # @return [MajorMinorAssignmentModeEnum]
     attr_accessor :major_minor_assignment_mode
 
     # The major number to be used in the beacon identifier. Only valid in

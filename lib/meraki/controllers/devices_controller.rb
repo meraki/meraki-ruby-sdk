@@ -276,16 +276,16 @@ module Meraki
     # the data. The maximum lookback period is 365 days from today.
     # @param [String] t1 Optional parameter: The end of the timespan for the
     # data. t1 can be a maximum of 31 days after t0.
-    # @param [Integer] timespan Optional parameter: The timespan for which the
+    # @param [Float] timespan Optional parameter: The timespan for which the
     # information will be fetched. If specifying timespan, do not specify
     # parameters t0 and t1. The value must be in seconds and be less than or
     # equal to 31 days. The default is 1 day.
     # @param [Integer] resolution Optional parameter: The time resolution in
     # seconds for returned data. The valid resolutions are: 60, 600, 3600,
     # 86400. The default is 60.
-    # @param [String] uplink Optional parameter: The WAN uplink used to obtain
-    # the requested stats. Valid uplinks are wan1, wan2, cellular. The default
-    # is wan1.
+    # @param [UplinkEnum] uplink Optional parameter: The WAN uplink used to
+    # obtain the requested stats. Valid uplinks are wan1, wan2, cellular. The
+    # default is wan1.
     # @return Mixed response from the API call
     def get_network_device_loss_and_latency_history(options = {})
       # Validate required parameters.

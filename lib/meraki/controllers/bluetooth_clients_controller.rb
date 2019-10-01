@@ -18,6 +18,12 @@ module Meraki
 
     # List the Bluetooth clients seen by APs in this network
     # @param [String] network_id Required parameter: Example:
+    # @param [String] t0 Optional parameter: The beginning of the timespan for
+    # the data. The maximum lookback period is 7 days from today.
+    # @param [Float] timespan Optional parameter: The timespan for which the
+    # information will be fetched. If specifying timespan, do not specify
+    # parameter t0. The value must be in seconds and be less than or equal to 7
+    # days. The default is 1 day.
     # @param [Integer] per_page Optional parameter: The number of entries per
     # page returned. Acceptable range is 5 - 1000. Default is 10.
     # @param [String] starting_after Optional parameter: A token used by the
@@ -30,8 +36,6 @@ module Meraki
     # but it is not limited to those. This parameter should not be defined by
     # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
-    # @param [Integer] timespan Optional parameter: The timespan, in seconds,
-    # used to look back from now for bluetooth clients
     # @param [Boolean] include_connectivity_history Optional parameter: Include
     # the connectivity history for this client
     # @return Mixed response from the API call
@@ -51,10 +55,11 @@ module Meraki
       _query_builder = APIHelper.append_url_with_query_parameters(
         _query_builder,
         {
+          't0' => options['t0'],
+          'timespan' => options['timespan'],
           'perPage' => options['per_page'],
           'startingAfter' => options['starting_after'],
           'endingBefore' => options['ending_before'],
-          'timespan' => options['timespan'],
           'includeConnectivityHistory' => options['include_connectivity_history']
         },
         array_serialization: Configuration.array_serialization

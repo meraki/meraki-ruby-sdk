@@ -7,7 +7,7 @@ module Meraki
   # Rule4Model Model.
   class Rule4Model < BaseModel
     # 'Deny' traffic specified by this rule
-    # @return [Policy2Enum]
+    # @return [Policy4Enum]
     attr_accessor :policy
 
     # Type of the L7 rule. One of: 'application', 'applicationCategory', 'host',

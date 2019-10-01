@@ -10,7 +10,7 @@ module Meraki
     # not collect traffic types),
     #     'basic' (collect generic traffic categories), or 'detailed' (collect
     # destination hostnames).
-    # @return [ModeEnum]
+    # @return [Mode1Enum]
     attr_accessor :mode
 
     # The list of items that make up the custom pie chart for traffic reporting.

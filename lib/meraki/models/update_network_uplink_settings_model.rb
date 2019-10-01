@@ -6,9 +6,8 @@
 module Meraki
   # UpdateNetworkUplinkSettingsModel Model.
   class UpdateNetworkUplinkSettingsModel < BaseModel
-    # A mapping of uplinks ('wan1', 'wan2' or 'cellular') to their bandwidth
-    # settings (be sure to check which uplinks are supported for your network).
-    # Bandwidth setting objects have the following structure
+    # A mapping of uplinks to their bandwidth settings (be sure to check which
+    # uplinks are supported for your network)
     # @return [BandwidthLimits6Model]
     attr_accessor :bandwidth_limits
 
