@@ -429,7 +429,8 @@ module Meraki
     end
 
     # Return the splash authorization for a client, for each SSID they've
-    # associated with through splash. Clients can be identified by a client key
+    # associated with through splash. Only enabled SSIDs with Click-through
+    # splash enabled will be included. Clients can be identified by a client key
     # or either the MAC or IP depending on whether the network uses Track-by-IP.
     # @param [String] network_id Required parameter: Example:
     # @param [String] client_id Required parameter: Example:

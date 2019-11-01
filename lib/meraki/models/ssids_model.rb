@@ -4,7 +4,8 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The target SSIDs. For each SSID where isAuthorized is true, the expiration
+  # The target SSIDs. Each SSID must be enabled and must have Click-through
+  # splash enabled. For each SSID where isAuthorized is true, the expiration
   # time will automatically be set according to the SSID's splash frequency.
   class SsidsModel < BaseModel
     # New authorization status for SSID (true, false).

@@ -6,6 +6,10 @@
 module Meraki
   # UpdateNetworkSwitchSettingsModel Model.
   class UpdateNetworkSwitchSettingsModel < BaseModel
+    # Management VLAN
+    # @return [Integer]
+    attr_accessor :vlan
+
     # The use Combined Power as the default behavior of secondary power supplies
     # on supported devices.
     # @return [Boolean]
@@ -15,25 +19,21 @@ module Meraki
     # @return [List of PowerExceptionModel]
     attr_accessor :power_exceptions
 
-    # Management VLAN
-    # @return [Integer]
-    attr_accessor :vlan
-
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
+      @_hash['vlan'] = 'vlan'
       @_hash['use_combined_power'] = 'useCombinedPower'
       @_hash['power_exceptions'] = 'powerExceptions'
-      @_hash['vlan'] = 'vlan'
       @_hash
     end
 
-    def initialize(use_combined_power = nil,
-                   power_exceptions = nil,
-                   vlan = nil)
+    def initialize(vlan = nil,
+                   use_combined_power = nil,
+                   power_exceptions = nil)
+      @vlan = vlan
       @use_combined_power = use_combined_power
       @power_exceptions = power_exceptions
-      @vlan = vlan
     end
 
     # Creates an instance of the object from a hash.
@@ -41,6 +41,7 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
+      vlan = hash['vlan']
       use_combined_power = hash['useCombinedPower']
       # Parameter is an array, so we need to iterate through it
       power_exceptions = nil
@@ -50,12 +51,11 @@ module Meraki
           power_exceptions << (PowerExceptionModel.from_hash(structure) if structure)
         end
       end
-      vlan = hash['vlan']
 
       # Create object from extracted values.
-      UpdateNetworkSwitchSettingsModel.new(use_combined_power,
-                                           power_exceptions,
-                                           vlan)
+      UpdateNetworkSwitchSettingsModel.new(vlan,
+                                           use_combined_power,
+                                           power_exceptions)
     end
   end
 end

@@ -6,7 +6,8 @@
 module Meraki
   # UpdateNetworkClientSplashAuthorizationStatusModel Model.
   class UpdateNetworkClientSplashAuthorizationStatusModel < BaseModel
-    # The target SSIDs. For each SSID where isAuthorized is true, the expiration
+    # The target SSIDs. Each SSID must be enabled and must have Click-through
+    # splash enabled. For each SSID where isAuthorized is true, the expiration
     # time will automatically be set according to the SSID's splash frequency.
     # @return [SsidsModel]
     attr_accessor :ssids

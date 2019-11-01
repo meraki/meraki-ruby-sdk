@@ -71,11 +71,13 @@ module Meraki
     attr_accessor :udld
 
     # Only devices with MAC addresses specified in this list will have access to
-    # this port.  Up to 20 MAC addresses can be defined.
+    # this port. Up to 20 MAC addresses can be defined. To disable MAC
+    # whitelist, set accessPolicyNumber to null.
     # @return [List of String]
     attr_accessor :mac_whitelist
 
-    # The initial list of MAC addresses for sticky Mac whitelist.
+    # The initial list of MAC addresses for sticky Mac whitelist. To reset
+    # Sticky MAC whitelist, set accessPolicyNumber to null.
     # @return [List of String]
     attr_accessor :sticky_mac_whitelist
 

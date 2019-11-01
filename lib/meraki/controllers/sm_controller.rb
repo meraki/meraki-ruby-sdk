@@ -346,6 +346,35 @@ module Meraki
       decoded
     end
 
+    # Refresh the details of a device
+    # @param [String] network_id Required parameter: Example:
+    # @param [String] device_id Required parameter: Example:
+    # @return void response from the API call
+    def refresh_network_sm_device_details(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'network_id' => options['network_id'],
+        'device_id' => options['device_id']
+      )
+      # Prepare query url.
+      _path_url = '/networks/{networkId}/sm/device/{deviceId}/refreshDetails'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'networkId' => options['network_id'],
+        'deviceId' => options['device_id']
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+      # Prepare and execute HttpRequest.
+      _request = @http_client.post(
+        _query_url
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+    end
+
     # List the devices enrolled in an SM network with various specified fields
     # and filters
     # @param [String] network_id Required parameter: Example:
@@ -372,14 +401,15 @@ module Meraki
     # @param [String] scope Optional parameter: Specify a scope (one of all,
     # none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as
     # comma separated values.
-    # @param [String] batch_token Optional parameter: On networks with more than
-    # 1000 devices, the device list will be limited to 1000 devices per query.  
-    #   If there are more devices to be seen, a batch token will be returned as
-    # a part of the device list. To see the remainder of     the devices, pass
-    # in the batchToken as a parameter in the next request. Requests made with
-    # the batchToken do not require     additional parameters as the batchToken
-    # includes the parameters passed in with the original request. Additional
-    # parameters     passed in with the batchToken will be ignored.
+    # @param [Integer] batch_size Optional parameter: Number of devices to
+    # return, 1000 is the default as well as the max.
+    # @param [String] batch_token Optional parameter: If the network has more
+    # devices than the batch size, a batch token will be returned     as a part
+    # of the device list. To see the remainder of the devices, pass in the
+    # batchToken as a parameter in the next request.     Requests made with the
+    # batchToken do not require additional parameters as the batchToken includes
+    # the parameters passed in     with the original request. Additional
+    # parameters passed in with the batchToken will be ignored.
     # @return Mixed response from the API call
     def get_network_sm_devices(options = {})
       # Validate required parameters.
@@ -402,6 +432,7 @@ module Meraki
           'serials' => options['serials'],
           'ids' => options['ids'],
           'scope' => options['scope'],
+          'batchSize' => options['batch_size'],
           'batchToken' => options['batch_token']
         },
         array_serialization: Configuration.array_serialization

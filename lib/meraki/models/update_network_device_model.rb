@@ -43,6 +43,11 @@ module Meraki
     # @return [String]
     attr_accessor :switch_profile_id
 
+    # The floor plan to associate to this device. null disassociates the device
+    # from the floorplan.
+    # @return [String]
+    attr_accessor :floor_plan_id
+
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
@@ -54,6 +59,7 @@ module Meraki
       @_hash['notes'] = 'notes'
       @_hash['move_map_marker'] = 'moveMapMarker'
       @_hash['switch_profile_id'] = 'switchProfileId'
+      @_hash['floor_plan_id'] = 'floorPlanId'
       @_hash
     end
 
@@ -64,7 +70,8 @@ module Meraki
                    address = nil,
                    notes = nil,
                    move_map_marker = nil,
-                   switch_profile_id = nil)
+                   switch_profile_id = nil,
+                   floor_plan_id = nil)
       @name = name
       @tags = tags
       @lat = lat
@@ -73,6 +80,7 @@ module Meraki
       @notes = notes
       @move_map_marker = move_map_marker
       @switch_profile_id = switch_profile_id
+      @floor_plan_id = floor_plan_id
     end
 
     # Creates an instance of the object from a hash.
@@ -88,6 +96,7 @@ module Meraki
       notes = hash['notes']
       move_map_marker = hash['moveMapMarker']
       switch_profile_id = hash['switchProfileId']
+      floor_plan_id = hash['floorPlanId']
 
       # Create object from extracted values.
       UpdateNetworkDeviceModel.new(name,
@@ -97,7 +106,8 @@ module Meraki
                                    address,
                                    notes,
                                    move_map_marker,
-                                   switch_profile_id)
+                                   switch_profile_id,
+                                   floor_plan_id)
     end
   end
 end

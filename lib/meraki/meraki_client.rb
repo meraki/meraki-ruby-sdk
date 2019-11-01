@@ -54,6 +54,12 @@ module Meraki
       ConfigTemplatesController.instance
     end
 
+    # Singleton access to connectivity_monitoring_destinations controller.
+    # @return [ConnectivityMonitoringDestinationsController] Returns the controller instance.
+    def connectivity_monitoring_destinations
+      ConnectivityMonitoringDestinationsController.instance
+    end
+
     # Singleton access to content_filtering_categories controller.
     # @return [ContentFilteringCategoriesController] Returns the controller instance.
     def content_filtering_categories
@@ -78,10 +84,22 @@ module Meraki
       DevicesController.instance
     end
 
+    # Singleton access to events controller.
+    # @return [EventsController] Returns the controller instance.
+    def events
+      EventsController.instance
+    end
+
     # Singleton access to firewalled_services controller.
     # @return [FirewalledServicesController] Returns the controller instance.
     def firewalled_services
       FirewalledServicesController.instance
+    end
+
+    # Singleton access to floorplans controller.
+    # @return [FloorplansController] Returns the controller instance.
+    def floorplans
+      FloorplansController.instance
     end
 
     # Singleton access to group_policies controller.
@@ -166,6 +184,12 @@ module Meraki
     # @return [MXPortForwardingRulesController] Returns the controller instance.
     def mx_port_forwarding_rules
       MXPortForwardingRulesController.instance
+    end
+
+    # Singleton access to mx_static_routes controller.
+    # @return [MXStaticRoutesController] Returns the controller instance.
+    def mx_static_routes
+      MXStaticRoutesController.instance
     end
 
     # Singleton access to mx_warm_spare_settings controller.
@@ -276,12 +300,6 @@ module Meraki
       SplashSettingsController.instance
     end
 
-    # Singleton access to static_routes controller.
-    # @return [StaticRoutesController] Returns the controller instance.
-    def static_routes
-      StaticRoutesController.instance
-    end
-
     # Singleton access to switch_port_schedules controller.
     # @return [SwitchPortSchedulesController] Returns the controller instance.
     def switch_port_schedules
@@ -352,6 +370,12 @@ module Meraki
     # @return [WirelessHealthController] Returns the controller instance.
     def wireless_health
       WirelessHealthController.instance
+    end
+
+    # Singleton access to wireless_settings controller.
+    # @return [WirelessSettingsController] Returns the controller instance.
+    def wireless_settings
+      WirelessSettingsController.instance
     end
 
     # Returns the configuration class for easy access.
