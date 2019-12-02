@@ -6,44 +6,78 @@
 module Meraki
   # Rule10Model Model.
   class Rule10Model < BaseModel
-    # A list of objects describing the definitions of your traffic shaping rule.
-    # At least one definition is required.
-    # @return [List of DefinitionModel]
-    attr_accessor :definitions
-
-    # An object describing the bandwidth settings for your rule.
-    # @return [PerClientBandwidthLimitsModel]
-    attr_accessor :per_client_bandwidth_limits
-
-    # The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
-    #     For a list of possible tag values, use the
-    # trafficShaping/dscpTaggingOptions endpoint.
-    # @return [Integer]
-    attr_accessor :dscp_tag_value
-
-    # A string, indicating the priority level for packets bound to your rule.
-    #     Can be 'low', 'normal' or 'high'.
+    # Description of the rule (optional).
     # @return [String]
-    attr_accessor :priority
+    attr_accessor :comment
+
+    # 'allow' or 'deny' traffic specified by this rule.
+    # @return [Policy6Enum]
+    attr_accessor :policy
+
+    # IP address version (must be 'any', 'ipv4' or 'ipv6'). Applicable only if
+    # network supports IPv6. Default value is 'ipv4'.
+    # @return [IpVersionEnum]
+    attr_accessor :ip_version
+
+    # The type of protocol (must be 'tcp', 'udp', or 'any').
+    # @return [Protocol3Enum]
+    attr_accessor :protocol
+
+    # Source IP address (in IP or CIDR notation) or 'any'.
+    # @return [String]
+    attr_accessor :src_cidr
+
+    # Source port. Must be in the range  of 1-65535 or 'any'. Default is 'any'.
+    # @return [String]
+    attr_accessor :src_port
+
+    # Destination IP address (in IP or CIDR notation) or 'any'.
+    # @return [String]
+    attr_accessor :dst_cidr
+
+    # Destination port. Must be in the range of 1-65535 or 'any'. Default is
+    # 'any'.
+    # @return [String]
+    attr_accessor :dst_port
+
+    # Incoming traffic VLAN. Must be in the range of 1-4095 or 'any'. Default is
+    # 'any'.
+    # @return [String]
+    attr_accessor :vlan
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
-      @_hash['definitions'] = 'definitions'
-      @_hash['per_client_bandwidth_limits'] = 'perClientBandwidthLimits'
-      @_hash['dscp_tag_value'] = 'dscpTagValue'
-      @_hash['priority'] = 'priority'
+      @_hash['comment'] = 'comment'
+      @_hash['policy'] = 'policy'
+      @_hash['ip_version'] = 'ipVersion'
+      @_hash['protocol'] = 'protocol'
+      @_hash['src_cidr'] = 'srcCidr'
+      @_hash['src_port'] = 'srcPort'
+      @_hash['dst_cidr'] = 'dstCidr'
+      @_hash['dst_port'] = 'dstPort'
+      @_hash['vlan'] = 'vlan'
       @_hash
     end
 
-    def initialize(definitions = nil,
-                   per_client_bandwidth_limits = nil,
-                   dscp_tag_value = nil,
-                   priority = nil)
-      @definitions = definitions
-      @per_client_bandwidth_limits = per_client_bandwidth_limits
-      @dscp_tag_value = dscp_tag_value
-      @priority = priority
+    def initialize(policy = nil,
+                   protocol = nil,
+                   src_cidr = nil,
+                   dst_cidr = nil,
+                   comment = nil,
+                   ip_version = nil,
+                   src_port = nil,
+                   dst_port = nil,
+                   vlan = nil)
+      @comment = comment
+      @policy = policy
+      @ip_version = ip_version
+      @protocol = protocol
+      @src_cidr = src_cidr
+      @src_port = src_port
+      @dst_cidr = dst_cidr
+      @dst_port = dst_port
+      @vlan = vlan
     end
 
     # Creates an instance of the object from a hash.
@@ -51,25 +85,26 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      # Parameter is an array, so we need to iterate through it
-      definitions = nil
-      unless hash['definitions'].nil?
-        definitions = []
-        hash['definitions'].each do |structure|
-          definitions << (DefinitionModel.from_hash(structure) if structure)
-        end
-      end
-      if hash['perClientBandwidthLimits']
-        per_client_bandwidth_limits = PerClientBandwidthLimitsModel.from_hash(hash['perClientBandwidthLimits'])
-      end
-      dscp_tag_value = hash['dscpTagValue']
-      priority = hash['priority']
+      policy = hash['policy']
+      protocol = hash['protocol']
+      src_cidr = hash['srcCidr']
+      dst_cidr = hash['dstCidr']
+      comment = hash['comment']
+      ip_version = hash['ipVersion']
+      src_port = hash['srcPort']
+      dst_port = hash['dstPort']
+      vlan = hash['vlan']
 
       # Create object from extracted values.
-      Rule10Model.new(definitions,
-                      per_client_bandwidth_limits,
-                      dscp_tag_value,
-                      priority)
+      Rule10Model.new(policy,
+                      protocol,
+                      src_cidr,
+                      dst_cidr,
+                      comment,
+                      ip_version,
+                      src_port,
+                      dst_port,
+                      vlan)
     end
   end
 end

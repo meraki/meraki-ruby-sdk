@@ -94,20 +94,20 @@ module Meraki
 
     # Return a SAML role
     # @param [String] organization_id Required parameter: Example:
-    # @param [String] id Required parameter: Example:
+    # @param [String] saml_role_id Required parameter: Example:
     # @return Mixed response from the API call
     def get_organization_saml_role(options = {})
       # Validate required parameters.
       validate_parameters(
         'organization_id' => options['organization_id'],
-        'id' => options['id']
+        'saml_role_id' => options['saml_role_id']
       )
       # Prepare query url.
-      _path_url = '/organizations/{organizationId}/samlRoles/{id}'
+      _path_url = '/organizations/{organizationId}/samlRoles/{samlRoleId}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'organizationId' => options['organization_id'],
-        'id' => options['id']
+        'samlRoleId' => options['saml_role_id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -133,7 +133,7 @@ module Meraki
 
     # Update a SAML role
     # @param [String] organization_id Required parameter: Example:
-    # @param [String] id Required parameter: Example:
+    # @param [String] saml_role_id Required parameter: Example:
     # @param [UpdateOrganizationSamlRoleModel] update_organization_saml_role
     # Optional parameter: Example:
     # @return Mixed response from the API call
@@ -141,14 +141,14 @@ module Meraki
       # Validate required parameters.
       validate_parameters(
         'organization_id' => options['organization_id'],
-        'id' => options['id']
+        'saml_role_id' => options['saml_role_id']
       )
       # Prepare query url.
-      _path_url = '/organizations/{organizationId}/samlRoles/{id}'
+      _path_url = '/organizations/{organizationId}/samlRoles/{samlRoleId}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'organizationId' => options['organization_id'],
-        'id' => options['id']
+        'samlRoleId' => options['saml_role_id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -176,20 +176,20 @@ module Meraki
 
     # Remove a SAML role
     # @param [String] organization_id Required parameter: Example:
-    # @param [String] id Required parameter: Example:
+    # @param [String] saml_role_id Required parameter: Example:
     # @return void response from the API call
     def delete_organization_saml_role(options = {})
       # Validate required parameters.
       validate_parameters(
         'organization_id' => options['organization_id'],
-        'id' => options['id']
+        'saml_role_id' => options['saml_role_id']
       )
       # Prepare query url.
-      _path_url = '/organizations/{organizationId}/samlRoles/{id}'
+      _path_url = '/organizations/{organizationId}/samlRoles/{samlRoleId}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'organizationId' => options['organization_id'],
-        'id' => options['id']
+        'samlRoleId' => options['saml_role_id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url

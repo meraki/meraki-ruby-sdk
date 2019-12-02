@@ -120,6 +120,12 @@ module Meraki
       IntrusionSettingsController.instance
     end
 
+    # Singleton access to licenses controller.
+    # @return [LicensesController] Returns the controller instance.
+    def licenses
+      LicensesController.instance
+    end
+
     # Singleton access to mr_l3_firewall controller.
     # @return [MRL3FirewallController] Returns the controller instance.
     def mr_l3_firewall
@@ -298,6 +304,12 @@ module Meraki
     # @return [SplashSettingsController] Returns the controller instance.
     def splash_settings
       SplashSettingsController.instance
+    end
+
+    # Singleton access to switch_ac_ls controller.
+    # @return [SwitchACLsController] Returns the controller instance.
+    def switch_ac_ls
+      SwitchACLsController.instance
     end
 
     # Singleton access to switch_port_schedules controller.

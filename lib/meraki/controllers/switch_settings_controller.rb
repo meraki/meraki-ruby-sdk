@@ -92,6 +92,161 @@ module Meraki
       decoded
     end
 
+    # Return the DHCP server policy
+    # @param [String] network_id Required parameter: Example:
+    # @return Mixed response from the API call
+    def get_network_switch_settings_dhcp_server_policy(network_id)
+      # Validate required parameters.
+      validate_parameters(
+        'network_id' => network_id
+      )
+      # Prepare query url.
+      _path_url = '/networks/{networkId}/switch/settings/dhcpServerPolicy'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'networkId' => network_id
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+      # Prepare headers.
+      _headers = {
+        'accept' => 'application/json'
+      }
+      # Prepare and execute HttpRequest.
+      _request = @http_client.get(
+        _query_url,
+        headers: _headers
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+      # Return appropriate response type.
+      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
+        _context.response.raw_body.nil? ||
+        _context.response.raw_body.to_s.strip.empty?
+      decoded
+    end
+
+    # Update the DHCP server policy
+    # @param [String] network_id Required parameter: Example:
+    # @param [UpdateNetworkSwitchSettingsDhcpServerPolicyModel]
+    # update_network_switch_settings_dhcp_server_policy Optional parameter:
+    # Example:
+    # @return Mixed response from the API call
+    def update_network_switch_settings_dhcp_server_policy(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'network_id' => options['network_id']
+      )
+      # Prepare query url.
+      _path_url = '/networks/{networkId}/switch/settings/dhcpServerPolicy'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'networkId' => options['network_id']
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+      # Prepare headers.
+      _headers = {
+        'accept' => 'application/json',
+        'content-type' => 'application/json; charset=utf-8'
+      }
+      # Prepare and execute HttpRequest.
+      _request = @http_client.put(
+        _query_url,
+        headers: _headers,
+        parameters: options['update_network_switch_settings_dhcp_server_policy'].to_json
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+      # Return appropriate response type.
+      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
+        _context.response.raw_body.nil? ||
+        _context.response.raw_body.to_s.strip.empty?
+      decoded
+    end
+
+    # Return the DSCP to CoS mappings
+    # @param [String] network_id Required parameter: Example:
+    # @return Mixed response from the API call
+    def get_network_switch_settings_dscp_to_cos_mappings(network_id)
+      # Validate required parameters.
+      validate_parameters(
+        'network_id' => network_id
+      )
+      # Prepare query url.
+      _path_url = '/networks/{networkId}/switch/settings/dscpToCosMappings'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'networkId' => network_id
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+      # Prepare headers.
+      _headers = {
+        'accept' => 'application/json'
+      }
+      # Prepare and execute HttpRequest.
+      _request = @http_client.get(
+        _query_url,
+        headers: _headers
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+      # Return appropriate response type.
+      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
+        _context.response.raw_body.nil? ||
+        _context.response.raw_body.to_s.strip.empty?
+      decoded
+    end
+
+    # Update the DSCP to CoS mappings
+    # @param [String] network_id Required parameter: Example:
+    # @param [UpdateNetworkSwitchSettingsDscpToCosMappingsModel]
+    # update_network_switch_settings_dscp_to_cos_mappings Required parameter:
+    # Example:
+    # @return Mixed response from the API call
+    def update_network_switch_settings_dscp_to_cos_mappings(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'network_id' => options['network_id'],
+        'update_network_switch_settings_dscp_to_cos_mappings' => options['update_network_switch_settings_dscp_to_cos_mappings']
+      )
+      # Prepare query url.
+      _path_url = '/networks/{networkId}/switch/settings/dscpToCosMappings'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'networkId' => options['network_id']
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+      # Prepare headers.
+      _headers = {
+        'accept' => 'application/json',
+        'content-type' => 'application/json; charset=utf-8'
+      }
+      # Prepare and execute HttpRequest.
+      _request = @http_client.put(
+        _query_url,
+        headers: _headers,
+        parameters: options['update_network_switch_settings_dscp_to_cos_mappings'].to_json
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+      # Return appropriate response type.
+      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
+        _context.response.raw_body.nil? ||
+        _context.response.raw_body.to_s.strip.empty?
+      decoded
+    end
+
     # Return the MTU configuration
     # @param [String] network_id Required parameter: Example:
     # @return Mixed response from the API call

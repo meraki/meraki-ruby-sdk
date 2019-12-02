@@ -36,6 +36,12 @@ module Meraki
     # @return [Boolean]
     attr_accessor :disable_remote_status_page
 
+    # A unique identifier which can be used for device enrollment or easy access
+    # through the Meraki SM Registration page or the Self Service Portal. Please
+    # note that changing this field may cause existing bookmarks to break.
+    # @return [String]
+    attr_accessor :enrollment_string
+
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
@@ -44,6 +50,7 @@ module Meraki
       @_hash['tags'] = 'tags'
       @_hash['disable_my_meraki_com'] = 'disableMyMerakiCom'
       @_hash['disable_remote_status_page'] = 'disableRemoteStatusPage'
+      @_hash['enrollment_string'] = 'enrollmentString'
       @_hash
     end
 
@@ -51,12 +58,14 @@ module Meraki
                    time_zone = nil,
                    tags = nil,
                    disable_my_meraki_com = nil,
-                   disable_remote_status_page = nil)
+                   disable_remote_status_page = nil,
+                   enrollment_string = nil)
       @name = name
       @time_zone = time_zone
       @tags = tags
       @disable_my_meraki_com = disable_my_meraki_com
       @disable_remote_status_page = disable_remote_status_page
+      @enrollment_string = enrollment_string
     end
 
     # Creates an instance of the object from a hash.
@@ -69,13 +78,15 @@ module Meraki
       tags = hash['tags']
       disable_my_meraki_com = hash['disableMyMerakiCom']
       disable_remote_status_page = hash['disableRemoteStatusPage']
+      enrollment_string = hash['enrollmentString']
 
       # Create object from extracted values.
       UpdateNetworkModel.new(name,
                              time_zone,
                              tags,
                              disable_my_meraki_com,
-                             disable_remote_status_page)
+                             disable_remote_status_page,
+                             enrollment_string)
     end
   end
 end

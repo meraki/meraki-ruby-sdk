@@ -14,7 +14,7 @@ module Meraki
     # @return [String]
     attr_accessor :org_access
 
-    # The list of tags that the SAML administrator has privileges on
+    # The list of tags that the SAML administrator has privleges on
     # @return [List of Tag2Model]
     attr_accessor :tags
 

@@ -85,6 +85,10 @@ module Meraki
     # @return [Integer]
     attr_accessor :sticky_mac_whitelist_limit
 
+    # The storm control status of the switch port
+    # @return [Boolean]
+    attr_accessor :storm_control_enabled
+
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
@@ -106,6 +110,7 @@ module Meraki
       @_hash['mac_whitelist'] = 'macWhitelist'
       @_hash['sticky_mac_whitelist'] = 'stickyMacWhitelist'
       @_hash['sticky_mac_whitelist_limit'] = 'stickyMacWhitelistLimit'
+      @_hash['storm_control_enabled'] = 'stormControlEnabled'
       @_hash
     end
 
@@ -126,7 +131,8 @@ module Meraki
                    udld = nil,
                    mac_whitelist = nil,
                    sticky_mac_whitelist = nil,
-                   sticky_mac_whitelist_limit = nil)
+                   sticky_mac_whitelist_limit = nil,
+                   storm_control_enabled = nil)
       @name = name
       @tags = tags
       @enabled = enabled
@@ -145,6 +151,7 @@ module Meraki
       @mac_whitelist = mac_whitelist
       @sticky_mac_whitelist = sticky_mac_whitelist
       @sticky_mac_whitelist_limit = sticky_mac_whitelist_limit
+      @storm_control_enabled = storm_control_enabled
     end
 
     # Creates an instance of the object from a hash.
@@ -170,6 +177,7 @@ module Meraki
       mac_whitelist = hash['macWhitelist']
       sticky_mac_whitelist = hash['stickyMacWhitelist']
       sticky_mac_whitelist_limit = hash['stickyMacWhitelistLimit']
+      storm_control_enabled = hash['stormControlEnabled']
 
       # Create object from extracted values.
       UpdateDeviceSwitchPortModel.new(name,
@@ -189,7 +197,8 @@ module Meraki
                                       udld,
                                       mac_whitelist,
                                       sticky_mac_whitelist,
-                                      sticky_mac_whitelist_limit)
+                                      sticky_mac_whitelist_limit,
+                                      storm_control_enabled)
     end
   end
 end

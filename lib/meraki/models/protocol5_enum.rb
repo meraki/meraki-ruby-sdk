@@ -5,9 +5,9 @@
 
 module Meraki
   # The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP".
-  # Default value is "ANY"
-  class Protocol4Enum
-    PROTOCOL4_ENUM = [
+  # Default value is "ANY".
+  class Protocol5Enum
+    PROTOCOL5_ENUM = [
       # TODO: Write general description for ANY
       ANY = 'ANY'.freeze,
 

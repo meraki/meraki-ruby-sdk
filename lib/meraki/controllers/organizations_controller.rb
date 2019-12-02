@@ -302,20 +302,31 @@ module Meraki
 
     # Return the inventory for an organization
     # @param [String] organization_id Required parameter: Example:
+    # @param [Boolean] include_license_info Optional parameter: When this
+    # parameter is true, each entity in the response will include the license
+    # expiration date of the device (if any). Only applies to organizations that
+    # support per-device licensing. Defaults to false.
     # @return Mixed response from the API call
-    def get_organization_inventory(organization_id)
+    def get_organization_inventory(options = {})
       # Validate required parameters.
       validate_parameters(
-        'organization_id' => organization_id
+        'organization_id' => options['organization_id']
       )
       # Prepare query url.
       _path_url = '/organizations/{organizationId}/inventory'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
-        'organizationId' => organization_id
+        'organizationId' => options['organization_id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
+      _query_builder = APIHelper.append_url_with_query_parameters(
+        _query_builder,
+        {
+          'includeLicenseInfo' => options['include_license_info']
+        },
+        array_serialization: Configuration.array_serialization
+      )
       _query_url = APIHelper.clean_url _query_builder
       # Prepare headers.
       _headers = {

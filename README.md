@@ -1,70 +1,18 @@
 # Getting started
 
-The Cisco Meraki Dashboard API is a modern REST API based on the [OpenAPI](https://swagger.io/docs/specification/about/) specification.
+The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
 
-## What can the API be used for?
-The Dashboard API can be used for many purposes. It's meant to be an open-ended tool. Here are some examples of use cases:
+> Date: 02 December, 2019
+>
+> [What's New](https://meraki.io/whats-new/)
 
-* Add new organizations, admins, networks, devices, VLANs, and more
-* Configure networks at scale
-* Automatically on-board and off-board new employees' teleworker setups
-* Build your own dashboard for store managers, field techs, or unique use cases
+---
 
-## Enabling the Dashboard API
-1. Begin by logging into [Meraki Dashboard](https://dashboard.meraki.com) and navigating to **Organization > Settings**
+[API Documentation](https://meraki.io/api)
 
-2. Locate the section titled **Dashboard API access** and select **Enable Access**, then **Save** your changes
+[Community Support](https://meraki.io/community)
 
-3. After enabling the API, choose your username at the top-right of the Meraki Dashboard and select **my profile**
-
-4. Locate the section titled **Dashboard API access** and select **Generate new API key**
-
-*Note: The API key is associated with a Dashboard administrator account. You can generate, revoke, and regenerate your API key on your profile.*
-
-**Keep your API key safe as it provides authentication to all of your organizations with the API enabled. If your API key is shared, you can regenerate your API key at any time. This will revoke the existing API key.**
-
-Copy and store your API key in a safe place. Dashboard does not store API keys in plaintext for security reasons, so this is the only time you will be able to record it. If you lose or forget your API key, you will have to revoke it and generate a new one.
-
-Every request must specify an API key via a request header.
-
-The API key must be specified in the URL header. The API will return a 404 (rather than a 403) in response to a request with a missing or incorrect API key in order to prevent leaking the existence of resources to unauthorized users.
-
-`X-Cisco-Meraki-API-Key: <secret key>`
-
-Read more about API [authorization](../api/#/python/getting-started/authorizing-your-client)
-
-
-## Versioning
-Once an API version is released, we will make only backwards-compatible changes to it. Backwards-compatible changes include:
-
-* Adding new API resources
-
-* Adding new optional request parameters to existing API methods
-
-* Adding new properties to existing API responses
-
-* Changing the order of properties in existing API responses
-
-## Rate Limit
-* The Dashboard API is limited to **5 calls per second**, per organization.
-* A burst of 5 additional calls are allowed in the first second, so a maximum of 15 calls in the first 2 seconds.
-* The rate limiting technique is based off of the [token bucket model](https://en.wikipedia.org/wiki/Token_bucket).
-* An error with a `429` status code will be returned when the rate limit has been exceeded.
-* Expect to backoff for 1 - 2 seconds if the limit has been exceeded. You may have to wait potentially longer if a large number of requests were made within this timeframe.
-
-
-## Additional Details
-Identifiers in the API are opaque strings. A `{networkId}`, for example, might be the string "126043", whereas an `{orderId}` might contain characters, such as "4S1234567". Client applications must not try to parse them as numbers. Even identifiers that look like numbers might be too long to encode without loss of precision in Javascript, where the only numeric type is IEEE 754 floating point.
-
-Verbs in the API follow the usual REST conventions:
-
-`GET` returns the value of a resource or a list of resources, depending on whether an identifier is specified. For example, a `GET` of `/organizations` returns a list of organizations, whereas a `GET` of `/organizations/{organizationId}` returns a particular organization.
-
-`POST` adds a new resource, as in a `POST` to `/organizations/{organizationId}/admins`, or performs some other non-idempotent change.
-
-`PUT` updates a resource. `PUTs` are idempotent; they update a resource, creating it first if it does not already exist. A `PUT` should specify all the fields of a resource; the API will revert omitted fields to their default value.
-
-`DELETE` removes a resource.
+[Meraki Homepage](https://www.meraki.com)
 
 
 ## How to Build
@@ -73,9 +21,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build meraki.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.5.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.6.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 ## How to Use
 
@@ -85,41 +33,41 @@ The following section explains how to use the Meraki Ruby Gem in a new Rails pro
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.5.0' ```
+In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.6.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0)
 
 ## How to Test
 
@@ -153,7 +101,7 @@ client = Meraki::MerakiClient.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.5.0&initLine=client%2520%253D%2520MerakiClient.new%2528%2527x_cisco_meraki_api_key%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.6.0&initLine=client%2520%253D%2520MerakiClient.new%2528%2527x_cisco_meraki_api_key%2527%2529)
 
 
 
@@ -180,6 +128,7 @@ The added initlization code can be debugged by putting a breakpoint in the ``` I
 * [GroupPoliciesController](#group_policies_controller)
 * [HTTPServersController](#http_servers_controller)
 * [IntrusionSettingsController](#intrusion_settings_controller)
+* [LicensesController](#licenses_controller)
 * [MRL3FirewallController](#mrl3_firewall_controller)
 * [MVSenseController](#mv_sense_controller)
 * [MX11NATRulesController](#mx11_nat_rules_controller)
@@ -210,6 +159,7 @@ The added initlization code can be debugged by putting a breakpoint in the ``` I
 * [SecurityEventsController](#security_events_controller)
 * [SplashLoginAttemptsController](#splash_login_attempts_controller)
 * [SplashSettingsController](#splash_settings_controller)
+* [SwitchACLsController](#switch_ac_ls_controller)
 * [SwitchPortSchedulesController](#switch_port_schedules_controller)
 * [SwitchPortsController](#switch_ports_controller)
 * [SwitchProfilesController](#switch_profiles_controller)
@@ -258,6 +208,7 @@ def get_organization_api_requests(options = {}); end
 | path |  ``` Optional ```  | Filter the results by the path of the API requests |
 | method |  ``` Optional ```  | Filter the results by the method of the API requests (must be 'GET', 'PUT', 'POST' or 'DELETE') |
 | response_code |  ``` Optional ```  | Filter the results by the response code of the API requests |
+| source_ip |  ``` Optional ```  | Filter the results by the IP address of the originating API request |
 
 
 #### Example Usage
@@ -274,10 +225,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 26.4710418491024
+timespan = 207.741798203318
 collect['timespan'] = timespan
 
-per_page = 26
+per_page = 207
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -295,8 +246,11 @@ collect['path'] = path
 method = 'method'
 collect['method'] = method
 
-response_code = 26
+response_code = 207
 collect['response_code'] = response_code
+
+source_ip = 'sourceIp'
+collect['source_ip'] = source_ip
 
 
 result = aPIUsage_controller.get_organization_api_requests(collect)
@@ -743,10 +697,10 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 26.4710418491024
+timespan = 207.741798203318
 collect['timespan'] = timespan
 
-per_page = 26
+per_page = 207
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -755,7 +709,7 @@ collect['starting_after'] = starting_after
 ending_before = 'endingBefore'
 collect['ending_before'] = ending_before
 
-include_connectivity_history = false
+include_connectivity_history = true
 collect['include_connectivity_history'] = include_connectivity_history
 
 
@@ -794,10 +748,10 @@ collect['network_id'] = network_id
 bluetooth_client_id = 'bluetoothClientId'
 collect['bluetooth_client_id'] = bluetooth_client_id
 
-include_connectivity_history = false
+include_connectivity_history = true
 collect['include_connectivity_history'] = include_connectivity_history
 
-connectivity_history_timespan = 26
+connectivity_history_timespan = 207
 collect['connectivity_history_timespan'] = connectivity_history_timespan
 
 
@@ -935,7 +889,7 @@ collect['serial'] = serial
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 26.4710418491024
+timespan = 207.741798203318
 collect['timespan'] = timespan
 
 
@@ -976,10 +930,10 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 26.4710418491024
+timespan = 207.741798203318
 collect['timespan'] = timespan
 
-per_page = 26
+per_page = 207
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -1093,7 +1047,7 @@ collect['network_id'] = network_id
 client_id = 'clientId'
 collect['client_id'] = client_id
 
-per_page = 26
+per_page = 207
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -1146,10 +1100,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 26.4710418491024
+timespan = 207.741798203318
 collect['timespan'] = timespan
 
-resolution = 26
+resolution = 207
 collect['resolution'] = resolution
 
 
@@ -1333,7 +1287,7 @@ collect['network_id'] = network_id
 client_id = 'clientId'
 collect['client_id'] = client_id
 
-per_page = 26
+per_page = 207
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -2085,7 +2039,7 @@ collect['network_id'] = network_id
 serial = 'serial'
 collect['serial'] = serial
 
-timespan = 117
+timespan = 44
 collect['timespan'] = timespan
 
 
@@ -2137,10 +2091,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 117.966323740765
+timespan = 44.2370800949806
 collect['timespan'] = timespan
 
-resolution = 117
+resolution = 44
 collect['resolution'] = resolution
 
 uplink = Meraki::UplinkEnum::WAN1
@@ -2315,7 +2269,7 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-per_page = 117
+per_page = 44
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -2413,7 +2367,7 @@ collect['sm_device_mac'] = sm_device_mac
 sm_device_name = 'smDeviceName'
 collect['sm_device_name'] = sm_device_name
 
-per_page = 117
+per_page = 44
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -3300,6 +3254,280 @@ result = intrusionSettings_controller.update_organization_security_intrusion_set
 
 [Back to List of Controllers](#list_of_controllers)
 
+## <a name="licenses_controller"></a>![Class: ](https://apidocs.io/img/class.png ".LicensesController") LicensesController
+
+### Get singleton instance
+
+The singleton instance of the ``` LicensesController ``` class can be accessed from the API Client.
+
+```ruby
+licenses_controller = client.licenses
+```
+
+### <a name="get_organization_licenses"></a>![Method: ](https://apidocs.io/img/method.png ".LicensesController.get_organization_licenses") get_organization_licenses
+
+> List the licenses for an organization
+
+
+```ruby
+def get_organization_licenses(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| device_serial |  ``` Optional ```  | Filter the licenses to those assigned to a particular device |
+| network_id |  ``` Optional ```  | Filter the licenses to those assigned in a particular network |
+| state |  ``` Optional ```  | Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'unused', 'unusedActive' or 'recentlyQueued' |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+per_page = 44
+collect['per_page'] = per_page
+
+starting_after = 'startingAfter'
+collect['starting_after'] = starting_after
+
+ending_before = 'endingBefore'
+collect['ending_before'] = ending_before
+
+device_serial = 'deviceSerial'
+collect['device_serial'] = device_serial
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+state = Meraki::StateEnum::ACTIVE
+collect['state'] = state
+
+
+result = licenses_controller.get_organization_licenses(collect)
+
+```
+
+
+### <a name="assign_organization_licenses_seats"></a>![Method: ](https://apidocs.io/img/method.png ".LicensesController.assign_organization_licenses_seats") assign_organization_licenses_seats
+
+> Assign SM seats to a network. This will increase the managed SM device limit of the network
+
+
+```ruby
+def assign_organization_licenses_seats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| assign_organization_licenses_seats |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+assign_organization_licenses_seats = AssignOrganizationLicensesSeatsModel.new
+collect['assign_organization_licenses_seats'] = assign_organization_licenses_seats
+
+
+result = licenses_controller.assign_organization_licenses_seats(collect)
+
+```
+
+
+### <a name="move_organization_licenses"></a>![Method: ](https://apidocs.io/img/method.png ".LicensesController.move_organization_licenses") move_organization_licenses
+
+> Move licenses to another organization. This will also move any devices that the licenses are assigned to
+
+
+```ruby
+def move_organization_licenses(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| move_organization_licenses |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+move_organization_licenses = MoveOrganizationLicensesModel.new
+collect['move_organization_licenses'] = move_organization_licenses
+
+
+result = licenses_controller.move_organization_licenses(collect)
+
+```
+
+
+### <a name="move_organization_licenses_seats"></a>![Method: ](https://apidocs.io/img/method.png ".LicensesController.move_organization_licenses_seats") move_organization_licenses_seats
+
+> Move SM seats to another organization
+
+
+```ruby
+def move_organization_licenses_seats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| move_organization_licenses_seats |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+move_organization_licenses_seats = MoveOrganizationLicensesSeatsModel.new
+collect['move_organization_licenses_seats'] = move_organization_licenses_seats
+
+
+result = licenses_controller.move_organization_licenses_seats(collect)
+
+```
+
+
+### <a name="renew_organization_licenses_seats"></a>![Method: ](https://apidocs.io/img/method.png ".LicensesController.renew_organization_licenses_seats") renew_organization_licenses_seats
+
+> Renew SM seats of a license. This will extend the license expiration date of managed SM devices covered by this license
+
+
+```ruby
+def renew_organization_licenses_seats(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| renew_organization_licenses_seats |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+renew_organization_licenses_seats = RenewOrganizationLicensesSeatsModel.new
+collect['renew_organization_licenses_seats'] = renew_organization_licenses_seats
+
+
+result = licenses_controller.renew_organization_licenses_seats(collect)
+
+```
+
+
+### <a name="get_organization_license"></a>![Method: ](https://apidocs.io/img/method.png ".LicensesController.get_organization_license") get_organization_license
+
+> Display a license
+
+
+```ruby
+def get_organization_license(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| license_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+license_id = 'licenseId'
+collect['license_id'] = license_id
+
+
+result = licenses_controller.get_organization_license(collect)
+
+```
+
+
+### <a name="update_organization_license"></a>![Method: ](https://apidocs.io/img/method.png ".LicensesController.update_organization_license") update_organization_license
+
+> Update a license
+
+
+```ruby
+def update_organization_license(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| license_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_license |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+license_id = 'licenseId'
+collect['license_id'] = license_id
+
+update_organization_license = UpdateOrganizationLicenseModel.new
+collect['update_organization_license'] = update_organization_license
+
+
+result = licenses_controller.update_organization_license(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
 ## <a name="mrl3_firewall_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MRL3FirewallController") MRL3FirewallController
 
 ### Get singleton instance
@@ -3454,7 +3682,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 117.966323740765
+timespan = 44.2370800949806
 collect['timespan'] = timespan
 
 object_type = Meraki::ObjectTypeEnum::PERSON
@@ -3565,10 +3793,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 117.966323740765
+timespan = 44.2370800949806
 collect['timespan'] = timespan
 
-resolution = 117
+resolution = 44
 collect['resolution'] = resolution
 
 object_type = Meraki::ObjectTypeEnum::PERSON
@@ -4773,7 +5001,7 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-with_details = false
+with_details = true
 collect['with_details'] = with_details
 
 
@@ -4845,7 +5073,7 @@ collect['network_id'] = network_id
 target_group_id = 'targetGroupId'
 collect['target_group_id'] = target_group_id
 
-with_details = false
+with_details = true
 collect['with_details'] = with_details
 
 
@@ -5151,7 +5379,7 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 76.2431505141981
+timespan = 135.732361986643
 collect['timespan'] = timespan
 
 
@@ -5373,7 +5601,7 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 76.2431505141981
+timespan = 135.732361986643
 collect['timespan'] = timespan
 
 device_type = 'deviceType'
@@ -5793,7 +6021,7 @@ result = organizations_controller.get_organization_device_statuses(organization_
 
 
 ```ruby
-def get_organization_inventory(organization_id); end
+def get_organization_inventory(options = {}); end
 ```
 
 #### Parameters
@@ -5801,14 +6029,22 @@ def get_organization_inventory(organization_id); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| include_license_info |  ``` Optional ```  | When this parameter is true, each entity in the response will include the license expiration date of the device (if any). Only applies to organizations that support per-device licensing. Defaults to false. |
 
 
 #### Example Usage
 
 ```ruby
-organization_id = 'organizationId'
+collect = Hash.new
 
-result = organizations_controller.get_organization_inventory(organization_id)
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+include_license_info = true
+collect['include_license_info'] = include_license_info
+
+
+result = organizations_controller.get_organization_inventory(collect)
 
 ```
 
@@ -5934,7 +6170,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 167.73843240586
+timespan = 135.732361986643
 collect['timespan'] = timespan
 
 uplink = Meraki::UplinkEnum::WAN1
@@ -6403,7 +6639,7 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-include_template_profiles = true
+include_template_profiles = false
 collect['include_template_profiles'] = include_template_profiles
 
 
@@ -6638,7 +6874,7 @@ def get_organization_saml_role(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
+| saml_role_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6649,8 +6885,8 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-id = 'id'
-collect['id'] = id
+saml_role_id = 'samlRoleId'
+collect['saml_role_id'] = saml_role_id
 
 
 result = sAMLRoles_controller.get_organization_saml_role(collect)
@@ -6672,7 +6908,7 @@ def update_organization_saml_role(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
+| saml_role_id |  ``` Required ```  | TODO: Add a parameter description |
 | update_organization_saml_role |  ``` Optional ```  | TODO: Add a parameter description |
 
 
@@ -6684,8 +6920,8 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-id = 'id'
-collect['id'] = id
+saml_role_id = 'samlRoleId'
+collect['saml_role_id'] = saml_role_id
 
 update_organization_saml_role = UpdateOrganizationSamlRoleModel.new
 collect['update_organization_saml_role'] = update_organization_saml_role
@@ -6710,7 +6946,7 @@ def delete_organization_saml_role(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | organization_id |  ``` Required ```  | TODO: Add a parameter description |
-| id |  ``` Required ```  | TODO: Add a parameter description |
+| saml_role_id |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -6721,8 +6957,8 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-id = 'id'
-collect['id'] = id
+saml_role_id = 'samlRoleId'
+collect['saml_role_id'] = saml_role_id
 
 
 sAMLRoles_controller.delete_organization_saml_role(collect)
@@ -7107,7 +7343,7 @@ collect['ids'] = ids
 scope = 'scope'
 collect['scope'] = scope
 
-batch_size = 167
+batch_size = 94
 collect['batch_size'] = batch_size
 
 batch_token = 'batchToken'
@@ -8573,10 +8809,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 4.23371429752266
+timespan = 94.0091887600763
 collect['timespan'] = timespan
 
-per_page = 4
+per_page = 94
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -8627,10 +8863,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 4.23371429752266
+timespan = 94.0091887600763
 collect['timespan'] = timespan
 
-per_page = 4
+per_page = 94
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -8681,10 +8917,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 4.23371429752266
+timespan = 94.0091887600763
 collect['timespan'] = timespan
 
-per_page = 4
+per_page = 94
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -8744,7 +8980,7 @@ collect['ssid_number'] = ssid_number
 login_identifier = 'loginIdentifier'
 collect['login_identifier'] = login_identifier
 
-timespan = 217
+timespan = 94
 collect['timespan'] = timespan
 
 
@@ -8833,6 +9069,78 @@ collect['update_network_ssids_plash_settings'] = update_network_ssids_plash_sett
 
 
 result = splashSettings_controller.update_network_ssids_plash_settings(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
+## <a name="switch_ac_ls_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SwitchACLsController") SwitchACLsController
+
+### Get singleton instance
+
+The singleton instance of the ``` SwitchACLsController ``` class can be accessed from the API Client.
+
+```ruby
+switchACLs_controller = client.switch_ac_ls
+```
+
+### <a name="get_network_switch_access_control_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchACLsController.get_network_switch_access_control_lists") get_network_switch_access_control_lists
+
+> Return the access control lists for a MS network
+
+
+```ruby
+def get_network_switch_access_control_lists(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = switchACLs_controller.get_network_switch_access_control_lists(network_id)
+
+```
+
+
+### <a name="update_network_switch_access_control_lists"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchACLsController.update_network_switch_access_control_lists") update_network_switch_access_control_lists
+
+> Update the access control lists for a MS network
+
+
+```ruby
+def update_network_switch_access_control_lists(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_switch_access_control_lists |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_switch_access_control_lists = UpdateNetworkSwitchAccessControlListsModel.new
+collect['update_network_switch_access_control_lists'] = update_network_switch_access_control_lists
+
+
+result = switchACLs_controller.update_network_switch_access_control_lists(collect)
 
 ```
 
@@ -9205,6 +9513,126 @@ collect['update_network_switch_settings'] = update_network_switch_settings
 
 
 result = switchSettings_controller.update_network_switch_settings(collect)
+
+```
+
+
+### <a name="get_network_switch_settings_dhcp_server_policy"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings_dhcp_server_policy") get_network_switch_settings_dhcp_server_policy
+
+> Return the DHCP server policy
+
+
+```ruby
+def get_network_switch_settings_dhcp_server_policy(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = switchSettings_controller.get_network_switch_settings_dhcp_server_policy(network_id)
+
+```
+
+
+### <a name="update_network_switch_settings_dhcp_server_policy"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.update_network_switch_settings_dhcp_server_policy") update_network_switch_settings_dhcp_server_policy
+
+> Update the DHCP server policy
+
+
+```ruby
+def update_network_switch_settings_dhcp_server_policy(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_switch_settings_dhcp_server_policy |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_switch_settings_dhcp_server_policy = UpdateNetworkSwitchSettingsDhcpServerPolicyModel.new
+collect['update_network_switch_settings_dhcp_server_policy'] = update_network_switch_settings_dhcp_server_policy
+
+
+result = switchSettings_controller.update_network_switch_settings_dhcp_server_policy(collect)
+
+```
+
+
+### <a name="get_network_switch_settings_dscp_to_cos_mappings"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings_dscp_to_cos_mappings") get_network_switch_settings_dscp_to_cos_mappings
+
+> Return the DSCP to CoS mappings
+
+
+```ruby
+def get_network_switch_settings_dscp_to_cos_mappings(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = switchSettings_controller.get_network_switch_settings_dscp_to_cos_mappings(network_id)
+
+```
+
+
+### <a name="update_network_switch_settings_dscp_to_cos_mappings"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.update_network_switch_settings_dscp_to_cos_mappings") update_network_switch_settings_dscp_to_cos_mappings
+
+> Update the DSCP to CoS mappings
+
+
+```ruby
+def update_network_switch_settings_dscp_to_cos_mappings(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_switch_settings_dscp_to_cos_mappings |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_switch_settings_dscp_to_cos_mappings = UpdateNetworkSwitchSettingsDscpToCosMappingsModel.new
+collect['update_network_switch_settings_dscp_to_cos_mappings'] = update_network_switch_settings_dscp_to_cos_mappings
+
+
+result = switchSettings_controller.update_network_switch_settings_dscp_to_cos_mappings(collect)
 
 ```
 
@@ -10530,10 +10958,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 217.510541070956
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-per_page = 217
+per_page = 185
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -10599,13 +11027,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 217.510541070956
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 217
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 217
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10654,13 +11082,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10715,13 +11143,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10774,13 +11202,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10831,13 +11259,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10885,13 +11313,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -10940,13 +11368,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -11001,13 +11429,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -11060,13 +11488,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -11119,13 +11547,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'
@@ -11180,13 +11608,13 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 54.0058229626183
+timespan = 185.504470651739
 collect['timespan'] = timespan
 
-ssid = 54
+ssid = 185
 collect['ssid'] = ssid
 
-vlan = 54
+vlan = 185
 collect['vlan'] = vlan
 
 ap_tag = 'apTag'

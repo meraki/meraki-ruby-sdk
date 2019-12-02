@@ -14,6 +14,11 @@ module Meraki
     # @return [String]
     attr_accessor :public_ip
 
+    # [optional] The remote ID is used to identify the connecting VPN peer. This
+    # can either be a valid IPv4 Address, FQDN or User FQDN.
+    # @return [String]
+    attr_accessor :remote_id
+
     # The list of the private subnets of the VPN peer
     # @return [List of String]
     attr_accessor :private_subnets
@@ -43,6 +48,7 @@ module Meraki
       @_hash = {} if @_hash.nil?
       @_hash['name'] = 'name'
       @_hash['public_ip'] = 'publicIp'
+      @_hash['remote_id'] = 'remoteId'
       @_hash['private_subnets'] = 'privateSubnets'
       @_hash['ipsec_policies'] = 'ipsecPolicies'
       @_hash['ipsec_policies_preset'] = 'ipsecPoliciesPreset'
@@ -55,11 +61,13 @@ module Meraki
                    public_ip = nil,
                    private_subnets = nil,
                    secret = nil,
+                   remote_id = nil,
                    ipsec_policies = nil,
                    ipsec_policies_preset = nil,
                    network_tags = nil)
       @name = name
       @public_ip = public_ip
+      @remote_id = remote_id
       @private_subnets = private_subnets
       @ipsec_policies = ipsec_policies
       @ipsec_policies_preset = ipsec_policies_preset
@@ -76,6 +84,7 @@ module Meraki
       public_ip = hash['publicIp']
       private_subnets = hash['privateSubnets']
       secret = hash['secret']
+      remote_id = hash['remoteId']
       ipsec_policies = IpsecPoliciesModel.from_hash(hash['ipsecPolicies']) if
         hash['ipsecPolicies']
       ipsec_policies_preset = hash['ipsecPoliciesPreset']
@@ -86,6 +95,7 @@ module Meraki
                     public_ip,
                     private_subnets,
                     secret,
+                    remote_id,
                     ipsec_policies,
                     ipsec_policies_preset,
                     network_tags)
