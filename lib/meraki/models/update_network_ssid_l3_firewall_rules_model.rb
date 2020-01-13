@@ -8,7 +8,7 @@ module Meraki
   class UpdateNetworkSsidL3FirewallRulesModel < BaseModel
     # An ordered array of the firewall rules for this SSID (not including the
     # local LAN access rule or the default rule)
-    # @return [List of Rule8Model]
+    # @return [List of Rule10Model]
     attr_accessor :rules
 
     # Allow wireless client access to local LAN (boolean value - true allows
@@ -40,7 +40,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule8Model.from_hash(structure) if structure)
+          rules << (Rule10Model.from_hash(structure) if structure)
         end
       end
       allow_lan_access = hash['allowLanAccess']

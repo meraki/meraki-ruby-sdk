@@ -7,7 +7,7 @@ module Meraki
   # UpdateNetworkCellularFirewallRulesModel Model.
   class UpdateNetworkCellularFirewallRulesModel < BaseModel
     # An ordered array of the firewall rules (not including the default rule)
-    # @return [List of RuleModel]
+    # @return [List of Rule1Model]
     attr_accessor :rules
 
     # A mapping from model property names to API property names.
@@ -31,7 +31,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (RuleModel.from_hash(structure) if structure)
+          rules << (Rule1Model.from_hash(structure) if structure)
         end
       end
 

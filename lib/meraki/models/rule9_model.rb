@@ -6,45 +6,64 @@
 module Meraki
   # Rule9Model Model.
   class Rule9Model < BaseModel
-    # A list of objects describing the definitions of your traffic shaping rule.
-    # At least one definition is required.
-    # @return [List of DefinitionModel]
-    attr_accessor :definitions
+    # A descriptive name for the rule
+    # @return [String]
+    attr_accessor :name
 
-    # An object describing the bandwidth settings for your rule.
-    # @return [PerClientBandwidthLimitsModel]
-    attr_accessor :per_client_bandwidth_limits
+    # The IP address of the server or device that hosts the internal resource
+    # that you wish to make available on the WAN
+    # @return [String]
+    attr_accessor :lan_ip
 
-    # The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
-    #     For a list of possible tag values, use the
-    # trafficShaping/dscpTaggingOptions endpoint.
-    # @return [Integer]
-    attr_accessor :dscp_tag_value
+    # The physical WAN interface on which the traffic will arrive ('internet1'
+    # or, if available, 'internet2' or 'both')
+    # @return [String]
+    attr_accessor :uplink
 
-    # The PCP tag applied by your rule. Can be 0 (lowest priority) through 7
-    # (highest priority).
-    #     null means 'Do not set PCP tag'.
-    # @return [Integer]
-    attr_accessor :pcp_tag_value
+    # A port or port ranges that will be forwarded to the host on the LAN
+    # @return [String]
+    attr_accessor :public_port
+
+    # A port or port ranges that will receive the forwarded traffic from the WAN
+    # @return [String]
+    attr_accessor :local_port
+
+    # An array of ranges of WAN IP addresses that are allowed to make inbound
+    # connections on the specified ports or port ranges (or any)
+    # @return [List of String]
+    attr_accessor :allowed_ips
+
+    # TCP or UDP
+    # @return [String]
+    attr_accessor :protocol
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
-      @_hash['definitions'] = 'definitions'
-      @_hash['per_client_bandwidth_limits'] = 'perClientBandwidthLimits'
-      @_hash['dscp_tag_value'] = 'dscpTagValue'
-      @_hash['pcp_tag_value'] = 'pcpTagValue'
+      @_hash['name'] = 'name'
+      @_hash['lan_ip'] = 'lanIp'
+      @_hash['uplink'] = 'uplink'
+      @_hash['public_port'] = 'publicPort'
+      @_hash['local_port'] = 'localPort'
+      @_hash['allowed_ips'] = 'allowedIps'
+      @_hash['protocol'] = 'protocol'
       @_hash
     end
 
-    def initialize(definitions = nil,
-                   per_client_bandwidth_limits = nil,
-                   dscp_tag_value = nil,
-                   pcp_tag_value = nil)
-      @definitions = definitions
-      @per_client_bandwidth_limits = per_client_bandwidth_limits
-      @dscp_tag_value = dscp_tag_value
-      @pcp_tag_value = pcp_tag_value
+    def initialize(name = nil,
+                   lan_ip = nil,
+                   uplink = nil,
+                   public_port = nil,
+                   local_port = nil,
+                   allowed_ips = nil,
+                   protocol = nil)
+      @name = name
+      @lan_ip = lan_ip
+      @uplink = uplink
+      @public_port = public_port
+      @local_port = local_port
+      @allowed_ips = allowed_ips
+      @protocol = protocol
     end
 
     # Creates an instance of the object from a hash.
@@ -52,25 +71,22 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      # Parameter is an array, so we need to iterate through it
-      definitions = nil
-      unless hash['definitions'].nil?
-        definitions = []
-        hash['definitions'].each do |structure|
-          definitions << (DefinitionModel.from_hash(structure) if structure)
-        end
-      end
-      if hash['perClientBandwidthLimits']
-        per_client_bandwidth_limits = PerClientBandwidthLimitsModel.from_hash(hash['perClientBandwidthLimits'])
-      end
-      dscp_tag_value = hash['dscpTagValue']
-      pcp_tag_value = hash['pcpTagValue']
+      name = hash['name']
+      lan_ip = hash['lanIp']
+      uplink = hash['uplink']
+      public_port = hash['publicPort']
+      local_port = hash['localPort']
+      allowed_ips = hash['allowedIps']
+      protocol = hash['protocol']
 
       # Create object from extracted values.
-      Rule9Model.new(definitions,
-                     per_client_bandwidth_limits,
-                     dscp_tag_value,
-                     pcp_tag_value)
+      Rule9Model.new(name,
+                     lan_ip,
+                     uplink,
+                     public_port,
+                     local_port,
+                     allowed_ips,
+                     protocol)
     end
   end
 end

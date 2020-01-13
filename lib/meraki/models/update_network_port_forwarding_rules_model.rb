@@ -7,7 +7,7 @@ module Meraki
   # UpdateNetworkPortForwardingRulesModel Model.
   class UpdateNetworkPortForwardingRulesModel < BaseModel
     # An array of port forwarding params
-    # @return [List of Rule7Model]
+    # @return [List of Rule9Model]
     attr_accessor :rules
 
     # A mapping from model property names to API property names.
@@ -31,7 +31,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule7Model.from_hash(structure) if structure)
+          rules << (Rule9Model.from_hash(structure) if structure)
         end
       end
 

@@ -8,7 +8,7 @@ module Meraki
   class UpdateNetworkUplinkSettingsModel < BaseModel
     # A mapping of uplinks to their bandwidth settings (be sure to check which
     # uplinks are supported for your network)
-    # @return [BandwidthLimits6Model]
+    # @return [BandwidthLimits7Model]
     attr_accessor :bandwidth_limits
 
     # A mapping from model property names to API property names.
@@ -28,7 +28,7 @@ module Meraki
 
       # Extract variables from the hash.
       if hash['bandwidthLimits']
-        bandwidth_limits = BandwidthLimits6Model.from_hash(hash['bandwidthLimits'])
+        bandwidth_limits = BandwidthLimits7Model.from_hash(hash['bandwidthLimits'])
       end
 
       # Create object from extracted values.

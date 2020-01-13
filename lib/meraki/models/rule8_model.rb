@@ -6,49 +6,74 @@
 module Meraki
   # Rule8Model Model.
   class Rule8Model < BaseModel
-    # Description of the rule (optional)
+    # A descriptive name for the rule
     # @return [String]
-    attr_accessor :comment
+    attr_accessor :name
 
-    # 'allow' or 'deny' traffic specified by this rule
-    # @return [PolicyEnum]
-    attr_accessor :policy
+    # The IP address that will be used to access the internal resource from the
+    # WAN
+    # @return [String]
+    attr_accessor :public_ip
 
-    # The type of protocol (must be 'tcp', 'udp', 'icmp' or 'any')
-    # @return [ProtocolEnum]
+    # The IP address of the server or device that hosts the internal resource
+    # that you wish to make available on the WAN
+    # @return [String]
+    attr_accessor :lan_ip
+
+    # The physical WAN interface on which the traffic will arrive ('internet1'
+    # or, if available, 'internet2')
+    # @return [String]
+    attr_accessor :uplink
+
+    # The ports this mapping will provide access on, and the remote IPs that
+    # will be allowed access to the resource
+    # @return [List of Object]
+    attr_accessor :allowed_inbound
+
+    # Either of the following: 'tcp', 'udp', 'icmp-ping' or 'any'
+    # @return [String]
     attr_accessor :protocol
 
-    # Comma-separated list of destination port(s) (integer in the range
-    # 1-65535), or 'any'
+    # An array of ports or port ranges that will be forwarded to the host on the
+    # LAN
     # @return [String]
-    attr_accessor :dest_port
+    attr_accessor :destination_ports
 
-    # Comma-separated list of destination IP address(es) (in IP or CIDR
-    # notation), fully-qualified domain names (FQDN) or 'any'
+    # An array of ranges of WAN IP addresses that are allowed to make inbound
+    # connections on the specified ports or port ranges, or 'any'
     # @return [String]
-    attr_accessor :dest_cidr
+    attr_accessor :allowed_ips
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
-      @_hash['comment'] = 'comment'
-      @_hash['policy'] = 'policy'
+      @_hash['name'] = 'name'
+      @_hash['public_ip'] = 'publicIp'
+      @_hash['lan_ip'] = 'lanIp'
+      @_hash['uplink'] = 'uplink'
+      @_hash['allowed_inbound'] = 'allowedInbound'
       @_hash['protocol'] = 'protocol'
-      @_hash['dest_port'] = 'destPort'
-      @_hash['dest_cidr'] = 'destCidr'
+      @_hash['destination_ports'] = 'destinationPorts'
+      @_hash['allowed_ips'] = 'allowedIps'
       @_hash
     end
 
-    def initialize(policy = nil,
+    def initialize(name = nil,
+                   public_ip = nil,
+                   lan_ip = nil,
+                   uplink = nil,
+                   allowed_inbound = nil,
                    protocol = nil,
-                   dest_cidr = nil,
-                   comment = nil,
-                   dest_port = nil)
-      @comment = comment
-      @policy = policy
+                   destination_ports = nil,
+                   allowed_ips = nil)
+      @name = name
+      @public_ip = public_ip
+      @lan_ip = lan_ip
+      @uplink = uplink
+      @allowed_inbound = allowed_inbound
       @protocol = protocol
-      @dest_port = dest_port
-      @dest_cidr = dest_cidr
+      @destination_ports = destination_ports
+      @allowed_ips = allowed_ips
     end
 
     # Creates an instance of the object from a hash.
@@ -56,18 +81,24 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      policy = hash['policy']
+      name = hash['name']
+      public_ip = hash['publicIp']
+      lan_ip = hash['lanIp']
+      uplink = hash['uplink']
+      allowed_inbound = hash['allowedInbound']
       protocol = hash['protocol']
-      dest_cidr = hash['destCidr']
-      comment = hash['comment']
-      dest_port = hash['destPort']
+      destination_ports = hash['destinationPorts']
+      allowed_ips = hash['allowedIps']
 
       # Create object from extracted values.
-      Rule8Model.new(policy,
+      Rule8Model.new(name,
+                     public_ip,
+                     lan_ip,
+                     uplink,
+                     allowed_inbound,
                      protocol,
-                     dest_cidr,
-                     comment,
-                     dest_port)
+                     destination_ports,
+                     allowed_ips)
     end
   end
 end

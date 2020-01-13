@@ -8,7 +8,7 @@ module Meraki
   class UpdateNetworkSwitchAccessControlListsModel < BaseModel
     # An ordered array of the access control list rules (not including the
     # default rule). An empty array will clear the rules.
-    # @return [List of Rule10Model]
+    # @return [List of Rule12Model]
     attr_accessor :rules
 
     # A mapping from model property names to API property names.
@@ -32,7 +32,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule10Model.from_hash(structure) if structure)
+          rules << (Rule12Model.from_hash(structure) if structure)
         end
       end
 

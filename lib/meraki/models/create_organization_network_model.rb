@@ -11,8 +11,8 @@ module Meraki
     attr_accessor :name
 
     # The type of the new network. Valid types are wireless, appliance, switch,
-    # systemsManager, camera, or a space-separated list of those for a combined
-    # network.
+    # systemsManager, camera, cellularGateway, or a space-separated list of
+    # those for a combined network.
     # @return [String]
     attr_accessor :type
 

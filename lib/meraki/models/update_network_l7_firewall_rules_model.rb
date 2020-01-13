@@ -7,7 +7,7 @@ module Meraki
   # UpdateNetworkL7FirewallRulesModel Model.
   class UpdateNetworkL7FirewallRulesModel < BaseModel
     # An ordered array of the MX L7 firewall rules
-    # @return [List of Rule4Model]
+    # @return [List of Rule6Model]
     attr_accessor :rules
 
     # A mapping from model property names to API property names.
@@ -31,7 +31,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule4Model.from_hash(structure) if structure)
+          rules << (Rule6Model.from_hash(structure) if structure)
         end
       end
 

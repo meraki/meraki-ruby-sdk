@@ -21,10 +21,11 @@ module Meraki
     # @return [Integer]
     attr_accessor :dscp_tag_value
 
-    # A string, indicating the priority level for packets bound to your rule.
-    #     Can be 'low', 'normal' or 'high'.
-    # @return [String]
-    attr_accessor :priority
+    # The PCP tag applied by your rule. Can be 0 (lowest priority) through 7
+    # (highest priority).
+    #     null means 'Do not set PCP tag'.
+    # @return [Integer]
+    attr_accessor :pcp_tag_value
 
     # A mapping from model property names to API property names.
     def self.names
@@ -32,18 +33,18 @@ module Meraki
       @_hash['definitions'] = 'definitions'
       @_hash['per_client_bandwidth_limits'] = 'perClientBandwidthLimits'
       @_hash['dscp_tag_value'] = 'dscpTagValue'
-      @_hash['priority'] = 'priority'
+      @_hash['pcp_tag_value'] = 'pcpTagValue'
       @_hash
     end
 
     def initialize(definitions = nil,
                    per_client_bandwidth_limits = nil,
                    dscp_tag_value = nil,
-                   priority = nil)
+                   pcp_tag_value = nil)
       @definitions = definitions
       @per_client_bandwidth_limits = per_client_bandwidth_limits
       @dscp_tag_value = dscp_tag_value
-      @priority = priority
+      @pcp_tag_value = pcp_tag_value
     end
 
     # Creates an instance of the object from a hash.
@@ -63,13 +64,13 @@ module Meraki
         per_client_bandwidth_limits = PerClientBandwidthLimitsModel.from_hash(hash['perClientBandwidthLimits'])
       end
       dscp_tag_value = hash['dscpTagValue']
-      priority = hash['priority']
+      pcp_tag_value = hash['pcpTagValue']
 
       # Create object from extracted values.
       Rule11Model.new(definitions,
                       per_client_bandwidth_limits,
                       dscp_tag_value,
-                      priority)
+                      pcp_tag_value)
     end
   end
 end

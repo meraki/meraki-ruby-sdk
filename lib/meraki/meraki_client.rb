@@ -36,6 +36,12 @@ module Meraki
       BluetoothClientsController.instance
     end
 
+    # Singleton access to camera_quality_retention_profiles controller.
+    # @return [CameraQualityRetentionProfilesController] Returns the controller instance.
+    def camera_quality_retention_profiles
+      CameraQualityRetentionProfilesController.instance
+    end
+
     # Singleton access to cameras controller.
     # @return [CamerasController] Returns the controller instance.
     def cameras
@@ -126,6 +132,48 @@ module Meraki
       LicensesController.instance
     end
 
+    # Singleton access to link_aggregations controller.
+    # @return [LinkAggregationsController] Returns the controller instance.
+    def link_aggregations
+      LinkAggregationsController.instance
+    end
+
+    # Singleton access to mg_dhcp_settings controller.
+    # @return [MGDHCPSettingsController] Returns the controller instance.
+    def mg_dhcp_settings
+      MGDHCPSettingsController.instance
+    end
+
+    # Singleton access to mg_lan_settings controller.
+    # @return [MGLANSettingsController] Returns the controller instance.
+    def mg_lan_settings
+      MGLANSettingsController.instance
+    end
+
+    # Singleton access to mg_connectivity_monitoring_destinations controller.
+    # @return [MGConnectivityMonitoringDestinationsController] Returns the controller instance.
+    def mg_connectivity_monitoring_destinations
+      MGConnectivityMonitoringDestinationsController.instance
+    end
+
+    # Singleton access to mg_port_forwarding_rules controller.
+    # @return [MGPortForwardingRulesController] Returns the controller instance.
+    def mg_port_forwarding_rules
+      MGPortForwardingRulesController.instance
+    end
+
+    # Singleton access to mg_subnet_pool_settings controller.
+    # @return [MGSubnetPoolSettingsController] Returns the controller instance.
+    def mg_subnet_pool_settings
+      MGSubnetPoolSettingsController.instance
+    end
+
+    # Singleton access to mg_uplink_settings controller.
+    # @return [MGUplinkSettingsController] Returns the controller instance.
+    def mg_uplink_settings
+      MGUplinkSettingsController.instance
+    end
+
     # Singleton access to mr_l3_firewall controller.
     # @return [MRL3FirewallController] Returns the controller instance.
     def mr_l3_firewall
@@ -184,6 +232,12 @@ module Meraki
     # @return [MXCellularFirewallController] Returns the controller instance.
     def mx_cellular_firewall
       MXCellularFirewallController.instance
+    end
+
+    # Singleton access to mx_inbound_firewall controller.
+    # @return [MXInboundFirewallController] Returns the controller instance.
+    def mx_inbound_firewall
+      MXInboundFirewallController.instance
     end
 
     # Singleton access to mx_port_forwarding_rules controller.
@@ -306,10 +360,10 @@ module Meraki
       SplashSettingsController.instance
     end
 
-    # Singleton access to switch_ac_ls controller.
-    # @return [SwitchACLsController] Returns the controller instance.
-    def switch_ac_ls
-      SwitchACLsController.instance
+    # Singleton access to switch_acls controller.
+    # @return [SwitchAclsController] Returns the controller instance.
+    def switch_acls
+      SwitchAclsController.instance
     end
 
     # Singleton access to switch_port_schedules controller.

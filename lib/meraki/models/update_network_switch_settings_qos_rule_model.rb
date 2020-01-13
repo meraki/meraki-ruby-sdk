@@ -12,7 +12,7 @@ module Meraki
 
     # The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP".
     # Default value is "ANY".
-    # @return [Protocol5Enum]
+    # @return [Protocol6Enum]
     attr_accessor :protocol
 
     # The source port of the incoming packet. Applicable only if protocol is TCP

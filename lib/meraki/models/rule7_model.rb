@@ -6,64 +6,80 @@
 module Meraki
   # Rule7Model Model.
   class Rule7Model < BaseModel
-    # A descriptive name for the rule
+    # The IP address that will be used to access the internal resource from the
+    # WAN
     # @return [String]
-    attr_accessor :name
-
-    # The IP address of the server or device that hosts the internal resource
-    # that you wish to make available on the WAN
-    # @return [String]
-    attr_accessor :lan_ip
+    attr_accessor :public_ip
 
     # The physical WAN interface on which the traffic will arrive ('internet1'
-    # or, if available, 'internet2' or 'both')
+    # or, if available, 'internet2')
     # @return [String]
     attr_accessor :uplink
 
-    # A port or port ranges that will be forwarded to the host on the LAN
+    # An array of associated forwarding rules
+    # @return [List of Object]
+    attr_accessor :port_rules
+
+    # A description of the rule
+    # @return [String]
+    attr_accessor :name
+
+    # 'tcp' or 'udp'
+    # @return [String]
+    attr_accessor :protocol
+
+    # Destination port of the traffic that is arriving on the WAN
     # @return [String]
     attr_accessor :public_port
 
-    # A port or port ranges that will receive the forwarded traffic from the WAN
+    # Local IP address to which traffic will be forwarded
+    # @return [String]
+    attr_accessor :local_ip
+
+    # Destination port of the forwarded traffic that will be sent from the MX to
+    # the specified host on the LAN. If you simply wish to forward the traffic
+    # without translating the port, this should be the same as the Public port
     # @return [String]
     attr_accessor :local_port
 
-    # An array of ranges of WAN IP addresses that are allowed to make inbound
-    # connections on the specified ports or port ranges (or any)
-    # @return [List of String]
-    attr_accessor :allowed_ips
-
-    # TCP or UDP
+    # Remote IP addresses or ranges that are permitted to access the internal
+    # resource via this port forwarding rule, or 'any'
     # @return [String]
-    attr_accessor :protocol
+    attr_accessor :allowed_ips
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
-      @_hash['name'] = 'name'
-      @_hash['lan_ip'] = 'lanIp'
+      @_hash['public_ip'] = 'publicIp'
       @_hash['uplink'] = 'uplink'
+      @_hash['port_rules'] = 'portRules'
+      @_hash['name'] = 'name'
+      @_hash['protocol'] = 'protocol'
       @_hash['public_port'] = 'publicPort'
+      @_hash['local_ip'] = 'localIp'
       @_hash['local_port'] = 'localPort'
       @_hash['allowed_ips'] = 'allowedIps'
-      @_hash['protocol'] = 'protocol'
       @_hash
     end
 
-    def initialize(name = nil,
-                   lan_ip = nil,
+    def initialize(public_ip = nil,
                    uplink = nil,
+                   port_rules = nil,
+                   name = nil,
+                   protocol = nil,
                    public_port = nil,
+                   local_ip = nil,
                    local_port = nil,
-                   allowed_ips = nil,
-                   protocol = nil)
-      @name = name
-      @lan_ip = lan_ip
+                   allowed_ips = nil)
+      @public_ip = public_ip
       @uplink = uplink
+      @port_rules = port_rules
+      @name = name
+      @protocol = protocol
       @public_port = public_port
+      @local_ip = local_ip
       @local_port = local_port
       @allowed_ips = allowed_ips
-      @protocol = protocol
     end
 
     # Creates an instance of the object from a hash.
@@ -71,22 +87,26 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      name = hash['name']
-      lan_ip = hash['lanIp']
+      public_ip = hash['publicIp']
       uplink = hash['uplink']
+      port_rules = hash['portRules']
+      name = hash['name']
+      protocol = hash['protocol']
       public_port = hash['publicPort']
+      local_ip = hash['localIp']
       local_port = hash['localPort']
       allowed_ips = hash['allowedIps']
-      protocol = hash['protocol']
 
       # Create object from extracted values.
-      Rule7Model.new(name,
-                     lan_ip,
+      Rule7Model.new(public_ip,
                      uplink,
+                     port_rules,
+                     name,
+                     protocol,
                      public_port,
+                     local_ip,
                      local_port,
-                     allowed_ips,
-                     protocol)
+                     allowed_ips)
     end
   end
 end

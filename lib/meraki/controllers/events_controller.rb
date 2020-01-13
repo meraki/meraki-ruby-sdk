@@ -20,8 +20,8 @@ module Meraki
     # @param [String] network_id Required parameter: Example:
     # @param [String] product_type Optional parameter: The product type to fetch
     # events for. This parameter is required for networks with multiple device
-    # types. Valid types are wireless, appliance, switch, systemsManager, and
-    # camera
+    # types. Valid types are wireless, appliance, switch, systemsManager,
+    # camera, and cellularGateway
     # @param [List of String] included_event_types Optional parameter: A list of
     # event types. The returned events will be filtered to only include events
     # with these types.

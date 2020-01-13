@@ -4,9 +4,7 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The bandwidth limits object, specifying upload and download speed for
-  # clients bound to the group policy. These are only enforced if 'settings' is
-  # set to 'custom'.
+  # The bandwidth settings for the 'cellular' uplink
   class BandwidthLimitsModel < BaseModel
     # The maximum upload limit (integer, in Kbps). null indicates no limit
     # @return [Integer]

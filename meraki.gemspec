@@ -1,8 +1,8 @@
 Gem::Specification.new do |s|
   s.name = 'meraki'
-  s.version = '0.6.0'
+  s.version = '0.7.0'
   s.summary = 'meraki'
-  s.description = 'The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.  > Date: 02 December, 2019 > > [What\'s New](https://meraki.io/whats-new/)  ---  [API Documentation](https://meraki.io/api)  [Community Support](https://meraki.io/community)  [Meraki Homepage](https://www.meraki.com) '
+  s.description = 'The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.  > Date: 13 January, 2020 > > [What\'s New](https://meraki.io/whats-new/)  ---  [API Documentation](https://meraki.io/api)  [Community Support](https://meraki.io/community)  [Meraki Homepage](https://www.meraki.com) '
   s.authors = ['APIMatic SDK Generator']
   s.email = 'support@apimatic.io'
   s.homepage = 'https://apimatic.io'

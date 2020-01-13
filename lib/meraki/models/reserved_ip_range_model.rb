@@ -6,15 +6,15 @@
 module Meraki
   # ReservedIpRangeModel Model.
   class ReservedIpRangeModel < BaseModel
-    # The first IP in the reserved range
+    # Starting IP included in the reserved range of IPs
     # @return [String]
     attr_accessor :start
 
-    # The last IP in the reserved range
+    # Ending IP included in the reserved range of IPs
     # @return [String]
     attr_accessor :mend
 
-    # A text comment for the reserved range
+    # Comment explaining the reserved IP range
     # @return [String]
     attr_accessor :comment
 

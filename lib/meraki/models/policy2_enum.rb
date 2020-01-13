@@ -4,7 +4,7 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # 'Deny' traffic specified by this rule
+  # The policy applied to matching traffic. Must be 'deny'.
   class Policy2Enum
     POLICY2_ENUM = [
       # TODO: Write general description for DENY

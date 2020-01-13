@@ -14,7 +14,7 @@ module Meraki
     # The bandwidth limits object, specifying the upload ('limitUp') and
     # download ('limitDown') speed in Kbps. These are only enforced if
     # 'settings' is set to 'custom'.
-    # @return [BandwidthLimits1Model]
+    # @return [BandwidthLimits2Model]
     attr_accessor :bandwidth_limits
 
     # A mapping from model property names to API property names.
@@ -38,7 +38,7 @@ module Meraki
       # Extract variables from the hash.
       settings = hash['settings']
       if hash['bandwidthLimits']
-        bandwidth_limits = BandwidthLimits1Model.from_hash(hash['bandwidthLimits'])
+        bandwidth_limits = BandwidthLimits2Model.from_hash(hash['bandwidthLimits'])
       end
 
       # Create object from extracted values.

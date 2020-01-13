@@ -6,35 +6,73 @@
 module Meraki
   # Rule1Model Model.
   class Rule1Model < BaseModel
-    # A description for your Bonjour forwarding rule. Optional.
+    # Description of the rule (optional)
     # @return [String]
-    attr_accessor :description
+    attr_accessor :comment
 
-    # The ID of the service VLAN. Required.
+    # 'allow' or 'deny' traffic specified by this rule
+    # @return [PolicyEnum]
+    attr_accessor :policy
+
+    # The type of protocol (must be 'tcp', 'udp', 'icmp' or 'any')
+    # @return [ProtocolEnum]
+    attr_accessor :protocol
+
+    # Comma-separated list of source port(s) (integer in the range 1-65535), or
+    # 'any'
     # @return [String]
-    attr_accessor :vlan_id
+    attr_accessor :src_port
 
-    # A list of Bonjour services. At least one service must be specified.
-    # Available services are 'All Services', 'AirPlay', 'AFP', 'BitTorrent',
-    # 'FTP', 'iChat', 'iTunes', 'Printers', 'Samba', 'Scanners' and 'SSH'
-    # @return [List of ServiceEnum]
-    attr_accessor :services
+    # Comma-separated list of source IP address(es) (in IP or CIDR notation), or
+    # 'any' (note: FQDN not supported for source addresses)
+    # @return [String]
+    attr_accessor :src_cidr
+
+    # Comma-separated list of destination port(s) (integer in the range
+    # 1-65535), or 'any'
+    # @return [String]
+    attr_accessor :dest_port
+
+    # Comma-separated list of destination IP address(es) (in IP or CIDR
+    # notation), fully-qualified domain names (FQDN) or 'any'
+    # @return [String]
+    attr_accessor :dest_cidr
+
+    # Log this rule to syslog (true or false, boolean value) - only applicable
+    # if a syslog has been configured (optional)
+    # @return [Boolean]
+    attr_accessor :syslog_enabled
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
-      @_hash['description'] = 'description'
-      @_hash['vlan_id'] = 'vlanId'
-      @_hash['services'] = 'services'
+      @_hash['comment'] = 'comment'
+      @_hash['policy'] = 'policy'
+      @_hash['protocol'] = 'protocol'
+      @_hash['src_port'] = 'srcPort'
+      @_hash['src_cidr'] = 'srcCidr'
+      @_hash['dest_port'] = 'destPort'
+      @_hash['dest_cidr'] = 'destCidr'
+      @_hash['syslog_enabled'] = 'syslogEnabled'
       @_hash
     end
 
-    def initialize(vlan_id = nil,
-                   services = nil,
-                   description = nil)
-      @description = description
-      @vlan_id = vlan_id
-      @services = services
+    def initialize(policy = nil,
+                   protocol = nil,
+                   src_cidr = nil,
+                   dest_cidr = nil,
+                   comment = nil,
+                   src_port = nil,
+                   dest_port = nil,
+                   syslog_enabled = nil)
+      @comment = comment
+      @policy = policy
+      @protocol = protocol
+      @src_port = src_port
+      @src_cidr = src_cidr
+      @dest_port = dest_port
+      @dest_cidr = dest_cidr
+      @syslog_enabled = syslog_enabled
     end
 
     # Creates an instance of the object from a hash.
@@ -42,14 +80,24 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      vlan_id = hash['vlanId']
-      services = hash['services']
-      description = hash['description']
+      policy = hash['policy']
+      protocol = hash['protocol']
+      src_cidr = hash['srcCidr']
+      dest_cidr = hash['destCidr']
+      comment = hash['comment']
+      src_port = hash['srcPort']
+      dest_port = hash['destPort']
+      syslog_enabled = hash['syslogEnabled']
 
       # Create object from extracted values.
-      Rule1Model.new(vlan_id,
-                     services,
-                     description)
+      Rule1Model.new(policy,
+                     protocol,
+                     src_cidr,
+                     dest_cidr,
+                     comment,
+                     src_port,
+                     dest_port,
+                     syslog_enabled)
     end
   end
 end

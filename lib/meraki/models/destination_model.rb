@@ -30,7 +30,7 @@ module Meraki
 
     def initialize(ip = nil,
                    description = nil,
-                   default = nil)
+                   default = false)
       @ip = ip
       @description = description
       @default = default
@@ -43,7 +43,7 @@ module Meraki
       # Extract variables from the hash.
       ip = hash['ip']
       description = hash['description']
-      default = hash['default']
+      default = hash['default'] ||= false
 
       # Create object from extracted values.
       DestinationModel.new(ip,

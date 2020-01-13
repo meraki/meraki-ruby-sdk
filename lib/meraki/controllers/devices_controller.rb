@@ -54,14 +54,13 @@ module Meraki
 
     # Claim a device into a network
     # @param [String] network_id Required parameter: Example:
-    # @param [ClaimNetworkDevicesModel] claim_network_devices Required
+    # @param [ClaimNetworkDevicesModel] claim_network_devices Optional
     # parameter: Example:
     # @return void response from the API call
     def claim_network_devices(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id'],
-        'claim_network_devices' => options['claim_network_devices']
+        'network_id' => options['network_id']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/devices/claim'
@@ -496,6 +495,9 @@ module Meraki
     # but it is not limited to those. This parameter should not be defined by
     # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
+    # @param [String] configuration_updated_after Optional parameter: Filter
+    # results by whether or not the device's configuration has been updated
+    # after the given timestamp
     # @return Mixed response from the API call
     def get_organization_devices(options = {})
       # Validate required parameters.
@@ -515,7 +517,8 @@ module Meraki
         {
           'perPage' => options['per_page'],
           'startingAfter' => options['starting_after'],
-          'endingBefore' => options['ending_before']
+          'endingBefore' => options['ending_before'],
+          'configurationUpdatedAfter' => options['configuration_updated_after']
         },
         array_serialization: Configuration.array_serialization
       )

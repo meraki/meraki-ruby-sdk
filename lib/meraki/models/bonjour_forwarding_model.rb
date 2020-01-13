@@ -14,7 +14,7 @@ module Meraki
 
     # A list of the Bonjour forwarding rules for your group policy. If
     # 'settings' is set to 'custom', at least one rule must be specified.
-    # @return [List of Rule1Model]
+    # @return [List of Rule3Model]
     attr_accessor :rules
 
     # A mapping from model property names to API property names.
@@ -42,7 +42,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule1Model.from_hash(structure) if structure)
+          rules << (Rule3Model.from_hash(structure) if structure)
         end
       end
 

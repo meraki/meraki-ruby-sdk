@@ -23,7 +23,7 @@ module Meraki
     #     they are specified in. An empty list (or null) means no rules. Note
     # that
     #     you are allowed a maximum of 8 rules.
-    # @return [List of Rule9Model]
+    # @return [List of Rule11Model]
     attr_accessor :rules
 
     # A mapping from model property names to API property names.
@@ -55,7 +55,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule9Model.from_hash(structure) if structure)
+          rules << (Rule11Model.from_hash(structure) if structure)
         end
       end
 

@@ -6,73 +6,78 @@
 module Meraki
   # Rule12Model Model.
   class Rule12Model < BaseModel
-    # Description of the rule (optional)
+    # Description of the rule (optional).
     # @return [String]
     attr_accessor :comment
 
-    # 'allow' or 'deny' traffic specified by this rule
-    # @return [PolicyEnum]
+    # 'allow' or 'deny' traffic specified by this rule.
+    # @return [Policy7Enum]
     attr_accessor :policy
 
-    # The type of protocol (must be 'tcp', 'udp', 'icmp' or 'any')
-    # @return [ProtocolEnum]
+    # IP address version (must be 'any', 'ipv4' or 'ipv6'). Applicable only if
+    # network supports IPv6. Default value is 'ipv4'.
+    # @return [IpVersionEnum]
+    attr_accessor :ip_version
+
+    # The type of protocol (must be 'tcp', 'udp', or 'any').
+    # @return [Protocol4Enum]
     attr_accessor :protocol
 
-    # Comma-separated list of source port(s) (integer in the range 1-65535), or
-    # 'any'
-    # @return [String]
-    attr_accessor :src_port
-
-    # Comma-separated list of source IP address(es) (in IP or CIDR notation), or
-    # 'any' (FQDN not supported)
+    # Source IP address (in IP or CIDR notation) or 'any'.
     # @return [String]
     attr_accessor :src_cidr
 
-    # Comma-separated list of destination port(s) (integer in the range
-    # 1-65535), or 'any'
+    # Source port. Must be in the range  of 1-65535 or 'any'. Default is 'any'.
     # @return [String]
-    attr_accessor :dest_port
+    attr_accessor :src_port
 
-    # Comma-separated list of destination IP address(es) (in IP or CIDR
-    # notation) or 'any' (FQDN not supported)
+    # Destination IP address (in IP or CIDR notation) or 'any'.
     # @return [String]
-    attr_accessor :dest_cidr
+    attr_accessor :dst_cidr
 
-    # Log this rule to syslog (true or false, boolean value) - only applicable
-    # if a syslog has been configured (optional)
-    # @return [Boolean]
-    attr_accessor :syslog_enabled
+    # Destination port. Must be in the range of 1-65535 or 'any'. Default is
+    # 'any'.
+    # @return [String]
+    attr_accessor :dst_port
+
+    # Incoming traffic VLAN. Must be in the range of 1-4095 or 'any'. Default is
+    # 'any'.
+    # @return [String]
+    attr_accessor :vlan
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
       @_hash['comment'] = 'comment'
       @_hash['policy'] = 'policy'
+      @_hash['ip_version'] = 'ipVersion'
       @_hash['protocol'] = 'protocol'
-      @_hash['src_port'] = 'srcPort'
       @_hash['src_cidr'] = 'srcCidr'
-      @_hash['dest_port'] = 'destPort'
-      @_hash['dest_cidr'] = 'destCidr'
-      @_hash['syslog_enabled'] = 'syslogEnabled'
+      @_hash['src_port'] = 'srcPort'
+      @_hash['dst_cidr'] = 'dstCidr'
+      @_hash['dst_port'] = 'dstPort'
+      @_hash['vlan'] = 'vlan'
       @_hash
     end
 
     def initialize(policy = nil,
                    protocol = nil,
                    src_cidr = nil,
-                   dest_cidr = nil,
+                   dst_cidr = nil,
                    comment = nil,
+                   ip_version = nil,
                    src_port = nil,
-                   dest_port = nil,
-                   syslog_enabled = nil)
+                   dst_port = nil,
+                   vlan = nil)
       @comment = comment
       @policy = policy
+      @ip_version = ip_version
       @protocol = protocol
-      @src_port = src_port
       @src_cidr = src_cidr
-      @dest_port = dest_port
-      @dest_cidr = dest_cidr
-      @syslog_enabled = syslog_enabled
+      @src_port = src_port
+      @dst_cidr = dst_cidr
+      @dst_port = dst_port
+      @vlan = vlan
     end
 
     # Creates an instance of the object from a hash.
@@ -83,21 +88,23 @@ module Meraki
       policy = hash['policy']
       protocol = hash['protocol']
       src_cidr = hash['srcCidr']
-      dest_cidr = hash['destCidr']
+      dst_cidr = hash['dstCidr']
       comment = hash['comment']
+      ip_version = hash['ipVersion']
       src_port = hash['srcPort']
-      dest_port = hash['destPort']
-      syslog_enabled = hash['syslogEnabled']
+      dst_port = hash['dstPort']
+      vlan = hash['vlan']
 
       # Create object from extracted values.
       Rule12Model.new(policy,
                       protocol,
                       src_cidr,
-                      dest_cidr,
+                      dst_cidr,
                       comment,
+                      ip_version,
                       src_port,
-                      dest_port,
-                      syslog_enabled)
+                      dst_port,
+                      vlan)
     end
   end
 end

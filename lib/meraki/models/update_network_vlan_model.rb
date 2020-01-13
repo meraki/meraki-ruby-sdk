@@ -60,7 +60,7 @@ module Meraki
     attr_accessor :fixed_ip_assignments
 
     # The DHCP reserved IP ranges on the VLAN
-    # @return [List of ReservedIpRangeModel]
+    # @return [List of ReservedIpRange1Model]
     attr_accessor :reserved_ip_ranges
 
     # The DNS nameservers used for DHCP responses, either "upstream_dns",
@@ -145,7 +145,7 @@ module Meraki
       unless hash['reservedIpRanges'].nil?
         reserved_ip_ranges = []
         hash['reservedIpRanges'].each do |structure|
-          reserved_ip_ranges << (ReservedIpRangeModel.from_hash(structure) if structure)
+          reserved_ip_ranges << (ReservedIpRange1Model.from_hash(structure) if structure)
         end
       end
       dns_nameservers = hash['dnsNameservers']

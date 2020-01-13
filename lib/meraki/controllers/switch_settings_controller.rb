@@ -590,7 +590,7 @@ module Meraki
       decoded
     end
 
-    # Return the global enhanced storm control configuration
+    # Return the storm control configuration for a switch network
     # @param [String] network_id Required parameter: Example:
     # @return Mixed response from the API call
     def get_network_switch_settings_storm_control(network_id)
@@ -626,7 +626,7 @@ module Meraki
       decoded
     end
 
-    # Update the global enhanced storm control configuration
+    # Update the storm control configuration for a switch network
     # @param [String] network_id Required parameter: Example:
     # @param [UpdateNetworkSwitchSettingsStormControlModel]
     # update_network_switch_settings_storm_control Optional parameter:

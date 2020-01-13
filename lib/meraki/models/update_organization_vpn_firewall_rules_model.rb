@@ -7,7 +7,7 @@ module Meraki
   # UpdateOrganizationVpnFirewallRulesModel Model.
   class UpdateOrganizationVpnFirewallRulesModel < BaseModel
     # An ordered array of the firewall rules (not including the default rule)
-    # @return [List of Rule12Model]
+    # @return [List of Rule14Model]
     attr_accessor :rules
 
     # Log the special default rule (boolean value - enable only if you've
@@ -39,7 +39,7 @@ module Meraki
       unless hash['rules'].nil?
         rules = []
         hash['rules'].each do |structure|
-          rules << (Rule12Model.from_hash(structure) if structure)
+          rules << (Rule14Model.from_hash(structure) if structure)
         end
       end
       syslog_default_rule = hash['syslogDefaultRule']

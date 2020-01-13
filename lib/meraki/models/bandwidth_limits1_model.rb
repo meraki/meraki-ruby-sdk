@@ -4,15 +4,15 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The bandwidth limits object, specifying the upload ('limitUp') and download
-  # ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to
-  # 'custom'.
+  # The bandwidth limits object, specifying upload and download speed for
+  # clients bound to the group policy. These are only enforced if 'settings' is
+  # set to 'custom'.
   class BandwidthLimits1Model < BaseModel
-    # The maximum upload limit (integer, in Kbps).
+    # The maximum upload limit (integer, in Kbps). null indicates no limit
     # @return [Integer]
     attr_accessor :limit_up
 
-    # The maximum download limit (integer, in Kbps).
+    # The maximum download limit (integer, in Kbps). null indicates no limit
     # @return [Integer]
     attr_accessor :limit_down
 
