@@ -276,6 +276,12 @@ module Meraki
       MerakiAuthUsersController.instance
     end
 
+    # Singleton access to monitored_media_servers controller.
+    # @return [MonitoredMediaServersController] Returns the controller instance.
+    def monitored_media_servers
+      MonitoredMediaServersController.instance
+    end
+
     # Singleton access to named_tag_scope controller.
     # @return [NamedTagScopeController] Returns the controller instance.
     def named_tag_scope

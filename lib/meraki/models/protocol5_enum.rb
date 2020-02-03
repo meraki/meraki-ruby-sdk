@@ -4,18 +4,17 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP".
-  # Default value is "ANY"
+  # The type of protocol (must be 'tcp', 'udp', or 'any').
   class Protocol5Enum
     PROTOCOL5_ENUM = [
-      # TODO: Write general description for ANY
-      ANY = 'ANY'.freeze,
-
       # TODO: Write general description for TCP
-      TCP = 'TCP'.freeze,
+      TCP = 'tcp'.freeze,
 
       # TODO: Write general description for UDP
-      UDP = 'UDP'.freeze
+      UDP = 'udp'.freeze,
+
+      # TODO: Write general description for ANY
+      ANY = 'any'.freeze
     ].freeze
   end
 end

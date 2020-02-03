@@ -2,7 +2,7 @@
 
 The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
 
-> Date: 13 January, 2020
+> Date: 03 February, 2020
 >
 > [What's New](https://meraki.io/whats-new/)
 
@@ -21,9 +21,9 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 1. Open the command line interface or the terminal and navigate to the folder containing the source code.
 2. Run ``` gem build meraki.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.7.0.gem ```
+3. Once built, the gem can be installed on the current work environment using ``` gem install meraki-0.8.0.gem ```
 
-![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=Meraki-Ruby&workspaceName=Meraki-Ruby&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 ## How to Use
 
@@ -33,41 +33,41 @@ The following section explains how to use the Meraki Ruby Gem in a new Rails pro
 
 Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
 
-![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
 
-![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
 ### 2. Add reference of the gem
 
-In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.7.0' ```
+In order to use the Meraki gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'meraki', '~> 0.8.0' ```
 
-![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Add references of the Gemfile](https://apidocs.io/illustration/ruby?step=addReference&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 ### 3. Adding a new Rails Controller
 
 Once the ``` TestApp ``` project is created, a folder named ``` controllers ``` will be visible in the *Project Explorer* under the following path: ``` TestApp > app > controllers ```. Right click on this folder and select ``` New -> Run Rails Generator... ```.
 
-![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Run Rails Generator on Controllers Folder](https://apidocs.io/illustration/ruby?step=addCode0&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 Selecting the said option will popup a small window where the generator names are displayed. Here, select the ``` controller ``` template.
 
-![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Create a new Controller](https://apidocs.io/illustration/ruby?step=addCode1&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 Next, a popup window will ask you for a Controller name and included Actions. For controller name provide ``` Hello ``` and include an action named ``` Index ``` and click ``` OK ```.
 
-![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```. In this method, add code for initialization and a sample for its usage.
 
-![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0)
+![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=Meraki-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0)
 
 ## How to Test
 
@@ -101,7 +101,7 @@ client = Meraki::MerakiClient.new(
 
 The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
 
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.7.0&initLine=client%2520%253D%2520MerakiClient.new%2528%2527x_cisco_meraki_api_key%2527%2529)
+![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=Meraki%20Dashboard%20API-Ruby&workspaceName=Meraki&projectName=meraki&gemName=meraki&gemVer=0.8.0&initLine=client%2520%253D%2520MerakiClient.new%2528%2527x_cisco_meraki_api_key%2527%2529)
 
 
 
@@ -154,6 +154,7 @@ The added initlization code can be debugged by putting a breakpoint in the ``` I
 * [MalwareSettingsController](#malware_settings_controller)
 * [ManagementInterfaceSettingsController](#management_interface_settings_controller)
 * [MerakiAuthUsersController](#meraki_auth_users_controller)
+* [MonitoredMediaServersController](#monitored_media_servers_controller)
 * [NamedTagScopeController](#named_tag_scope_controller)
 * [NetflowSettingsController](#netflow_settings_controller)
 * [NetworksController](#networks_controller)
@@ -234,10 +235,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 209.490363320564
+timespan = 204.016461832922
 collect['timespan'] = timespan
 
-per_page = 209
+per_page = 204
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -255,7 +256,7 @@ collect['path'] = path
 method = 'method'
 collect['method'] = method
 
-response_code = 209
+response_code = 204
 collect['response_code'] = response_code
 
 source_ip = 'sourceIp'
@@ -706,10 +707,10 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 209.490363320564
+timespan = 204.016461832922
 collect['timespan'] = timespan
 
-per_page = 209
+per_page = 204
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -760,7 +761,7 @@ collect['bluetooth_client_id'] = bluetooth_client_id
 include_connectivity_history = true
 collect['include_connectivity_history'] = include_connectivity_history
 
-connectivity_history_timespan = 209
+connectivity_history_timespan = 204
 collect['connectivity_history_timespan'] = connectivity_history_timespan
 
 
@@ -1162,7 +1163,7 @@ collect['serial'] = serial
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 209.490363320564
+timespan = 204.016461832922
 collect['timespan'] = timespan
 
 
@@ -1203,10 +1204,10 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 209.490363320564
+timespan = 204.016461832922
 collect['timespan'] = timespan
 
-per_page = 209
+per_page = 204
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -1235,7 +1236,7 @@ def provision_network_clients(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| provision_network_clients |  ``` Optional ```  | TODO: Add a parameter description |
+| provision_network_clients |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -1320,7 +1321,7 @@ collect['network_id'] = network_id
 client_id = 'clientId'
 collect['client_id'] = client_id
 
-per_page = 209
+per_page = 204
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -1373,10 +1374,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 209.490363320564
+timespan = 204.016461832922
 collect['timespan'] = timespan
 
-resolution = 209
+resolution = 204
 collect['resolution'] = resolution
 
 
@@ -1560,7 +1561,7 @@ collect['network_id'] = network_id
 client_id = 'clientId'
 collect['client_id'] = client_id
 
-per_page = 117
+per_page = 204
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -2312,7 +2313,7 @@ collect['network_id'] = network_id
 serial = 'serial'
 collect['serial'] = serial
 
-timespan = 117
+timespan = 40
 collect['timespan'] = timespan
 
 
@@ -2364,10 +2365,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 117.995081428902
+timespan = 40.5117437245845
 collect['timespan'] = timespan
 
-resolution = 117
+resolution = 40
 collect['resolution'] = resolution
 
 uplink = Meraki::UplinkEnum::WAN1
@@ -2543,7 +2544,7 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-per_page = 117
+per_page = 40
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -2644,7 +2645,7 @@ collect['sm_device_mac'] = sm_device_mac
 sm_device_name = 'smDeviceName'
 collect['sm_device_name'] = sm_device_name
 
-per_page = 117
+per_page = 40
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -3571,7 +3572,7 @@ collect = Hash.new
 organization_id = 'organizationId'
 collect['organization_id'] = organization_id
 
-per_page = 117
+per_page = 40
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -4535,7 +4536,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 159.718254655468
+timespan = 132.007025616247
 collect['timespan'] = timespan
 
 object_type = Meraki::ObjectTypeEnum::PERSON
@@ -4646,10 +4647,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 159.718254655468
+timespan = 132.007025616247
 collect['timespan'] = timespan
 
-resolution = 159
+resolution = 132
 collect['resolution'] = resolution
 
 object_type = Meraki::ObjectTypeEnum::PERSON
@@ -4785,7 +4786,7 @@ def update_network_one_to_many_nat_rules(options = {}); end
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_one_to_many_nat_rules |  ``` Optional ```  | TODO: Add a parameter description |
+| update_network_one_to_many_nat_rules |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
@@ -5891,6 +5892,184 @@ result = merakiAuthUsers_controller.get_network_meraki_auth_user(collect)
 
 [Back to List of Controllers](#list_of_controllers)
 
+## <a name="monitored_media_servers_controller"></a>![Class: ](https://apidocs.io/img/class.png ".MonitoredMediaServersController") MonitoredMediaServersController
+
+### Get singleton instance
+
+The singleton instance of the ``` MonitoredMediaServersController ``` class can be accessed from the API Client.
+
+```ruby
+monitoredMediaServers_controller = client.monitored_media_servers
+```
+
+### <a name="get_organization_insight_monitored_media_servers"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.get_organization_insight_monitored_media_servers") get_organization_insight_monitored_media_servers
+
+> List the monitored media servers for this organization. Only valid for organizations with Meraki Insight.
+
+
+```ruby
+def get_organization_insight_monitored_media_servers(organization_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+organization_id = 'organizationId'
+
+result = monitoredMediaServers_controller.get_organization_insight_monitored_media_servers(organization_id)
+
+```
+
+
+### <a name="create_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.create_organization_insight_monitored_media_server") create_organization_insight_monitored_media_server
+
+> Add a media server to be monitored for this organization. Only valid for organizations with Meraki Insight.
+
+
+```ruby
+def create_organization_insight_monitored_media_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| create_organization_insight_monitored_media_server |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+create_organization_insight_monitored_media_server = CreateOrganizationInsightMonitoredMediaServerModel.new
+collect['create_organization_insight_monitored_media_server'] = create_organization_insight_monitored_media_server
+
+
+result = monitoredMediaServers_controller.create_organization_insight_monitored_media_server(collect)
+
+```
+
+
+### <a name="get_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.get_organization_insight_monitored_media_server") get_organization_insight_monitored_media_server
+
+> Return a monitored media server for this organization. Only valid for organizations with Meraki Insight.
+
+
+```ruby
+def get_organization_insight_monitored_media_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| monitored_media_server_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+monitored_media_server_id = 'monitoredMediaServerId'
+collect['monitored_media_server_id'] = monitored_media_server_id
+
+
+result = monitoredMediaServers_controller.get_organization_insight_monitored_media_server(collect)
+
+```
+
+
+### <a name="update_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.update_organization_insight_monitored_media_server") update_organization_insight_monitored_media_server
+
+> Update a monitored media server for this organization. Only valid for organizations with Meraki Insight.
+
+
+```ruby
+def update_organization_insight_monitored_media_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| monitored_media_server_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_organization_insight_monitored_media_server |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+monitored_media_server_id = 'monitoredMediaServerId'
+collect['monitored_media_server_id'] = monitored_media_server_id
+
+update_organization_insight_monitored_media_server = UpdateOrganizationInsightMonitoredMediaServerModel.new
+collect['update_organization_insight_monitored_media_server'] = update_organization_insight_monitored_media_server
+
+
+result = monitoredMediaServers_controller.update_organization_insight_monitored_media_server(collect)
+
+```
+
+
+### <a name="delete_organization_insight_monitored_media_server"></a>![Method: ](https://apidocs.io/img/method.png ".MonitoredMediaServersController.delete_organization_insight_monitored_media_server") delete_organization_insight_monitored_media_server
+
+> Delete a monitored media server from this organization. Only valid for organizations with Meraki Insight.
+
+
+```ruby
+def delete_organization_insight_monitored_media_server(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| organization_id |  ``` Required ```  | TODO: Add a parameter description |
+| monitored_media_server_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+organization_id = 'organizationId'
+collect['organization_id'] = organization_id
+
+monitored_media_server_id = 'monitoredMediaServerId'
+collect['monitored_media_server_id'] = monitored_media_server_id
+
+
+monitoredMediaServers_controller.delete_organization_insight_monitored_media_server(collect)
+
+```
+
+
+[Back to List of Controllers](#list_of_controllers)
+
 ## <a name="named_tag_scope_controller"></a>![Class: ](https://apidocs.io/img/class.png ".NamedTagScopeController") NamedTagScopeController
 
 ### Get singleton instance
@@ -5926,7 +6105,7 @@ collect = Hash.new
 network_id = 'networkId'
 collect['network_id'] = network_id
 
-with_details = true
+with_details = false
 collect['with_details'] = with_details
 
 
@@ -5998,7 +6177,7 @@ collect['network_id'] = network_id
 target_group_id = 'targetGroupId'
 collect['target_group_id'] = target_group_id
 
-with_details = true
+with_details = false
 collect['with_details'] = with_details
 
 
@@ -6304,7 +6483,7 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 68.2229727638061
+timespan = 90.2838523896801
 collect['timespan'] = timespan
 
 
@@ -6526,7 +6705,7 @@ collect['network_id'] = network_id
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 68.2229727638061
+timespan = 90.2838523896801
 collect['timespan'] = timespan
 
 device_type = 'deviceType'
@@ -7095,7 +7274,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 68.2229727638061
+timespan = 90.2838523896801
 collect['timespan'] = timespan
 
 uplink = Meraki::UplinkEnum::WAN1
@@ -8268,7 +8447,7 @@ collect['ids'] = ids
 scope = 'scope'
 collect['scope'] = scope
 
-batch_size = 68
+batch_size = 181
 collect['batch_size'] = batch_size
 
 batch_token = 'batchToken'
@@ -8412,362 +8591,6 @@ collect['device_id'] = device_id
 
 
 result = sM_controller.unenroll_network_sm_device(collect)
-
-```
-
-
-### <a name="create_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_profile_clarity") create_network_sm_profile_clarity
-
-> Create a new profile containing a Cisco Clarity payload
-
-
-```ruby
-def create_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_sm_profile_clarity |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-create_network_sm_profile_clarity = CreateNetworkSmProfileClarityModel.new
-collect['create_network_sm_profile_clarity'] = create_network_sm_profile_clarity
-
-
-result = sM_controller.create_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="update_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_profile_clarity") update_network_sm_profile_clarity
-
-> Update an existing profile containing a Cisco Clarity payload
-
-
-```ruby
-def update_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_profile_clarity |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-update_network_sm_profile_clarity = UpdateNetworkSmProfileClarityModel.new
-collect['update_network_sm_profile_clarity'] = update_network_sm_profile_clarity
-
-
-result = sM_controller.update_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="add_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.add_network_sm_profile_clarity") add_network_sm_profile_clarity
-
-> Add a Cisco Clarity payload to an existing profile
-
-
-```ruby
-def add_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| add_network_sm_profile_clarity |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-add_network_sm_profile_clarity = AddNetworkSmProfileClarityModel.new
-collect['add_network_sm_profile_clarity'] = add_network_sm_profile_clarity
-
-
-result = sM_controller.add_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="get_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profile_clarity") get_network_sm_profile_clarity
-
-> Get details for a Cisco Clarity payload
-
-
-```ruby
-def get_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-result = sM_controller.get_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="delete_network_sm_profile_clarity"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_profile_clarity") delete_network_sm_profile_clarity
-
-> Delete a Cisco Clarity payload. Deletes the entire profile if it's empty after removing the payload.
-
-
-```ruby
-def delete_network_sm_profile_clarity(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-result = sM_controller.delete_network_sm_profile_clarity(collect)
-
-```
-
-
-### <a name="create_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.create_network_sm_profile_umbrella") create_network_sm_profile_umbrella
-
-> Create a new profile containing a Cisco Umbrella payload
-
-
-```ruby
-def create_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| create_network_sm_profile_umbrella |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-create_network_sm_profile_umbrella = CreateNetworkSmProfileUmbrellaModel.new
-collect['create_network_sm_profile_umbrella'] = create_network_sm_profile_umbrella
-
-
-result = sM_controller.create_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="update_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.update_network_sm_profile_umbrella") update_network_sm_profile_umbrella
-
-> Update an existing profile containing a Cisco Umbrella payload
-
-
-```ruby
-def update_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| update_network_sm_profile_umbrella |  ``` Optional ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-update_network_sm_profile_umbrella = UpdateNetworkSmProfileUmbrellaModel.new
-collect['update_network_sm_profile_umbrella'] = update_network_sm_profile_umbrella
-
-
-result = sM_controller.update_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="add_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.add_network_sm_profile_umbrella") add_network_sm_profile_umbrella
-
-> Add a Cisco Umbrella payload to an existing profile
-
-
-```ruby
-def add_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-| add_network_sm_profile_umbrella |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-add_network_sm_profile_umbrella = AddNetworkSmProfileUmbrellaModel.new
-collect['add_network_sm_profile_umbrella'] = add_network_sm_profile_umbrella
-
-
-result = sM_controller.add_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="get_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.get_network_sm_profile_umbrella") get_network_sm_profile_umbrella
-
-> Get details for a Cisco Umbrella payload
-
-
-```ruby
-def get_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-result = sM_controller.get_network_sm_profile_umbrella(collect)
-
-```
-
-
-### <a name="delete_network_sm_profile_umbrella"></a>![Method: ](https://apidocs.io/img/method.png ".SMController.delete_network_sm_profile_umbrella") delete_network_sm_profile_umbrella
-
-> Delete a Cisco Umbrella payload. Deletes the entire profile if it's empty after removing the payload
-
-
-```ruby
-def delete_network_sm_profile_umbrella(options = {}); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| network_id |  ``` Required ```  | TODO: Add a parameter description |
-| profile_id |  ``` Required ```  | TODO: Add a parameter description |
-
-
-#### Example Usage
-
-```ruby
-collect = Hash.new
-
-network_id = 'networkId'
-collect['network_id'] = network_id
-
-profile_id = 'profileId'
-collect['profile_id'] = profile_id
-
-
-result = sM_controller.delete_network_sm_profile_umbrella(collect)
 
 ```
 
@@ -9233,9 +9056,9 @@ def get_network_sm_connectivity(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -9249,7 +9072,7 @@ collect['network_id'] = network_id
 id = 'id'
 collect['id'] = id
 
-per_page = 'perPage'
+per_page = 181
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9279,9 +9102,9 @@ def get_network_sm_desktop_logs(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -9295,7 +9118,7 @@ collect['network_id'] = network_id
 id = 'id'
 collect['id'] = id
 
-per_page = 'perPage'
+per_page = 181
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9329,9 +9152,9 @@ def get_network_sm_device_command_logs(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -9345,7 +9168,7 @@ collect['network_id'] = network_id
 id = 'id'
 collect['id'] = id
 
-per_page = 'perPage'
+per_page = 181
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9375,9 +9198,9 @@ def get_network_sm_performance_history(options = {}); end
 |-----------|------|-------------|
 | network_id |  ``` Required ```  | TODO: Add a parameter description |
 | id |  ``` Required ```  | TODO: Add a parameter description |
-| per_page |  ``` Optional ```  | The number of entries per page returned |
-| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
-| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, next or prev page in the HTTP Link header should define it. |
+| per_page |  ``` Optional ```  | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. |
+| starting_after |  ``` Optional ```  | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
+| ending_before |  ``` Optional ```  | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. |
 
 
 #### Example Usage
@@ -9391,7 +9214,7 @@ collect['network_id'] = network_id
 id = 'id'
 collect['id'] = id
 
-per_page = 'perPage'
+per_page = 181
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9734,10 +9557,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 231.727690872144
+timespan = 181.779134281342
 collect['timespan'] = timespan
 
-per_page = 231
+per_page = 181
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9788,10 +9611,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 231.727690872144
+timespan = 181.779134281342
 collect['timespan'] = timespan
 
-per_page = 231
+per_page = 181
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9842,10 +9665,10 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 231.727690872144
+timespan = 181.779134281342
 collect['timespan'] = timespan
 
-per_page = 231
+per_page = 181
 collect['per_page'] = per_page
 
 starting_after = 'startingAfter'
@@ -9905,7 +9728,7 @@ collect['ssid_number'] = ssid_number
 login_identifier = 'loginIdentifier'
 collect['login_identifier'] = login_identifier
 
-timespan = 231
+timespan = 181
 collect['timespan'] = timespan
 
 
@@ -10255,11 +10078,49 @@ collect['serial'] = serial
 t0 = 't0'
 collect['t0'] = t0
 
-timespan = 231.727690872144
+timespan = 181.779134281342
 collect['timespan'] = timespan
 
 
 result = switchPorts_controller.get_device_switch_port_statuses(collect)
+
+```
+
+
+### <a name="get_device_switch_port_statuses_packets"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchPortsController.get_device_switch_port_statuses_packets") get_device_switch_port_statuses_packets
+
+> Return the packet counters for all the ports of a switch
+
+
+```ruby
+def get_device_switch_port_statuses_packets(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| serial |  ``` Required ```  | TODO: Add a parameter description |
+| t0 |  ``` Optional ```  | The beginning of the timespan for the data. The maximum lookback period is 1 day from today. |
+| timespan |  ``` Optional ```  | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day. |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+serial = 'serial'
+collect['serial'] = serial
+
+t0 = 't0'
+collect['t0'] = t0
+
+timespan = 181.779134281342
+collect['timespan'] = timespan
+
+
+result = switchPorts_controller.get_device_switch_port_statuses_packets(collect)
 
 ```
 
@@ -10656,6 +10517,66 @@ collect['update_network_switch_settings_mtu'] = update_network_switch_settings_m
 
 
 result = switchSettings_controller.update_network_switch_settings_mtu(collect)
+
+```
+
+
+### <a name="get_network_switch_settings_multicast"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.get_network_switch_settings_multicast") get_network_switch_settings_multicast
+
+> Return Multicast settings for a network
+
+
+```ruby
+def get_network_switch_settings_multicast(network_id); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+network_id = 'networkId'
+
+result = switchSettings_controller.get_network_switch_settings_multicast(network_id)
+
+```
+
+
+### <a name="update_network_switch_settings_multicast"></a>![Method: ](https://apidocs.io/img/method.png ".SwitchSettingsController.update_network_switch_settings_multicast") update_network_switch_settings_multicast
+
+> Update multicast settings for a network
+
+
+```ruby
+def update_network_switch_settings_multicast(options = {}); end
+```
+
+#### Parameters
+
+| Parameter | Tags | Description |
+|-----------|------|-------------|
+| network_id |  ``` Required ```  | TODO: Add a parameter description |
+| update_network_switch_settings_multicast |  ``` Optional ```  | TODO: Add a parameter description |
+
+
+#### Example Usage
+
+```ruby
+collect = Hash.new
+
+network_id = 'networkId'
+collect['network_id'] = network_id
+
+update_network_switch_settings_multicast = UpdateNetworkSwitchSettingsMulticastModel.new
+collect['update_network_switch_settings_multicast'] = update_network_switch_settings_multicast
+
+
+result = switchSettings_controller.update_network_switch_settings_multicast(collect)
 
 ```
 
@@ -11921,7 +11842,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 per_page = 18
@@ -11990,7 +11911,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12045,7 +11966,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12106,7 +12027,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12165,7 +12086,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12222,7 +12143,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12276,7 +12197,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12331,7 +12252,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12392,7 +12313,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12451,7 +12372,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12510,7 +12431,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18
@@ -12571,7 +12492,7 @@ collect['t0'] = t0
 t1 = 't1'
 collect['t1'] = t1
 
-timespan = 18.4508640987104
+timespan = 18.2744161730047
 collect['timespan'] = timespan
 
 ssid = 18

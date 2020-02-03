@@ -4,17 +4,14 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The type of protocol (must be 'tcp', 'udp', or 'any').
+  # 'tcp' or 'udp'
   class Protocol3Enum
     PROTOCOL3_ENUM = [
       # TODO: Write general description for TCP
       TCP = 'tcp'.freeze,
 
       # TODO: Write general description for UDP
-      UDP = 'udp'.freeze,
-
-      # TODO: Write general description for ANY
-      ANY = 'any'.freeze
+      UDP = 'udp'.freeze
     ].freeze
   end
 end

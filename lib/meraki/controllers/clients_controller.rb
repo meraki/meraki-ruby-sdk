@@ -136,13 +136,14 @@ module Meraki
     # Provisions a client with a name and policy. Clients can be provisioned
     # before they associate to the network.
     # @param [String] network_id Required parameter: Example:
-    # @param [ProvisionNetworkClientsModel] provision_network_clients Optional
+    # @param [ProvisionNetworkClientsModel] provision_network_clients Required
     # parameter: Example:
     # @return Mixed response from the API call
     def provision_network_clients(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id']
+        'network_id' => options['network_id'],
+        'provision_network_clients' => options['provision_network_clients']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/clients/provision'

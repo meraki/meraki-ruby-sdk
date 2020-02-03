@@ -618,420 +618,6 @@ module Meraki
       decoded
     end
 
-    # Create a new profile containing a Cisco Clarity payload
-    # @param [String] network_id Required parameter: Example:
-    # @param [CreateNetworkSmProfileClarityModel]
-    # create_network_sm_profile_clarity Required parameter: Example:
-    # @return Mixed response from the API call
-    def create_network_sm_profile_clarity(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'create_network_sm_profile_clarity' => options['create_network_sm_profile_clarity']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/clarity'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        headers: _headers,
-        parameters: options['create_network_sm_profile_clarity'].to_json
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Update an existing profile containing a Cisco Clarity payload
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @param [UpdateNetworkSmProfileClarityModel]
-    # update_network_sm_profile_clarity Optional parameter: Example:
-    # @return Mixed response from the API call
-    def update_network_sm_profile_clarity(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/clarity/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.put(
-        _query_url,
-        headers: _headers,
-        parameters: options['update_network_sm_profile_clarity'].to_json
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Add a Cisco Clarity payload to an existing profile
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @param [AddNetworkSmProfileClarityModel] add_network_sm_profile_clarity
-    # Required parameter: Example:
-    # @return Mixed response from the API call
-    def add_network_sm_profile_clarity(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id'],
-        'add_network_sm_profile_clarity' => options['add_network_sm_profile_clarity']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/clarity/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        headers: _headers,
-        parameters: options['add_network_sm_profile_clarity'].to_json
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Get details for a Cisco Clarity payload
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @return Mixed response from the API call
-    def get_network_sm_profile_clarity(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/clarity/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.get(
-        _query_url,
-        headers: _headers
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Delete a Cisco Clarity payload. Deletes the entire profile if it's empty
-    # after removing the payload.
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @return Mixed response from the API call
-    def delete_network_sm_profile_clarity(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/clarity/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.delete(
-        _query_url,
-        headers: _headers
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Create a new profile containing a Cisco Umbrella payload
-    # @param [String] network_id Required parameter: Example:
-    # @param [CreateNetworkSmProfileUmbrellaModel]
-    # create_network_sm_profile_umbrella Required parameter: Example:
-    # @return Mixed response from the API call
-    def create_network_sm_profile_umbrella(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'create_network_sm_profile_umbrella' => options['create_network_sm_profile_umbrella']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/umbrella'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        headers: _headers,
-        parameters: options['create_network_sm_profile_umbrella'].to_json
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Update an existing profile containing a Cisco Umbrella payload
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @param [UpdateNetworkSmProfileUmbrellaModel]
-    # update_network_sm_profile_umbrella Optional parameter: Example:
-    # @return Mixed response from the API call
-    def update_network_sm_profile_umbrella(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/umbrella/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.put(
-        _query_url,
-        headers: _headers,
-        parameters: options['update_network_sm_profile_umbrella'].to_json
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Add a Cisco Umbrella payload to an existing profile
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @param [AddNetworkSmProfileUmbrellaModel] add_network_sm_profile_umbrella
-    # Required parameter: Example:
-    # @return Mixed response from the API call
-    def add_network_sm_profile_umbrella(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id'],
-        'add_network_sm_profile_umbrella' => options['add_network_sm_profile_umbrella']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/umbrella/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json',
-        'content-type' => 'application/json; charset=utf-8'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.post(
-        _query_url,
-        headers: _headers,
-        parameters: options['add_network_sm_profile_umbrella'].to_json
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Get details for a Cisco Umbrella payload
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @return Mixed response from the API call
-    def get_network_sm_profile_umbrella(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/umbrella/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.get(
-        _query_url,
-        headers: _headers
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
-    # Delete a Cisco Umbrella payload. Deletes the entire profile if it's empty
-    # after removing the payload
-    # @param [String] network_id Required parameter: Example:
-    # @param [String] profile_id Required parameter: Example:
-    # @return Mixed response from the API call
-    def delete_network_sm_profile_umbrella(options = {})
-      # Validate required parameters.
-      validate_parameters(
-        'network_id' => options['network_id'],
-        'profile_id' => options['profile_id']
-      )
-      # Prepare query url.
-      _path_url = '/networks/{networkId}/sm/profile/umbrella/{profileId}'
-      _path_url = APIHelper.append_url_with_template_parameters(
-        _path_url,
-        'networkId' => options['network_id'],
-        'profileId' => options['profile_id']
-      )
-      _query_builder = Configuration.base_uri.dup
-      _query_builder << _path_url
-      _query_url = APIHelper.clean_url _query_builder
-      # Prepare headers.
-      _headers = {
-        'accept' => 'application/json'
-      }
-      # Prepare and execute HttpRequest.
-      _request = @http_client.delete(
-        _query_url,
-        headers: _headers
-      )
-      CustomHeaderAuth.apply(_request)
-      _context = execute_request(_request)
-      validate_response(_context)
-      # Return appropriate response type.
-      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
-        _context.response.raw_body.nil? ||
-        _context.response.raw_body.to_s.strip.empty?
-      decoded
-    end
-
     # List all the profiles in the network
     # @param [String] network_id Required parameter: Example:
     # @return Mixed response from the API call
@@ -1558,17 +1144,17 @@ module Meraki
     # checking in to Dashboard).
     # @param [String] network_id Required parameter: Example:
     # @param [String] id Required parameter: Example:
-    # @param [String] per_page Optional parameter: The number of entries per
-    # page returned
+    # @param [Integer] per_page Optional parameter: The number of entries per
+    # page returned. Acceptable range is 3 - 1000. Default is 1000.
     # @param [String] starting_after Optional parameter: A token used by the
     # server to indicate the start of the page. Often this is a timestamp or an
     # ID but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @param [String] ending_before Optional parameter: A token used by the
     # server to indicate the end of the page. Often this is a timestamp or an ID
     # but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @return Mixed response from the API call
     def get_network_sm_connectivity(options = {})
@@ -1619,17 +1205,17 @@ module Meraki
     # details for desktop devices.
     # @param [String] network_id Required parameter: Example:
     # @param [String] id Required parameter: Example:
-    # @param [String] per_page Optional parameter: The number of entries per
-    # page returned
+    # @param [Integer] per_page Optional parameter: The number of entries per
+    # page returned. Acceptable range is 3 - 1000. Default is 1000.
     # @param [String] starting_after Optional parameter: A token used by the
     # server to indicate the start of the page. Often this is a timestamp or an
     # ID but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @param [String] ending_before Optional parameter: A token used by the
     # server to indicate the end of the page. Often this is a timestamp or an ID
     # but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @return Mixed response from the API call
     def get_network_sm_desktop_logs(options = {})
@@ -1684,17 +1270,17 @@ module Meraki
     #     of any reports.</p>
     # @param [String] network_id Required parameter: Example:
     # @param [String] id Required parameter: Example:
-    # @param [String] per_page Optional parameter: The number of entries per
-    # page returned
+    # @param [Integer] per_page Optional parameter: The number of entries per
+    # page returned. Acceptable range is 3 - 1000. Default is 1000.
     # @param [String] starting_after Optional parameter: A token used by the
     # server to indicate the start of the page. Often this is a timestamp or an
     # ID but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @param [String] ending_before Optional parameter: A token used by the
     # server to indicate the end of the page. Often this is a timestamp or an ID
     # but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @return Mixed response from the API call
     def get_network_sm_device_command_logs(options = {})
@@ -1745,17 +1331,17 @@ module Meraki
     # desktop devices.
     # @param [String] network_id Required parameter: Example:
     # @param [String] id Required parameter: Example:
-    # @param [String] per_page Optional parameter: The number of entries per
-    # page returned
+    # @param [Integer] per_page Optional parameter: The number of entries per
+    # page returned. Acceptable range is 3 - 1000. Default is 1000.
     # @param [String] starting_after Optional parameter: A token used by the
     # server to indicate the start of the page. Often this is a timestamp or an
     # ID but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @param [String] ending_before Optional parameter: A token used by the
     # server to indicate the end of the page. Often this is a timestamp or an ID
     # but it is not limited to those. This parameter should not be defined by
-    # client applications. The link for the first, last, next or prev page in
+    # client applications. The link for the first, last, prev, or next page in
     # the HTTP Link header should define it.
     # @return Mixed response from the API call
     def get_network_sm_performance_history(options = {})

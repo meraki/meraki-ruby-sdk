@@ -20,7 +20,7 @@ module Meraki
     attr_accessor :ip_version
 
     # The type of protocol (must be 'tcp', 'udp', or 'any').
-    # @return [Protocol4Enum]
+    # @return [Protocol5Enum]
     attr_accessor :protocol
 
     # Source IP address (in IP or CIDR notation) or 'any'.
