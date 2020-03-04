@@ -11,7 +11,7 @@ module Meraki
     attr_accessor :code
 
     # The type for the DHCP option. One of: 'text', 'ip', 'hex' or 'integer'
-    # @return [Type9Enum]
+    # @return [Type10Enum]
     attr_accessor :type
 
     # The value for the DHCP option

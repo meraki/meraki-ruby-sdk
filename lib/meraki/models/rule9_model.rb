@@ -17,7 +17,7 @@ module Meraki
 
     # The physical WAN interface on which the traffic will arrive ('internet1'
     # or, if available, 'internet2' or 'both')
-    # @return [String]
+    # @return [Uplink3Enum]
     attr_accessor :uplink
 
     # A port or port ranges that will be forwarded to the host on the LAN
@@ -34,7 +34,7 @@ module Meraki
     attr_accessor :allowed_ips
 
     # TCP or UDP
-    # @return [String]
+    # @return [Protocol5Enum]
     attr_accessor :protocol
 
     # A mapping from model property names to API property names.
@@ -50,13 +50,13 @@ module Meraki
       @_hash
     end
 
-    def initialize(name = nil,
-                   lan_ip = nil,
-                   uplink = nil,
+    def initialize(lan_ip = nil,
                    public_port = nil,
                    local_port = nil,
                    allowed_ips = nil,
-                   protocol = nil)
+                   protocol = nil,
+                   name = nil,
+                   uplink = nil)
       @name = name
       @lan_ip = lan_ip
       @uplink = uplink
@@ -71,22 +71,22 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      name = hash['name']
       lan_ip = hash['lanIp']
-      uplink = hash['uplink']
       public_port = hash['publicPort']
       local_port = hash['localPort']
       allowed_ips = hash['allowedIps']
       protocol = hash['protocol']
+      name = hash['name']
+      uplink = hash['uplink']
 
       # Create object from extracted values.
-      Rule9Model.new(name,
-                     lan_ip,
-                     uplink,
+      Rule9Model.new(lan_ip,
                      public_port,
                      local_port,
                      allowed_ips,
-                     protocol)
+                     protocol,
+                     name,
+                     uplink)
     end
   end
 end

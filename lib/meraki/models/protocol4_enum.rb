@@ -4,7 +4,7 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The type of protocol (must be 'tcp', 'udp', or 'any').
+  # Either of the following: 'tcp', 'udp', 'icmp-ping' or 'any'
   class Protocol4Enum
     PROTOCOL4_ENUM = [
       # TODO: Write general description for TCP
@@ -12,6 +12,9 @@ module Meraki
 
       # TODO: Write general description for UDP
       UDP = 'udp'.freeze,
+
+      # TODO: Write general description for ICMPPING
+      ICMPPING = 'icmp-ping'.freeze,
 
       # TODO: Write general description for ANY
       ANY = 'any'.freeze

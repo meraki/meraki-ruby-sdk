@@ -55,12 +55,13 @@ module Meraki
     # Update the port forwarding rules for an MX network
     # @param [String] network_id Required parameter: Example:
     # @param [UpdateNetworkPortForwardingRulesModel]
-    # update_network_port_forwarding_rules Optional parameter: Example:
+    # update_network_port_forwarding_rules Required parameter: Example:
     # @return Mixed response from the API call
     def update_network_port_forwarding_rules(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id']
+        'network_id' => options['network_id'],
+        'update_network_port_forwarding_rules' => options['update_network_port_forwarding_rules']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/portForwardingRules'

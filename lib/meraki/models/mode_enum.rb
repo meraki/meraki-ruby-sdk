@@ -4,17 +4,18 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The site-to-site VPN mode. Can be one of 'none', 'spoke' or 'hub'
+  # Set mode to 'disabled'/'detection'/'prevention' (optional - omitting will
+  # leave current config unchanged)
   class ModeEnum
     MODE_ENUM = [
-      # TODO: Write general description for NONE
-      NONE = 'none'.freeze,
+      # TODO: Write general description for PREVENTION
+      PREVENTION = 'prevention'.freeze,
 
-      # TODO: Write general description for SPOKE
-      SPOKE = 'spoke'.freeze,
+      # TODO: Write general description for DETECTION
+      DETECTION = 'detection'.freeze,
 
-      # TODO: Write general description for HUB
-      HUB = 'hub'.freeze
+      # TODO: Write general description for DISABLED
+      DISABLED = 'disabled'.freeze
     ].freeze
   end
 end

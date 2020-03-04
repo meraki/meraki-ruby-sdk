@@ -19,7 +19,7 @@ module Meraki
     attr_accessor :blocked_url_categories
 
     # URL category list size which is either 'topSites' or 'fullList'
-    # @return [String]
+    # @return [UrlCategoryListSizeEnum]
     attr_accessor :url_category_list_size
 
     # A mapping from model property names to API property names.

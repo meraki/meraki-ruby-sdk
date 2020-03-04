@@ -19,15 +19,18 @@ module Meraki
     attr_accessor :gateway_ip
 
     # The enabled state of the static route
-    # @return [String]
+    # @return [Boolean]
     attr_accessor :enabled
 
-    # The DHCP fixed IP assignments on the static route
-    # @return [String]
+    # The DHCP fixed IP assignments on the static route. This should be an
+    # object that contains mappings from MAC addresses to objects that
+    # themselves each contain "ip" and "name" string fields. See the sample
+    # request/response for more details.
+    # @return [Object]
     attr_accessor :fixed_ip_assignments
 
     # The DHCP reserved IP ranges on the static route
-    # @return [String]
+    # @return [List of ReservedIpRange1Model]
     attr_accessor :reserved_ip_ranges
 
     # A mapping from model property names to API property names.
@@ -66,7 +69,14 @@ module Meraki
       gateway_ip = hash['gatewayIp']
       enabled = hash['enabled']
       fixed_ip_assignments = hash['fixedIpAssignments']
-      reserved_ip_ranges = hash['reservedIpRanges']
+      # Parameter is an array, so we need to iterate through it
+      reserved_ip_ranges = nil
+      unless hash['reservedIpRanges'].nil?
+        reserved_ip_ranges = []
+        hash['reservedIpRanges'].each do |structure|
+          reserved_ip_ranges << (ReservedIpRange1Model.from_hash(structure) if structure)
+        end
+      end
 
       # Create object from extracted values.
       UpdateNetworkStaticRouteModel.new(name,

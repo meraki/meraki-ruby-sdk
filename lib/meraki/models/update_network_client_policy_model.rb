@@ -6,12 +6,13 @@
 module Meraki
   # UpdateNetworkClientPolicyModel Model.
   class UpdateNetworkClientPolicyModel < BaseModel
-    # The group policy (Whitelisted, Blocked, Normal, Group policy)
+    # The policy to assign. Can be 'Whitelisted', 'Blocked', 'Normal' or 'Group
+    # policy'. Required.
     # @return [String]
     attr_accessor :device_policy
 
-    # [optional] If devicePolicy param is set to 'Group policy' this param is
-    # used to specify the group ID.
+    # [optional] If 'devicePolicy' is set to 'Group policy' this param is used
+    # to specify the group policy ID.
     # @return [String]
     attr_accessor :group_policy_id
 

@@ -7,7 +7,7 @@ module Meraki
   # CreateNetworkPiiRequestModel Model.
   class CreateNetworkPiiRequestModel < BaseModel
     # One of "delete" or "restrict processing"
-    # @return [Type5Enum]
+    # @return [Type6Enum]
     attr_accessor :type
 
     # The datasets related to the provided key that should be deleted. Only

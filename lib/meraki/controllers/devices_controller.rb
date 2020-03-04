@@ -16,6 +16,47 @@ module Meraki
       self.class.instance
     end
 
+    # Cycle a set of switch ports
+    # @param [String] serial Required parameter: Example:
+    # @param [CycleDeviceSwitchPortsModel] cycle_device_switch_ports Required
+    # parameter: Example:
+    # @return Mixed response from the API call
+    def cycle_device_switch_ports(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'serial' => options['serial'],
+        'cycle_device_switch_ports' => options['cycle_device_switch_ports']
+      )
+      # Prepare query url.
+      _path_url = '/devices/{serial}/switch/ports/cycle'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'serial' => options['serial']
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_url = APIHelper.clean_url _query_builder
+      # Prepare headers.
+      _headers = {
+        'accept' => 'application/json',
+        'content-type' => 'application/json; charset=utf-8'
+      }
+      # Prepare and execute HttpRequest.
+      _request = @http_client.post(
+        _query_url,
+        headers: _headers,
+        parameters: options['cycle_device_switch_ports'].to_json
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+      # Return appropriate response type.
+      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
+        _context.response.raw_body.nil? ||
+        _context.response.raw_body.to_s.strip.empty?
+      decoded
+    end
+
     # List the devices in a network
     # @param [String] network_id Required parameter: Example:
     # @return Mixed response from the API call
@@ -52,7 +93,7 @@ module Meraki
       decoded
     end
 
-    # Claim a device into a network
+    # Claim devices into a network
     # @param [String] network_id Required parameter: Example:
     # @param [ClaimNetworkDevicesModel] claim_network_devices Optional
     # parameter: Example:

@@ -8,13 +8,13 @@ module Meraki
   class UpdateNetworkSecurityIntrusionSettingsModel < BaseModel
     # Set mode to 'disabled'/'detection'/'prevention' (optional - omitting will
     # leave current config unchanged)
-    # @return [String]
+    # @return [ModeEnum]
     attr_accessor :mode
 
     # Set the detection ruleset 'connectivity'/'balanced'/'security' (optional -
     # omitting will leave current config unchanged). Default value is 'balanced'
     # if none currently saved
-    # @return [String]
+    # @return [IdsRulesetsEnum]
     attr_accessor :ids_rulesets
 
     # Set the included/excluded networks from the intrusion engine (optional -

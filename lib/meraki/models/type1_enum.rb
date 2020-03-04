@@ -4,8 +4,8 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # Type of the L7 Rule. Must be 'application', 'applicationCategory', 'host',
-  # 'port' or 'ipRange'
+  # The type of definition. Can be one of 'application', 'applicationCategory',
+  # 'host', 'port', 'ipRange' or 'localNet'.
   class Type1Enum
     TYPE1_ENUM = [
       # TODO: Write general description for APPLICATION
@@ -21,7 +21,10 @@ module Meraki
       PORT = 'port'.freeze,
 
       # TODO: Write general description for IPRANGE
-      IPRANGE = 'ipRange'.freeze
+      IPRANGE = 'ipRange'.freeze,
+
+      # TODO: Write general description for LOCALNET
+      LOCALNET = 'localNet'.freeze
     ].freeze
   end
 end

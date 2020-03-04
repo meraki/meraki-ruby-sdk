@@ -34,7 +34,8 @@ module Meraki
     # @return [String]
     attr_accessor :psk
 
-    # The types of WPA encryption. ('WPA1 and WPA2' or 'WPA2 only')
+    # The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only',
+    # 'WPA3 Transition Mode' or 'WPA3 only')
     # @return [WpaEncryptionModeEnum]
     attr_accessor :wpa_encryption_mode
 

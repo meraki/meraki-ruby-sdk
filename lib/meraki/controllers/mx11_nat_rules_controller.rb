@@ -55,12 +55,13 @@ module Meraki
     # Set the 1:1 NAT mapping rules for an MX network
     # @param [String] network_id Required parameter: Example:
     # @param [UpdateNetworkOneToOneNatRulesModel]
-    # update_network_one_to_one_nat_rules Optional parameter: Example:
+    # update_network_one_to_one_nat_rules Required parameter: Example:
     # @return Mixed response from the API call
     def update_network_one_to_one_nat_rules(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id']
+        'network_id' => options['network_id'],
+        'update_network_one_to_one_nat_rules' => options['update_network_one_to_one_nat_rules']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/oneToOneNatRules'

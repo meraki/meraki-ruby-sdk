@@ -55,12 +55,13 @@ module Meraki
     # Add a static route for an MX or teleworker network
     # @param [String] network_id Required parameter: Example:
     # @param [CreateNetworkStaticRouteModel] create_network_static_route
-    # Optional parameter: Example:
+    # Required parameter: Example:
     # @return Mixed response from the API call
     def create_network_static_route(options = {})
       # Validate required parameters.
       validate_parameters(
-        'network_id' => options['network_id']
+        'network_id' => options['network_id'],
+        'create_network_static_route' => options['create_network_static_route']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/staticRoutes'
@@ -94,20 +95,20 @@ module Meraki
 
     # Return a static route for an MX or teleworker network
     # @param [String] network_id Required parameter: Example:
-    # @param [String] sr_id Required parameter: Example:
+    # @param [String] static_route_id Required parameter: Example:
     # @return Mixed response from the API call
     def get_network_static_route(options = {})
       # Validate required parameters.
       validate_parameters(
         'network_id' => options['network_id'],
-        'sr_id' => options['sr_id']
+        'static_route_id' => options['static_route_id']
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/staticRoutes/{srId}'
+      _path_url = '/networks/{networkId}/staticRoutes/{staticRouteId}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'networkId' => options['network_id'],
-        'srId' => options['sr_id']
+        'staticRouteId' => options['static_route_id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -133,7 +134,7 @@ module Meraki
 
     # Update a static route for an MX or teleworker network
     # @param [String] network_id Required parameter: Example:
-    # @param [String] sr_id Required parameter: Example:
+    # @param [String] static_route_id Required parameter: Example:
     # @param [UpdateNetworkStaticRouteModel] update_network_static_route
     # Optional parameter: Example:
     # @return Mixed response from the API call
@@ -141,14 +142,14 @@ module Meraki
       # Validate required parameters.
       validate_parameters(
         'network_id' => options['network_id'],
-        'sr_id' => options['sr_id']
+        'static_route_id' => options['static_route_id']
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/staticRoutes/{srId}'
+      _path_url = '/networks/{networkId}/staticRoutes/{staticRouteId}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'networkId' => options['network_id'],
-        'srId' => options['sr_id']
+        'staticRouteId' => options['static_route_id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url
@@ -176,20 +177,20 @@ module Meraki
 
     # Delete a static route from an MX or teleworker network
     # @param [String] network_id Required parameter: Example:
-    # @param [String] sr_id Required parameter: Example:
+    # @param [String] static_route_id Required parameter: Example:
     # @return void response from the API call
     def delete_network_static_route(options = {})
       # Validate required parameters.
       validate_parameters(
         'network_id' => options['network_id'],
-        'sr_id' => options['sr_id']
+        'static_route_id' => options['static_route_id']
       )
       # Prepare query url.
-      _path_url = '/networks/{networkId}/staticRoutes/{srId}'
+      _path_url = '/networks/{networkId}/staticRoutes/{staticRouteId}'
       _path_url = APIHelper.append_url_with_template_parameters(
         _path_url,
         'networkId' => options['network_id'],
-        'srId' => options['sr_id']
+        'staticRouteId' => options['static_route_id']
       )
       _query_builder = Configuration.base_uri.dup
       _query_builder << _path_url

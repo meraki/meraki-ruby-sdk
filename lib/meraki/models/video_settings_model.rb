@@ -22,6 +22,10 @@ module Meraki
     # @return [MV12WEModel]
     attr_accessor :mv12_we
 
+    # Quality and resolution for MV22X/MV72X camera models.
+    # @return [MV22XMV72XModel]
+    attr_accessor :mv22_x_mv72_x
+
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
@@ -29,17 +33,20 @@ module Meraki
       @_hash['mv12_mv22_mv72'] = 'MV12/MV22/MV72'
       @_hash['mv32'] = 'MV32'
       @_hash['mv12_we'] = 'MV12WE'
+      @_hash['mv22_x_mv72_x'] = 'MV22X/MV72X'
       @_hash
     end
 
     def initialize(mv21_mv71 = nil,
                    mv12_mv22_mv72 = nil,
                    mv32 = nil,
-                   mv12_we = nil)
+                   mv12_we = nil,
+                   mv22_x_mv72_x = nil)
       @mv21_mv71 = mv21_mv71
       @mv12_mv22_mv72 = mv12_mv22_mv72
       @mv32 = mv32
       @mv12_we = mv12_we
+      @mv22_x_mv72_x = mv22_x_mv72_x
     end
 
     # Creates an instance of the object from a hash.
@@ -53,12 +60,15 @@ module Meraki
         hash['MV12/MV22/MV72']
       mv32 = MV32Model.from_hash(hash['MV32']) if hash['MV32']
       mv12_we = MV12WEModel.from_hash(hash['MV12WE']) if hash['MV12WE']
+      mv22_x_mv72_x = MV22XMV72XModel.from_hash(hash['MV22X/MV72X']) if
+        hash['MV22X/MV72X']
 
       # Create object from extracted values.
       VideoSettingsModel.new(mv21_mv71,
                              mv12_mv22_mv72,
                              mv32,
-                             mv12_we)
+                             mv12_we,
+                             mv22_x_mv72_x)
     end
   end
 end

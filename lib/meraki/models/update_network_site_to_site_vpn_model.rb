@@ -7,7 +7,7 @@ module Meraki
   # UpdateNetworkSiteToSiteVpnModel Model.
   class UpdateNetworkSiteToSiteVpnModel < BaseModel
     # The site-to-site VPN mode. Can be one of 'none', 'spoke' or 'hub'
-    # @return [ModeEnum]
+    # @return [Mode2Enum]
     attr_accessor :mode
 
     # The list of VPN hubs, in order of preference. In spoke mode, at least 1

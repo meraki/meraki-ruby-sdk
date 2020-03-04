@@ -8,7 +8,7 @@ module Meraki
   class DefinitionModel < BaseModel
     # The type of definition. Can be one of 'application',
     # 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
-    # @return [TypeEnum]
+    # @return [Type1Enum]
     attr_accessor :type
 
     # If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be

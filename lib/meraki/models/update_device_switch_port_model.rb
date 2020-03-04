@@ -18,8 +18,8 @@ module Meraki
     # @return [Boolean]
     attr_accessor :enabled
 
-    # The type of the switch port ("access" or "trunk")
-    # @return [String]
+    # The type of the switch port ('trunk' or 'access')
+    # @return [TypeEnum]
     attr_accessor :type
 
     # The VLAN of the switch port. A null value will clear the value set for
@@ -47,9 +47,9 @@ module Meraki
     # @return [Boolean]
     attr_accessor :rstp_enabled
 
-    # The state of the STP guard ("disabled", "Root guard", "BPDU guard", "Loop
-    # guard")
-    # @return [String]
+    # The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or
+    # 'loop guard')
+    # @return [StpGuardEnum]
     attr_accessor :stp_guard
 
     # The number of the access policy of the switch port. Only applicable to

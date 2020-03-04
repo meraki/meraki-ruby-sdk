@@ -12,15 +12,23 @@ module Meraki
     # @return [String]
     attr_accessor :timestamp
 
+    # [optional] If set to "true" the snapshot will be taken at full sensor
+    # resolution. This will error if used with timestamp.
+    # @return [Boolean]
+    attr_accessor :fullframe
+
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
       @_hash['timestamp'] = 'timestamp'
+      @_hash['fullframe'] = 'fullframe'
       @_hash
     end
 
-    def initialize(timestamp = nil)
+    def initialize(timestamp = nil,
+                   fullframe = nil)
       @timestamp = timestamp
+      @fullframe = fullframe
     end
 
     # Creates an instance of the object from a hash.
@@ -29,9 +37,11 @@ module Meraki
 
       # Extract variables from the hash.
       timestamp = hash['timestamp']
+      fullframe = hash['fullframe']
 
       # Create object from extracted values.
-      GenerateNetworkCameraSnapshotModel.new(timestamp)
+      GenerateNetworkCameraSnapshotModel.new(timestamp,
+                                             fullframe)
     end
   end
 end

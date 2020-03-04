@@ -36,6 +36,12 @@ module Meraki
       BluetoothClientsController.instance
     end
 
+    # Singleton access to bluetooth_settings controller.
+    # @return [BluetoothSettingsController] Returns the controller instance.
+    def bluetooth_settings
+      BluetoothSettingsController.instance
+    end
+
     # Singleton access to camera_quality_retention_profiles controller.
     # @return [CameraQualityRetentionProfilesController] Returns the controller instance.
     def camera_quality_retention_profiles
@@ -46,6 +52,12 @@ module Meraki
     # @return [CamerasController] Returns the controller instance.
     def cameras
       CamerasController.instance
+    end
+
+    # Singleton access to change_log controller.
+    # @return [ChangeLogController] Returns the controller instance.
+    def change_log
+      ChangeLogController.instance
     end
 
     # Singleton access to clients controller.

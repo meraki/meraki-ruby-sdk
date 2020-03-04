@@ -98,5 +98,58 @@ module Meraki
         _context.response.raw_body.to_s.strip.empty?
       decoded
     end
+
+    # Return an aggregated overview of API requests data
+    # @param [String] organization_id Required parameter: Example:
+    # @param [String] t0 Optional parameter: The beginning of the timespan for
+    # the data. The maximum lookback period is 31 days from today.
+    # @param [String] t1 Optional parameter: The end of the timespan for the
+    # data. t1 can be a maximum of 31 days after t0.
+    # @param [Float] timespan Optional parameter: The timespan for which the
+    # information will be fetched. If specifying timespan, do not specify
+    # parameters t0 and t1. The value must be in seconds and be less than or
+    # equal to 31 days. The default is 31 days.
+    # @return Mixed response from the API call
+    def get_organization_api_requests_overview(options = {})
+      # Validate required parameters.
+      validate_parameters(
+        'organization_id' => options['organization_id']
+      )
+      # Prepare query url.
+      _path_url = '/organizations/{organizationId}/apiRequests/overview'
+      _path_url = APIHelper.append_url_with_template_parameters(
+        _path_url,
+        'organizationId' => options['organization_id']
+      )
+      _query_builder = Configuration.base_uri.dup
+      _query_builder << _path_url
+      _query_builder = APIHelper.append_url_with_query_parameters(
+        _query_builder,
+        {
+          't0' => options['t0'],
+          't1' => options['t1'],
+          'timespan' => options['timespan']
+        },
+        array_serialization: Configuration.array_serialization
+      )
+      _query_url = APIHelper.clean_url _query_builder
+      # Prepare headers.
+      _headers = {
+        'accept' => 'application/json'
+      }
+      # Prepare and execute HttpRequest.
+      _request = @http_client.get(
+        _query_url,
+        headers: _headers
+      )
+      CustomHeaderAuth.apply(_request)
+      _context = execute_request(_request)
+      validate_response(_context)
+      # Return appropriate response type.
+      decoded = APIHelper.json_deserialize(_context.response.raw_body) unless
+        _context.response.raw_body.nil? ||
+        _context.response.raw_body.to_s.strip.empty?
+      decoded
+    end
   end
 end

@@ -12,7 +12,7 @@ module Meraki
 
     # Type of the L7 rule. One of: 'application', 'applicationCategory', 'host',
     # 'port', 'ipRange'
-    # @return [Type4Enum]
+    # @return [Type5Enum]
     attr_accessor :type
 
     # The 'value' of what you want to block. Format of 'value' varies depending

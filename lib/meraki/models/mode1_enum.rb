@@ -4,19 +4,14 @@
 # ( https://apimatic.io ).
 
 module Meraki
-  # The traffic analysis mode for the network. Can be one of 'disabled' (do not
-  # collect traffic types),     'basic' (collect generic traffic categories), or
-  # 'detailed' (collect destination hostnames).
+  # Set mode to 'enabled' to enable malware prevention, otherwise 'disabled'
   class Mode1Enum
     MODE1_ENUM = [
+      # TODO: Write general description for ENABLED
+      ENABLED = 'enabled'.freeze,
+
       # TODO: Write general description for DISABLED
-      DISABLED = 'disabled'.freeze,
-
-      # TODO: Write general description for BASIC
-      BASIC = 'basic'.freeze,
-
-      # TODO: Write general description for DETAILED
-      DETAILED = 'detailed'.freeze
+      DISABLED = 'disabled'.freeze
     ].freeze
   end
 end

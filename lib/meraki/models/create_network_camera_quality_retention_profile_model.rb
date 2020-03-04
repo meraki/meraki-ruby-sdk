@@ -30,6 +30,11 @@ module Meraki
     # @return [Boolean]
     attr_accessor :cloud_archive_enabled
 
+    # The version of the motion detector that will be used by the camera. Only
+    # applies to Gen 2 cameras. Defaults to v2.
+    # @return [Integer]
+    attr_accessor :motion_detector_version
+
     # Schedule for which this camera will record video, or 'null' to always
     # record.
     # @return [String]
@@ -54,6 +59,7 @@ module Meraki
         'restrictedBandwidthModeEnabled'
       @_hash['audio_recording_enabled'] = 'audioRecordingEnabled'
       @_hash['cloud_archive_enabled'] = 'cloudArchiveEnabled'
+      @_hash['motion_detector_version'] = 'motionDetectorVersion'
       @_hash['schedule_id'] = 'scheduleId'
       @_hash['max_retention_days'] = 'maxRetentionDays'
       @_hash['video_settings'] = 'videoSettings'
@@ -65,6 +71,7 @@ module Meraki
                    restricted_bandwidth_mode_enabled = nil,
                    audio_recording_enabled = nil,
                    cloud_archive_enabled = nil,
+                   motion_detector_version = nil,
                    schedule_id = nil,
                    max_retention_days = nil,
                    video_settings = nil)
@@ -73,6 +80,7 @@ module Meraki
       @restricted_bandwidth_mode_enabled = restricted_bandwidth_mode_enabled
       @audio_recording_enabled = audio_recording_enabled
       @cloud_archive_enabled = cloud_archive_enabled
+      @motion_detector_version = motion_detector_version
       @schedule_id = schedule_id
       @max_retention_days = max_retention_days
       @video_settings = video_settings
@@ -88,6 +96,7 @@ module Meraki
       restricted_bandwidth_mode_enabled = hash['restrictedBandwidthModeEnabled']
       audio_recording_enabled = hash['audioRecordingEnabled']
       cloud_archive_enabled = hash['cloudArchiveEnabled']
+      motion_detector_version = hash['motionDetectorVersion']
       schedule_id = hash['scheduleId']
       max_retention_days = hash['maxRetentionDays']
       video_settings = VideoSettingsModel.from_hash(hash['videoSettings']) if
@@ -99,6 +108,7 @@ module Meraki
                                                           restricted_bandwidth_mode_enabled,
                                                           audio_recording_enabled,
                                                           cloud_archive_enabled,
+                                                          motion_detector_version,
                                                           schedule_id,
                                                           max_retention_days,
                                                           video_settings)

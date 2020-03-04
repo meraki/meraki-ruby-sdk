@@ -6,18 +6,25 @@
 module Meraki
   # ClaimNetworkDevicesModel Model.
   class ClaimNetworkDevicesModel < BaseModel
-    # The serial of a device
+    # A list of serials of devices to claim
+    # @return [List of String]
+    attr_accessor :serials
+
+    # [DEPRECATED] The serial of a device to claim
     # @return [String]
     attr_accessor :serial
 
     # A mapping from model property names to API property names.
     def self.names
       @_hash = {} if @_hash.nil?
+      @_hash['serials'] = 'serials'
       @_hash['serial'] = 'serial'
       @_hash
     end
 
-    def initialize(serial = nil)
+    def initialize(serials = nil,
+                   serial = nil)
+      @serials = serials
       @serial = serial
     end
 
@@ -26,10 +33,12 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
+      serials = hash['serials']
       serial = hash['serial']
 
       # Create object from extracted values.
-      ClaimNetworkDevicesModel.new(serial)
+      ClaimNetworkDevicesModel.new(serials,
+                                   serial)
     end
   end
 end

@@ -323,7 +323,7 @@ module Meraki
       decoded
     end
 
-    # Return Multicast settings for a network
+    # Return multicast settings for a network
     # @param [String] network_id Required parameter: Example:
     # @return Mixed response from the API call
     def get_network_switch_settings_multicast(network_id)

@@ -12,7 +12,7 @@ module Meraki
 
     # The signature type for the custom pie chart item. Can be one of 'host',
     # 'port' or 'ipRange'.
-    # @return [Type7Enum]
+    # @return [Type8Enum]
     attr_accessor :type
 
     # The value of the custom pie chart item. Valid syntax depends on the

@@ -9,7 +9,8 @@ module Meraki
     # The target SSIDs. Each SSID must be enabled and must have Click-through
     # splash enabled. For each SSID where isAuthorized is true, the expiration
     # time will automatically be set according to the SSID's splash frequency.
-    # @return [SsidsModel]
+    # Not all networks support configuring all SSIDs
+    # @return [Array<String, GeneratedObject10Model>]
     attr_accessor :ssids
 
     # A mapping from model property names to API property names.
@@ -28,7 +29,7 @@ module Meraki
       return nil unless hash
 
       # Extract variables from the hash.
-      ssids = SsidsModel.from_hash(hash['ssids']) if hash['ssids']
+      ssids = GeneratedObject10Model.from_hash(hash['ssids']) if hash['ssids']
 
       # Create object from extracted values.
       UpdateNetworkClientSplashAuthorizationStatusModel.new(ssids)

@@ -390,13 +390,14 @@ module Meraki
     # @param [String] network_id Required parameter: Example:
     # @param [String] client_id Required parameter: Example:
     # @param [UpdateNetworkClientPolicyModel] update_network_client_policy
-    # Optional parameter: Example:
+    # Required parameter: Example:
     # @return Mixed response from the API call
     def update_network_client_policy(options = {})
       # Validate required parameters.
       validate_parameters(
         'network_id' => options['network_id'],
-        'client_id' => options['client_id']
+        'client_id' => options['client_id'],
+        'update_network_client_policy' => options['update_network_client_policy']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/clients/{clientId}/policy'
@@ -477,14 +478,15 @@ module Meraki
     # @param [String] network_id Required parameter: Example:
     # @param [String] client_id Required parameter: Example:
     # @param [UpdateNetworkClientSplashAuthorizationStatusModel]
-    # update_network_client_splash_authorization_status Optional parameter:
+    # update_network_client_splash_authorization_status Required parameter:
     # Example:
     # @return Mixed response from the API call
     def update_network_client_splash_authorization_status(options = {})
       # Validate required parameters.
       validate_parameters(
         'network_id' => options['network_id'],
-        'client_id' => options['client_id']
+        'client_id' => options['client_id'],
+        'update_network_client_splash_authorization_status' => options['update_network_client_splash_authorization_status']
       )
       # Prepare query url.
       _path_url = '/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus'

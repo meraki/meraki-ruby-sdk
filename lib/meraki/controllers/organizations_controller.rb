@@ -347,7 +347,7 @@ module Meraki
       decoded
     end
 
-    # Return the license state for an organization
+    # Return an overview of the license state for an organization
     # @param [String] organization_id Required parameter: Example:
     # @return Mixed response from the API call
     def get_organization_license_state(organization_id)
